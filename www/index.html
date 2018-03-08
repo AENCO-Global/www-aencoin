@@ -25,7 +25,10 @@
     <link href="script/core.min.css" rel="stylesheet">
     <link href="script/blockchain.min.css" rel="stylesheet">
     <link href="script/style.css" rel="stylesheet">
-    <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script>
+   <!--  <script defer src="https://use.fontawesome.com/releases/v5.0.6/js/all.js"></script> -->
+
+   <link href="fontawesome/css/fa-svg-with-js.css" rel="stylesheet">
+   <script defer src="fontawesome/js/fontawesome-all.js"></script>
 
     <!-- Favicons -->
     <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
@@ -72,7 +75,7 @@
             <li class="nav-item">
               <a class="nav-link" href="#">Blog <i class="fa fa-caret-down"></i></a>
               <div class="nav-submenu">
-                <a class="nav-link" target="_blank" href="https://medium.com/aencoin" Sale Blog</a>
+                <a class="nav-link" target="_blank" href="https://medium.com/aencoin">Sale Blog</a>
                 <a class="nav-link" target="_blank" href="https://blog.aencoin.com">Company Blog</a>
               </div>
             </li>
@@ -80,28 +83,37 @@
             <li class="nav-item"><a class="nav-link" target="_blank" href="http://www.aptorumgroup.com/">APTORUM Grp</a></li>
             <li class="nav-item hidden-md-down ml-15"><a class="nav-link disabled fs-26 fw-100" href="#">|</a></li>
            <li class="nav-item ml-15">
-            <a class="nav-link" target="_blank" href="https://t.me/aencoin"><i class="fa fa-paper-plane mt-35 fs-18" aria-hidden="true"></i> <span class="hidden-md-up">Telegram Group</span></a>
+            <a class="nav-link" target="_blank" href="https://t.me/aencoin">
+		<i class="fa fa-paper-plane mt-35 fs-18" aria-hidden="true"></i>
+		<span class="hidden-md-up">Telegram Group</span>
+	   </a>
           </li>
            <li class="nav-item ml-15">
-            <a class="nav-link" target="_blank" href="https://bitcointalk.org/index.php?topic=2286102.0"><i class="fa fa-bitcoin mt-35 fs-20" aria-hidden="true"></i> <span class="hidden-md-up">Bitcointalk Forum</span></a>
+            <a class="nav-link" target="_blank" href="https://bitcointalk.org/index.php?topic=2286102.0">
+		<i class="fab fa-bitcoin mt-35 fs-20" aria-hidden="true"></i>
+		<span class="hidden-md-up">Bitcointalk Forum</span>
+	   </a>
           </li>
             <li class="nav-item ml-15">
-              <a class="nav-link" target="_blank" href="https://www.reddit.com/r/aencoin/"><i class="fa fa-reddit-alien mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Subreddit Forum</span></a>
+              <a class="nav-link" target="_blank" href="https://www.reddit.com/r/aencoin/"><i class="fab fa-reddit-alien mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Subreddit Forum</span></a>
             </li>
             <li class="nav-item ml-15">
-            <a class="nav-link" target="_blank" href="https://open.kakao.com/o/gRFJjFE"><i class="fa fa-commenting mt-35 fs-20"></i><span class="hidden-md-up">Kakao Channel</span></a>
+             <a class="nav-link" target="_blank" href="https://open.kakao.com/o/gRFJjFE">
+		<i class="fa fa-comment mt-35 fs-20"></i>
+		<span class="hidden-md-up">Kakao Channel</span>
+	     </a>
             </li>
             <li class="nav-item ml-15"><a class="nav-link" target="_blank" href="https://github.com/Aptorum">
-              <i class="fa fa-github mt-35 fs-20" aria-hidden="true"></i> <span class="hidden-md-up">Github</span></a>
+              <i class="fab fa-github mt-35 fs-20" aria-hidden="true"></i> <span class="hidden-md-up">Github</span></a>
             </li>
             <li class="nav-item ml-15">
-              <a class="nav-link" target="_blank" href="https://www.facebook.com/aencoin/"><i class="fa fa-facebook mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Twitter</span></a>
+              <a class="nav-link" target="_blank" href="https://www.facebook.com/aencoin/"><i class="fab fa-facebook mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Twitter</span></a>
             </li>
             <li class="nav-item ml-15">
-              <a class="nav-link" target="_blank" href="https://www.twitter.com/aencoin/"><i class="fa fa-twitter mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Twitter</span></a>
+              <a class="nav-link" target="_blank" href="https://www.twitter.com/aencoin/"><i class="fab fa-twitter mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Twitter</span></a>
             </li>
             <li class="nav-item ml-15">
-              <a class="nav-link" target="_blank" href="https://www.instagram.com/aencoin/"><i class="fa fa-instagram mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Instagram</span></a>
+              <a class="nav-link" target="_blank" href="https://www.instagram.com/aencoin/"><i class="fab fa-instagram mt-35 fs-20" aria-hidden="true"></i>  <span class="hidden-md-up">Instagram</span></a>
             </li>
             <li class="nav-item">
               <span class="nav-link active"><a class="btn btn-block btn-lg btn-warning p-10" href="https:/.aencoin.com" style="display:initial;">Join Presale</a></span>
@@ -1066,15 +1078,15 @@
             </div>
 
             <div class="col-md-3 col-12">
-              <canvas id=" height="400px" width="400px"></canvas>
+              <canvas id="chart1" height="400px" width="400px"></canvas>
               <script>
-              var ctx = document.getElementById(').getContext('2d');
+              var ctx = document.getElementById('chart1').getContext('2d');
               var myDoughnutChart = new Chart(ctx, {
                   type: 'doughnut',
                   data: {
-                      labels: [ Sale", "Partnership Adoption Pool", "AENCoin (Tech Dev)", "Team & Bounty", "Smart AEN Tech LTD"],
+                      labels: [ "Sale", "Partnership Adoption Pool", "AENCoin (Tech Dev)", "Team & Bounty", "Smart AEN Tech LTD"],
                       datasets: [{
-                          label:  Allocation",
+                          label:  "Allocation",
                           backgroundColor: ['rgb(110, 193, 228)','rgb(128, 201, 231)','rgb(146, 209, 235)','rgb(164, 216, 238)','rgb(182, 224, 241)'],
                           borderColor: '#ffffff',
                           data: [30, 30, 15, 10, 15,],
