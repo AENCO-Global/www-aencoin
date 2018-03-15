@@ -1,6 +1,5 @@
 #!/bin/bash
-whoami
-pwd
-ssh -p 22 $2 "whoami; pwd"
-echo "Version to Deploy is $1"
+echo "Identify the target server"
+ssh -p 22 $2 "/home/ubuntu/role.sh"
 
+echo "Version to Deploy is $1"
