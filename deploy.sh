@@ -21,7 +21,6 @@ echo "--------------------------------------"
 echo "--=== Transfer files to remote Server ===--"
 ls  -l
 rsync -avzhe ssh  --rsync-path="sudo rsync" ./www jenkins@$2:$3
-# /home/apache/public_html/wallet.aencoin.com/
 echo "---------------------------------------"
 
 echo "--=== Set permisions on transfered files ===--"
@@ -29,6 +28,8 @@ echo "--=== Set permisions on transfered files ===--"
 echo "----------------------------------------------"
 
 echo "--=== Operations on the Remote server ===--"
+ssh -p 22 $2 "sudo groups"
+
 ssh -p 22 $2 "sudo chown -R apache:apache $3"
 echo "-------------------------------------------"
 
