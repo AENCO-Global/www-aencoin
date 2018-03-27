@@ -24,13 +24,9 @@ echo "rsync -avzhe ssh  --rsync-path="""rsync""" ./www jenkins@$2:$3"""
 rsync -avzhe ssh  --rsync-path="rsync" ./www/* jenkins@$2:$3
 echo "---------------------------------------"
 
-echo "--=== Set permisions on transfered files ===--"
-
-echo "----------------------------------------------"
-
-echo "--=== Operations on the Remote server ===--"
-ssh -p 22 $2 "chown -R apache:apache $3"
-echo "-------------------------------------------"
+#echo "--=== Set permisions on transfered files ===--"
+#ssh -p 22 $2 "chown -R apache:apache $3"
+#echo "-------------------------------------------"
 
 echo "----====== Verify Deployments-List from Remote ======----"
 ssh -p 22 $2 "ls -al /home/apache/public_html/"
