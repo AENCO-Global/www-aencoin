@@ -20,7 +20,7 @@ echo "--------------------------------------"
 
 echo "--=== Transfer files to remote Server ===--"
 ls  -l
-rsync -avzhe ssh  --rsync-path="sudo rsync" . jenkins@$2:$3
+rsync -avzhe ssh  --rsync-path="sudo rsync" ./www jenkins@$2:$3
 # /home/apache/public_html/wallet.aencoin.com/
 echo "---------------------------------------"
 
