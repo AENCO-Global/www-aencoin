@@ -16,10 +16,11 @@ echo "-----------------------------------------"
 
 echo "--=== Modify Version Information ===--"
 echo "Version $1" > version.html
+ls  -l
 echo "--------------------------------------"
 
 echo "--=== Transfer files to remote Server ===--"
-ls  -l
+echo 'rsync -avzhe ssh  --rsync-path="sudo rsync" ./www jenkins@$2:$3"'
 rsync -avzhe ssh  --rsync-path="sudo rsync" ./www jenkins@$2:$3
 echo "---------------------------------------"
 
