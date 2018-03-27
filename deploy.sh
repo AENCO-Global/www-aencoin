@@ -29,9 +29,7 @@ echo "--=== Set permisions on transfered files ===--"
 echo "----------------------------------------------"
 
 echo "--=== Operations on the Remote server ===--"
-ssh -p 22 $2 "sudo groups"
-
-ssh -p 22 $2 "sudo chown -R apache:apache $3"
+ssh -p 22 $2 "chown -R apache:apache $3"
 echo "-------------------------------------------"
 
 echo "----====== Verify Deployments-List from Remote ======----"
