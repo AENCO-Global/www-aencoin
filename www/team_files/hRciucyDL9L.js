@@ -1,3 +1,0 @@
-if (self.CavalryLogger) { CavalryLogger.start_js(["lKZeF"]); }
-
-__d("AdsInterfacesComponentsEventName",[],(function a(b,c,d,e,f,g){f.exports=Object.freeze({BIG_ADOPTION_NO_CONTEXT_THEME:"big_adoption_no_context_theme",BIG_ADOPTION_EXCEPTION:"big_adoption_exception",BIG_COMPONENT_ERROR:"big_component_error",DEPRECATE_CALLED:"deprecate_called",FDS_TEXT_DEPRECATED_VALUES:"fds_text_deprecated_values"})}),null);
