@@ -59,7 +59,7 @@ color: #4d4d4d;
 position: relative;
 font-family: 'Roboto', sans-serif;
 text-align: left;
-background: url(../images/bg.png) left top repeat;
+/* background: url(../images/bg.png) left top repeat; */
 }
 
 .wrapper{
