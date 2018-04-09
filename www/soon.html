@@ -5,7 +5,7 @@
 <title>Coming Soon</title>
 <link href="soon/style.css" rel="stylesheet" type="text/css" media="screen" />
 <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
-<script type="text/javascript" src="soon/jquery.min.js"></script> 
+<script type="text/javascript" src="soon/jquery.min.js"></script>
 <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery-backstretch/2.0.4/jquery.backstretch.min.js"></script> 
 <link href='https://fonts.googleapis.com/css?family=Roboto+Condensed:700|Roboto+Slab:700' rel='stylesheet' type='text/css'>
 <meta name="viewport" content="width=device-width, initial-scale = 1.0, user-scalable = no">
@@ -14,7 +14,23 @@
 </head>
 <body>
 <div class="wrapper">
-	<div class="left-section"><img src="soon/watch.png" /></div>
+	<div class="left-section">
+	<!--	<img src="soon/watch.png" /> -->
+		<div class="clock-container">
+			<div id="clock">
+				<div class="clock-case">
+					<div class="clock-dial">
+					<div class="clock-hour-hand"></div>
+					<div class="clock-minute-hand"></div>
+					<div class="clock-second-hand"></div>
+					<div class="clock-nut"></div>
+					<div class="clock-ratio"></div>
+					</div>
+				</div>
+			</div>
+			
+		</div>
+	</div>
 	<div class="right-section">
 		<h1 id="logo">AEN</h1>
 		<div class="seprator"></div>
@@ -45,7 +61,7 @@
 	</div>
 	<div class="watch-section"><img src="soon/watch.png" /></div>
 </div>
-
-
+<link href="soon/clock.css" rel="stylesheet" type="text/css" media="screen" />
+<script type="text/javascript" src="soon/clock.js"></script>
 </body>
 </html>
