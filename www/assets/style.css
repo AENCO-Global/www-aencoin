@@ -7391,7 +7391,7 @@ body .wpb_text_column.wpb_animate_when_almost_visible.wpb_fade {
 }
 
 body .lazy-loading:not(.lazy-loading-not-hide) {
-    visibility: hidden;
+/*    visibility: hidden; */
 }
 
 body .lazy-loading .wpb_text_column.wpb_animate_when_almost_visible.wpb_fade {
