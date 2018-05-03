@@ -391,7 +391,7 @@
 			this.hasHeaderVisuals = $('.ls-wp-container').size() > 0;
 
 			$(document).find('.lazy-loading:first').addClass('lazy-loading-first');
-//			$(document).find('.lazy-loading').not('.lazy-loading-not-hide').css({visibility: 'hidden'});
+			$(document).find('.lazy-loading').not('.lazy-loading-not-hide').css({visibility: 'hidden'});
 
 			$(document).ready(function() {
 				self.rebuild();
