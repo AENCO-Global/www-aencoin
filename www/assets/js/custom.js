@@ -1,3 +1,133 @@
+(function ($) {
+    "use strict";
+
+
+    $(document).ready(function(){
+
+        welcome();
+
+        // Menu Dropdown Toggle
+        if($('.menu-trigger').length){
+            $('.menu-trigger').click(function(){
+                $(this).toggleClass('active');
+                $('.header-area .nav').slideToggle(200);
+            });
+        }
+
+
+        // Countdown init
+        if($('.countdown').length){
+            $('.countdown').downCount({
+                date: '06/01/2018 00:00:00',
+                offset: +10
+            });
+        }
+
+        // Scroll animation init
+        window.sr = new scrollReveal();
+
+        // Menu elevator animation
+        $('a[href*=\\#]:not([href=\\#])').click(function() {
+            if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
+                var target = $(this.hash);
+                target = target.length ? target : $('[name=' + this.hash.slice(1) +']');
+                if (target.length) {
+                    var width = $(window).width();
+                    if(width < 991) {
+                        $('.menu-trigger').removeClass('active');
+                        $('.header-area .nav').slideUp(200);
+                    }
+                    $('html,body').animate({
+                        scrollTop: (target.offset().top) - 30
+                    }, 700);
+                    return false;
+                }
+            }
+        });
+
+        // Token Progress Bar
+        if($('.token-progress ul').length){
+            $(".token-progress ul").find(".item").each(function(i){
+                $('.token-progress ul .item:eq(' +[i]+ ')').css("left", $('.token-progress ul .item:eq(' + [i] + ')').data('position'));
+            });
+            var progress = $(".token-progress ul .progress-active").data('progress');
+            $(".token-progress ul .progress-active").css('width', progress);
+        }
+
+    });
+
+    // Page Loading Animation
+    $(window).on("load", function(){
+        $(".loading-wrapper").animate({
+            'opacity': '0'
+        }, 400, function(){
+            setTimeout(function(){
+                $(".loading-wrapper").css("visibility", "hidden").fadeOut();
+
+                // Parallax init
+                if($('.parallax').length){
+                    $('.parallax').parallax({
+                        imageSrc: 'assets/images/parallax.jpg',
+                        zIndex: '1'
+                    });
+                }
+            }, 200);
+        });
+    });
+
+    // Header Scrolling Set White Background
+    $(window).scroll(function() {
+        var width = $(window).width();
+        if(width > 991) {
+            var scroll = $(window).scrollTop();
+            if (scroll >= 30) {
+                $(".header-area").addClass("header-sticky");
+                $(".header-area .dark-logo").css('display', 'block');
+                $(".header-area .light-logo").css('display', 'none');
+            }else{
+                $(".header-area").removeClass("header-sticky");
+                $(".header-area .dark-logo").css('display', 'none');
+                $(".header-area .light-logo").css('display', 'block');
+            }
+        }
+    });
+
+
+    // Window resize setting
+    $(window).resize(function(){
+        welcome();
+    });
+
+
+    // Welcome area height settings
+    function welcome() {
+        var width = $(window).width();
+
+        if(width > 991) {
+            var height = $(window).height();
+            $('.welcome-area').css('height', height - 80);
+        }else{
+            $('.welcome-area').css('height', 'auto');
+        }
+
+        // Welcome1 particleJS init
+        if($('#welcome-1').length){
+            particlesJS('welcome-1', welcome1Settings);
+        }
+    }
+
+    /** Dis-allow user to submit the form if the Google Recaptcha is not ticked*/
+    $('form').submit(function(event) {
+
+        var recaptcha = $('#g-recaptcha-response').val();
+        if (recaptcha === '') {
+            event.preventDefault();
+        }
+    });
+})(jQuery);
+
+/** -------------------------------------------------------------------------------------- */
+
 jQuery(document).ready(function(e) {
     jQuery("#sfsi_floater").attr("data-top",jQuery(document).height());
 });
