@@ -1,0 +1,39 @@
+/* 
+---------------------------------------------
+Font & reset CSS
+--------------------------------------------- 
+*/
+
+@import url('https://fonts.googleapis.com/css?family=Raleway:300,400,500,600,700');
+
+$img-url: '../img/';
+
+$font : 'Raleway', sans-serif;
+
+$light: 300;
+$normal: 400;
+$medium: 500;
+$semi: 600;
+$bold: 700;
+
+
+// General Colors
+$primaryColor: #0EB8D9;
+$secondaryColor: #01405F;
+
+// Gradient Colors
+$gradientDark: #0EB8D9;
+$gradientLight: #2CDDC9;
+
+//Heading Color
+$headingDark: #3B566E;
+$headingLight: #ffffff;
+
+// Text Colors
+$textDark: #6F8BA4;
+$textLight: #fff;
+
+$white-color: #fff;
+$sm-width: 560px;
+$md-width: 768px;
+$lg-width: 992px
