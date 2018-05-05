@@ -8,6 +8,16 @@ welcome area
 	min-height: 620px;
 	position: relative;
 
+    .welcome-left {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
+    .welcome-right {
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
 	&.bg-top-right {
 		&:before {
 			content: '';
@@ -16,7 +26,7 @@ welcome area
 			height: 100%;
 			left: 0px;
 			top: 0px;
-			background: url("#{$img-url}dark-top-right-bg.png") top right no-repeat;
+			background: url("#{$img-url}blue-background.png") no-repeat;
 			z-index: 3;
 		}
 	}
@@ -90,6 +100,11 @@ welcome area
 			letter-spacing: 1px;
 			margin-bottom: 40px;
 		}
+
+        iframe {
+          width: 100%;
+          height: 100%;
+        }
 	}
 
 	.scroll-to {

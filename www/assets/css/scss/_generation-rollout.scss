@@ -1,0 +1,52 @@
+.generation-rollout {
+
+  margin-top: 30px;
+  margin-bottom: 60px;
+
+  img {
+    max-width: 100%;
+    height: auto;
+    width: auto;
+  }
+
+  .first-generation {
+
+    margin-bottom: 10px;
+
+    h3{
+      color: #71de15;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .second-generation {
+
+    margin-bottom: 10px;
+
+    h3 {
+      color: #00c48f;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+
+  }
+
+  .third-generation {
+
+    margin-bottom: 10px;
+
+    h3 {
+      color: #1496b7;
+    }
+
+    li {
+      margin-bottom: 10px;
+    }
+  }
+}

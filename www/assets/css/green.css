@@ -9,7 +9,6 @@ Table of Contents
 06. header
 07. welcome area
 08. services
-09. roadmap
 10. team
 11. parallax
 12. faq
@@ -1018,6 +1017,12 @@ welcome area
 .welcome-area {
   min-height: 620px;
   position: relative; }
+  .welcome-area .welcome-left {
+    margin-top: 20px;
+    margin-bottom: 20px; }
+  .welcome-area .welcome-right {
+    margin-top: 20px;
+    margin-bottom: 20px; }
   .welcome-area.bg-top-right:before {
     content: '';
     position: absolute;
@@ -1025,7 +1030,7 @@ welcome area
     height: 100%;
     left: 0px;
     top: 0px;
-    background: url("../img/dark-top-right-bg.png") top right no-repeat;
+    background: url("../img/blue-background.png") no-repeat;
     z-index: 3; }
   .welcome-area.bg-bottom-center:before {
     content: '';
@@ -1080,6 +1085,9 @@ welcome area
       line-height: 28px;
       letter-spacing: 1px;
       margin-bottom: 40px; }
+    .welcome-area .header-token iframe {
+      width: 100%;
+      height: 100%; }
   .welcome-area .scroll-to {
     position: absolute;
     width: 100%;
@@ -1397,8 +1405,7 @@ team
       margin: auto;
       bottom: -89px;
       width: 3px;
-      height: 89px;
-      background: url("../img/team.png"); }
+      height: 89px; }
     .team-round .profile .img {
       position: relative;
       width: 160px;
@@ -1789,5 +1796,81 @@ footer {
       margin: 0px;
       margin-bottom: 30px;
       text-align: center; } }
+.generation-rollout {
+  margin-top: 30px;
+  margin-bottom: 60px; }
+  .generation-rollout img {
+    max-width: 100%;
+    height: auto;
+    width: auto; }
+  .generation-rollout .first-generation {
+    margin-bottom: 10px; }
+    .generation-rollout .first-generation h3 {
+      color: #71de15; }
+    .generation-rollout .first-generation li {
+      margin-bottom: 10px; }
+  .generation-rollout .second-generation {
+    margin-bottom: 10px; }
+    .generation-rollout .second-generation h3 {
+      color: #00c48f; }
+    .generation-rollout .second-generation li {
+      margin-bottom: 10px; }
+  .generation-rollout .third-generation {
+    margin-bottom: 10px; }
+    .generation-rollout .third-generation h3 {
+      color: #1496b7; }
+    .generation-rollout .third-generation li {
+      margin-bottom: 10px; }
+
+.legal-framework {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .legal-framework img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
+
+.aenco-ecosystem {
+  margin-top: 50px;
+  margin-bottom: 50px; }
+  .aenco-ecosystem img {
+    width: 70%;
+    height: auto; }
+  .aenco-ecosystem .aenco-video-wrapper {
+    margin-top: 15px;
+    margin-left: auto;
+    margin-right: auto; }
+    .aenco-ecosystem .aenco-video-wrapper .aenco-video {
+      margin: auto; }
+  .aenco-ecosystem .aenco-ib-solutions {
+    margin-bottom: 20px; }
+    .aenco-ecosystem .aenco-ib-solutions h3 {
+      color: #b2d254; }
+    .aenco-ecosystem .aenco-ib-solutions li {
+      margin-bottom: 10px; }
+  .aenco-ecosystem .aenco-prime-solutions {
+    margin-bottom: 20px; }
+    .aenco-ecosystem .aenco-prime-solutions h3 {
+      color: #23d3b5; }
+    .aenco-ecosystem .aenco-prime-solutions li {
+      margin-bottom: 10px; }
+  .aenco-ecosystem .aenco-smartcap-solutions {
+    margin-bottom: 20px; }
+    .aenco-ecosystem .aenco-smartcap-solutions h3 {
+      color: #147ce5; }
+    .aenco-ecosystem .aenco-smartcap-solutions li {
+      margin-bottom: 10px; }
+
+.holder-benefits {
+  margin-top: 30px;
+  margin-bottom: 30px; }
+  .holder-benefits img {
+    width: 100%;
+    height: auto;
+    display: block;
+    margin-left: auto;
+    margin-right: auto; }
 
 /*# sourceMappingURL=green.css.map */
