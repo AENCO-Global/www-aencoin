@@ -1,78 +1,57 @@
-/* 
----------------------------------------------
-pre-loader
---------------------------------------------- 
-*/
+/**
+ *  Page Loader area styling
+ */
 
 .loading-wrapper {
-	position: fixed;
-	width: 100%;
-	height: 100%;
-	color: white;
-	font-size: 16px;
-	background-image: linear-gradient(134deg, $gradientDark 0%, $gradientLight 100%);
-	z-index: 99999;
-	@include transition(.3s);
+  position: fixed;
+  width: 100%;
+  height: 100%;
+  background-image: linear-gradient(141deg, $gradient-1 0%, $gradient-2 51%);
+  z-index: 99999;
+  @include transition(.3s);
 }
 
 .loading {
-	left: 0;
-	top: 0;
-	right: 0;
-	bottom: 0;
-	display: block;
-	position: absolute;
-	margin: auto;
-	width: 50px;
-	height: 50px;
+  left: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  display: block;
+  position: absolute;
+  margin: auto;
+  width: 80px;
+  height: 80px;
+
+  img {
+    position: absolute;
+    width: 80px;
+    height: 80px;
+
+    -webkit-animation: loading 2s linear 0s infinite;
+    -webkit-animation-fill-mode: both;
+    animation: loading 2s linear 0s infinite;
+    animation-fill-mode: both;
+  }
 }
-.loading > div {
-	background-color: #fff;
-	width: 10px;
-	height: 10px;
-	border-radius: 100%;
-	-webkit-animation-fill-mode: both;
-	animation-fill-mode: both;
-	position: absolute;
-	opacity: 0;
-	width: 50px;
-	height: 50px;
-	-webkit-animation: loading 1s 0s linear infinite;
-	animation: loading 1s 0s linear infinite;
-}
-.loading > div:nth-child(2) {
-	-webkit-animation-delay: 0.33333s;
-	animation-delay: 0.33333s;  
-}
-.loading > div:nth-child(3) {
-	-webkit-animation-delay: 0.66666s;
-	animation-delay: 0.66666s;
-}
+
 @-webkit-keyframes loading {
-	0% {
-		opacity: 0;
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
-	5% {
-		opacity: 1;
-	}
-	100% {
-		-webkit-transform: scale(1);
-		transform: scale(1);
-		opacity: 0;
-	}
+  from {
+    -webkit-transform: rotateY(0deg);
+  }
+  to {
+    -webkit-transform: rotateY(360deg);
+  }
 }
+
 @keyframes loading {
-	0% {
-		opacity: 0;
-		-webkit-transform: scale(0);
-		transform: scale(0);
-	}
-	5% {
-		opacity: 1;
-	}
-	100% {
-		opacity: 0;
-	}
+  from {
+    -ms-transform:  rotateY(0deg);
+    -moz-transform: rotateY(0deg);
+    transform: rotateY(0deg);
+  }
+  to {
+    -ms-transform: rotateY(360deg);
+    -moz-transform: rotateY(360deg);
+    transform: rotateY(360deg);
+  }
 }

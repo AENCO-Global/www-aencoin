@@ -168,14 +168,6 @@
         }, 400, function(){
             setTimeout(function(){
                 $(".loading-wrapper").css("visibility", "hidden").fadeOut();
-
-                // Parallax init
-                if($('.parallax').length){
-                    $('.parallax').parallax({
-                        imageSrc: './assets/img/parallax.jpg',
-                        zIndex: '1'
-                    });
-                }
             }, 200);
         });
     });
