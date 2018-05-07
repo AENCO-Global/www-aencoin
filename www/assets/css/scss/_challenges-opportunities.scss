@@ -1,0 +1,30 @@
+#opportunity {
+  .card {
+    border: none;
+    width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+
+    .card-title {
+      text-align: center;
+    }
+
+    img {
+      display: block;
+      width: 20%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    p {
+      display: block;
+      width: 80%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+
+      text-align: center;
+    }
+  }
+}

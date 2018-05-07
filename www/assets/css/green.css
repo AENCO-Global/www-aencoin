@@ -990,15 +990,6 @@ header
 .welcome-area {
   min-height: 620px;
   position: relative; }
-  .welcome-area .welcome-left {
-    margin-top: 20px;
-    margin-bottom: 20px; }
-  .welcome-area .welcome-right {
-    margin-top: 20px;
-    margin-bottom: 20px; }
-    .welcome-area .welcome-right .card {
-      width: 100%;
-      height: 100%; }
   .welcome-area.bg-top-right:before {
     content: '';
     position: absolute;
@@ -1041,6 +1032,35 @@ header
     z-index: 5;
     -webkit-transform: translateY(-65%);
     transform: translateY(-65%); }
+    .welcome-area .header-token .welcome-left {
+      margin-top: 40px; }
+    .welcome-area .header-token .welcome-right {
+      margin-top: 40px; }
+      .welcome-area .header-token .welcome-right #aenco-videos {
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto; }
+        .welcome-area .header-token .welcome-right #aenco-videos .aenco-prev {
+          left: -10%; }
+        .welcome-area .header-token .welcome-right #aenco-videos .aenco-next {
+          right: -10%; }
+        .welcome-area .header-token .welcome-right #aenco-videos .carousel-indicators {
+          bottom: -20px; }
+        .welcome-area .header-token .welcome-right #aenco-videos .carousel-inner {
+          min-height: 420px;
+          min-width: auto;
+          background-color: white;
+          border-style: solid;
+          border-radius: 16px; }
+          .welcome-area .header-token .welcome-right #aenco-videos .carousel-inner .carousel-item iframe {
+            margin: 20px;
+            width: 90%; }
+          .welcome-area .header-token .welcome-right #aenco-videos .carousel-inner .carousel-item p {
+            margin-top: 20px;
+            text-align: center;
+            color: black; }
     .welcome-area .header-token.basic {
       top: 62%; }
     .welcome-area .header-token.text {
@@ -1061,9 +1081,6 @@ header
       line-height: 28px;
       letter-spacing: 1px;
       margin-bottom: 40px; }
-    .welcome-area .header-token iframe {
-      width: 100%;
-      height: 100%; }
   .welcome-area .scroll-to {
     position: absolute;
     width: 100%;
@@ -1772,120 +1789,128 @@ footer {
       margin: 0px;
       margin-bottom: 30px;
       text-align: center; } }
-.generation-rollout {
-  margin-top: 30px;
-  margin-bottom: 60px; }
-  .generation-rollout img {
-    max-width: 100%;
-    height: auto;
-    width: auto; }
-  .generation-rollout .first-generation {
+#generation-rollout img {
+  max-width: 100%;
+  height: auto;
+  width: auto; }
+#generation-rollout .first-generation {
+  margin-bottom: 10px; }
+  #generation-rollout .first-generation h3 {
+    color: #71de15; }
+  #generation-rollout .first-generation li {
     margin-bottom: 10px; }
-    .generation-rollout .first-generation h3 {
-      color: #71de15; }
-    .generation-rollout .first-generation li {
-      margin-bottom: 10px; }
-  .generation-rollout .second-generation {
+#generation-rollout .second-generation {
+  margin-bottom: 10px; }
+  #generation-rollout .second-generation h3 {
+    color: #00c48f; }
+  #generation-rollout .second-generation li {
     margin-bottom: 10px; }
-    .generation-rollout .second-generation h3 {
-      color: #00c48f; }
-    .generation-rollout .second-generation li {
-      margin-bottom: 10px; }
-  .generation-rollout .third-generation {
+#generation-rollout .third-generation {
+  margin-bottom: 10px; }
+  #generation-rollout .third-generation h3 {
+    color: #1496b7; }
+  #generation-rollout .third-generation li {
     margin-bottom: 10px; }
-    .generation-rollout .third-generation h3 {
-      color: #1496b7; }
-    .generation-rollout .third-generation li {
-      margin-bottom: 10px; }
 
-.legal-framework {
+#legal-framework img {
+  width: 100%;
+  height: auto;
+  display: block;
+  margin-left: auto;
+  margin-right: auto; }
+
+#ecosystem img {
+  width: 70%;
+  height: auto;
+  margin-left: auto;
+  margin-right: auto;
+  margin-bottom: 20px; }
+#ecosystem #three-pillars {
+  margin-top: 30px; }
+#ecosystem .aenco-ib-solutions {
+  margin-bottom: 20px; }
+  #ecosystem .aenco-ib-solutions h3 {
+    color: #b2d254; }
+  #ecosystem .aenco-ib-solutions li {
+    margin-bottom: 10px; }
+#ecosystem .aenco-prime-solutions {
+  margin-bottom: 20px; }
+  #ecosystem .aenco-prime-solutions h3 {
+    color: #23d3b5; }
+  #ecosystem .aenco-prime-solutions li {
+    margin-bottom: 10px; }
+#ecosystem .aenco-smartcap-solutions {
+  margin-bottom: 20px; }
+  #ecosystem .aenco-smartcap-solutions h3 {
+    color: #147ce5; }
+  #ecosystem .aenco-smartcap-solutions li {
+    margin-bottom: 10px; }
+
+#benefit {
   margin-top: 30px;
   margin-bottom: 30px; }
-  .legal-framework img {
+  #benefit img {
     width: 100%;
     height: auto;
     display: block;
     margin-left: auto;
     margin-right: auto; }
 
-.aenco-ecosystem {
-  margin-top: 50px;
-  margin-bottom: 50px; }
-  .aenco-ecosystem img {
-    width: 70%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto; }
-  .aenco-ecosystem #challenges-opportunity .card {
-    border: none;
-    width: 30rem;
-    margin-left: auto;
-    margin-right: auto; }
-    .aenco-ecosystem #challenges-opportunity .card .card-title {
-      text-align: center; }
-    .aenco-ecosystem #challenges-opportunity .card img {
-      display: block;
-      width: 20%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto; }
-    .aenco-ecosystem #challenges-opportunity .card p {
-      display: block;
-      width: 80%;
-      height: auto;
-      margin-left: auto;
-      margin-right: auto;
-      text-align: center; }
-  .aenco-ecosystem .aenco-video-prev {
-    margin: auto; }
-    .aenco-ecosystem .aenco-video-prev a {
-      text-align: center; }
-  .aenco-ecosystem .aenco-video-next {
-    margin: auto; }
-    .aenco-ecosystem .aenco-video-next a {
-      text-align: center; }
-  .aenco-ecosystem .aenco-video-wrapper {
-    margin-top: 15px;
-    margin-left: auto;
-    margin-right: auto; }
-    .aenco-ecosystem .aenco-video-wrapper .card {
-      margin: auto;
-      border: none; }
-      .aenco-ecosystem .aenco-video-wrapper .card .owl-video-wrapper {
-        margin-left: auto;
-        margin-right: auto; }
-      .aenco-ecosystem .aenco-video-wrapper .card p {
-        margin-top: 10px;
-        text-align: center; }
-  .aenco-ecosystem #three-pillars {
-    margin-top: 30px; }
-  .aenco-ecosystem .aenco-ib-solutions {
-    margin-bottom: 20px; }
-    .aenco-ecosystem .aenco-ib-solutions h3 {
-      color: #b2d254; }
-    .aenco-ecosystem .aenco-ib-solutions li {
-      margin-bottom: 10px; }
-  .aenco-ecosystem .aenco-prime-solutions {
-    margin-bottom: 20px; }
-    .aenco-ecosystem .aenco-prime-solutions h3 {
-      color: #23d3b5; }
-    .aenco-ecosystem .aenco-prime-solutions li {
-      margin-bottom: 10px; }
-  .aenco-ecosystem .aenco-smartcap-solutions {
-    margin-bottom: 20px; }
-    .aenco-ecosystem .aenco-smartcap-solutions h3 {
-      color: #147ce5; }
-    .aenco-ecosystem .aenco-smartcap-solutions li {
-      margin-bottom: 10px; }
-
-.holder-benefits {
-  margin-top: 30px;
-  margin-bottom: 30px; }
-  .holder-benefits img {
-    width: 100%;
-    height: auto;
+#opportunity .card {
+  border: none;
+  width: 90%;
+  margin-left: auto;
+  margin-right: auto; }
+  #opportunity .card .card-title {
+    text-align: center; }
+  #opportunity .card img {
     display: block;
+    width: 20%;
+    height: auto;
     margin-left: auto;
     margin-right: auto; }
+  #opportunity .card p {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center; }
+
+.modal-backdrop.in {
+  filter: alpha(opacity=7);
+  opacity: 0.7; }
+
+.modal-content {
+  background: none;
+  border: 0;
+  -moz-border-radius: 0;
+  -webkit-border-radius: 0;
+  border-radius: 0;
+  -moz-box-shadow: none;
+  -webkit-box-shadow: none;
+  box-shadow: none; }
+
+.modal-body {
+  padding: 0 25px 25px 25px;
+  min-width: 480px;
+  min-height: 270px;
+  margin: auto; }
+
+.modal-header {
+  padding: 25px 25px 15px 25px;
+  text-align: right; }
+
+.modal-header, .modal-footer {
+  border: 0; }
+
+.modal-header .close {
+  float: none;
+  margin: 0;
+  font-size: 36px;
+  color: #fff;
+  font-weight: 300;
+  text-shadow: none;
+  opacity: 1; }
 
 /*# sourceMappingURL=green.css.map */

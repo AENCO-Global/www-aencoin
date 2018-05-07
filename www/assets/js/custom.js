@@ -4,7 +4,7 @@
     $(document).ready(function(){
         welcome();
 
-        /** Menu Drop down Toggle */
+        /** Menu Drop down toggle */
         if($('.menu-trigger').length){
             $('.menu-trigger').click(function(){
                 $(this).toggleClass('active');
@@ -12,28 +12,13 @@
             });
         }
 
-        /** Owl Carousel */
-        $('.owl-carousel').owlCarousel({loop: true,
-                                        margin: 5,
-                                        video: true,
-                                        videoWidth: 270,
-                                        videoHeight: 160,
-                                        autoplay:true,
-                                        autoplayTimeout:1000,
-                                        autoplayHoverPause:true,
-                                        responsive: {0: {items:1},
-                                                     600:{items:2},
-                                                     1000:{items:3}
-            }
+        $('.launch-modal').on('click', function(e){
+            e.preventDefault();
+            $( '#' + $(this).data('modal-id') ).modal();
         });
-
-        /** Countdown Init */
-        if($('.countdown').length){
-            $('.countdown').downCount({
-                date: '06/01/2018 00:00:00',
-                offset: +10
-            });
-        }
+        $('.close').click(function(){
+            $('iframe').attr('src', $('iframe').attr('src'));
+        });
 
         /** Scroll Reveal Version 3 */
         window.sr = new ScrollReveal();
@@ -62,7 +47,6 @@
             delay: 800
         });
 
-
         /** Menu elevator animation */
         $('a[href*=\\#]:not([href=\\#])').click(function() {
             if (location.pathname.replace(/^\//,'') == this.pathname.replace(/^\//,'') && location.hostname == this.hostname) {
@@ -81,15 +65,6 @@
                 }
             }
         });
-
-        /** Token Progress Bar */
-        if($('.token-progress ul').length){
-            $(".token-progress ul").find(".item").each(function(i){
-                $('.token-progress ul .item:eq(' +[i]+ ')').css("left", $('.token-progress ul .item:eq(' + [i] + ')').data('position'));
-            });
-            var progress = $(".token-progress ul .progress-active").data('progress');
-            $(".token-progress ul .progress-active").css('width', progress);
-        }
 
         /** Pie Chart for Token Supply */
         var ctx = document.getElementById("token-supply").getContext('2d');
@@ -207,13 +182,4 @@
             $('.welcome-area').css('height', 'auto');
         }
     }
-
-    /** Dis-allow user to submit the form if the Google Recaptcha is not ticked */
-    $('form').submit(function(event) {
-
-        var recaptcha = $('#g-recaptcha-response').val();
-        if (recaptcha === '') {
-            event.preventDefault();
-        }
-    });
 })(jQuery);

@@ -6,21 +6,6 @@
   min-height: 620px;
   position: relative;
 
-  .welcome-left {
-    margin-top: 20px;
-    margin-bottom: 20px;
-  }
-
-  .welcome-right {
-    margin-top: 20px;
-    margin-bottom: 20px;
-
-      .card {
-        width: 100%;
-        height: 100%;
-      }
-  }
-
   &.bg-top-right {
     &:before {
       content: '';
@@ -76,6 +61,55 @@
     -webkit-transform: translateY(-65%);
     transform: translateY(-65%);
 
+    .welcome-left {
+      margin-top: 40px;
+    }
+
+    .welcome-right {
+      margin-top: 40px;
+
+      #aenco-videos {
+        margin-top: 15px;
+        margin-left: auto;
+        margin-right: auto;
+        width: 100%;
+        height: auto;
+
+        .aenco-prev {
+          left: -10%;
+        }
+
+        .aenco-next {
+          right: -10%;
+        }
+
+        .carousel-indicators {
+          bottom: -20px;
+        }
+
+        .carousel-inner {
+          min-height: 420px;
+          min-width: auto;
+          background-color: white;
+          border-style: solid;
+          border-radius: 16px;
+
+          .carousel-item {
+            iframe {
+              margin: 20px;
+              width: 90%;
+            }
+
+            p {
+              margin-top: 20px;
+              text-align: center;
+              color: black;
+            }
+          }
+        }
+      }
+    }
+
     &.basic {
       top: 62%;
     }
@@ -102,11 +136,6 @@
       line-height: 28px;
       letter-spacing: 1px;
       margin-bottom: 40px;
-    }
-
-    iframe {
-      width: 100%;
-      height: 100%;
     }
   }
 

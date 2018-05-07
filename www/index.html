@@ -22,9 +22,6 @@
     <link type="text/css" href="./assets/css/vendor/fa-regular.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/fa-brands.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/fontawesome.css" rel="stylesheet">
-    <!-- Owl Carousel -->
-    <link type="text/css" href="./assets/css/vendor/owl.carousel.min.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/vendor/owl.theme.default.css" rel="stylesheet">
     <!-- Theme -->
     <link rel="stylesheet" href="./assets/css/green.css" type="text/css">
 
@@ -50,6 +47,26 @@
     <!-- Matomo Script End -->
 </head>
 <body>
+    <!-- Modal Video
+    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="modal-video">
+                        <div class="embed-responsive embed-responsive-16by9">
+                            <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>-->
+
     <!-- Loading Area Start -->
     <div class="loading-wrapper">
         <div class="loading">
@@ -71,6 +88,7 @@
                         <!-- ***** Logo End ***** -->
                         <!-- ***** Menu Start ***** -->
                         <ul class="nav">
+                            <li><a href="#opportunity">Challenges & Opportunities</a></li>
                             <li><a href="#ecosystem">AENCO Ecosystem</a></li>
                             <li><a href="#benefit">AEN Token Benefits</a></li>
                             <li><a href="#team">Team</a></li>
@@ -94,35 +112,97 @@
         <div class="header-token basic">
             <div class="container">
                 <div class="row">
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 welcome-left">
+                    <div class="col-lg-5 col-md-5 col-sm-5 col-xs-5 welcome-left">
                         <h1>AENCO Global HealthTech Blockchain Financial Solutions</h1>
                         <p>AENCO is the world’s first blockchain-based healthcare financial solutions platform that leverages off of a rich pipeline and network of HealthTech partners, technologists, and financial professionals.</p>
                         <a target="_blank" href="http://signup.aencoin.com/register" class="btn-secondary-box">Subscribe For Interest</a>
                     </div>
-                    <div class="col-lg-6 col-md-6 col-sm-6 col-xs-6 welcome-right">
-                        <div class="card">
-                            <iframe src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0"></iframe>
+                    <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 welcome-right">
+                        <ul class="nav nav-tabs" id="myTab" role="tablist">
+                            <li class="nav-item">
+                                <a class="nav-link active" id="english-tab" data-toggle="tab" href="#en-aenco-video" role="tab" aria-controls="home" aria-selected="true">English</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link" id="chinese-tab" data-toggle="tab" href="#cn-aenco-video" role="tab" aria-controls="profile" aria-selected="false">Chinese</a>
+                            </li>
+                        </ul>
+                        <div class="tab-content" id="myTabContent">
+                            <div class="tab-pane fade show active" id="en-aenco-video" role="tabpanel" aria-labelledby="english-tab">En</div>
+                            <div class="tab-pane fade" id="cn-aenco-video" role="tabpanel" aria-labelledby="chinese-tab">Cn</div>
                         </div>
+                        <!--<div class="col-sm-8 col-sm-offset-2 video-link medium-paragraph">
+                            <a href="#" class="launch-modal" data-modal-id="modal-video">
+                                <span class="video-link-icon"><i class="fa fa-play"></i></span>
+                                <span class="video-link-text">Launch modal video</span>
+                            </a>
+                        </div>-->
+                        <!--<div id="aenco-videos" class="carousel slide" data-ride="carousel">
+                            <ol class="carousel-indicators">
+                                <li data-target="#aenco-videos" data-slide-to="0" class="active"></li>
+                                <li data-target="#aenco-videos" data-slide-to="1"></li>
+                                <li data-target="#aenco-videos" data-slide-to="2"></li>
+                                <li data-target="#aenco-videos" data-slide-to="3"></li>
+                                <li data-target="#aenco-videos" data-slide-to="4"></li>
+                            </ol>
+                            <div class="carousel-inner">
+                                <div class="carousel-item active">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
+                                    </div>
+                                    <p>Meet the Aenco Team</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/thFx7IndFR4?rel=0" allowfullscreen></iframe>
+                                    </div>
+                                    <p>Co-founders Ian and Darren talk about the purpose, mission and vision of Aenco</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/xXvdMVgl8aQ?rel=0" allowfullscreen></iframe>
+                                    </div>
+                                    <p>ICO Regulation</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/Vv4lgRwoX08?rel=0" allowfullscreen></iframe>
+                                    </div>
+                                    <p>3-Generation of technology rollout</p>
+                                </div>
+                                <div class="carousel-item">
+                                    <div class="embed-responsive embed-responsive-16by9">
+                                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/-l4mUSPZWUI?rel=0" allowfullscreen></iframe>
+                                    </div>
+                                    <p>Our Community</p>
+                                </div>
+                            </div>
+                            <a class="carousel-control-prev aenco-prev" href="#aenco-videos" role="button" data-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Previous</span>
+                            </a>
+                            <a class="carousel-control-next aenco-next" href="#aenco-videos" role="button" data-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="sr-only">Next</span>
+                            </a>
+                        </div>-->
                     </div>
                 </div>
             </div>
         </div>
     </section>
     <!-- Welcome Area End -->
-    <!-- Aenco Ecosystem Area Start -->
-    <section class="aenco-ecosystem" id="ecosystem">
+    <!-- Challenges & Solution Area Start -->
+    <section class="section" id="opportunity">
         <div class="container">
             <!-- Title -->
             <div class="row">
                 <div class="col-lg-12">
                     <div class="center-heading">
-                        <h1 class="section-title">The Aenco Ecosystem Solutions</h1>
-                        <p>Innovation | Impact | Integrity</p>
+                        <h1 class="section-title">HealthTech Challenges & Opportunities</h1>
                     </div>
                 </div>
             </div>
-            <!-- Challenges & Opportunities -->
-            <div id="challenges-opportunity" class="row">
+            <div class="row">
                 <div class="col-sm-6">
                     <div class="card">
                         <h2 class="card-title">Challenges</h2>
@@ -182,42 +262,21 @@
                     </div>
                 </div>
             </div>
-            <!-- Video -->
+        </div>
+    </section>
+    <!-- Challenges & Solution Area End -->
+    <!-- Aenco Ecosystem Area Start -->
+    <section class="section" id="ecosystem">
+        <div class="container">
+            <!-- Title -->
             <div class="row">
-                <!--<div class="col-1 aenco-video-prev">
-                    <a><i class="fas fa-angle-left"></i></a>
-                </div>-->
-                <div class="owl-carousel owl-theme aenco-video-wrapper col-10">
-                    <div class="card">
-                        <div class="card-body">
-                            <a class="owl-video" href="https://www.youtube.com/watch?v=thFx7IndFR4"></a>
-                            <p>Co-founders Ian and Darren talk about the purpose, mission and vision of Aenco</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <a class="owl-video" href="https://www.youtube.com/watch?v=xXvdMVgl8aQ"></a>
-                            <p>ICO Regulation</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <a class="owl-video" href="https://www.youtube.com/watch?v=Vv4lgRwoX08"></a>
-                            <p>3-Generation of technology rollout</p>
-                        </div>
-                    </div>
-                    <div class="card">
-                        <div class="card-body">
-                            <a class="owl-video" href="https://www.youtube.com/watch?v=-l4mUSPZWUI"></a>
-                            <p>Components of our community</p>
-                        </div>
+                <div class="col-lg-12">
+                    <div class="center-heading">
+                        <h1 class="section-title">The Aenco Ecosystem Solutions</h1>
+                        <p>Innovation | Impactful | Integrity</p>
                     </div>
                 </div>
-                <!--<div class="col-1 aenco-video-next">
-                    <a><i class="fas fa-angle-right"></i></a>
-                </div>-->
             </div>
-            <!-- Three Pillars -->
             <div id="three-pillars" class="row">
                 <div class="col-sm-6">
                     <img src="./assets/img/utilitymembershipaccess.png">
@@ -249,7 +308,7 @@
     </section>
     <!-- Aenco Ecosystem Area End -->
     <!-- Legal Framework Area Start -->
-    <section class="legal-framework bg-bottom" id="legal-framework">
+    <section class="section bg-bottom" id="legal-framework">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -286,7 +345,7 @@
     </section>
     <!-- Token Supply & Allocation Area End -->
     <!-- 3-Generation Rollout Area Start -->
-    <section class="generation-rollout">
+    <section class="section" id="generation-rollout">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -328,7 +387,7 @@
     </section>
     <!-- 3-Generation Rollout Area End -->
     <!-- Holder Benefits Area Start -->
-    <section class="holder-benefits bg-bottom" id="benefit">
+    <section class="section bg-bottom" id="benefit">
         <div class="container">
             <div class="row">
                 <div class="col-lg-12">
@@ -942,7 +1001,7 @@
                             <p>Vistra (Cayman) Limited, P.O. Box 31119 Grand Pavilion, Hisbiscus Way, 802 West Bay Road,
                                 Grand Cayman, KY1-1205 Cayman Islands</p>
                             <h3 class="section-title">Contact Address</h3>
-                            <p>904, 9/F, Office Plus@Sheung Wan, 93-103 Wing Lok Street, Sheug Wan, Hong Kong</p>
+                            <p>904, 9/F, Office Plus@Sheung Wan, 93-103 Wing Lok Street, Sheung Wan, Hong Kong</p>
                             <ul class="list">
                                 <li>
                                     <i class="far fa-envelope"></i>
@@ -1007,7 +1066,6 @@
     <script type="text/javascript" src="./assets/js/vendor/Chart.min.js"></script>
     <!-- Misc -->
     <script type="text/javascript" src="./assets/js/vendor/scrollreveal.min.js"></script>
-    <script type="text/javascript" src="./assets/js/vendor/owl.carousel.min.js"></script>
     <!-- Custom -->
     <script type="text/javascript" src="./assets/js/custom.min.js"></script>
 </body>
