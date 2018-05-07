@@ -118,17 +118,19 @@
                         <a target="_blank" href="http://signup.aencoin.com/register" class="btn-secondary-box">Subscribe For Interest</a>
                     </div>
                     <div class="col-lg-7 col-md-7 col-sm-7 col-xs-7 welcome-right">
-                        <ul class="nav nav-tabs" id="myTab" role="tablist">
-                            <li class="nav-item">
-                                <a class="nav-link active" id="english-tab" data-toggle="tab" href="#en-aenco-video" role="tab" aria-controls="home" aria-selected="true">English</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link" id="chinese-tab" data-toggle="tab" href="#cn-aenco-video" role="tab" aria-controls="profile" aria-selected="false">Chinese</a>
-                            </li>
-                        </ul>
-                        <div class="tab-content" id="myTabContent">
-                            <div class="tab-pane fade show active" id="en-aenco-video" role="tabpanel" aria-labelledby="english-tab">En</div>
-                            <div class="tab-pane fade" id="cn-aenco-video" role="tabpanel" aria-labelledby="chinese-tab">Cn</div>
+                        <div class="tab-frame">
+                            <input type="radio" checked name="tab" id="tab1">
+                            <label for="tab1">English</label>
+                            <input type="radio" name="tab" id="tab2">
+                            <label for="tab2">Chinese</label>
+
+                            <div class="tab">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
+                            </div>
+                            <div class="tab">
+                                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/U5A5d22b17E?rel=0" allowfullscreen></iframe>
+                            </div>
+                            <p>Meet the Aenco Team</p>
                         </div>
                         <!--<div class="col-sm-8 col-sm-offset-2 video-link medium-paragraph">
                             <a href="#" class="launch-modal" data-modal-id="modal-video">
