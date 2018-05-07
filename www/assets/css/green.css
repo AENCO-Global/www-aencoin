@@ -1036,31 +1036,10 @@ header
       margin-top: 40px; }
     .welcome-area .header-token .welcome-right {
       margin-top: 40px; }
-      .welcome-area .header-token .welcome-right #aenco-videos {
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
-        width: 100%;
-        height: auto; }
-        .welcome-area .header-token .welcome-right #aenco-videos .aenco-prev {
-          left: -10%; }
-        .welcome-area .header-token .welcome-right #aenco-videos .aenco-next {
-          right: -10%; }
-        .welcome-area .header-token .welcome-right #aenco-videos .carousel-indicators {
-          bottom: -20px; }
-        .welcome-area .header-token .welcome-right #aenco-videos .carousel-inner {
-          min-height: 420px;
-          min-width: auto;
-          background-color: white;
-          border-style: solid;
-          border-radius: 16px; }
-          .welcome-area .header-token .welcome-right #aenco-videos .carousel-inner .carousel-item iframe {
-            margin: 20px;
-            width: 90%; }
-          .welcome-area .header-token .welcome-right #aenco-videos .carousel-inner .carousel-item p {
-            margin-top: 20px;
-            text-align: center;
-            color: black; }
+      .welcome-area .header-token .welcome-right iframe {
+        display: block;
+        margin: auto;
+        width: 100%; }
     .welcome-area .header-token.basic {
       top: 62%; }
     .welcome-area .header-token.text {
@@ -1856,6 +1835,12 @@ footer {
     margin-left: auto;
     margin-right: auto; }
 
+#opportunity .aenco-video-col .aenco-video {
+  height: 340px; }
+#opportunity .aenco-video-col iframe {
+  display: block;
+  margin: auto;
+  width: 100%; }
 #opportunity .card {
   border: none;
   width: 90%;

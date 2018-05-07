@@ -68,45 +68,10 @@
     .welcome-right {
       margin-top: 40px;
 
-      #aenco-videos {
-        margin-top: 15px;
-        margin-left: auto;
-        margin-right: auto;
+      iframe {
+        display: block;
+        margin: auto;
         width: 100%;
-        height: auto;
-
-        .aenco-prev {
-          left: -10%;
-        }
-
-        .aenco-next {
-          right: -10%;
-        }
-
-        .carousel-indicators {
-          bottom: -20px;
-        }
-
-        .carousel-inner {
-          min-height: 420px;
-          min-width: auto;
-          background-color: white;
-          border-style: solid;
-          border-radius: 16px;
-
-          .carousel-item {
-            iframe {
-              margin: 20px;
-              width: 90%;
-            }
-
-            p {
-              margin-top: 20px;
-              text-align: center;
-              color: black;
-            }
-          }
-        }
       }
     }
 
