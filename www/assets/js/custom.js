@@ -2,10 +2,9 @@
     "use strict";
 
     $(document).ready(function(){
-
         welcome();
 
-        /** Menu Dropdown Toggle */
+        /** Menu Drop down Toggle */
         if($('.menu-trigger').length){
             $('.menu-trigger').click(function(){
                 $(this).toggleClass('active');
@@ -25,7 +24,7 @@
             }
         });
 
-        /** Countdown init */
+        /** Countdown Init */
         if($('.countdown').length){
             $('.countdown').downCount({
                 date: '06/01/2018 00:00:00',
