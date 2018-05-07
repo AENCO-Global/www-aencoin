@@ -1836,12 +1836,29 @@ footer {
       margin-left: auto;
       margin-right: auto;
       text-align: center; }
+  .aenco-ecosystem .aenco-video-prev {
+    margin: auto; }
+    .aenco-ecosystem .aenco-video-prev a {
+      text-align: center; }
+  .aenco-ecosystem .aenco-video-next {
+    margin: auto; }
+    .aenco-ecosystem .aenco-video-next a {
+      text-align: center; }
   .aenco-ecosystem .aenco-video-wrapper {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto; }
-    .aenco-ecosystem .aenco-video-wrapper .aenco-video {
-      margin: auto; }
+    .aenco-ecosystem .aenco-video-wrapper .card {
+      margin: auto;
+      border: none; }
+      .aenco-ecosystem .aenco-video-wrapper .card .owl-video-wrapper {
+        margin-left: auto;
+        margin-right: auto; }
+      .aenco-ecosystem .aenco-video-wrapper .card p {
+        margin-top: 10px;
+        text-align: center; }
+  .aenco-ecosystem #three-pillars {
+    margin-top: 30px; }
   .aenco-ecosystem .aenco-ib-solutions {
     margin-bottom: 20px; }
     .aenco-ecosystem .aenco-ib-solutions h3 {

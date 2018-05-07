@@ -40,14 +40,45 @@
     }
   }
 
+  .aenco-video-prev {
+    margin: auto;
+
+    a {
+      text-align: center;
+    }
+  }
+
+  .aenco-video-next {
+    margin: auto;
+
+    a {
+      text-align: center;
+    }
+  }
+
   .aenco-video-wrapper {
     margin-top: 15px;
     margin-left: auto;
     margin-right: auto;
 
-    .aenco-video {
+    .card {
       margin: auto;
+      border: none;
+
+      .owl-video-wrapper {
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      p {
+        margin-top: 10px;
+        text-align: center;
+      }
     }
+  }
+
+  #three-pillars {
+    margin-top: 30px;
   }
 
   .aenco-ib-solutions {

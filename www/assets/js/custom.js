@@ -14,10 +14,13 @@
 
         /** Owl Carousel */
         $('.owl-carousel').owlCarousel({loop: true,
-                                        margin: 10,
+                                        margin: 5,
                                         video: true,
                                         videoWidth: 270,
                                         videoHeight: 160,
+                                        autoplay:true,
+                                        autoplayTimeout:1000,
+                                        autoplayHoverPause:true,
                                         responsive: {0: {items:1},
                                                      600:{items:2},
                                                      1000:{items:3}
