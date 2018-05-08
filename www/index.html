@@ -26,6 +26,26 @@
     <link rel="stylesheet" href="./assets/css/green.css" type="text/css">
 </head>
 <body>
+    <!-- Modal Video -->
+    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </div>
+    </div>
+
     <!-- Loading Area Start -->
     <div class="loading-wrapper">
         <div class="loading">
@@ -78,6 +98,12 @@
                             <a target="_blank" href="./assets/docs/aenco-whitepaper-v3.pdf" class="btn-secondary-box">Whitepaper</a>
                             <a target="_blank" href="./assets/docs/aenco-two-pager.pdf" class="btn-secondary-box">Two-Page Summary</a>
                             <a target="_blank" href="./assets/docs/aenco-token-economics-v3.pdf" class="btn-secondary-box">Token Paper</a>
+                        </div>
+                        <div class="aenco-video-launcher">
+                            <a href="#" class="launch-modal btn-secondary-box" data-modal-id="modal-video">
+                                <span class="video-link-icon"><i class="fab fa-youtube"></i></span>
+                                <span class="video-link-text">Launch Aenco Video</span>
+                            </a>
                         </div>
                     </div>
                 </div>

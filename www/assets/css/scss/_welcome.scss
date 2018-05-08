@@ -94,6 +94,12 @@
       }
     }
 
+    .aenco-video-launcher {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
     p {
       @include font($normal, 16px);
       color: $textLight;

@@ -1053,6 +1053,10 @@ header
       .welcome-area .header-token .aenco-document-link .btn-secondary-box {
         width: 250px;
         margin: 10px; }
+    .welcome-area .header-token .aenco-video-launcher {
+      display: flex;
+      justify-content: center;
+      align-items: center; }
     .welcome-area .header-token p {
       font-weight: 400;
       font-size: 16px;
