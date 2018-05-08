@@ -15,7 +15,7 @@ echo "No tests yet Defined"
 echo "-----------------------------------------"
 
 echo "--=== Modify Version Information ===--"
-echo "Version $1" > version.html
+echo "Version $1" > ./www/version.html
 ls  -l
 echo "--------------------------------------"
 
