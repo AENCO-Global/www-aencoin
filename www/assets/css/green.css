@@ -1032,14 +1032,6 @@ header
     z-index: 5;
     -webkit-transform: translateY(-65%);
     transform: translateY(-65%); }
-    .welcome-area .header-token .welcome-left {
-      margin-top: 40px; }
-    .welcome-area .header-token .welcome-right {
-      margin-top: 40px; }
-      .welcome-area .header-token .welcome-right iframe {
-        display: block;
-        margin: auto;
-        width: 100%; }
     .welcome-area .header-token.basic {
       top: 62%; }
     .welcome-area .header-token.text {

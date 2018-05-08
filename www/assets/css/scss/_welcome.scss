@@ -61,20 +61,6 @@
     -webkit-transform: translateY(-65%);
     transform: translateY(-65%);
 
-    .welcome-left {
-      margin-top: 40px;
-    }
-
-    .welcome-right {
-      margin-top: 40px;
-
-      iframe {
-        display: block;
-        margin: auto;
-        width: 100%;
-      }
-    }
-
     &.basic {
       top: 62%;
     }
