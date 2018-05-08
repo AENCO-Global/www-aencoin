@@ -93,6 +93,19 @@
       line-height: 46px;
       letter-spacing: 0.7px;
       margin-bottom: 30px;
+
+      text-align: center;
+    }
+
+    .aenco-document-link {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      .btn-secondary-box {
+        width: 250px;
+        margin: 10px;
+      }
     }
 
     p {
@@ -101,6 +114,8 @@
       line-height: 28px;
       letter-spacing: 1px;
       margin-bottom: 40px;
+
+      text-align: center;
     }
   }
 
