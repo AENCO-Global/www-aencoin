@@ -25,26 +25,26 @@
         sr.reveal('.sr-team-c1', {
                   origin: 'bottom',
                   distance: '50px',
-                  duration: 600,
-                  delay: 200
+                  duration: 200,
+                  delay: 100
         });
         sr.reveal('.sr-team-c2', {
             origin: 'bottom',
             distance: '50px',
-            duration: 600,
-            delay: 400
+            duration: 200,
+            delay: 200
         });
         sr.reveal('.sr-team-c3', {
             origin: 'bottom',
             distance: '50px',
-            duration: 600,
-            delay: 600
+            duration: 200,
+            delay: 400
         });
         sr.reveal('.sr-team-c4', {
             origin: 'bottom',
             distance: '50px',
-            duration: 600,
-            delay: 800
+            duration: 200,
+            delay: 600
         });
 
         /** Menu elevator animation */

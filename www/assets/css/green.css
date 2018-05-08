@@ -1047,16 +1047,17 @@ header
       margin-bottom: 30px;
       text-align: center; }
     .welcome-area .header-token .aenco-document-link {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      margin-left: auto;
+      margin-right: auto; }
       .welcome-area .header-token .aenco-document-link .btn-secondary-box {
         width: 250px;
-        margin: 10px; }
+        margin-left: auto;
+        margin-right: auto;
+        margin-bottom: 20px; }
     .welcome-area .header-token .aenco-video-launcher {
-      display: flex;
-      justify-content: center;
-      align-items: center; }
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px; }
     .welcome-area .header-token p {
       font-weight: 400;
       font-size: 16px;
@@ -1119,6 +1120,8 @@ header
     .welcome-area .header-token .box {
       margin-top: 90px;
       margin-bottom: 100px; }
+    .welcome-area .header-token .btn-secondary-box {
+      display: block; }
   .welcome-area .header-image {
     margin-top: 60px;
     margin-bottom: 90px; } }
@@ -1811,6 +1814,9 @@ footer {
   margin-bottom: 20px; }
 #ecosystem #three-pillars {
   margin-top: 30px; }
+  #ecosystem #three-pillars img {
+    display: block;
+    margin: auto; }
 #ecosystem .aenco-ib-solutions {
   margin-bottom: 20px; }
   #ecosystem .aenco-ib-solutions h3 {
@@ -1868,7 +1874,7 @@ footer {
     text-align: center; }
 
 .modal-backdrop.in {
-  filter: alpha(opacity=7);
+  filter: alpha(opacity=30);
   opacity: 0.7; }
 
 .modal-content {
