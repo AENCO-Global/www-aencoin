@@ -997,7 +997,7 @@ header
     height: 100%;
     left: 0px;
     top: 0px;
-    background: url("../img/blue-background.png") no-repeat;
+    background: url("../img/blue-background.png") center no-repeat;
     z-index: 3; }
   .welcome-area.bg-bottom-center:before {
     content: '';

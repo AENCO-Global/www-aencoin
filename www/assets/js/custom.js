@@ -17,7 +17,7 @@
             $( '#' + $(this).data('modal-id') ).modal();
         });
         $('.close').click(function(){
-            $('iframe').attr('src', $('iframe').attr('src'));
+            $('#what-is-aenco-video').attr('src', $('#what-is-aenco-video').attr('src'));
         });
 
         /** Scroll Reveal Version 3 */
