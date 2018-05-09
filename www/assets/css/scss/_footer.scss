@@ -187,7 +187,7 @@ footer {
       margin-bottom: 50px;
     }
 
-    .version {
+    #version-number {
       @include font($normal, 12px);
       line-height: 24px;
       color: #F3F8FF;

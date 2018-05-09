@@ -1762,7 +1762,7 @@ footer {
       letter-spacing: 1.7px;
       text-align: left;
       margin-bottom: 50px; }
-    footer .footer-bottom .version {
+    footer .footer-bottom #version-number {
       font-weight: 400;
       font-size: 12px;
       line-height: 24px;
