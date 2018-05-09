@@ -12,7 +12,7 @@
             });
         }
 
-        $('#version-number').load('/version.html body');
+        $('#version-number').load('./version.html');
 
         $('.launch-modal').on('click', function(e){
             e.preventDefault();
