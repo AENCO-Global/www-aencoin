@@ -1046,22 +1046,8 @@ header
       letter-spacing: 0.7px;
       margin-bottom: 30px;
       text-align: center; }
-    .welcome-area .header-token .aenco-document-link {
-      margin-left: auto;
-      margin-right: auto; }
-      .welcome-area .header-token .aenco-document-link .btn-secondary-box {
-        width: 250px;
-        margin-left: auto;
-        margin-right: auto;
-        margin-bottom: 20px; }
-    .welcome-area .header-token .aenco-video-launcher {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px; }
-    .welcome-area .header-token .register-button {
-      margin-left: auto;
-      margin-right: auto;
-      margin-bottom: 20px; }
+    .welcome-area .header-token .btn-secondary-box {
+      width: 250px; }
     .welcome-area .header-token p {
       font-weight: 400;
       font-size: 16px;
