@@ -101,6 +101,12 @@
       margin-bottom: 20px;
     }
 
+    .register-button {
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 20px;
+    }
+
     p {
       @include font($normal, 16px);
       color: $textLight;
