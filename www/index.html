@@ -43,18 +43,64 @@
 <body>
     <!-- Modal Video -->
     <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
-        <div class="modal-dialog" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+        <div class="modal-dialog modal-lg" role="document">
+            <div id="aenco-modal-content" class="modal-content">
+                <div id="aenco-modal-header" class="modal-header">
+                    <button type="button" id="aenco-modal-close" class="close" data-dismiss="modal" aria-label="Close">
                         <span aria-hidden="true">&times;</span>
                     </button>
                 </div>
-                <div class="modal-body">
+                <div id="aenco-modal-body" class="modal-body">
                     <div class="modal-video">
                         <div class="embed-responsive embed-responsive-16by9">
                             <iframe id="what-is-aenco-video" class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
                         </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Eligible Contributor Modal -->
+    <div class="modal fade" id="eligible-contributor" tabindex="-1" role="dialog" aria-labelledby="eligible-contributor" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Eligible Contributors</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="eligible-contributor-modal-body" class="modal-body">
+                    <div style="overflow-x:auto;">
+                        <table class="table">
+                            <thead>
+                            <tr>
+                                <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
+                                <th scope="col">Hong Kong Residents</th>
+                                <th scope="col">Rest of the World</th>
+                            </tr>
+                            </thead>
+                            <tbody>
+                            <tr>
+                                <td>USA</td>
+                                <td>Proof of Identity: Passport or HKID</td>
+                                <td>Proof of Identity: Passport</td>
+                            </tr>
+                            <tr>
+                                <td>People's Republic of China</td>
+                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                            </tr>
+                            <tr>
+                                <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
+                                </td>
+                                <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
+                                    (excluding Real Estate) in excess of HKD 8 mil
+                                </td>
+                                <td></td>
+                            </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
@@ -128,6 +174,11 @@
                 <div class="row">
                     <div class="mx-auto my-1">
                         <a target="_blank" href="https://signup.aencoin.com/register" class="btn-secondary-box">Register</a>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="mx-auto my-1">
+                        <a href="#" class="text-light" data-toggle="modal" data-target="#eligible-contributor">Eligible Contributors</a>
                     </div>
                 </div>
             </div>
