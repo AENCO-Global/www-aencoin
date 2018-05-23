@@ -1,19 +1,20 @@
-/* ---------------------------------------------
-Table of Contents
-------------------------------------------------
-01. font & reset css
-02. pre-loader
-03. global styles
-04. buttons
-05. token box
-06. header
-07. welcome area
-08. services
-10. team
-11. parallax
-12. faq
-13. footer & contact
---------------------------------------------- */
+/**
+|------------------------------------------------
+| Table of Contents
+|------------------------------------------------
+|01. Font & Colour
+|02. pre-loader
+|03. global styles
+|04. buttons
+|05. token box
+|06. header
+|07. welcome area
+|08. services
+|10. team
+|11. parallax
+|12. faq
+|13. footer & contact
+|---------------------------------------------**/
 /**
  *  Theme Colouring
  */
@@ -1117,238 +1118,6 @@ header
     margin-bottom: 90px; } }
 /* 
 ---------------------------------------------
-services
---------------------------------------------- 
-*/
-.features-elliptical {
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 30px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
-  .features-elliptical.elliptical-bottom {
-    position: relative; }
-    .features-elliptical.elliptical-bottom:after {
-      content: '';
-      position: absolute;
-      width: 70%;
-      height: 32px;
-      top: 70px;
-      left: 70%;
-      background: url("../img/elliptical-bottom.png") center center no-repeat;
-      -webkit-transition: all 0.3s ease 0s;
-      -moz-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
-      transition: all 0.3s ease 0s; }
-  .features-elliptical.elliptical-top {
-    position: relative; }
-    .features-elliptical.elliptical-top:after {
-      content: '';
-      position: absolute;
-      width: 70%;
-      height: 32px;
-      top: 0px;
-      left: 70%;
-      background: url("../img/elliptical-top.png") center center no-repeat;
-      -webkit-transition: all 0.3s ease 0s;
-      -moz-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
-      transition: all 0.3s ease 0s; }
-  .features-elliptical .icon {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    border-radius: 100px;
-    border: 2px dashed #6F8BA4;
-    margin-bottom: 36px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; }
-    .features-elliptical .icon i {
-      display: block;
-      width: 100px;
-      height: 100px;
-      line-height: 100px;
-      color: #6F8BA4;
-      font-size: 50px; }
-  .features-elliptical .features-title {
-    font-weight: 400;
-    font-size: 18px;
-    color: #3B566E;
-    letter-spacing: 1.12px;
-    margin-bottom: 20px; }
-  .features-elliptical p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6F8BA4;
-    line-height: 28px;
-    letter-spacing: 1px; }
-  .features-elliptical:hover {
-    margin-top: -20px;
-    padding-bottom: 20px; }
-    .features-elliptical:hover.elliptical-bottom:after {
-      top: 90px; }
-    .features-elliptical:hover.elliptical-top:after {
-      top: 20px; }
-
-.features-line {
-  text-align: center;
-  padding-left: 20px;
-  padding-right: 20px;
-  margin-bottom: 30px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
-  .features-line.line {
-    position: relative; }
-    .features-line.line:after {
-      content: '';
-      position: absolute;
-      width: 70%;
-      height: 2px;
-      top: 50px;
-      left: 70%;
-      -webkit-transition: all 0.3s ease 0s;
-      -moz-transition: all 0.3s ease 0s;
-      -o-transition: all 0.3s ease 0s;
-      transition: all 0.3s ease 0s;
-      border: 1px dashed #0EB8D9; }
-  .features-line .icon {
-    width: 100px;
-    height: 100px;
-    margin: auto;
-    -webkit-border-radius: 100px;
-    -moz-border-radius: 100px;
-    -ms-border-radius: 100px;
-    border-radius: 100px;
-    margin-bottom: 36px;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s;
-    background: #0EB8D9; }
-    .features-line .icon i {
-      display: block;
-      width: 100px;
-      height: 100px;
-      line-height: 100px;
-      color: #fff;
-      font-size: 40px; }
-  .features-line .features-title {
-    font-weight: 400;
-    font-size: 18px;
-    color: #3B566E;
-    letter-spacing: 1.12px;
-    margin-bottom: 20px; }
-  .features-line p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6F8BA4;
-    line-height: 28px;
-    letter-spacing: 1px; }
-  .features-line:hover {
-    margin-top: -20px;
-    padding-bottom: 20px; }
-    .features-line:hover:after {
-      top: 70px; }
-
-.features-bordered {
-  border: 1px solid #CEE1F8;
-  -webkit-border-radius: 4px;
-  -moz-border-radius: 4px;
-  -ms-border-radius: 4px;
-  border-radius: 4px;
-  padding: 30px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s;
-  overflow: hidden;
-  margin-bottom: 30px; }
-  .features-bordered:hover {
-    border: 1px solid #0EB8D9; }
-  .features-bordered .icon {
-    margin-bottom: 25px; }
-  .features-bordered .features-title {
-    font-weight: 400;
-    font-size: 18px;
-    letter-spacing: 1.12px;
-    color: #3B566E;
-    line-height: 28px;
-    margin-bottom: 22px; }
-  .features-bordered p {
-    font-weight: 400;
-    font-size: 16px;
-    color: #6F8BA4;
-    letter-spacing: 1px;
-    line-height: 28px;
-    margin-bottom: 10px; }
-  .features-bordered a {
-    float: right;
-    font-weight: 400;
-    font-size: 14px;
-    letter-spacing: 0.88px;
-    color: #6F8BA4;
-    -webkit-transition: all 0.3s ease 0s;
-    -moz-transition: all 0.3s ease 0s;
-    -o-transition: all 0.3s ease 0s;
-    transition: all 0.3s ease 0s; }
-    .features-bordered a i {
-      margin-left: 3px; }
-    .features-bordered a:hover {
-      color: #01405F; }
-
-.features-shadow {
-  padding: 30px 20px;
-  text-align: center;
-  margin-bottom: 30px;
-  -webkit-transition: all 0.3s ease 0s;
-  -moz-transition: all 0.3s ease 0s;
-  -o-transition: all 0.3s ease 0s;
-  transition: all 0.3s ease 0s; }
-  .features-shadow .icon {
-    margin-bottom: 20px; }
-    .features-shadow .icon i {
-      color: #6F8BA4;
-      font-size: 30px;
-      color: #01405F; }
-  .features-shadow .features-title {
-    font-weight: 400;
-    font-size: 16px;
-    color: #3B566E;
-    letter-spacing: 1.12px;
-    margin-bottom: 20px;
-    line-height: 26px; }
-  .features-shadow p {
-    font-weight: 400;
-    font-size: 14px;
-    color: #6F8BA4;
-    line-height: 26px;
-    letter-spacing: 1px; }
-  .features-shadow:hover {
-    background: #FFFFFF;
-    box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.06);
-    border-radius: 4px;
-    transform: scale(1.1); }
-
-@media (max-width: 991px) {
-  .features-elliptical {
-    padding: 0px; }
-    .features-elliptical:after {
-      display: none; }
-
-  .features-line:after {
-    display: none; } }
-/* 
----------------------------------------------
 team
 --------------------------------------------- 
 */
@@ -1807,4 +1576,4 @@ footer {
   text-shadow: none;
   opacity: 1; }
 
-/*# sourceMappingURL=green.css.map */
+/*# sourceMappingURL=aenco.css.map */
