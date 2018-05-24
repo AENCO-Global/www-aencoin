@@ -3,30 +3,12 @@
 | Table of Contents
 |------------------------------------------------
 |01. Font & Colour
-|02. pre-loader
-|03. global styles
-|04. buttons
-|05. token box
-|06. header
-|07. welcome area
-|08. services
-|10. team
-|11. parallax
-|12. faq
-|13. footer & contact
+|02. Mixins
 |---------------------------------------------**/
 
 @import 'theme-aenco';
 
 @import 'mixins';
-
-@import 'reset';
-
-@import 'loader';
-
-@import 'global';
-
-@import 'buttons';
 
 @import 'token-box';
 
@@ -35,8 +17,6 @@
 @import 'welcome';
 
 @import 'team';
-
-@import 'parallax';
 
 @import 'faq';
 

@@ -26,818 +26,164 @@
     <link rel="stylesheet" href="./assets/css/aenco.css" type="text/css">
     <!-- Matomo -->
     <script type="text/javascript">
-      var _paq = _paq || [];
-      /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
-      _paq.push(['trackPageView']);
-      _paq.push(['enableLinkTracking']);
-      (function() {
-        var u="//stats.aencoin.com/";
-        _paq.push(['setTrackerUrl', u+'piwik.php']);
-        _paq.push(['setSiteId', '1']);
-        var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-        g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-      })();
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//stats.aencoin.com/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+        })();
     </script>
     <!-- End Matomo Code -->
 </head>
 <body>
-    <!-- Modal Video -->
-    <div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
-        <div class="modal-dialog modal-lg" role="document">
-            <div id="aenco-modal-content" class="modal-content">
-                <div id="aenco-modal-header" class="modal-header">
-                    <button type="button" id="aenco-modal-close" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="aenco-modal-body" class="modal-body">
-                    <div class="modal-video">
-                        <div class="embed-responsive embed-responsive-16by9">
-                            <iframe id="what-is-aenco-video" class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
-                        </div>
+<!-- Modal Video -->
+<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
+    <div class="modal-dialog modal-lg" role="document">
+        <div id="aenco-modal-content" class="modal-content">
+            <div id="aenco-modal-header" class="modal-header">
+                <button type="button" id="aenco-modal-close" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="aenco-modal-body" class="modal-body">
+                <div class="modal-video">
+                    <div class="embed-responsive embed-responsive-16by9">
+                        <iframe id="what-is-aenco-video" class="embed-responsive-item"
+                                src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-    <!-- Eligible Contributor Modal -->
-    <div class="modal fade" id="eligible-contributor" tabindex="-1" role="dialog" aria-labelledby="eligible-contributor" aria-hidden="true">
-        <div class="modal-dialog modal-lg" role="document">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h5 class="modal-title" id="exampleModalLabel">Eligible Contributors</h5>
-                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                        <span aria-hidden="true">&times;</span>
-                    </button>
-                </div>
-                <div id="eligible-contributor-modal-body" class="modal-body">
-                    <div style="overflow-x:auto;">
-                        <table class="table">
-                            <thead>
-                            <tr>
-                                <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
-                                <th scope="col">Hong Kong Residents</th>
-                                <th scope="col">Rest of the World</th>
-                            </tr>
-                            </thead>
-                            <tbody>
-                            <tr>
-                                <td>United States of America (USA), <br> Independent State of Samoa (Samoa)</td>
-                                <td>Proof of Identity: Passport or HKID</td>
-                                <td>Proof of Identity: Passport</td>
-                            </tr>
-                            <tr>
-                                <td>People's Republic of China</td>
-                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                            </tr>
-                            <tr>
-                                <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
-                                </td>
-                                <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
-                                    (excluding Real Estate) in excess of HKD 8 mil
-                                </td>
-                                <td></td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
+</div>
+<!-- Eligible Contributor Modal -->
+<div class="modal fade" id="eligible-contributor" tabindex="-1" role="dialog" aria-labelledby="eligible-contributor"
+     aria-hidden="true">
+    <div class="modal-dialog modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Eligible Contributors</h5>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="eligible-contributor-modal-body" class="modal-body">
+                <div style="overflow-x:auto;">
+                    <table class="table">
+                        <thead>
+                        <tr>
+                            <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
+                            <th scope="col">Hong Kong Residents</th>
+                            <th scope="col">Rest of the World</th>
+                        </tr>
+                        </thead>
+                        <tbody>
+                        <tr>
+                            <td>United States of America (USA), <br> Independent State of Samoa (Samoa)</td>
+                            <td>Proof of Identity: Passport or HKID</td>
+                            <td>Proof of Identity: Passport</td>
+                        </tr>
+                        <tr>
+                            <td>People's Republic of China</td>
+                            <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                            <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                        </tr>
+                        <tr>
+                            <td>OFAC Sanctioned Countries * <a target="_blank"
+                                                               href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
+                            </td>
+                            <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
+                                (excluding Real Estate) in excess of HKD 8 mil
+                            </td>
+                            <td></td>
+                        </tr>
+                        </tbody>
+                    </table>
                 </div>
             </div>
         </div>
     </div>
+</div>
 
-    <!-- Loading Area Start -->
-    <div class="loading-wrapper">
-        <div class="loading">
-                <img src="./assets/img/aenco-loading-logo.png">
-            </div>
+<!-- Navigation Area Start -->
+<nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-dark">
+    <div class="container">
+        <a href="./" class="navbar-brand">
+            <img src="./assets/img/aenco-logo-light.png" alt="Aenco Logo"/>
+        </a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content"
+                aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
+        </button>
+
+        <div class="collapse navbar-collapse" id="navbar-supported-content">
+            <ul class="navbar-nav ml-auto">
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbar-documents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Documents
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbar-documents">
+                        <a class="dropdown-item" href="./assets/docs/aenco-two-pager.pdf">Two-Page Summary</a>
+                        <a class="dropdown-item" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a>
+                        <a class="dropdown-item" href="./assets/docs/aenco-token-economics.pdf">Token Paper</a>
+                        <div class="dropdown-divider"></div>
+                        <a class="dropdown-item" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>
+                    </div>
+                </li>
+                <li class="nav-item"><a class="nav-link text-white" href="#ecosystem">AEN Token</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#benefit">Token Economy</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#roadmap">Roadmap</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#team">Team</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#faq">FAQ</a></li>
+                <li class="nav-item"><a class="nav-link text-white" href="#contact">Contact</a></li>
+                <li class="nav-item"><a class="nav-link text-white" target="_blank"
+                                        href="https://uatsignup.aencoin.com/login">Login</a></li>
+                <li class="nav-item"><a class="nav-link text-white" target="_blank"
+                                        href="https://uatsignup.aencoin.com/register">Register</a></li>
+            </ul>
+        </div>
     </div>
-    <!-- Loading Area End -->
-    <!-- Header Area Start -->
-    <header class="header-area">
-        <div class="container">
-            <div class="row">
-                <div class="col-12">
-                    <nav class="main-nav">
-                        <!-- ***** Logo Start ***** -->
-                        <a href="./" class="logo">
-                            <img src="./assets/img/aenco-logo-light.png" class="light-logo" alt="Aenco Light Logo"/>
-                            <img src="./assets/img/aenco-logo-dark.png" class="dark-logo" alt="Aenco Dark Logo"/>
-                        </a>
-                        <!-- ***** Logo End ***** -->
-                        <!-- ***** Menu Start ***** -->
-                        <ul class="nav">
-                            <li><a href="#ecosystem">AENCO Ecosystem</a></li>
-                            <li><a href="#benefit">AEN Token Benefits</a></li>
-                            <li><a href="#team">Team</a></li>
-                            <li><a href="#faq">FAQ</a></li>
-                            <li><a href="#contact">Contact</a></li>
-                            <li><a target="_blank" href="https://signup.aencoin.com/login">Login</a></li>
-                            <li><a target="_blank" href="https://signup.aencoin.com/register">Register</a></li>
-                        </ul>
-                        <a class='menu-trigger'>
-                            <span>Menu</span>
-                        </a>
-                        <!-- ***** Menu End ***** -->
-                    </nav>
-                </div>
+</nav>
+<!-- Navigation Area End -->
+<!-- Welcome Area Start -->
+<section class="section section-top section-full welcome-area">
+    <div class="bg-cover">
+    </div>
+    <div class="container">
+        <div class="row justify-content-center align-items-center">
+            <div class="col-md-8 col-lg-12">
+                <h1 class="text-white text-center text-uppercase mb-4">AENCO Is The World's First Blockchain-Based Healthcare Financial Solutions</h1>
+                <p class="lead text-white text-center mb-5">HealthTech, Smart Capital, and Prime Brokerage Solutions Under One Umbrella</p>
+                <p class="text-center mb-0">
+                    <a href="uatsignup.aencoin.com/register" class="btn-custom text-white">
+                        Register
+                    </a>
+                </p>
             </div>
         </div>
-    </header>
-    <!-- Header Area End -->
-    <!-- Welcome Area Start -->
-    <section class="welcome-area bg-top-right" id="welcome-1">
-        <div class="header-token basic">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-                        <h1>AENCO Is The World's First Blockchain-Based Healthcare Financial Solutions</h1>
-                        <p>HealthTech, Smart Capital, and Prime Brokerage Solutions Under One Umbrella</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mx-auto">
-                        <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf" class="btn-secondary-box my-1">Whitepaper</a>
-                        <a target="_blank" href="./assets/docs/aenco-two-pager.pdf" class="btn-secondary-box my-1">Two-Page Summary</a>
-                        <a target="_blank" href="./assets/docs/aenco-token-economics.pdf" class="btn-secondary-box my-1">Token Paper</a>
-                        <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf" class="btn-secondary-box my-1">Terms and Conditions</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mx-auto">
-                        <a href="#" class="launch-modal btn-secondary-box" data-modal-id="modal-video">
-                            <span class="video-link-icon"><i class="fab fa-youtube"></i></span>
-                            <span class="video-link-text">Launch Aenco Video</span>
-                        </a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mx-auto my-1">
-                        <a target="_blank" href="https://signup.aencoin.com/register" class="btn-secondary-box">Register</a>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="mx-auto my-1">
-                        <a href="#" class="btn-secondary-box" data-toggle="modal" data-target="#eligible-contributor">Eligible Contributors</a>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- Welcome Area End -->
-    <!-- Team Area Start -->
-    <section class="section bg-bottom" id="team">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h1 class="h1 section-title">Our Team</h1>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Management Team Start ***** -->
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/ian.png" alt="Ian Huen">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/ianhuen/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Ian Huen</h3>
-                        <span>Co-Founder</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/darren.jpg" alt="Darren Lui">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/darren-lui/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Darren Lui</h3>
-                        <span>Co-Founder</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/kenrick.jpg" alt="Kenrick Fok">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/kenrickfok/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Kenrick Fok</h3>
-                        <span>CFO</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/geoff.jpg" alt="Geoff Tipy">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/geoff-tipy/"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Geoff Tipy</h3>
-                        <span>CTO</span>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Management Team End ***** -->
-            <br>
-            <!-- ***** Core Team Start ***** -->
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/charleslau.jpg" alt="Charles Lau">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/laucharles"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Charles Lau</h3>
-                        <span>Managing Director</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/ericachan.jpg" alt="Erica Chan">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/erica-chan/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Erica Chan</h3>
-                        <span>Head of Wealth Management</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/isabellalai.jpg" alt="Isabella Lai">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/isabella-lai/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Isabella Lai</h3>
-                        <span>Senior Director</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/teddyip.jpg" alt="Teddy Ip">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/teddyip/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Teddy Ip</h3>
-                        <span>Senior Director</span>
-                    </div>
-                </div>
+    </div>
+</section>
+<!-- Welcome Area End -->
 
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/nickwan.jpg" alt="Nick Wan">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/nickhywan/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Nick Wan</h3>
-                        <span>Co-Investment Director</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/calvinpoon.jpg" alt="Calvin Poon">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/calvin-poon/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Calvin Poon</h3>
-                        <span>Co-Investment Director</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/allycheung.jpg" alt="Ally Cheung">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/allycheung/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Ally Cheung</h3>
-                        <span>Head of Community Management</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/davidcarey.jpg" alt="David Carey">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/david-carey/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">David Carey</h3>
-                        <span>Senior Cloud Engineer</span>
-                    </div>
-                </div>
-
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/aaronregala.jpg" alt="Aaron Regala">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/aaron-regala/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Aaron Regala</h3>
-                        <span>Business Analyst</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/andychan.jpg" alt="Andy Chan">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Andy Chan</h3>
-                        <span>Head of Insurance</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/issaccheung.jpg" alt="Issac Cheung">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Issac Cheung</h3>
-                        <span>Full-Stack Developer</span>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Core Team End ***** -->
-            <br>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h1 class="h1 section-title">Our Advisors</h1>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Advisors Start ***** -->
-            <div class="row">
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/douglas.jpg"
-                                     alt="Professor Douglas W. Arner">
-                                <ul class="social">
-                                    <li><a target="_blank" href="http://www.law.hku.hk/faculty/staff/arner_douglas.php"><i
-                                            class="fas fa-user"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Professor Douglas W. Arner</h3>
-                        <span>Senior Regulatory and Strategic Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/virginialam.jpg" alt="Virginia Lam">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/lamvirginia/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Virginia Lam</h3>
-                        <span>Marketing Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/douglasching.jpg" alt="Douglas Ching">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/dougching/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Douglas Ching</h3>
-                        <span>Marketing Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/smyiu.jpg" alt="Dr. S.M. Yiu">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. S.M. Yiu</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/jeffmarquass.jpg" alt="Jeff Marquass">
-                                <ul class="social">
-                                    <li><a target="_blank" href="https://www.linkedin.com/in/jeff-marquass-4a37995/"><i
-                                            class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
-                            </div>
-                        </div>
-                        <h3 class="team-name">Jeff Marquass</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/albertleung.jpg" alt="Dr. Albert Leung">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. Albert Leung</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/kennyyu.jpg" alt="Dr. Kenny Yu">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. Kenny Yu</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/kwokkawai.jpg" alt="Dr. Kwok Ka Wai">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. Kwok Ka Wai</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/owenko.jpg" alt="Dr. Owen Ko">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. Owen Ko</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/sunnywong.jpg" alt="Dr. Sunny Wong">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. Sunny Wong</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/williamwu.jpg" alt="Dr. William Wu">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Dr. William Wu</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/joehui.jpg" alt="Joe Hui">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Joe Hui</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/julianting.jpg" alt="Julian Ting">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Julian Ting</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-                <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                    <div class="team-round">
-                        <div class="profile">
-                            <div class="img">
-                                <img src="./assets/img/shellcheung.jpg" alt="Shell Cheung">
-                            </div>
-                        </div>
-                        <h3 class="team-name">Shell Cheung</h3>
-                        <span>Advisor</span>
-                    </div>
-                </div>
-            </div>
-            <!-- ***** Advisors End ***** -->
-        </div>
-    </section>
-    <!-- Team Area End -->
-    <!-- FAQ Area Start -->
-    <section class="section bg-top" id="faq">
-        <div class="container">
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="center-heading">
-                        <h1 class="section-title">Frequently Asked Questions</h1>
-                    </div>
-                </div>
-                <div class="offset-lg-3 col-lg-6">
-                    <div class="center-text">
-                        <p>We have provided answers to common questions we have been asked below.</p>
-                    </div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col-lg-12">
-                    <div class="faq" id="accordion">
-                        <!-- ***** Questions and Answers Start ***** -->
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-1">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-1"
-                                        data-aria-expanded="true" data-aria-controls="faqCollapse-1">
-                                        <span class="badge">1</span> What is Aenco?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-1" class="collapse" aria-labelledby="faqHeading-1"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>Aenco is a "one stop shop" for the delivery of cutting edge institutional financing, prime brokerage, and smart capital solutions for the HealthTech industry, as well
-                                        as a research and collaboration hub for healthcare companies and projects
-                                        involved in the field of blockchain development.</p>
-                                    <p>Aenco will be combining its solutions platform and core financing ecosystem with
-                                        the wider healthcare technology community, through the AEN token, as the key
-                                        ecosystem building block and extensions across all its service and community
-                                        deliveries.</p>
-                                    <p>Check out our <a target="_blank"
-                                                        href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a>
-                                        for more information.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-2">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-2"
-                                        data-aria-expanded="false" data-aria-controls="faqCollapse-2">
-                                        <span class="badge">2</span> Do you accept other methods of contribution such as
-                                        credit card?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-2" class="collapse" aria-labelledby="faqHeading-2"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>No. Bitcoin (BTC) and Ethereum (ETH) are the only accepted method of contribution
-                                        as part of the token sale.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-3">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-3"
-                                        data-aria-expanded="false" data-aria-controls="faqCollapse-3">
-                                        <span class="badge">3</span> Can I / How do I participate in the token sale?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-3" class="collapse" aria-labelledby="faqHeading-3"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>The token sale is currently on private sale phase.
-                                    </p>
-                                    <p>We are not accepting contributions from residents of USA, Samoa, China, and OFAC sanctioned countries. For Hong Kong based contributors, you must qualify and provide wealth proof as a "Professional Investor" under the Hong Kong SFC Guidance and Rules.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-4">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-4"
-                                        data-aria-expanded="false" data-aria-controls="faqCollapse-4">
-                                        <span class="badge">4</span> What are the requirements to participate in the
-                                        token sale?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-4" class="collapse" aria-labelledby="faqHeading-4"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>We require you to go through our Sign Up process. To acquire AEN tokens, we also require you to go through our
-                                        KYC Verfication.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-5">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-5"
-                                        data-aria-expanded="false" data-aria-controls="faqCollapse-5">
-                                        <span class="badge">5</span> Will you offer any early bird bonus?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-5" class="collapse" aria-labelledby="faqHeading-5"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>Yes, we do operate an early bird bonus for the private sale and the pre-sale period. Please refer to the community announcements or the token paper for details.</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-6">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-6"
-                                        data-aria-expanded="false" data-aria-controls="faqCollapse-6">
-                                        <span class="badge">6</span> Do you have any Bounty Program?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-6" class="collapse" aria-labelledby="faqHeading-6"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>Yes, we value your support and reward bounty AEN tokens for your efforts. Stay
-                                        tuned for the announcement of the details on the Bounty Program.</div>
-                            </div>
-                        </div>
-                        <div class="card">
-                            <div class="card-header" id="faqHeading-7">
-                                <div class="mb-0">
-                                    <h5 class="faq-title" data-toggle="collapse" data-target="#faqCollapse-7"
-                                        data-aria-expanded="false" data-aria-controls="faqCollapse-7">
-                                        <span class="badge">7</span> When will I receive my AEN tokens?
-                                    </h5>
-                                </div>
-                            </div>
-                            <div id="faqCollapse-7" class="collapse" aria-labelledby="faqHeading-7"
-                                 data-parent="#accordion">
-                                <div class="card-body">
-                                    <p>AEN tokens will be allocated to you upon confirmation of contribution. Depending
-                                        on the stage of contribution, there will be lock up restrictions on the
-                                        withdrawal.</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- ***** Questions and Answers End ***** -->
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-    <!-- FAQ Area End -->
-    <!-- Contact Area Start -->
-    <footer id="contact">
-        <div class="footer-top">
-            <div class="container">
-                <div class="row">
-                    <div class="col-lg-12 contact">
-                        <div class="center-heading">
-                            <h1 class="section-title">Contact</h1>
-                        </div>
-                    </div>
-                    <div class="col-lg-5 col-md-5 col-sm-12">
-                        <div class="contact-info">
-                            <h3 class="section-title">Registered Address</h3>
-                            <p>Vistra Corporate Services Centre, Ground Floor NPF Building, Beach Road, Apia, Samoa</p>
-                            <ul class="list">
-                                <li>
-                                    <i class="far fa-envelope"></i>
-                                    <a href="mailto:moon@aencoin.com">moon@aencoin.com</a>
-                                    <i class="fas fa-external-link-alt"></i>
-                                </li>
-                                <li>
-                                    <i class="fas fa-phone"></i>
-                                    <a href="tel:+852-8199-0918">+852 8199 0918</a>
-                                    <i class="fas fa-external-link-alt"></i>
-                                </li>
-                                <li>
-                                    <i class="fab fa-telegram-plane"></i>
-                                    <a target="_blank" href="https://t.me/AENCO">Join us on Telegram </a>
-                                    <i class="fas fa-external-link-alt"></i>
-                                </li>
-                            </ul>
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><i class="fab fa-facebook fa-3x"></i></a></li>
-                                <li><a target="_blank" href="https://twitter.com/aencoin"><i class="fab fa-twitter-square fa-3x"></i></a></li>
-                                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><i class="fab fa-discord fa-3x"></i></a></li>
-                                <li><a target="_blank" href="https://medium.com/@aencoin"><i class="fab fa-medium fa-3x"></i></a></li>
-                                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><i class="fab fa-linkedin fa-3x"></i></a></li>
-                                <li><a target="_blank" href="https://github.com/AENCO-Global"><i class="fab fa-github-square fa-3x"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <div class="container">
-                <div class="row">
-                    <div class="col-12">
-                        <ul class="legal-link">
-                            <li><a target="_blank" href="./assets/docs/disclaimer.pdf">Disclaimer</a></li>
-                            <li><a target="_blank" href="./assets/docs/privacy-policy.pdf">Privacy Policy</a></li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="col-lg-6">
-                        <p class="copyright" style="margin-bottom: 0!important">2018 © Aenco Solutions Ltd - Global Healthtech Blockchain Financial Solutions</p>
-                        <p id="version-number">Version</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </footer>
-    <!-- Contact Area End -->
-
-    <!-- JQuery -->
-    <script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
-    <!-- Bootstrap -->
-    <script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
-    <script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
-    <!-- Charting-->
-    <script type="text/javascript" src="./assets/js/vendor/Chart.min.js"></script>
-    <!-- Misc -->
-    <script type="text/javascript" src="./assets/js/vendor/scrollreveal.min.js"></script>
-    <!-- Custom -->
-    <script type="text/javascript" src="./assets/js/custom.min.js"></script>
+<!-- JQuery -->
+<script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
+<!-- Bootstrap -->
+<script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
+<script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
+<!-- Charting-->
+<script type="text/javascript" src="./assets/js/vendor/Chart.min.js"></script>
+<!-- Misc -->
+<script type="text/javascript" src="./assets/js/vendor/scrollreveal.min.js"></script>
+<!-- Custom -->
+<script type="text/javascript" src="./assets/js/custom.min.js"></script>
 </body>
 </html>

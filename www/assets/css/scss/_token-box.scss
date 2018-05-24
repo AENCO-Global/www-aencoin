@@ -49,7 +49,7 @@ token box
 			text-align: center;
 			@include font($medium, 16px);
 			letter-spacing: 1.4px;
-			color: $primaryColor;
+			color: $primary-color;
 			margin-bottom: 20px;
 		}
 
@@ -84,7 +84,7 @@ token box
 		}
 
 		.token-input {
-			border: 1px solid $primaryColor;
+			border: 1px solid $primary-color;
 			height: 46px;
 			overflow: hidden;
 			@include radius(100px);
@@ -109,7 +109,7 @@ token box
 				position: absolute;
 				width: 10%;
 				height: 24px;
-				border: 1px solid $primaryColor;
+				border: 1px solid $primary-color;
 				left: 25%;
 				top: -1px;
 				line-height: 24px;
@@ -117,14 +117,14 @@ token box
 				background: #E6EEF2;
 				cursor: pointer;
 				font-size: 7px;
-				color: $primaryColor;
+				color: $primary-color;
 			}
 
 			.fa-minus {
 				position: absolute;
 				width: 10%;
 				height: 23px;
-				border: 1px solid $primaryColor;
+				border: 1px solid $primary-color;
 				left: 25%;
 				top: 22px;
 				line-height: 24px;
@@ -132,7 +132,7 @@ token box
 				background: #E6EEF2;
 				cursor: pointer;
 				font-size: 7px;
-				color: $primaryColor;
+				color: $primary-color;
 			}
 
 			button {
@@ -146,7 +146,7 @@ token box
 				outline: none;
 				@include font($medium, 12px);
 				letter-spacing: 0.5px;
-				color: $primaryColor;
+				color: $primary-color;
 				cursor: pointer;
 			}
 		}
@@ -167,7 +167,7 @@ token box
 			.progress-active {
 				position: absolute;
 				height: 5px;
-				background: $primaryColor;
+				background: $primary-color;
 				@include radius(5px);
 				width: 0%;
 				@include transition(.3s);
@@ -202,7 +202,7 @@ token box
 
 				&.complate {
 					&:before, &:after {
-						background: $primaryColor;
+						background: $primary-color;
 						@include transition(.3s);
 					}
 
@@ -240,7 +240,7 @@ token box
 			strong {
 				float: left;
 				width: 35%;
-				@include font($normal, 14px);
+				@include font($regular, 14px);
 				color: $headingDark;
 				letter-spacing: 1.22px;
 				height: 38px;
@@ -250,7 +250,7 @@ token box
 			span {
 				float: left;
 				width: 65%;
-				@include font($normal, 14px);
+				@include font($regular, 14px);
 				color: $textDark;
 				letter-spacing: 1.22px;
 				height: 38px;
@@ -272,7 +272,7 @@ token box
 		span {
 			position: absolute;
 			background: #fff;
-			@include font($normal, 14px);
+			@include font($regular, 14px);
 			color: #A7A7E5;
 			letter-spacing: 1.24px;
 			padding-left: 10px;
@@ -290,7 +290,7 @@ token box
 				display: inline-block;
 				width: 32px;
 				height: 32px;
-				border: 1px solid $primaryColor;
+				border: 1px solid $primary-color;
 				position: relative;
 				@include radius(4px);
 				overflow: hidden;
@@ -298,7 +298,7 @@ token box
 				margin-left: 5px;
 
 				input:checked + label {
-					background: $primaryColor;
+					background: $primary-color;
 				}
 
 				input:checked + label i {
@@ -321,14 +321,14 @@ token box
 						height: 32px;
 						line-height: 30px;
 						text-align: center;
-						color: $primaryColor;
+						color: $primary-color;
 						font-size: 14px;
 						@include transition(.3s);
 						letter-spacing: 0px;
 					}
 
 					&:hover {
-						background: $primaryColor;
+						background: $primary-color;
 
 						i {
 							color: #fff;

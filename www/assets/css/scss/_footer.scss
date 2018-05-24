@@ -28,7 +28,7 @@ footer {
       }
 
       p {
-        @include font($normal, 16px);
+        @include font($regular, 16px);
         color: $textDark;
         line-height: 28px;
         letter-spacing: 1px;
@@ -45,7 +45,7 @@ footer {
             line-height: 40px;
             width: 30px;
             font-size: 16px;
-            color: $primaryColor;
+            color: $primary-color;
           }
 
           a, span {
@@ -53,7 +53,7 @@ footer {
             margin-right: 10px;
             height: 40px;
             line-height: 40px;
-            @include font($normal, 16px);
+            @include font($regular, 16px);
             color: $headingDark;
             letter-spacing: 0.69px;
             @include transition(.3s);
@@ -75,7 +75,7 @@ footer {
 
           a {
             font-size: 22px;
-            color: $primaryColor;
+            color: $primary-color;
             @include transition(.3s);
           }
         }
@@ -102,8 +102,8 @@ footer {
         width: 100%;
 
         &:hover {
-          border: 1px solid $secondaryColor;
-          color: $secondaryColor;
+          border: 1px solid $secondary-color;
+          color: $secondary-color;
         }
       }
 
@@ -121,7 +121,7 @@ footer {
 
           &:focus {
             padding-left: 30px;
-            border: 1px solid $primaryColor;
+            border: 1px solid $primary-color;
           }
         }
 
@@ -140,7 +140,7 @@ footer {
     position: relative;
 
     .legal-link {
-      @include font($normal, 12px);
+      @include font($regular, 12px);
       line-height: 24px;
 
       li {
@@ -179,7 +179,7 @@ footer {
     }
 
     .copyright {
-      @include font($normal, 14px);
+      @include font($regular, 14px);
       line-height: 24px;
       color: #F3F8FF;
       letter-spacing: 1.7px;
@@ -188,7 +188,7 @@ footer {
     }
 
     #version-number {
-      @include font($normal, 12px);
+      @include font($regular, 12px);
       line-height: 24px;
       color: #F3F8FF;
       letter-spacing: 1.7px;

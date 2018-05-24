@@ -83,7 +83,7 @@ team
 	span {
 		display: block;
 		text-align: center;
-		@include font($normal, 12px);
+		@include font($regular, 12px);
 		color: $textDark;
 	}
 
@@ -158,7 +158,7 @@ team
 	span {
 		display: block;
 		text-align: center;
-		@include font($normal, 12px);
+		@include font($regular, 12px);
 		color: $textDark;
 	}	
 

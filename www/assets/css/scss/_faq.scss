@@ -34,7 +34,7 @@ faq
 				padding: 0px;
 				padding-left: 30px;
 				padding-right: 30px;
-				@include font($normal, 16px);
+				@include font($regular, 16px);
 				letter-spacing: 1px;
 				color: $headingDark;
 				text-decoration: none !important;
@@ -47,7 +47,7 @@ faq
 					height: 20px;
 					@include radius(100px);
 					text-align: center;
-					background: $primaryColor;
+					background: $primary-color;
 					color: #fff;
 					font-size: 12px;
 					margin-right: 10px;
@@ -59,7 +59,7 @@ faq
 			padding: 30px;
 			padding-left: 35px;
 			padding-bottom: 16px;
-			@include font($normal, 16px);
+			@include font($regular, 16px);
 			color: $textDark;
 			line-height: 28px;
 			letter-spacing: 1px;
