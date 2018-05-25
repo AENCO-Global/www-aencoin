@@ -18,6 +18,12 @@
 h1, h2, h3, h4, h5, h6, p, a {
   color: white; }
 
+.section-title {
+  font-family: "Teko", sans-serif;
+  font-weight: 500;
+  font-size: 3.8em;
+  letter-spacing: 1px; }
+
 .header-area {
   position: fixed;
   top: 0px;
@@ -660,6 +666,9 @@ token box
     width: 100%;
     height: auto; }
 
+.roadmap {
+  background-color: #252525; }
+
 .team-round {
   margin-bottom: 30px; }
   .team-round .profile {
@@ -871,172 +880,6 @@ faq
   .faq .card .card-header .faq-title {
     line-height: 26px;
     margin-top: 10px; } }
-/* 
----------------------------------------------
-footer & contact
---------------------------------------------- 
-*/
-footer {
-  padding-top: 50px; }
-  footer .footer-top {
-    background: #F7F9FB;
-    padding-top: 20px;
-    padding-bottom: 40px; }
-    footer .footer-top contact {
-      margin-top: 90px; }
-    footer .footer-top .contact-info .section-title {
-      font-weight: 500;
-      font-size: 16px;
-      color: #3B566E;
-      letter-spacing: 0.77px;
-      line-height: 46px;
-      margin-bottom: 10px; }
-    footer .footer-top .contact-info p {
-      font-weight: 400;
-      font-size: 16px;
-      color: #6F8BA4;
-      line-height: 28px;
-      letter-spacing: 1px;
-      margin-bottom: 20px; }
-    footer .footer-top .contact-info ul.list li {
-      overflow: hidden; }
-      footer .footer-top .contact-info ul.list li i {
-        float: left;
-        height: 40px;
-        line-height: 40px;
-        width: 30px;
-        font-size: 16px;
-        color: #00B7CE; }
-      footer .footer-top .contact-info ul.list li a, footer .footer-top .contact-info ul.list li span {
-        float: left;
-        margin-right: 10px;
-        height: 40px;
-        line-height: 40px;
-        font-weight: 400;
-        font-size: 16px;
-        color: #3B566E;
-        letter-spacing: 0.69px;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-        footer .footer-top .contact-info ul.list li a:hover, footer .footer-top .contact-info ul.list li span:hover {
-          padding-left: 10px; }
-    footer .footer-top .contact-info .social {
-      float: left;
-      margin-top: 20px; }
-      footer .footer-top .contact-info .social li {
-        float: left;
-        margin-right: 15px; }
-        footer .footer-top .contact-info .social li a {
-          font-size: 22px;
-          color: #00B7CE;
-          -webkit-transition: all 0.3s ease 0s;
-          -moz-transition: all 0.3s ease 0s;
-          -o-transition: all 0.3s ease 0s;
-          transition: all 0.3s ease 0s; }
-    footer .footer-top .contact-form {
-      background: #FFFFFF;
-      box-shadow: 0 1px 18px 10px rgba(0, 0, 0, 0.06);
-      border-radius: 4px;
-      padding: 40px;
-      margin-top: 10px;
-      position: relative;
-      z-index: 2; }
-      footer .footer-top .contact-form .section-title {
-        font-weight: 500;
-        font-size: 18px;
-        color: #3B566E;
-        letter-spacing: 0.77px;
-        margin-bottom: 30px; }
-      footer .footer-top .contact-form .btn-secondary-box {
-        width: 100%; }
-        footer .footer-top .contact-form .btn-secondary-box:hover {
-          border: 1px solid #B1D34A;
-          color: #B1D34A; }
-      footer .footer-top .contact-form .form-element input, footer .footer-top .contact-form .form-element textarea {
-        width: 100%;
-        height: 46px;
-        border: 1px solid #CEE1F8;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        -ms-border-radius: 4px;
-        border-radius: 4px;
-        outline: none;
-        padding-left: 20px;
-        padding-right: 20px;
-        margin-bottom: 24px;
-        -webkit-transition: all 0.3s ease 0s;
-        -moz-transition: all 0.3s ease 0s;
-        -o-transition: all 0.3s ease 0s;
-        transition: all 0.3s ease 0s; }
-        footer .footer-top .contact-form .form-element input:focus, footer .footer-top .contact-form .form-element textarea:focus {
-          padding-left: 30px;
-          border: 1px solid #00B7CE; }
-      footer .footer-top .contact-form .form-element textarea {
-        height: 120px;
-        padding: 20px;
-        resize: none; }
-  footer .footer-bottom {
-    padding-top: 80px;
-    background-image: linear-gradient(134deg, #0EB8D9 0%, #2CDDC9 100%);
-    position: relative; }
-    footer .footer-bottom .legal-link {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 24px; }
-      footer .footer-bottom .legal-link li {
-        display: inline;
-        float: left;
-        margin-left: 10px; }
-        footer .footer-bottom .legal-link li a {
-          color: #F3F8FF; }
-          footer .footer-bottom .legal-link li a:hover {
-            text-decoration: underline !important; }
-    footer .footer-bottom.slim {
-      padding-top: 20px; }
-      footer .footer-bottom.slim .copyright {
-        text-align: center;
-        margin-top: 0px;
-        margin-bottom: 20px; }
-    footer .footer-bottom:before {
-      content: '';
-      position: absolute;
-      width: 100%;
-      height: 100%;
-      background: url("../img/section-bg-bottom.png") center bottom no-repeat;
-      top: 0px;
-      left: 0px; }
-    footer .footer-bottom .copyright {
-      font-weight: 400;
-      font-size: 14px;
-      line-height: 24px;
-      color: #F3F8FF;
-      letter-spacing: 1.7px;
-      text-align: left;
-      margin-bottom: 50px; }
-    footer .footer-bottom #version-number {
-      font-weight: 400;
-      font-size: 12px;
-      line-height: 24px;
-      color: #F3F8FF;
-      letter-spacing: 1.7px;
-      text-align: left;
-      margin-bottom: 50px; }
-
-@media (max-width: 991px) {
-  footer .footer-top {
-    height: auto;
-    padding-top: 100px;
-    padding-bottom: 100px; }
-    footer .footer-top .contact {
-      margin-top: 0px; }
-  footer .footer-bottom {
-    padding-top: 40px; }
-    footer .footer-bottom .copyright {
-      margin: 0px;
-      margin-bottom: 30px;
-      text-align: center; } }
 .modal-backdrop.in {
   filter: alpha(opacity=30);
   opacity: 0.7; }

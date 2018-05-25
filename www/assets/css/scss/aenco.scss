@@ -12,6 +12,8 @@
 
 @import 'reset';
 
+@import 'global.scss';
+
 @import 'header';
 
 @import 'welcome';
@@ -24,10 +26,10 @@
 
 @import 'explore-aenco';
 
+@import 'roadmap';
+
 @import 'team';
 
 @import 'faq';
-
-@import 'footer';
 
 @import 'modal-video';
