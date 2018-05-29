@@ -1725,7 +1725,7 @@ footer {
       footer .footer-bottom .legal-link li {
         display: inline;
         float: left;
-        margin-left: 10px; }
+        margin-right: 10px; }
         footer .footer-bottom .legal-link li a {
           color: #F3F8FF; }
           footer .footer-bottom .legal-link li a:hover {
