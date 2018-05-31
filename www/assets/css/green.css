@@ -1844,32 +1844,34 @@ footer {
     margin-left: auto;
     margin-right: auto; }
 
-#opportunity .aenco-video-col .aenco-video {
-  height: 340px; }
-#opportunity .aenco-video-col iframe {
-  display: block;
-  margin: auto;
-  width: 100%; }
-#opportunity .card {
-  border: none;
-  width: 90%;
-  margin-left: auto;
-  margin-right: auto; }
-  #opportunity .card .card-title {
-    text-align: center; }
-  #opportunity .card img {
+#opportunity {
+  background-color: #F7F9FB; }
+  #opportunity .aenco-video-col .aenco-video {
+    height: 340px; }
+  #opportunity .aenco-video-col iframe {
     display: block;
-    width: 20%;
-    height: auto;
+    margin: auto;
+    width: 100%; }
+  #opportunity .card {
+    border: none;
+    width: 90%;
     margin-left: auto;
     margin-right: auto; }
-  #opportunity .card p {
-    display: block;
-    width: 80%;
-    height: auto;
-    margin-left: auto;
-    margin-right: auto;
-    text-align: center; }
+    #opportunity .card .card-title {
+      text-align: center; }
+    #opportunity .card img {
+      display: block;
+      width: 20%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto; }
+    #opportunity .card p {
+      display: block;
+      width: 80%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+      text-align: center; }
 
 .modal-backdrop.in {
   filter: alpha(opacity=30);
@@ -1903,5 +1905,8 @@ footer {
   font-weight: 300;
   text-shadow: none;
   opacity: 1; }
+
+#press {
+  background-color: #F7F9FB; }
 
 /*# sourceMappingURL=green.css.map */
