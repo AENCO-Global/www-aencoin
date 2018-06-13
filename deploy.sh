@@ -27,10 +27,10 @@ echo "--=== Set Login/Register Link ===--"
 if [ "$4" = "uat" ]
     then
         echo "UAT Login/Register Set"
-        sed -i -e 's/<!--uatorlive-->/uatsignup/g' ./index.html
+        sed -i -e 's/<!--uatorlive-->/uatsignup/g' ./www/index.html
     else
         echo "Live Login/Register Set"
-        sed -i -e 's/<!--uatorlive-->/signup/g' ./index.html
+        sed -i -e 's/<!--uatorlive-->/signup/g' ./www/index.html
 fi
 
 echo "----====== Verify Deployments-List from Remote ======----"
