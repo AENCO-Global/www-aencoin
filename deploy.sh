@@ -20,13 +20,18 @@ ls  -l
 echo "--------------------------------------"
 
 echo "--=== Transfer files to remote Server ===--"
-echo "rsync -avzhe ssh  --rsync-path="""rsync""" ./www/ jenkins@$2:$3"""
 rsync -avzhe ssh  --rsync-path="rsync" ./www/* jenkins@$2:$3
 echo "---------------------------------------"
 
-#echo "--=== Set permisions on transfered files ===--"
-#ssh -p 22 $2 "chown -R apache:apache $3"
-#echo "-------------------------------------------"
+echo "--=== Set Login/Register Link ===--"
+if [ "$4" = "uat" ]
+    then
+        echo "UAT Login/Register Set"
+        sed -i -e 's/<!--uatorlive-->/uatsignup/g' ./index.html
+    else
+        echo "Live Login/Register Set"
+        sed -i -e 's/<!--uatorlive-->/signup/g' ./index.html
+fi
 
 echo "----====== Verify Deployments-List from Remote ======----"
 ssh -p 22 $2 "ls -al /home/apache/public_html/"
