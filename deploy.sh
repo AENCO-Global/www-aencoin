@@ -19,21 +19,21 @@ echo "Version $1" > ./www/version.html
 ls  -l
 echo "--------------------------------------"
 
-echo "--=== Transfer files to remote Server ===--"
-rsync -avzhe ssh  --rsync-path="rsync" ./www/* jenkins@$2:$3
-echo "---------------------------------------"
-
 echo "--=== Set Login/Register Link ===--"
 if [ "$4" = "uat" ]
     then
         echo "UAT Login/Register Set"
-        sed -i -e 's/<!--uatorlive-->/UATLogin/g' ./index.html
-        sed -i -e 's/<!--uatorlive-->/UATLogin/g' ./token-sale-terms-summary.html
+        sed -i -e 's/<!--uatorlive-->/UATLogin/g' ./www/index.html
+        sed -i -e 's/<!--uatorlive-->/UATLogin/g' ./www/token-sale-terms-summary.html
     else
         echo "Live Login/Register Set"
         sed -i -e 's/<!--uatorlive-->/"https:\/\/signup.aencoin.com\/login"/g' ./www/index.html
         sed -i -e 's/<!--uatorlive-->/"https:\/\/signup.aencoin.com\/login"/g' ./www/token-sale-terms-summary.html
 fi
+
+echo "--=== Transfer files to remote Server ===--"
+rsync -avzhe ssh  --rsync-path="rsync" ./www/* jenkins@$2:$3
+echo "---------------------------------------"
 
 echo "----====== Verify Deployments-List from Remote ======----"
 ssh -p 22 $2 "ls -al /home/apache/public_html/"
