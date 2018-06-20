@@ -22,9 +22,25 @@
     <link type="text/css" href="./assets/css/vendor/fa-regular.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/fa-brands.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/fontawesome.css" rel="stylesheet">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Teko:300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600" rel="stylesheet">
+    <!-- slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Theme -->
     <link rel="stylesheet" href="./assets/css/aenco.css" type="text/css">
     <!-- Matomo -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="./assets/js/vendor/slick.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
+    <!-- pdf -->
+    <script type="text/javascript" src="./assets/js/vendor/pdfobject.min.js"></script>
+    <!-- pie -->
+    <script type="text/javascript" src="./assets/js/vendor/pie.js"></script>
     <script type="text/javascript">
         var _paq = _paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -45,682 +61,600 @@
     <!-- End Matomo Code -->
 </head>
 <body>
-<!-- Modal Video -->
-<div class="modal fade" id="modal-video" tabindex="-1" role="dialog" aria-labelledby="modal-video-label">
-    <div class="modal-dialog modal-lg" role="document">
-        <div id="aenco-modal-content" class="modal-content">
-            <div id="aenco-modal-header" class="modal-header">
-                <button type="button" id="aenco-modal-close" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div id="aenco-modal-body" class="modal-body">
-                <div class="modal-video">
-                    <div class="embed-responsive embed-responsive-16by9">
-                        <iframe id="what-is-aenco-video" class="embed-responsive-item"
-                                src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen></iframe>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </div>
-</div>
-<!-- Eligible Contributor Modal -->
-<div class="modal fade" id="eligible-contributor" tabindex="-1" role="dialog" aria-labelledby="eligible-contributor"
-     aria-hidden="true">
-    <div class="modal-dialog modal-lg" role="document">
+<!-- Modals -->
+<div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container" aria-hidden="true">
+    <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Eligible Contributors</h5>
+                <h5 class="modal-title"></h5>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                    <span aria-hidden="true">&times;</span>
+                <span aria-hidden="true">&times;</span>
                 </button>
             </div>
-            <div id="eligible-contributor-modal-body" class="modal-body">
-                <div style="overflow-x:auto;">
-                    <table class="table">
-                        <thead>
-                        <tr>
-                            <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
-                            <th scope="col">Hong Kong Residents</th>
-                            <th scope="col">Rest of the World</th>
-                        </tr>
-                        </thead>
-                        <tbody>
-                        <tr>
-                            <td>United States of America (USA), <br> Independent State of Samoa (Samoa)</td>
-                            <td>Proof of Identity: Passport or HKID</td>
-                            <td>Proof of Identity: Passport</td>
-                        </tr>
-                        <tr>
-                            <td>People's Republic of China</td>
-                            <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                            <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                        </tr>
-                        <tr>
-                            <td>OFAC Sanctioned Countries * <a target="_blank"
-                                                               href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
-                            </td>
-                            <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
-                                (excluding Real Estate) in excess of HKD 8 mil
-                            </td>
-                            <td></td>
-                        </tr>
-                        </tbody>
-                    </table>
-                </div>
+            <div id="modal-body" class="modal-body">
+                <div id="modal-body-content" class="modal-body-content no-langauge-bar"></div>
             </div>
         </div>
     </div>
 </div>
+<!-- End Modals -->
 
-<!-- Navigation Area Start -->
-<nav class="navbar navbar-expand-xl navbar-togglable fixed-top navbar-dark">
-    <div class="container">
-        <a href="./" class="navbar-brand">
-            <img src="./assets/img/aenco-logo-light.png" alt="Aenco Logo"/>
-        </a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-supported-content"
-                aria-controls="navbar-supported-content" aria-expanded="false" aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"><i class="fas fa-bars"></i></span>
-        </button>
-
-        <div class="collapse navbar-collapse" id="navbar-supported-content">
-            <ul class="navbar-nav ml-auto">
-                <li class="nav-item dropdown">
-                    <a class="nav-link dropdown-toggle" href="#" id="navbar-documents" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                        Documents
-                    </a>
-                    <div class="dropdown-menu" aria-labelledby="navbar-documents">
-                        <a class="dropdown-item" href="./assets/docs/aenco-two-pager.pdf">Two-Page Summary</a>
-                        <a class="dropdown-item" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a>
-                        <a class="dropdown-item" href="./assets/docs/aenco-token-economics.pdf">Token Paper</a>
-                        <div class="dropdown-divider"></div>
-                        <a class="dropdown-item" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <a href="#welcome-area"><div class="brand-logo"></div></a>
+        <div class="mobile-menu pos-f-t">
+            <nav class="navbar navbar-dark">
+              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+              </button>
+            </nav>
+            <div class="collapse" id="navbarToggleExternalContent">
+                <div class="p-4 menu-content">
+                    <div class="list-group">
+                        <a href="#welcome-area" class="list-group-item list-group-item-action">WHITEPAPER</a>
+                        <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action">AEN TOKEN</a>
+                        <a href="#roadmap-area" class="list-group-item list-group-item-action">ROADMAP</a>
+                        <a href="#team-area" class="list-group-item list-group-item-action">TEAM</a>
+                        <a href="#contact-us-area" class="list-group-item list-group-item-action">CONTACT</a>
                     </div>
-                </li>
-                <li class="nav-item"><a class="nav-link" href="#ecosystem">AEN Token</a></li>
-                <li class="nav-item"><a class="nav-link" href="#benefit">Token Economy</a></li>
-                <li class="nav-item"><a class="nav-link" href="#roadmap">Roadmap</a></li>
-                <li class="nav-item"><a class="nav-link" href="#team">Team</a></li>
-                <li class="nav-item"><a class="nav-link" href="#faq">FAQ</a></li>
-                <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
-                <li class="nav-item"><a class="nav-link" target="_blank"
-                                        href="https://uatsignup.aencoin.com/login">Login</a></li>
-                <li class="nav-item"><a class="nav-link" target="_blank"
-                                        href="https://uatsignup.aencoin.com/register">Register</a></li>
-            </ul>
+                </div>
+            </div>
         </div>
+        <nav class="menu">
+            <ul>
+                <li><a href="#welcome-area">WHITEPAPER</a></li>
+                <li><a href="#what-is-ean-token-area">AEN TOKEN</a></li>
+                <li><a href="#roadmap-area">ROADMAP</a></li>
+                <li><a href="#team-area">TEAM</a></li>
+                <li><a href="#contact-us-area">CONTACT</a></li>
+                <li class="telegram"><a href="https://t.me/AENCO"><i class="fab fa-telegram-plane fa-3x"></i></a></li>
+            </ul>
+        </nav>
+        <nav class="login-menu">
+            <ul>
+                <li class="group-account"><a href="https://signup.aencoin.com/register"><span class="txt-signup">SIGN UP</span></a></li>
+                <li class="group-account"><a href="https://signup.aencoin.com/login"><span class="txt-login">LOGIN</span></a></li>
+            </ul>
+        </nav>
     </div>
-</nav>
-<!-- Navigation Area End -->
+</header>
+<!-- Header End -->
+
+<!-- bottom bar -->
+<div class="bottomBarContainer">
+    <div class="bottomBar">
+        <h2 class="txt-join-community">JOIN OUR COMMUNITY</h2>
+        <nav>
+            <ul>
+                <li><a target="_blank" href="https://t.me/AENCO"><i class="fab fa-telegram fa-3x"></i></a>
+                </li>
+                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><i class="fab fa-facebook fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://twitter.com/aencoin"><i class="fab fa-twitter-square fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><i class="fab fa-discord fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://medium.com/@aencoin"><i class="fab fa-medium fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><i class="fab fa-linkedin fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://github.com/AENCO-Global"><i class="fab fa-github-square fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://reddit.com/r/Aenco"><i class="fab fa-reddit fa-3x"></i></a>
+                </li>
+                <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><i class="fab fa-btc fa-3x"></i></a></li>
+            </ul>
+        </nav>
+    </div>
+</div>
+<!-- bottom bar end -->
+
 <!-- Welcome Area Start -->
-<section class="section section-top section-full welcome-area">
-    <div class="bg-cover">
-    </div>
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-8 col-lg-12">
-                <h1 class="text-center text-uppercase mb-4">AENCO Is The World's First Blockchain-Based Healthcare Financial Solutions</h1>
-                <p class="lead text-center mb-5">HealthTech, Smart Capital, and Prime Brokerage Solutions Under One Umbrella</p>
-                <p class="text-center mb-0">
-                    <a href="uatsignup.aencoin.com/register" class="btn-custom">
-                        Register
+<section id="welcome-area" class="section section-top section-full welcome-area">
+    <div class="background">
+        <div class="content">
+            <div class="row">
+                <h1 class="core-message">AENCO IS THE WORLD'S FIRST BLOCKCHAIN-BASED HEALTHCARE FINANCIAL SOLUTIONS PLATFORM</h1>
+            </div>
+            <div class="row sub-message-container">
+                <h3 class="sub-message">HealthTech, Smart Capital, and Prime Brokerage Solutions Under One Umbrella</h3>
+            </div>
+            <div class="row private-sale-notice">
+                <div class="col col-7"><h2 class="private-sale-txt">PRIVATE SALE IS LIVE!</h2></div>
+                <div class="col">
+                    <a href="https://signup.aencoin.com/register" class="btn-join">
+                        <span class="btn-txt">JOIN NOW</span>
                     </a>
-                </p>
+                </div>
+            </div>
+            <div class="row row-contributor">
+                <div class="link-group h3">
+                    <a href="#" id="btn-contributors" data-toggle="modal" data-target="#modal-container">Eligible Contributors</a> <span>|</span> <a href="https://www.aencoin.com/token-sale-terms-summary.html">Learn More</a>
+                </div>
+            </div>
+            <div class="row link-group-container">
+                <ul class="link-list">
+                    <li class="link-txt"><a herf="#" id="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" id="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">TOKEN PAPER</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" id="btn-two-pager" data-toggle="modal" data-target="#modal-container">2 PAGER</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" id="btn-presentation" data-toggle="modal" data-target="#modal-container">SLIDE PRESENTATION</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" id="btn-launch-video" data-toggle="modal" data-target="#modal-container">TEAM LAUNCH VIDEO</a></li>
+                </ul>
+            </div>
+
+            <div class="rating-container">
+                <div class="regular slider">
+                    <div class="slider-item">
+                        <a href="https://icobench.com/ico/aenco" target="_blank" rel="nofollow" title="Aenco on ICObench">
+                            <img border="0" src="https://icobench.com/rated/aenco?shape=square&amp;size=s" alt="Aenco ICO rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://findico.io/ico/aenco" target="_blank" title="Aenco on FindICO">
+                            <img border="0" src="https://findico.io/widget/horizontal/aenco/500.png" alt="0x (ZRX) FindICO rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://www.trackico.io/ico/aenco/" target="_blank" rel="nofollow" title="Aenco on TrackICO">
+                            <img border="0" src="https://www.trackico.io/widget/square/aenco/120.png" alt="Aenco TrackICO rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://icochannels.com/published/details/aenco-418.html" target="_blank" rel="nofollow">
+                            <img src="https://icochannels.com/public/widget/aenco/horizontal.png" alt="Aenco ICOchannel rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://icoholder.com/en/aenco-21686" target="_blank" rel="nofollow" title="Aenco on ICOholder">
+                            <img border="0" src="https://icoholder.com/en/big-black/21686.widget.svg?width=132" alt="Aenco TrackICO rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://www.coinschedule.com/ico/aen-coin" target="_blank"><img src="https://www.coinschedule.com/link-to-us/logo/2826_small?type=7"></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
 <!-- Welcome Area End -->
-<!-- What is Aenco Area Start -->
-<section class="section section-full what-is-aen-token">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-md-12 col-lg-6 mt-5">
-                <h2 class="text-uppercase">What is AEN Token</h2>
-                <h3 class="text-uppercase">Aenco token will fuel and facilitate an ecosystem for the HealthTech Entrepreneurial, Innovation and Research</h3>
-                <p class="">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+<!-- What is Aen Token -->
+<section id="what-is-ean-token-area" class="section section-top section-full what-is-aen-token-area">
+    <div class="main-container">
+        <div class="content">
+            <div class="message-container">
+                <h2>WHAT IS AEN TOKEN?</h2>
+                <h3>AEN Token Fuels and Facilitates an Ecosystem for HealthTech Entrepreneurialism, Innovation, and Research</h3>
+                <h5>As a one-stop-shop solutions provider and research collaboration hub for healthcare companies involved in blockchain development, Aenco combines it solutions platform and core financial ecosystem through the release of the AEN token, as the key building block and extensions across all service and community deliveries.</h5>
             </div>
-            <div class="col-md-12 col-lg-6">
-                <img src="./assets/img/video-intro-thumb.jpg">
-            </div>
-        </div>
-    </div>
-</section>
-<!-- What is Aenco Area End -->
-<!-- How it works Area Start -->
-<section class="section section-full how-it-works">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="text-uppercase text-center section-title">How it works</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-lg-4 col-xl-4">
-                <img src="assets/img/icon-global.png">
-                <h3 class="text-uppercase">Global community</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="col-md-12 col-lg-4 col-xl-4">
-                <img src="assets/img/icon-solution.png">
-                <h3 class="text-uppercase">Aenco Global HealthTech Financial Solutions</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
-            </div>
-            <div class="col-md-12 col-lg-4 col-xl-4">
-                <img src="assets/img/icon-partners.png">
-                <h3 class="text-uppercase">HealthTech Partners & Future Sponsored Projects</h3>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</p>
+            <div class="video-container">
+                <a href="#" id="btn-video-core" data-toggle="modal" data-target="#modal-container"><img src="./assets/img/video-rollout-thumb.jpg" /></a>
             </div>
         </div>
     </div>
 </section>
-<!-- How it works Area End -->
-<!-- Explore Video Area Start -->
-<section class="section section-full explore-aenco">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="text-uppercase text-center section-title">Explore Aenco</h2>
-            </div>
-        </div>
-        <div class="row">
-            <div class="col-md-12 col-lg-3 col-xl-3">
-                <img src="assets/img/video-vison-thumb.jpg">
-                <p class="text-uppercase text-center">Our Vision</p>
-            </div>
-            <div class="col-md-12 col-lg-3 col-xl-3">
-                <img src="assets/img/video-rollout-thumb.jpg">
-                <p class="text-uppercase text-center">Technology Rollout</p>
-            </div>
-            <div class="col-md-12 col-lg-3 col-xl-3">
-                <img src="assets/img/video-regulatory-thumb.jpg">
-                <p class="text-uppercase text-center">Regulatory Landscape</p>
-            </div>
-            <div class="col-md-12 col-lg-3 col-xl-3">
-                <img src="assets/img/video-community-thumb.jpg">
-                <p class="text-uppercase text-center">Our Community</p>
+<!-- What is Aen Token End -->
+<!-- How is works -->
+<section id="how-it-works-area" class="section section-top section-full how-it-works-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>HOW IT WORKS?</h2>
+            <div class="items">
+                <div class="item">
+                    <div class="logo logo-global"></div>
+                    <div class="info">
+                        <h3 class="subtitle">GLOBAL<br /> COMMUNITY</h3>
+                        <h5>To enjoy platform membership, priority access to evolving ecosystem opportunities, utility, community rewards, and platform solutions.</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="logo logo-solution"></div>
+                    <div class="info">
+                        <h3 class="subtitle">AENCO GLOBAL HEALTHTECH FINANCIAL SOLUTIONS</h3>
+                        <h5>Ecosystem opportunities and utility across three core application platforms: Aenco IB, Prime, and SmartCap Solutions.</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="logo logo-partner "></div>
+                    <div class="info">
+                        <h3 class="subtitle">HEALTHTECH PARTNERS & FUTURE SPONSORED PROJECTS</h3>
+                        <h5>Medical utility across an existing pipeline, and expanding network of HealthTech partners specializing in therapeutics, medical infrastructure, medical data analytics, and innovative forms of healthcare technology services.</h5>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
 </section>
-<!-- Explore Video Area End -->
-<!-- Roadmap Area Start -->
-<section class="section section-full roadmap">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="text-uppercase text-center section-title">Roadmap</h2>
+<!-- How is works End -->
+<!-- Explore Aenco -->
+<section id="explore-aenco-area" class="section section-top section-full explore-aenco-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>EXPLORE AENCO</h2>
+            <div class="items" id="video-list"></div>
+            <div class="more-btn-container">
+                <button class="btn-more-videos" onclick="loadMore();" >MORE VIDEOS</button>
             </div>
         </div>
     </div>
 </section>
-<!-- Roadmap Area End -->
-<!-- Team Area Start -->
-<section class="section section-full team">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="text-uppercase text-center section-title">Team</h2>
-            </div>
-        </div>
-        <!-- ***** Management Team Start ***** -->
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/ian-huen.png" alt="Ian Huen">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/ianhuen/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
+<!-- Explore Aenco End -->
+<!-- Token Economy -->
+<section id="token-economy-area" class="section section-top section-full token-economy-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>TOKEN ECONOMY</h2>
+            <div class="row coin-info">
+                <div class="soft-cap col">
+                    <div class="circle">
+                        <div class="title">Soft Cap</div>
+                        <div class="value">USD<br/>15,000,000</div>
                     </div>
-                    <h3 class="team-name">Ian Huen</h3>
-                    <span>Co-Founder</span>
+                </div>
+                <div class="soft-cap col">
+                    <div class="circle">
+                        <div class="title">Target Cap</div>
+                        <div class="value">USD<br/>60,000,000</div>
+                    </div>
+                </div>
+                <div class="soft-cap col">
+                    <div class="circle green-circle">
+                        <div class="title">Accpeted<br/>Crypto</div>
+                        <div class="value">BTC<br/>ETH</div>
+                    </div>
                 </div>
             </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/darren-lui.png" alt="Darren Lui">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/darren-lui/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+            <div class="row coin-info">
+                <div class="col col-blue">
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col1"><h5>Token Symbol</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col2"><h5>AEN</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Darren Lui</h3>
-                    <span>Co-Founder</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/kenrick-fok.png" alt="Kenrick Fok">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/kenrickfok/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col1"><h5>Token Name</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col2"><h5>AEN Coin</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Kenrick Fok</h3>
-                    <span>CFO</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/geoffrey-tipton.png" alt="Geoff Tipy">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/geoff-tipy/"><i class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col1"><h5>Token Type</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col2"><h5>ERC223</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Geoff Tipy</h3>
-                    <span>CTO</span>
-                </div>
-            </div>
-        </div>
-        <!-- ***** Management Team End ***** -->
-        <br>
-        <!-- ***** Core Team Start ***** -->
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/charles-lau.png" alt="Charles Lau">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/laucharles"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row row-text-only">
+                        <div class="col">USD PRICE PER TOKEN</div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col1"><h5>ot ICO</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col2"><h5>0.1</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Charles Lau</h3>
-                    <span>Managing Director</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/erica-chan.png" alt="Erica Chan">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/erica-chan/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col1"><h5>ot Pre-ICO</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col2"><h5>0.1+50% Bonus Token</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Erica Chan</h3>
-                    <span>Head of Wealth Management</span>
                 </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/isabella-lai.png" alt="Isabella Lai">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/isabella-lai/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3 class="team-name">Isabella Lai</h3>
-                    <span>Senior Director</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/teddy-ip.png" alt="Teddy Ip">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/teddyip/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3 class="team-name">Teddy Ip</h3>
-                    <span>Senior Director</span>
-                </div>
-            </div>
 
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/nick-wan.png" alt="Nick Wan">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/nickhywan/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                <div class="col col-green">
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col3"><h5>Pre-ICO Sole</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col4"><h5>200,000,000(5% total supply)</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Nick Wan</h3>
-                    <span>Co-Investment Director</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/calvin-poon.png" alt="Calvin Poon">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/calvin-poon/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col3"><h5>Pre-ICO Bonus Scheme</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col4"><h5>100,000,000(+50% bonus)</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Calvin Poon</h3>
-                    <span>Co-Investment Director</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/ally-cheung.png" alt="Ally Cheung">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/allycheung/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col3"><h5>ICO Public Sole</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col4"><h5>400,000,000(10% total supply)</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Ally Cheung</h3>
-                    <span>Head of Community Management</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/david-carey.png" alt="David Carey">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/david-carey/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col3"><h5>ICO Bonus Scheme</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col4">
+                                <h5>Week 1: +20% Bonus<br>
+                                Week 2: +10% Bonus<br>
+                                Week 3: +5% Bonus</h5>
+                            </div>
                         </div>
                     </div>
-                    <h3 class="team-name">David Carey</h3>
-                    <span>Senior Cloud Engineer</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/aaron-regala.png" alt="Aaron Regala">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/aaron-regala/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
+                    <div class="row">
+                        <div class="col">
+                            <div class="bg-left col3"><h5>Tokens Unsold</h5></div>
+                        </div>
+                        <div class="col">
+                            <div class="bg-right col4"><h5>Allocated to Reserves</h5></div>
                         </div>
                     </div>
-                    <h3 class="team-name">Aaron Regala</h3>
-                    <span>Business Analyst</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/michelle-au.png" alt="Michelle Au">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Michelle Au</h3>
-                    <span>Creative Specialist</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/andy-chan.png" alt="Andy Chan">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Andy Chan</h3>
-                    <span>Head of Insurance</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/issac-cheung.png" alt="Issac Cheung">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Issac Cheung</h3>
-                    <span>Full-Stack Developer</span>
                 </div>
             </div>
         </div>
-        <!-- ***** Core Team End ***** -->
-        <br>
+    </div>
+</section>
+<!-- Topken Economy End -->
+<!-- Token Distribution -->
+<section id="token-distribution-area" class="section section-top section-full token-distribution-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>TOKEN DISTRIBUTION</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="chart-title">
+                        <h3>TOKEN ALLOCATION</h3>
+                    </div>
+                    <div class="chart-subtitle">
+                        <h5>Total Token Supply 4,000,000,000</h5>
+                    </div>
+                    <div class="pie-chart">
+                        <canvas id="allocation-pie"></canvas>
+                    </div>
+                    <div id="token-allocation" class="chart-descriptions"></div>
+                </div>
+                <div class="col">
+                    <div class="chart-title">
+                        <h3>TOKEN ALLOCATION</h3>
+                    </div>
+                    <div class="chart-subtitle">
+                        <h5>Total Token Supply 4,000,000,000</h5>
+                    </div>
+                    <div class="pie-chart">
+                        <canvas id="use-of-proceeds-pie"></canvas>
+                    </div>
+                    <div id="use-of-proceeds" class="chart-descriptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Token Distribution End -->
+<!-- Media -->
+<section id="media-area" class="section section-top section-full media-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>MEDIA COVERAGE</h2>
+            <div class="media-list-container">
+                <ul id="media-list" class="media-list"></ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Media End-->
+<!-- Partners -->
+<section id="partners-area" class="section section-top section-full partners-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>PARTNERS</h2>
+            <div class="partner-list-container">
+                <ul id="partner-list" class="partner-list"></ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Partners End -->
+<!-- Roadmap -->
+<section id="roadmap-area" class="section section-top section-full roadmap-area">
+    <div class="main-container">
+        <h2>ROADMAP</h2>
+        <div class="container-fluid">
+            <div class="row example-centered">
+                <div class="col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2 margin-auto">
+                    <ul class="timeline timeline-centered">
+                        <li class="timeline-item">
+                            <div class="timeline-info"> </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">4Q 2010</h3>
+                                <p>Assets managed by Aeneas deployed into health care private equity and direct investments<br>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"> </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">2Q 2016</h3>
+                                <p>Aeneas Group builds healthtech partnership with Aptorum Group, a multi-disciplinary medical innovations platform based in HK<br>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"> </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">3Q 2017</h3>
+                                <p>
+                                Aeneas Capital initiates to expand its licenses with the SFC in HK to include dealing and advising in securities (in progress) </p>
+                                <p>Aeneas expands partnerships with healthtech companies specializing in neuro, infectious diseases, and robotic surgeary devices<br>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"> </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">1Q 2018</h3>
+                                <p>Aeneas Capital, LLC. established in New Jersey, U.S.A. to set up a FINRA regulated broker dealer (in progress) </p>
+                                <p>Aneas Group establishing a full-service banking license in Europe (in progress)<br>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"> </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">2Q 2018</h3>
+                                <h6 class="timeline-smtitle">T-2M</h6>
+                                <p>Initiate private presale: 50% bonus</p>
+                                <h6 class="timeline-smtitle">T-1M</h6>
+                                <p>Aeneas Capital granted expanded licenses by the SFC in HK.</p>
+                                <p>Community Investors outreach 50% bonus</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item">
+                            <div class="timeline-info"> </div>
+                            <div class="timeline-marker"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">1Q 2018</h3>
+                                <p>Aeneas Capital, LLC. established in New Jersey, U.S.A. to set up a FINRA regulated broker dealer (in progress) </p>
+                                <p>Aneas Group establishing a full-service banking license in Europe (in progress)<br>
+                                </p>
+                            </div>
+                        </li>
+                        <li class="timeline-item period" style="padding-bottom: 50px;">
+                            <div class="timeline-content">
+                                <h2 class="timeline-title">ICO<br>
+                                </h2>
+                                <h6 class="timeline-subtitle">TARGET: BEGINS 3RD QUARTER 2018 "T" </h6>
+                            </div>
+                        </li>        
+                        <li class="timeline-item ico">
+                            <div class="timeline-marker ico"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">ICO Public sales</h3>
+                                <p><strong>WEEK 1:</strong> 20% Bonus<br>
+                                <strong>WEEK 2:</strong> 10% Bonus<br>
+                                <strong>WEEK 3:</strong> 5% Bonus<br>
+                                <strong>WEEK 4 Starting:</strong> No Bonus</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item ico">
+                            <div class="timeline-marker ico"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">POST-ICO</h3>
+                            </div>
+                        </li>
+                        <li class="timeline-item ico">
+                            <div class="timeline-marker ico"></div>
+                            <div class="timeline-content">
+                            <h3 class="timeline-title">4Q 2018</h3>
+                            <p><strong>T+3M</strong><br>
+                            Launch first generation  smart wallet &  infrastucture  (AEN Connect)</p>
+                            <p><strong>T+6M</strong><br>
+                            Second generation  custodial wallet &  escow services</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item ico">
+                            <div class="timeline-marker ico"></div>
+                            <div class="timeline-content">
+                            <h3 class="timeline-title">4Q 2019</h3>
+                                <p><strong>T+15M</strong><br>
+                                Second generation:  AENX trading exchange</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item ico">
+                            <div class="timeline-marker ico"></div>
+                            <div class="timeline-content">
+                                <h3 class="timeline-title">2Q 2020</h3>
+                                <p><strong>T+21M</strong><br>
+                                Third generation:  AENCO prime  brokerage  platform</p>
+                            </div>
+                        </li>
+                        <li class="timeline-item period">
+                            <div class="timeline-info"></div>
+                            <div class="timeline-marker ico2"></div>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Roadmap End -->
+<!-- Team -->
+<section id="team-area" class="section section-top section-full team-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>OUR TEAM</h2>
+            <div id="team-member-list" class="team-member-list"></div>
+            <div class="more-btn-container">
+                <button id="btn-team-more" class="btn-more" onclick="getMemberLoad('#team-member-list').loadMoreMembers();" >MORE</button>
+            </div>
+            <h2>OUR ADVISORS</h2>
+            <div id="advisor-list" class="team-member-list"></div>
+            <div class="more-btn-container">
+                <button id="btn-advisors-more" class="btn-more" onclick="getMemberLoad('#advisor-list').loadMoreMembers();" >MORE</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team End -->
+<!-- Contact Us -->
+<section id="contact-us-area" class="section section-top section-full contact-us-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>CONTACT US</h2>
+            <div class="moon-contact"><a href="mailto:moon@aencoin.com">MOON@AENCOIN.COM</a><br />+852 8199 0918</div>
+            <div class="social-items">
+                <ul class="social">
+                    <li><a target="_blank" href="https://t.me/AENCO"><i class="fab fa-telegram fa-3x"></i></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><i class="fab fa-facebook fa-3x"></i></a></li>
+                    <li><a target="_blank" href="https://twitter.com/aencoin"><i class="fab fa-twitter-square fa-3x"></i></a></li>
+                    <li><a target="_blank" href="https://discord.gg/5nTn4rC"><i class="fab fa-discord fa-3x"></i></a></li>
+                    <li><a target="_blank" href="https://medium.com/@aencoin"><i class="fab fa-medium fa-3x"></i></a></li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><i class="fab fa-linkedin fa-3x"></i></a></li>
+                    <li><a target="_blank" href="https://github.com/AENCO-Global"><i class="fab fa-github-square fa-3x"></i></a></li>
+                    <li><a target="_blank" href="https://reddit.com/r/Aenco"><i class="fab fa-reddit fa-3x"></i></a>
+                    </li>
+                    <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><i class="fab fa-btc fa-3x"></i></a></li>
+                </ul>
+            </div>
+            <h3>CONTACT ADDRESS</h3>
+            <h5>904, 9/F, Office Plus@Sheung Wan, 93-103 Wing Lok Street,<br /> Sheung Wan, Hong Kong</h5>
+            <h3 class="text-reg-addr">REGISTRED ADDRESS</h3>
+            <h5>Vistra (Cayman) Limited, P.O. Box 31119 Grand Pavilion Hisbiscus Way<br /> 802 Weat Bay Road, Grand Cayman, KYI-1205, Cayman Island</h5>
+        </div>
+    </div>
+</section>
+<!-- Contact Us End -->
+<footer>
+    <div class="footer">
         <div class="row">
-            <div class="col-lg-12">
-                <div class="center-heading">
-                    <h1 class="h1 section-title">Our Advisors</h1>
-                </div>
-            </div>
+            <div class="footer-content terms col"><a href="#" id="btn-terms" data-toggle="modal" data-target="#modal-container">Terms of Use</a> | <a href="#" id="btn-policy" data-toggle="modal" data-target="#modal-container">Privacy Policy</a> | <a href="#" id="btn-disclaimer" data-toggle="modal" data-target="#modal-container">Risk Disclaimer</a></div>
+            <div class="footer-content copyright col">2018 © Aenco Solutions Ltd - Global Healthtech Blockchain Financial Solutions</div>
         </div>
-        <!-- ***** Advisors Start ***** -->
-        <div class="row">
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/doug-arner.png"
-                                 alt="Professor Douglas W. Arner">
-                            <ul class="social">
-                                <li><a target="_blank" href="http://www.law.hku.hk/faculty/staff/arner_douglas.php"><i
-                                        class="fas fa-user"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3 class="team-name">Professor Douglas W. Arner</h3>
-                    <span>Senior Regulatory and Strategic Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/virginia-lam.png" alt="Virginia Lam">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/lamvirginia/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3 class="team-name">Virginia Lam</h3>
-                    <span>Marketing Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/douglas-ching.png" alt="Douglas Ching">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/dougching/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3 class="team-name">Douglas Ching</h3>
-                    <span>Marketing Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/sm-yiu.png" alt="Dr. S.M. Yiu">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. S.M. Yiu</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/jeff-marquass.png" alt="Jeff Marquass">
-                            <ul class="social">
-                                <li><a target="_blank" href="https://www.linkedin.com/in/jeff-marquass-4a37995/"><i
-                                        class="fab fa-linkedin-in"></i></a></li>
-                            </ul>
-                        </div>
-                    </div>
-                    <h3 class="team-name">Jeff Marquass</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/albert-leung.png" alt="Dr. Albert Leung">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. Albert Leung</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/kenny-yu.png" alt="Dr. Kenny Yu">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. Kenny Yu</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/kwok-ka-wai.png" alt="Dr. Kwok Ka Wai">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. Kwok Ka Wai</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/owen-ko.png" alt="Dr. Owen Ko">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. Owen Ko</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/sunny-wong.png" alt="Dr. Sunny Wong">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. Sunny Wong</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c3">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/william-wu.png" alt="Dr. William Wu">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Dr. William Wu</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c4">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/joe-hui.png" alt="Joe Hui">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Joe Hui</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c1">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/julian-ting.png" alt="Julian Ting">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Julian Ting</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-            <div class="col-lg-3 col-md-3 col-sm-6 col-xs-12 sr-team-c2">
-                <div class="team-round">
-                    <div class="profile">
-                        <div class="img">
-                            <img src="./assets/img/profile/shell-cheung.png" alt="Shell Cheung">
-                        </div>
-                    </div>
-                    <h3 class="team-name">Shell Cheung</h3>
-                    <span>Advisor</span>
-                </div>
-            </div>
-        </div>
-        <!-- ***** Advisors End ***** -->
     </div>
-</section>
-<!-- Team Area End -->
-<!-- Contact Area Start -->
-<section class="section section-full contact-us">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="text-uppercase text-center section-title">Roadmap</h2>
-            </div>
+</footer>
+<!-- Hidden Bottom Bar Area -->
+<section class="section section-top section-full bottom-bar-area">
+    <div class="main-container">
+        <div class="mockup">
         </div>
     </div>
 </section>
-<!-- Contact Area End -->
-<!-- Footer Area Start -->
-<section class="section section-full footer-aenco">
-    <div class="container">
-        <div class="row justify-content-center align-items-center">
-            <div class="col-12">
-                <h2 class="text-uppercase text-center section-title">Roadmap</h2>
-            </div>
-        </div>
-    </div>
-</section>
-<!-- Footer Area End -->
-
-<!-- JQuery -->
-<script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
-<!-- Bootstrap -->
-<script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
-<script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
-<!-- Charting-->
-<script type="text/javascript" src="./assets/js/vendor/Chart.min.js"></script>
-<!-- Misc -->
-<script type="text/javascript" src="./assets/js/vendor/scrollreveal.min.js"></script>
-<!-- Custom -->
-<script type="text/javascript" src="./assets/js/custom.min.js"></script>
+<!-- Hidden Bottom Bar  End -->
+<script type="text/javascript" src="./assets/js/team.js"></script>
+<script type="text/javascript" src="./assets/js/token-distribution.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
 </body>
 </html>

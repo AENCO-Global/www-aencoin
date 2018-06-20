@@ -1,0 +1,70 @@
+.contact-us-area {
+    .main-container {
+        width: 100%;
+        background-color: #0a92a4;
+        text-align: center;
+    }
+    .content {
+        width: calc(1200 * 100vh / #{$ref-height});
+        margin: auto;
+        padding: calc(100vh * 50 / #{$ref-height}) 0;
+    }
+    .moon-contact {
+        margin-top: calc(100vh * 30 / #{$ref-height});
+        font-size: calc(100vh * 18 / #{$ref-height});
+        font-weight: 600;
+        letter-spacing: calc(100vh * 0.6 / #{$ref-height});
+        font-family: 'Titillium Web', sans-serif;
+    }
+    .social-items {
+        width: 100%;
+        height: calc(100vh * 42 / #{$ref-height});
+        margin-top: calc(100vh * 40 / #{$ref-height});
+        margin-bottom: calc(100vh * 48 / #{$ref-height});
+    }
+    h2 {
+        font-size: calc(100vh * 40 / #{$ref-height});
+        font-weight: 400;
+        letter-spacing: calc(100vh * 4 / #{$ref-height});
+    }
+    h3 {
+        font-size: calc(100vh * 29 / #{$ref-height});
+        font-family: 'Teko', sans-serif;
+        font-weight: 400;
+        letter-spacing: calc(100vh * 2 / #{$ref-height});
+        line-height: 1;
+    }
+    h5 {
+        font-size: calc(100vh * 16 / #{$ref-height});
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 300;
+        letter-spacing: calc(100vh * 0.6 / #{$ref-height});
+        line-height: 1.5;
+        padding-top: calc(100vh * 3 / #{$ref-height});
+    }
+    .text-reg-addr {
+        margin-top: calc(100vh * 30 / #{$ref-height});
+    }
+    ul {
+        display: flex;
+        list-style: none;
+        padding: 0;
+        max-width: calc(100vh * 570 / #{$ref-height});
+        margin: auto;
+    }
+    li {
+        list-style: none;
+        margin: 0 auto;
+    }
+    li a {
+        color: #FFFFFF;
+    }
+    .fa-3x {
+        font-size: calc(100vh * 38 / #{$ref-height});
+    }
+    @media (max-aspect-ratio: 1200/1012) {
+        .content {
+            width: 80vw;
+        }
+    }
+}

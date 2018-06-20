@@ -1,3 +1,75 @@
-.how-it-works {
-  background-color: $primary-color-shade-1;
+.how-it-works-area {
+  .main-container {
+    width: 100%;
+    background-color: #0a92a4;
+    margin: auto;
+  }
+  .content {
+    width: calc(1200 * 100vh / #{$ref-height});
+    margin: auto;
+    padding: calc(100vh * 50 / #{$ref-height}) 0;
+  }
+  .items {
+    margin: auto;
+    margin-top: calc(100vh * 46 / #{$ref-height});
+    flex-wrap: wrap;
+    display: flex;
+  }
+  .item {
+    width: calc(100vh * 340 / #{$ref-height});
+    height: calc(100vh * 420 / #{$ref-height});
+    position: inherit;
+    text-align: center;
+    margin: auto;
+  }
+  .logo {
+    margin: auto;
+    height: calc(100vh * 174 / #{$ref-height});
+    background-repeat: no-repeat;
+  }
+  .logo-global {
+    width: calc(100vh * 174 / #{$ref-height});
+    background: url($how-it-works-icon-global) no-repeat;
+    background-size: calc(100vh * 174 / #{$ref-height}) calc(100vh * 142 / #{$ref-height});
+  }
+  .logo-solution {
+    width: calc(100vh * 150 / #{$ref-height});
+    background: url($how-it-works-icon-solution) no-repeat;
+    background-size: calc(100vh * 150 / #{$ref-height}) calc(100vh * 150 / #{$ref-height});
+  }
+  .logo-partner {
+    width: calc(100vh * 134 / #{$ref-height});
+    background: url($how-it-works-icon-partners) no-repeat;
+    background-size: calc(100vh * 134 / #{$ref-height}) calc(100vh * 134 / #{$ref-height});
+  }
+  h2 {
+    font-size: calc(100vh * 40 / #{$ref-height});
+    font-weight: 400;
+    letter-spacing: calc(100vh * 6 / #{$ref-height});
+  }
+  h2, h3, h5 {
+    text-align: center;
+  }
+  h3 {
+    font-weight: 400;
+    font-size: calc(100vh * 27 / #{$ref-height});
+    letter-spacing: calc(100vh * 6 / #{$ref-height});
+  }
+  .subtitle {
+    line-height: 1.3;
+    letter-spacing: calc(100vh * 3 / #{$ref-height});
+  }
+  h5 {
+    font-size: calc(100vh * 16 / #{$ref-height});
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    letter-spacing: calc(100vh * 1 / #{$ref-height});
+    line-height: 1.6;
+
+  }
+  @media (max-aspect-ratio: 1600/1012) {
+    .content {
+        width: 80vw;
+    }
+  }
 }

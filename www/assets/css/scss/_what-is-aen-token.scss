@@ -1,14 +1,78 @@
-.what-is-aen-token {
-  background-color: $tertiary-color;
-
-  h2 {
-    font-family: $font-primary;
-    font-weight: $regular;
-    color: $secondary-color;
-  }
-
-  img {
+.what-is-aen-token-area {
+  .main-container {
     width: 100%;
-    height: auto;
+    margin: auto;
+  }
+  .content {
+    width: calc(1600 * 100vh / #{$ref-height});
+    margin: auto;
+    padding: calc(100vh * 190 / 1012) 0 calc(100vh * 90 / 1012) 0;
+    display: flex;
+  }
+  .message-container {
+    width: calc(100vh * 500 / #{$ref-height});
+    margin-left: calc(100vh * 270 / #{$ref-height});
+  }
+  h2 {
+    color: #b6d84e;
+    font-weight: 500;
+    font-size: calc(100vh * 39 / #{$ref-height});
+    letter-spacing: calc(100vh * 3 / #{$ref-height});
+  }
+  h3 {
+    letter-spacing: calc(100vh * 2 / #{$ref-height});
+    font-weight: 500;
+    font-size: calc(100vh * 35 / #{$ref-height});
+    line-height: calc(100vh * 48 / #{$ref-height});
+    margin-top: calc(100vh * 13 / #{$ref-height});
+  }
+  h5 {
+    font-size: calc(100vh * 16 / #{$ref-height});
+    line-height: calc(100vh * 31 / #{$ref-height});
+    color: #FFFFFF;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    margin-top: calc(100vh * 12 / #{$ref-height});
+  }
+  .video-container {
+    margin-left: calc(100vh * 36 / #{$ref-height});
+    width: calc(100vh * 540 / 1012);
+    img {
+      width: 100%;
+    }
+  }
+  .video {
+    width: calc(100vh * 536 / #{$ref-height});
+    height: calc(100vh * 378 / #{$ref-height});
+  }
+  @media (max-aspect-ratio: 1600/1012) {
+    .content {
+        width: 80vw;
+    }
+    .message-container {
+      margin-left: 0;
+      margin-top: 0;
+    }
+  }
+  @media (max-aspect-ratio: 1000/1012) {
+    .content {
+      display: block;
+      text-align: center;
+    }
+    h2 {
+      text-align: center;
+    }
+    .video-container {
+      margin-left: 0;
+    }
+  }
+  @media (max-aspect-ratio: 1012/1012) {
+    .video-container {
+      width: calc(100vw * 540 / 1012);
+      margin: auto;
+    }
+    .message-container {
+      margin: auto;
+    }
   }
 }

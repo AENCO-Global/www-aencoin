@@ -1,0 +1,37 @@
+.partners-area {
+    .main-container {
+        width: 100%;
+        background-color: $color-deep-blue;
+    }
+    .content {
+        width: calc(1200 * 100vh / #{$ref-height});
+        margin: auto;
+        padding: calc(100vh * 50 / #{$ref-height}) 0;
+    }
+    h2 {
+        font-size: calc(100vh * 40 / #{$ref-height});
+        font-weight: 400;
+        letter-spacing: calc(100vh * 6 / #{$ref-height});
+        text-align: center;
+    }
+    .partner-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .partner-list li {
+        width: calc(100vh * 270 / #{$ref-height});
+        text-align: center;
+        margin: auto;
+        padding: calc(100vh * 20 / #{$ref-height}) calc(100vh * 15 / #{$ref-height});
+    }
+    .partner-list  img {
+        max-width: 100%;
+        height: 100%;
+    }
+    @media (max-aspect-ratio: 1600/1012) {
+        .content {
+            width: 80vw;
+        }
+    }
+}
