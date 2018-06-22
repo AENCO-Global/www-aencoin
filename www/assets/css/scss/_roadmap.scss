@@ -3,20 +3,21 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
 .roadmap-area {
   .main-container {
-    padding-top: calc(100vh * 190 / #{$ref-height});
     background-color: #000000;
   }
+  .content {
+    padding: 75px 0;
+  }
   .container-fluid {
-    margin-top: calc(100vh * 75 / #{$ref-height});
+    margin-top: 48px;
   }
   h2 {
     text-align: center;
     font-weight: 500;
-    font-size: calc(100vh * 39 / #{$ref-height});
-    letter-spacing: calc(100vh * 3 / #{$ref-height});
+    font-size: 52px;
+    letter-spacing: 2.5px;
   }
 }
-
 h2.timeline-title {
     font-family: "Teko", sans-serif;
     font-weight: 500;

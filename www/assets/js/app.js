@@ -20,6 +20,11 @@ var data = [
         path: './assets/img/video-regulatory-thumb.jpg',
         label: 'OUR COMMUNITY',
         url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
+    },
+    {
+        path: './assets/img/video-regulatory-thumb.jpg',
+        label: 'OUR COMMUNITY',
+        url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
     }
 ];
 
@@ -302,7 +307,6 @@ function addChangeLanguageCallback(btnSelector, pdfSelector, url) {
 function initModal(title = "", content = "", hasMultipleLanguages = false) {
     $("#modal-container .modal-title").html(title);
     $("#modal-container #modal-body-content").html(content);
-    console.log("hasMultipleLanguages", hasMultipleLanguages);
     if (hasMultipleLanguages) {
         $("#modal-container #modal-body-content").removeClass("no-langauge-bar");
     } else {
@@ -417,10 +421,6 @@ function initCallback() {
         });
     }
 
-    $("#btn-video-core").on("click", function() {
-        initModal("", getVideoContent("https://www.youtube.com/embed/Vv4lgRwoX08?rel=0"));
-    });
-
     $("#btn-launch-video").on("click", function() {
         initModal("", getVideoContent("https://www.youtube.com/embed/qDYAOZP2dTg?rel=0"));
     });
@@ -511,7 +511,7 @@ $(function () {
                     $('.header-area .nav').slideUp(200);
                 }
                 $('html,body').animate({
-                    scrollTop: (target.offset().top) - 30
+                    scrollTop: (target.offset().top) - 100
                 }, 700);
                 return false;
             }
@@ -526,7 +526,7 @@ $(function () {
     };
     render(window.innerWidth, window.innerHeight);
 
-    renderSlider();
+    //renderSlider();
 
     mediaDataLoader.render({
         selector: "#media-list",
@@ -540,5 +540,14 @@ $(function () {
 
     $("#navbarToggleExternalContent a").on("click", function() {
         $("#navbarToggleExternalContent").removeClass("show");
+    });
+
+    $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > 80) {
+            $(".header").css("background-color", "rgba(0,0,0,1)");
+        } else {
+            $(".header").css("background-color", "rgba(0,0,0," + st / 80 + ")");
+        }
     });
 });

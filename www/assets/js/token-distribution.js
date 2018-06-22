@@ -129,32 +129,20 @@ var getPieChart = function() {
 
 var tokenAllocationData = [
     {
+        label: 'Mining Rewards',
+        value: 50
+    },
+    {
+        label: 'Retained by Company and Team',
+        value: 21
+    },
+    {
         label: 'Token Sale (excl. bonus allocations)',
         value: 15
     },
     {
-        label: 'Retained by Company and Team',
-        value: 22
-    },
-    {
-        label: 'Ecosystem Liquidity',
-        value: 15
-    },
-    {
-        label: 'Allocation to Ecosystem Partners / Backers',
-        value: 12
-    },
-    {
-        label: 'Reserved for incentive Programs',
-        value: 12
-    },
-    {
-        label: 'Bonus Allocation (on token sale)',
-        value: 4
-    },
-    {
-        label: 'Reserves and token sale costs',
-        value: 20
+        label: 'Bonus Allocations (on token sale) & Incentive Programs',
+        value: 14
     }
 ];
 var useOfProceedsData = [
@@ -163,7 +151,7 @@ var useOfProceedsData = [
         value: 40
     },
     {
-        label: 'Research, Technology Development and Roll Out, and Collaboration Research<',
+        label: 'Research, Technology Development and Roll Out, and Collaboration Research',
         value: 30
     },
     {
@@ -202,7 +190,7 @@ var tokenDistribution = {
         var allocationDom = "";
         var useOfProceedsDom = "";
         var color = "transparent";
-        var pieChartSize = props.height * 290 / 1012;
+        var pieChartSize = 290;
         var pieChartOffset = Math.ceil(pieChartSize * 0.05);
 
         for(let i = 0; i < allocationData.length; i++) {

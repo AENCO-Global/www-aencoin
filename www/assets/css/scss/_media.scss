@@ -4,14 +4,14 @@
         background-color: $color-blue;
     }
     .content {
-        width: calc(1200 * 100vh / #{$ref-height});
+        width: 1200px;
         margin: auto;
-        padding: calc(100vh * 50 / #{$ref-height}) 0;
+        padding: 56px 0;
     }
     h2 {
-        font-size: calc(100vh * 40 / #{$ref-height});
+        font-size: 40px;
         font-weight: 400;
-        letter-spacing: calc(100vh * 6 / #{$ref-height});
+        letter-spacing: 6px;
         text-align: center;
     }
     .media-list {
@@ -20,10 +20,9 @@
         max-width: 100%;
     }
     .media-list li {
-        width: calc(100vh * 270 / #{$ref-height});
         margin: auto;
         text-align: center;
-        padding: calc(100vh * 20 / #{$ref-height}) calc(100vh * 15 / #{$ref-height});
+        padding: 20px 15px;
     }
     .media-list img {
         max-width: 100%;

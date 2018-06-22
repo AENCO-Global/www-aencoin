@@ -4,75 +4,49 @@
     margin: auto;
   }
   .content {
-    width: calc(1600 * 100vh / #{$ref-height});
+    max-width: 1534px;
     margin: auto;
-    padding: calc(100vh * 190 / 1012) 0 calc(100vh * 90 / 1012) 0;
+    padding: 97px  0;
     display: flex;
   }
   .message-container {
-    width: calc(100vh * 500 / #{$ref-height});
-    margin-left: calc(100vh * 270 / #{$ref-height});
+    max-width: 680px;
+    margin-left: 30px;
   }
   h2 {
     color: #b6d84e;
     font-weight: 500;
-    font-size: calc(100vh * 39 / #{$ref-height});
-    letter-spacing: calc(100vh * 3 / #{$ref-height});
+    font-size: 56px;
+    letter-spacing: 3px;
+    margin: 0;
   }
   h3 {
-    letter-spacing: calc(100vh * 2 / #{$ref-height});
-    font-weight: 500;
-    font-size: calc(100vh * 35 / #{$ref-height});
-    line-height: calc(100vh * 48 / #{$ref-height});
-    margin-top: calc(100vh * 13 / #{$ref-height});
+    letter-spacing: 4px;
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 1.35;
+    margin: 0;
+    margin-top: 18px;
   }
   h5 {
-    font-size: calc(100vh * 16 / #{$ref-height});
-    line-height: calc(100vh * 31 / #{$ref-height});
+    font-size: 18px;
+    line-height: 1.75;
     color: #FFFFFF;
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
-    margin-top: calc(100vh * 12 / #{$ref-height});
+    margin: 0;
+    margin-top: 18px;
   }
   .video-container {
-    margin-left: calc(100vh * 36 / #{$ref-height});
-    width: calc(100vh * 540 / 1012);
+    margin-left: 116px;
+    margin-top: 18px;
+    width: 700px;
     img {
       width: 100%;
     }
   }
   .video {
-    width: calc(100vh * 536 / #{$ref-height});
-    height: calc(100vh * 378 / #{$ref-height});
-  }
-  @media (max-aspect-ratio: 1600/1012) {
-    .content {
-        width: 80vw;
-    }
-    .message-container {
-      margin-left: 0;
-      margin-top: 0;
-    }
-  }
-  @media (max-aspect-ratio: 1000/1012) {
-    .content {
-      display: block;
-      text-align: center;
-    }
-    h2 {
-      text-align: center;
-    }
-    .video-container {
-      margin-left: 0;
-    }
-  }
-  @media (max-aspect-ratio: 1012/1012) {
-    .video-container {
-      width: calc(100vw * 540 / 1012);
-      margin: auto;
-    }
-    .message-container {
-      margin: auto;
-    }
+    width: 536px;
+    height: 378px;
   }
 }

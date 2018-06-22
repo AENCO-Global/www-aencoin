@@ -2,55 +2,37 @@
     .main-container {
         width: 100%;
         background-color: #0a92a4;
-        text-align: center;
+        text-align: left;
     }
     .content {
-        width: calc(1200 * 100vh / #{$ref-height});
+        display: grid;
         margin: auto;
-        padding: calc(100vh * 50 / #{$ref-height}) 0;
+        padding: 87px 0;
+        grid-template-columns: 2fr 2fr 2fr 1fr;
+        grid-gap: 45px;
+        max-width: 1520px;
     }
     .moon-contact {
-        margin-top: calc(100vh * 30 / #{$ref-height});
-        font-size: calc(100vh * 18 / #{$ref-height});
-        font-weight: 600;
-        letter-spacing: calc(100vh * 0.6 / #{$ref-height});
-        font-family: 'Titillium Web', sans-serif;
+        margin-top: 16px;
+        font-weight: 400;
+        font-family: 'Teko', sans-serif;
+        font-size: 35px;
+        letter-spacing: 2px;
     }
     .social-items {
         width: 100%;
-        height: calc(100vh * 42 / #{$ref-height});
-        margin-top: calc(100vh * 40 / #{$ref-height});
-        margin-bottom: calc(100vh * 48 / #{$ref-height});
-    }
-    h2 {
-        font-size: calc(100vh * 40 / #{$ref-height});
-        font-weight: 400;
-        letter-spacing: calc(100vh * 4 / #{$ref-height});
-    }
-    h3 {
-        font-size: calc(100vh * 29 / #{$ref-height});
-        font-family: 'Teko', sans-serif;
-        font-weight: 400;
-        letter-spacing: calc(100vh * 2 / #{$ref-height});
-        line-height: 1;
-    }
-    h5 {
-        font-size: calc(100vh * 16 / #{$ref-height});
-        font-family: 'Titillium Web', sans-serif;
-        font-weight: 300;
-        letter-spacing: calc(100vh * 0.6 / #{$ref-height});
-        line-height: 1.5;
-        padding-top: calc(100vh * 3 / #{$ref-height});
+        height: 42px;
+        margin-top: 40px;
+        margin-bottom: 48px;
     }
     .text-reg-addr {
-        margin-top: calc(100vh * 30 / #{$ref-height});
+        margin-top: 24px;
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 400;
+        font-size: 26px;
     }
-    ul {
-        display: flex;
-        list-style: none;
-        padding: 0;
-        max-width: calc(100vh * 570 / #{$ref-height});
-        margin: auto;
+    .row-join-telegram {
+        margin-top: 28px;
     }
     li {
         list-style: none;
@@ -60,11 +42,41 @@
         color: #FFFFFF;
     }
     .fa-3x {
-        font-size: calc(100vh * 38 / #{$ref-height});
+        font-size: 38px;
     }
-    @media (max-aspect-ratio: 1200/1012) {
-        .content {
-            width: 80vw;
+    .title {
+        font-family: 'Teko', sans-serif;
+        font-size: 35px;
+        font-weight: 400;
+    }
+    .footer-menu ul li {
+        font-family: 'Teko', sans-serif;
+        font-weight: 300;
+        font-size: 35px;
+        letter-spacing: 2px;
+    }
+    .txt-registerd-address {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 400;
+        font-size: 24px;
+    }
+    .txt-email {
+        margin-left: 10px;
+    }
+    .display-inline {
+        display: inline-block;
+    }
+    .row-sign {
+        display: flex;
+        li {
+            margin: 0;
+            &.seperator {
+                background-color: #FFFFFF;
+                width: 2px;
+                height: 36px;
+                margin: auto 10px;
+                display: inline-block;
+            }
         }
     }
 }

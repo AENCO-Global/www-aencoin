@@ -191,6 +191,7 @@ function memberLoad(selector, btnSelector, data) {
                                 <img src="${imagePath}" alt="${name}">
                                 <ul class="social">
                                     <li><a target="_blank" href="${linkedUrl}"><i class="fab fa-linkedin-in"></i></a></li>
+                                    <li><a target="_blank" href="${linkedUrl}"><i class="fab fa-linkedin-in"></i></a></li>
                                 </ul>
                             </div>
                             <div class="name">${name}</div>

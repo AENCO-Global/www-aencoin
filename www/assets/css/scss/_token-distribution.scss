@@ -4,31 +4,31 @@
         background-color: #0a92a4;
     }
     .content {
-        width: calc(1180 * 100vh / #{$ref-height});
+        width: 1200px;
         margin: auto;
-        padding: calc(100vh * 50 / #{$ref-height}) 0;
+        padding: 50px 0;
     }
     h2 {
         text-align: center;
-        font-size: calc(100vh * 40 / #{$ref-height});
+        font-size: 40px;
         font-weight: 400;
-        letter-spacing: calc(100vh * 6 / #{$ref-height});
+        letter-spacing: 6px;
     }
     .chart-title {
-        margin-top: calc(100vh * 42 / #{$ref-height});
+        margin-top: 42px;
     }
     h3 {
         text-align: center;
-        font-size: calc(100vh * 27 / #{$ref-height});
+        font-size: 27px;
         font-weight: 400;
-        letter-spacing: calc(100vh * 2.5 / #{$ref-height});
+        letter-spacing: 2.5px;
         line-height: 1;
     }
     h5 {
         text-align: center;
-        font-size: calc(100vh * 14 / #{$ref-height});
+        font-size: 14px;
         font-weight: 400;
-        letter-spacing: calc(100vh * 1 / #{$ref-height});
+        letter-spacing: 1px;
         line-height: 1;
     }
     .col {
@@ -36,29 +36,24 @@
         position: inherit;
     }
     .chart-descriptions {
-        width: calc(100vh * 400 / 1012);
+        width: 400px;
         margin: auto;
-        margin-top: calc(100vh * 32 / 1012);
+        margin-top: 32px;
         .col {
             text-align: left;
             font-family: 'Titillium Web', sans-serif;
             font-weight: 300;
-            font-size: calc(100vh * 14 / 1012);
+            font-size: 14px;
         }
         .row {
-            padding: calc(100vh * 8 / 1012);
+            padding: 8px;
         }
         .unselected {
             background-color: transparent;
         }
     }
     .pie-chart {
-        height: calc(100vh * 290 / #{$ref-height});
-        margin-top: calc(100vh * 25 / #{$ref-height});
-    }
-    @media (max-aspect-ratio: 1600/1012) {
-        .content {
-            width: 80vw;
-        }
+        height: 290px;
+        margin-top: 25px;
     }
 }

@@ -1,7 +1,10 @@
 body {
-    background-color: #252525;
+    background-color: #002d35;
     font-family: 'Titillium Web', sans-serif;
     color: #FFFFFF;
+}
+div {
+    position: relative;
 }
 iframe{ 
     border: none;
@@ -20,40 +23,44 @@ a:focus {
 .lang {
     color: #000000;
 }
+.fleft {
+    float: left;
+}
+.fright {
+    float: right;
+}
 .header {
     z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: calc(100vh * #{$header-height} / #{$ref-height});
-    padding-top: calc(100vh * 50 / #{$ref-height});
-    background-color: #000000;
+    height: 140px;
+    padding-top: 45px;
+    background-color: rgba(0, 0, 0, 0);
 }
 .header-content {
-    width: calc(100vh * #{$content-width} / #{$ref-height});
     margin: auto;
 }
 .bottomBar {
-    width: calc(100vh * #{$content-width} / #{$ref-height});
     margin: auto;
-    justify-content: space-between;
-    display: flex;
 }
 .bottomBarContainer {
     width: 100%;
     position: fixed;
     left: 0;
-    top: calc(100vh - 100vh * #{$bottom-bar-height} / #{$ref-height});
+    top: calc(100vh - #{$bottom-bar-height});
     background-color: $color-blue;
     z-index: 99;
+    text-align: center;
 }
 .bottom-bar-area {
     width: 100%;
-    height: calc(100vh * #{$bottom-bar-height} / #{$ref-height});
+    height: #{$bottom-bar-height};
 }
 .bottomBar {
-    height: calc(100vh * #{$bottom-bar-height} / #{$ref-height});
+    height: #{$bottom-bar-height};
+    display: inline-block;
 }
 .main-container {
     width: 100%;
@@ -62,26 +69,28 @@ a:focus {
     margin: auto;
 }
 .footer {
-    width: calc(100vh * 1600 / #{$ref-height});
     margin: auto;
 }
 .clear {
     clear: both;
 }
+.margin-auto {
+    margin: auto;
+}
 h2 {
     color: #FFFFFF;
-    font-size: calc(100vh * 62 / #{$ref-height});
+    font-size: 62px;
     font-family: 'Teko', sans-serif;
 }
 h3 {
-    font-size: calc(100vh * 58 / #{$ref-height});
-    line-height: calc(100vh * 71 / #{$ref-height});
+    font-size: 58px;
+    line-height: 71px;
     color: #FFFFFF;
     font-family: 'Teko', sans-serif;
 }
 h5 {
-    font-size: calc(100vh * 22 / #{$ref-height});
-    line-height: calc(100vh * 44 / #{$ref-height});
+    font-size: 22px;
+    line-height: 44px;
     color: #FFFFFF;
     font-family: "Titillium Web", sans-serif;
 }
@@ -92,34 +101,32 @@ a:hover, button:hover {
     opacity: 0.6;
 }
 .footer-content {
-    font-size: calc(100vh * 16 / #{$ref-height});
+    font-size: 22px;
     font-family: 'Titillium Web', sans-serif;
     font-weight: 300;
-    letter-spacing: calc(100vh * 1 / #{$ref-height});
-    line-height: 1.5;
-    padding: calc(100vh * 25 / #{$ref-height}) 0;
+    letter-spacing: 2px;
+    padding: 20px 0;
 }
-.footer-content {
-    position: inherit;
+.company-name {
+    margin-left: 57px;
 }
-.terms {
-    text-align: center;
-}
-.copyright {
-    text-align: center;
+.version {
+    margin-right: 38px;
 }
 .menu {
-    display:inline-block;
-    position: absolute;
-    right: calc(200 * 100vh / 1012 + 4vw);
-    padding: calc(100vh * 12 / 1012) 0;
+    position: relative;
+    margin-right: 9px;
+    margin-top: 9px;
+    float: right;
+}
+.menu ul li a {
+    text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
 }
 .login-menu {
-    display:inline-block;
-    position: absolute;
-    right: 4vw;
-    width: calc(200 * 100vh / 1012);
-    padding: calc(100vh * 12 / 1012) 0;
+    position: relative;
+    margin-right: 83px;
+    margin-top: 9px;
+    float: right;
 }
 .bottomBar ul li, .menu ul li, .login-menu ul li {
     display: inline-block;
@@ -127,10 +134,10 @@ a:hover, button:hover {
 }
 .mobile-menu {
     display: none;
-    font-size: calc(100vh * 48 / #{$ref-height});
+    font-size: 48px;
     position: absolute;
     width: 90vw;
-    top: calc(100vh * 100 / #{$ref-height});
+    top: 100px;
 }
 .mobile-menu .navbar {
     padding: 0;
@@ -138,18 +145,18 @@ a:hover, button:hover {
 .mobile-menu .collapse {
     width: 90vw;
     position: absolute;
-    top: calc(100vh * 40 / #{$ref-height});
+    top: 40px;
 }
 .mobile-menu .collapsing {
-    top: calc(100vh * 40 / #{$ref-height});
+    top: 40px;
 }
 .mobile-menu button {
     position: absolute;
     right: 5vw;
-    top: calc(100vh * -40 / #{$ref-height});
+    top: -40px;
 }
 .mobile-menu .navbar-toggler {
-    padding: calc(100vh * 6 / 1012) 0;
+    padding: 6px 0;
 }
 button:focus {
     outline: none;
@@ -161,8 +168,8 @@ button:focus {
     color: #FFFFFF;
     font-family: 'Teko', sans-serif;
     font-weight: 400;
-    font-size: calc(100vh * 36 / #{$ref-height});
-    letter-spacing: calc(100vh * 6 / #{$ref-height});
+    font-size: 36px;
+    letter-spacing: 6px;
     background-color: #000000;
 }
 .mobile-menu .list-group-item:hover {
@@ -172,22 +179,24 @@ button:focus {
 .mobile-menu .list-group-item:hover {
     background-color: #252525;
 }
-.menu ul li, .login-menu ul li {
-    padding-top: calc(100vh * 2 / #{$ref-height});
-    margin: 0 calc(100vh * 24 / #{$ref-height});
+.menu ul li {
+    margin-right: 44px;
 }
 .login-menu ul li {
-    padding-top: calc(100vh * 2 / #{$ref-height});
-    margin: 0 calc(100vh * 8 / #{$ref-height});
+    margin-left: 11px;
 }
 .menu ul li.group-account {
-    margin: 0 calc(100vh * 7 / #{$ref-height});
+    margin: 0 7px;
 }
 .menu ul li.telegram {
-    margin: 0 calc(100vh * 28 / #{$ref-height}) 0 calc(100vh * 16 / #{$ref-height});
+    margin-right: 15px;
+    margin-left: -6px;
+}
+.menu ul li.telegram a {
+    vertical-align: middle;
 }
 .fa-3x {
-    font-size: calc(100vh * 38 / #{$ref-height});
+    font-size: 38px;
 }
 .txt-signup {
     color: $color-blue;
@@ -195,64 +204,70 @@ button:focus {
 .txt-login {
     color: $color-green;
 }
-.menu ul li a, .login-menu ul li a {
+.menu ul li a {
     font-family: 'Teko', sans-serif;
-    font-size: calc(100vh * 32 / #{$ref-height});
-    letter-spacing: calc(100vh * 2 / #{$ref-height});
+    font-size: 32px;
+    letter-spacing: 2px;
+}
+.login-menu ul li a {
+    font-family: 'Teko', sans-serif;
+    font-size: 32px;
+    letter-spacing: 2px;
 }
 .brand-logo {
     display: inline-block;
-    background-image: url($welcome-logo-url);
-    background-size: calc(100vh * 230 / #{$ref-height}) calc(100vh * 58 / #{$ref-height});
-    width: calc(100vh * 230 / #{$ref-height});
-    height: calc(100vh * 58 / #{$ref-height});
+    background: url($welcome-logo-url) no-repeat;
+    width: 233px;
+    height: 63px;
+    margin-left: 100px;
 }
 .txt-join-community {
     font-family: "Teko", sans-serif;
-    font-size: calc(49 * 100vh / #{$ref-height});
+    font-size: 49px;
     font-weight: 400;
     font-style: normal;
-    margin-top: calc(16 * 100vh / #{$ref-height});
-    letter-spacing: calc(5 * 100vh / #{$ref-height});
+    margin-top: 16px;
+    letter-spacing: 5px;
 }
 .bottomBar i {
-    font-size: 4calc(48 * 100vh / #{$ref-height});
+    font-size: 48px;
 }
 .bottomBar ul {
     display: flex;
     list-style: none;
     padding: 0;
-    max-width: calc(100vh * 570 / 1012);
-    margin: calc(16 * 100vh / 1012) auto auto auto;
+    max-width: 570px;
+    margin: 16px auto auto 50px;
 }
 .bottomBar ul li {
     margin: 0 auto;
+    margin-right: 34px;
 }
 .bottomBar nav {
     width: 50%;
 }
 .more-btn-container {
     text-align: center;
-    margin: calc(100vh * 50 / #{$ref-height}) 0;
+    margin: 50px 0;
 }
 .btn-more {
-    width: calc(100vh * 210 / #{$ref-height});
-    height: calc(100vh * 48 / #{$ref-height});
-    line-height: calc(100vh * 42 / #{$ref-height});
-    font-size: calc(100vh * 22 / #{$ref-height});
+    width: 210px;
+    height: 48px;
+    line-height: 42px;
+    font-size: 22px;
     font-family: 'Teko', sans-serif;
     font-weight: 400;
     color: #FFFFFF;
-    border: calc(100vh * 4 / #{$ref-height}) solid #0a92a4;
-    border-radius: calc(100vh * 24 / #{$ref-height});
-    background-color: #076f7d;
-    letter-spacing: calc(100vh * 2 / #{$ref-height});
+    border: 4px solid #0a92a4;
+    border-radius: 24px;
+    background-color: transparent;
+    letter-spacing: 2px;
 }
 #exampleModalLabel.modal-title {
     font-family: 'Teko', sans-serif;
     font-weight: 400;
-    font-size: calc(100vh * 36 / #{$ref-height});
-    letter-spacing: calc(100vh * 6 / #{$ref-height});
+    font-size: 36px;
+    letter-spacing: 6px;
     margin: auto;
     width: 100%;
 }
@@ -355,7 +370,7 @@ button:focus {
 .slick-prev:before, .slick-next:before {
     font-family: "Teko", sans-serif;
     font-weight: 400;
-    font-size: calc(60 * 100vh / #{$ref-height});
+    font-size: 60px;
     line-height: 1;
     color: $color-blue;
     -webkit-font-smoothing: antialiased;
@@ -385,81 +400,19 @@ button:focus {
     z-index: 80;
 }
 .slick-list {
-    height: calc(142 * 100vh / #{$ref-height});
+    height: 142px;
 }
 .slider-item img {
     max-width: 100%;
-    height: calc(132 * 100vh / #{$ref-height});
-    padding: calc(5 * 100vh / #{$ref-height});
+    height: 132px;
+    padding: 5px;
     max-height: 100%;
     margin: auto;
 }
 .slick-slide.slick-active {
     opacity: 1;
 }
-@media (max-aspect-ratio: 1800/1012) {
-    .header-content, .bottomBar {
-        width: calc(100vw * #{$content-width} / #{$ref-width});
-    }
-}
-@media (max-aspect-ratio: 1450/1012) {
-    .menu {
-        display: none;
-    }
-    .header-content {
-        justify-content: space-between;
-    }
-    .mobile-menu {
-        display: block;
-    }
-    .login-menu {
-        right: 15vw;
-        height: calc(100vh * 58 / 1012);
-    }
-    .bottomBarContainer {
-        top: calc(100vh - 100vh * 152 / 1012);
-    }
-    .bottom-bar-area {
-        height: calc(100vh * 152 / 1012);
-    }
-    .bottomBar {
-        height: calc(100vh * 152 / #{$ref-height});
-        display: block;
-        text-align: center;
-    }
-    .bottomBar nav {
-        width: 100%;
-    }
-    .bottomBar ul {
-        max-width: 60vw;
-        margin: auto;
-    }
-    .txt-join-community {
-        text-align: center;
-        font-size: calc(49 * 100vw / 1450);
-    }
-    .fa-3x {
-        font-size: calc(100vw * 48 / 1450);
-    }
-    .footer {
-        width: 80vw;
-        .row {
-            display: block;
-        }
-    }
-}
-@media (max-aspect-ratio: 1012/1012) {
-    .video-frame { 
-        width: 100%;
-        height: calc(67vw * 9 / 16);
-    }
-}
 @media (max-aspect-ratio: 1024/1366) {
-    .brand-logo {
-        background-size: calc(100vh * 230 / 1366) calc(100vh * 54 / 1366);
-        width: calc(100vh * 230 / 1366);
-        height: calc(100vh * 54 / 1366);
-    }
     .mobile-menu button {
         right: 1vw;
     }
@@ -471,16 +424,16 @@ button:focus {
         right: 12vw;
     }
     .bottomBar {
-        height: calc(100vh * 152 / 1366);
+        height: 152px;
     }
     .bottomBarContainer {
-        top: calc(100vh - 100vh * 152 / 1366);
+        top: calc(100vh - 152);
     }
     .slick-list {
-        height: calc(142 * 100vh / 1366);
+        height: 142px;
     }
     .slider-item img {
-        height: calc(132 * 100vh / 1366);
-        padding: calc(5 * 100vh / 1366);
+        height: 132px;
+        padding: 5px;
     }
 }
