@@ -131,7 +131,7 @@ var mediaDataLoader = {
         if (url === "") {
             return `<li><img src="${imagePath}" /></li>`;
         }
-        return `<li><a href="${url}"><img src="${imagePath}" /></a></li>`;
+        return `<li><a target="_blank" href="${url}"><img src="${imagePath}" /></a></li>`;
     },
     render: function(props) {
         var data = props.data || [];
@@ -164,7 +164,7 @@ var partnerDataLoader = {
 
 function openVideo (id) {
     var content = getVideoContent(data[id].url);
-    initModal("", content);
+    initModal(data[id].label, content);
 }
 
 function getDom(path, subtitle, id) {
@@ -252,6 +252,28 @@ function getVideoContent(videoUrl) {
     return `<div class="popup-video-container"><div class="video-frame"><iframe class="embed-responsive-item" src="${videoUrl}" allowfullscreen=""></iframe></div></div>`;
 }
 
+function getMemberDetailedInfo(imgPath  = "", name  = "", title = "", desc = []) {
+    var descTxt = "<ul>";
+    for(let i = 0; i < desc.length; i++) {
+        descTxt += `<li>${desc[i]}</li>`;
+    }
+    descTxt += "</ul>";
+    return `<div class="member-info-container">
+        <div class="member-image">
+            <img src="${imgPath}" />
+        </div>
+        <div class="info">
+            <ul>
+                <li class="name">${name}</li>
+                <li class="title">${title}</li>
+                <li class="desc">
+                    ${descTxt}
+                </li>
+            </ul>
+        </div>
+    </div>`;
+}
+
 function getLanguageSelector(languages, urls) {
     var listdom = "";
     for(let i = 0; i < languages.length; i++) {
@@ -296,6 +318,74 @@ function getContributionsContent() {
             </table>`;
 }
 
+function getLearnMoreContent() {
+    return `<section class="section" id="token-sale-terms">
+                <div class="container">
+                    <!-- Title -->
+                    <div class="row">
+                        <div class="col-lg-12">
+                            <div class="center-heading">
+                                <h1>Summary of Token Sale Terms and Conditions</h1>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Token Sale Terms Summary -->
+                    <p>The following shows the summary of information for the Aenco Token Sale such as the terms and conditions, schedule, and bonus details. For more information, please check out our <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> paper and <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</p>
+                    <p>Please feel free to ask us questions. We recommend posting your question on our Telegram Group:<a target="_blank" href="https://t.me/AENCO">Aencoin Community</a>.</p>
+                    <h2>Schedule of Private Sale</h2>
+                    <p><b>Private Sale</b></p>
+                    <ul>
+                        <li><b>Start:</b> Now</li>
+                        <li><b>End Date:</b> 30th June 11:59 pm UTC time OR once the soft cap is met, under Aenco Management's discretion.</li>
+                        <li><b>Minimum Contribution:</b> USD 20,000 equivalent of ETH or BTC.</li>
+                        <li><b>Bonus:</b> +60% AEN tokens</li>
+                    </ul>
+                    <p><b>Pre-Sale and Crowd Sale</b></p>
+                    <p>Please refer to our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> and <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> documents.</p>
+                    <p>The <b>Soft Cap</b> for the token sale is USD 15,000,000</p>
+                    <p>The <b>Target Cap</b> for the token sale is USD 60,000,000</p>
+                    <p>The <b>Token Price</b>: USD 0.10</p>
+                    <p><b>Eligibility &amp; Restrictions:</b></p>
+                    <ol>
+                        <li>1.) You must read, understand and agree to the <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</li>
+                        <li>2.) Register your details at: <a target="_blank" href="https://signup.aencoin.com/register">https://signup.aencoin.com/register</a>.</li>
+                        <li>3.) Provide your Identity and Address documents for Identity Verification (collectively known as Know Your Customer (KYC) documents)</li>
+                    </ol>
+                    <table class="table table-bordered">
+                        <thead>
+                            <tr>
+                                <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
+                                <th scope="col">Hong Kong Residents</th>
+                                <th scope="col">Rest of the World</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>United States of America (USA), <br> Independent State of Samoa (Samoa)</td>
+                                <td>Proof of Identity: Passport or HKID</td>
+                                <td>Proof of Identity: Passport</td>
+                            </tr>
+                            <tr>
+                                <td>People's Republic of China</td>
+                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                            </tr>
+                            <tr>
+                                <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
+                                </td>
+                                <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
+                                    (excluding Real Estate) in excess of HKD 8 mil
+                                </td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p>We would like to give thanks to our community for the continued support.</p>
+                    <p><i>Disclaimer: The last update is on the 25th of May 2018. The information above may be subject to change.</i></p>
+                </div>
+            </section>`;
+}
+
 function addChangeLanguageCallback(btnSelector, pdfSelector, url) {
     return `<script>
                 $("${btnSelector}").on("click", function() {
@@ -304,8 +394,10 @@ function addChangeLanguageCallback(btnSelector, pdfSelector, url) {
             </script>`;
 }
 
-function initModal(title = "", content = "", hasMultipleLanguages = false) {
+function initModal(title = "", content = "", hasMultipleLanguages = false, extraModalClass = "") {
+    var className = "modal-dialog " + extraModalClass;
     $("#modal-container .modal-title").html(title);
+    $("#modal-container .modal-dialog").attr("class", className);
     $("#modal-container #modal-body-content").html(content);
     if (hasMultipleLanguages) {
         $("#modal-container #modal-body-content").removeClass("no-langauge-bar");
@@ -316,78 +408,78 @@ function initModal(title = "", content = "", hasMultipleLanguages = false) {
 
 var modalBtnCallback = [
     {
-        btnSelector: "#btn-welcome-whitepaper",
+        btnSelector: ".btn-welcome-whitepaper",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/aenco-whitepaper.pdf",
+            url: "./assets/docs/aenco-whitepaper.pdf",
             languages: [
                 {
                     id: 'ENGLISH',
-                    url: 'https://www.aencoin.com/assets/docs/aenco-whitepaper.pdf'
+                    url: './assets/docs/aenco-whitepaper.pdf'
                 },
                 {
                     id: '中文',
-                    url: 'https://www.aencoin.com/assets/docs/aenco-whitepaper-cn.pdf'
+                    url: './assets/docs/aenco-whitepaper-cn.pdf'
                 }
             ]
         },
         title: "WHITEPAPER"
     },
     {
-        btnSelector: "#btn-welcome-token-paper",
+        btnSelector: ".btn-welcome-token-paper",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/aenco-token-economics.pdf",
+            url: "./assets/docs/aenco-token-economics.pdf",
             languages: [
                 {
                     id: 'ENGLISH',
-                    url: 'https://www.aencoin.com/assets/docs/aenco-token-economics.pdf'
+                    url: './assets/docs/aenco-token-economics.pdf'
                 },
                 {
                     id: '中文',
-                    url: 'https://www.aencoin.com/assets/docs/aenco-token-economics-cn.pdf'
+                    url: './assets/docs/aenco-token-economics-cn.pdf'
                 }
             ]
         },
         title: "TOKEN PAPER"
     },
     {
-        btnSelector: "#btn-two-pager",
+        btnSelector: ".btn-two-pager",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/aenco-two-pager.pdf"
+            url: "./assets/docs/aenco-two-pager.pdf"
         },
         title: "TWO PAGER"
     },
     {
-        btnSelector: "#btn-presentation",
+        btnSelector: ".btn-presentation",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/aenco-presentation.pdf"
+            url: "./assets/docs/aenco-presentation.pdf"
         },
         title: "SLIDE PRESENTATION"
     },
     {
-        btnSelector: "#btn-terms",
+        btnSelector: ".btn-terms",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/aenco-terms-conditions.pdf"
+            url: "./assets/docs/aenco-terms-conditions.pdf"
         },
         title: "TERMS OF USE"
     },
     {
-        btnSelector: "#btn-disclaimer",
+        btnSelector: ".btn-disclaimer",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/disclaimer.pdf"
+            url: "./assets/docs/disclaimer.pdf"
         },
         title: "RISK DISCLAIMER"
     },
     {
-        btnSelector: "#btn-policy",
+        btnSelector: ".btn-policy",
         options: {
             type: 2,
-            url: "https://www.aencoin.com/assets/docs/privacy-policy.pdf"
+            url: "./assets/docs/privacy-policy.pdf"
         },
         title: "PRIVACY POLICY"
     }
@@ -421,13 +513,17 @@ function initCallback() {
         });
     }
 
-    $("#btn-launch-video").on("click", function() {
-        initModal("", getVideoContent("https://www.youtube.com/embed/qDYAOZP2dTg?rel=0"));
+    $(".btn-launch-video").on("click", function() {
+        initModal("Team Video", getVideoContent("https://www.youtube.com/embed/qDYAOZP2dTg?rel=0"));
     });
 
     $("#btn-contributors").on("click", function() {
-        initModal("", getContributionsContent());
-    })
+        initModal("Contributors", getContributionsContent());
+    });
+
+    $("#btn-learn").on("click", function() {
+        initModal("Learn", getLearnMoreContent());
+    });
 }
 
 function getBreakPointsScale() {
@@ -452,6 +548,8 @@ function renderSlider() {
         infinite: true,
         slidesToShow: 5,
         slidesToScroll: 1,
+        variableWidth: true,
+        centerMode: true,
         responsive: [
             {
               breakpoint: 1400 * scale,
@@ -526,7 +624,7 @@ $(function () {
     };
     render(window.innerWidth, window.innerHeight);
 
-    //renderSlider();
+    renderSlider();
 
     mediaDataLoader.render({
         selector: "#media-list",

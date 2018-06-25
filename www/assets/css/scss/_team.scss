@@ -117,4 +117,51 @@
   .btn-more:hover {
     opacity: 0.8;
   }
+  .icon {
+    width: 30px;
+    height: 50px;
+    text-align: center;
+    float: left;
+  }
+  .icon-linkedin {
+    background: center no-repeat url($icon-linkedin);
+  }
+  .icon-profile {
+    background: center no-repeat url($icon-profile);
+  }
+}
+
+.member-info-container {
+  .member-image {
+    text-align: center;
+  }
+  img {
+    width: 110px;
+    height: 110px;
+  }
+  .info {
+    color: #FFFFFF;
+    width: 600px;
+    padding: 20px;
+  }
+  .name {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .title {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 2px;
+  }
+  .desc {
+    ul {
+      list-style-type: circle;
+      margin-left: 2em;
+    }
+  }
 }

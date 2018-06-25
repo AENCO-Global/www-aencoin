@@ -4,14 +4,14 @@
     margin: auto;
   }
   .content {
-    max-width: 1534px;
+    width: 1534px;
     margin: auto;
-    padding: 97px  0;
+    padding: 97px 0;
     display: flex;
   }
   .message-container {
     max-width: 680px;
-    margin-left: 30px;
+    padding: 0 30px;
   }
   h2 {
     color: #b6d84e;
@@ -38,9 +38,10 @@
     margin-top: 18px;
   }
   .video-container {
-    margin-left: 116px;
+    margin: auto;
     margin-top: 18px;
     width: 700px;
+    height: 460px;
     img {
       width: 100%;
     }
@@ -48,5 +49,20 @@
   .video {
     width: 536px;
     height: 378px;
+  }
+  @media screen and (max-width: 1600px) {
+    .content {
+        width: 90%;
+    }
+    .video-container {
+      width: calc(100vw / 1600 * 700);
+      height: calc(100vw / 1600 * 460);
+    }
+  }
+  @media screen and (max-width: 769px) {
+    /* start of medium tablet styles */
+    .content {
+      flex-wrap: wrap;
+    }
   }
 }

@@ -12,6 +12,11 @@ iframe{
     height: 100%;
     margin: auto;
 }
+table {
+    border: none;
+    border-collapse: unset;
+    width: 100%;
+}
 ul {
     list-style: none;
     padding: 0;
@@ -28,6 +33,15 @@ a:focus {
 }
 .fright {
     float: right;
+}
+.ralign {
+    text-align: right;
+}
+.lalign {
+    text-align: left;
+}
+.calign {
+    text-align: center;
 }
 .header {
     z-index: 99;
@@ -49,7 +63,7 @@ a:focus {
     width: 100%;
     position: fixed;
     left: 0;
-    top: calc(100vh - #{$bottom-bar-height});
+    bottom: 1px;
     background-color: $color-blue;
     z-index: 99;
     text-align: center;
@@ -124,7 +138,7 @@ a:hover, button:hover {
 }
 .login-menu {
     position: relative;
-    margin-right: 83px;
+    margin-right: 50px;
     margin-top: 9px;
     float: right;
 }
@@ -137,7 +151,6 @@ a:hover, button:hover {
     font-size: 48px;
     position: absolute;
     width: 90vw;
-    top: 100px;
 }
 .mobile-menu .navbar {
     padding: 0;
@@ -146,17 +159,21 @@ a:hover, button:hover {
     width: 90vw;
     position: absolute;
     top: 40px;
+    margin-left: 5vw;
 }
 .mobile-menu .collapsing {
+    width: 90vw;
+    position: absolute;
     top: 40px;
+    margin-left: 5vw;
 }
 .mobile-menu button {
     position: absolute;
-    right: 5vw;
-    top: -40px;
+    right: 0;
+    top: -50px;
 }
 .mobile-menu .navbar-toggler {
-    padding: 6px 0;
+    padding: 0;
 }
 button:focus {
     outline: none;
@@ -180,10 +197,10 @@ button:focus {
     background-color: #252525;
 }
 .menu ul li {
-    margin-right: 44px;
+    padding: 0 15px;
 }
 .login-menu ul li {
-    margin-left: 11px;
+    padding: 0 15px;
 }
 .menu ul li.group-account {
     margin: 0 7px;
@@ -206,20 +223,21 @@ button:focus {
 }
 .menu ul li a {
     font-family: 'Teko', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 2px;
 }
 .login-menu ul li a {
     font-family: 'Teko', sans-serif;
-    font-size: 32px;
+    font-size: 28px;
     letter-spacing: 2px;
 }
 .brand-logo {
     display: inline-block;
     background: url($welcome-logo-url) no-repeat;
-    width: 233px;
-    height: 63px;
-    margin-left: 100px;
+    background-size: 200px;
+    width: 200px;
+    height: 56px;
+    margin-left: 50px;
 }
 .txt-join-community {
     font-family: "Teko", sans-serif;
@@ -272,9 +290,14 @@ button:focus {
     width: 100%;
 }
 .modal-dialog {
-    margin-left: 11vw;
-    margin-top: 16vh;
-    max-width: 78vw;
+    max-width: 90vw;
+    &.team-member-popup {
+        max-width: fit-content;
+        margin-top: 20vh;
+        .modal-header {
+            display: none;
+        }
+    }
     .close {
         font-size: 3rem;
         color: #FFFFFF;
@@ -287,15 +310,6 @@ button:focus {
     }
     .modal-title {
         color: #FFFFFF;
-    }
-    .modal-body {
-        padding: 62vh 10% 0 0;
-    }
-    .modal-body-content {
-        width: 94%;
-        position: absolute;
-        top: 0;
-        left: 3%;
     }
     .modal-header {
         border: 0;
@@ -310,7 +324,7 @@ button:focus {
             margin-left: 2vw;
         }
         span {
-            font-family: 'Titillium Web', sans-serif;
+            font-family: 'Flamenco', cursive;
             font-weight: 300;
             font-size: 5rem;
         }
@@ -321,7 +335,7 @@ button:focus {
 }
 #pdfContainer {
     width: 100%;
-    height: 46vh;
+    height: 75vh;
 }
 .pdf-frame {
     background-color: $color-medium-blue;
@@ -368,7 +382,7 @@ button:focus {
     content: '<';
 }
 .slick-prev:before, .slick-next:before {
-    font-family: "Teko", sans-serif;
+    font-family: 'Flamenco', cursive;
     font-weight: 400;
     font-size: 60px;
     line-height: 1;
@@ -392,48 +406,46 @@ button:focus {
     background: transparent;
 }
 .slick-next {
-    right: -3%;
+    right: -10%;
     z-index: 80;
 }
 .slick-prev {
-    left: -3%;
+    left: -10%;
     z-index: 80;
 }
-.slick-list {
-    height: 142px;
-}
 .slider-item img {
-    max-width: 100%;
-    height: 132px;
-    padding: 5px;
-    max-height: 100%;
     margin: auto;
 }
-.slick-slide.slick-active {
+.slick-slide {
+    margin: 0 24px;
     opacity: 1;
 }
-@media (max-aspect-ratio: 1024/1366) {
-    .mobile-menu button {
-        right: 1vw;
+@media screen and (max-width: 1240px) {
+    /* start of large tablet styles */
+    .mobile-menu {
+        display: block;
     }
-    .mobile-menu .navbar-toggler {
-        padding: 0;
+    .menu {
+        display: none;
     }
     .login-menu {
-        padding: 0;
-        right: 12vw;
+        margin-right: 14vw;
     }
-    .bottomBar {
-        height: 152px;
+}
+
+@media screen and (max-width: 991px) {
+    /* start of large tablet styles */
+
+}
+
+@media screen and (max-width: 767px) {
+    /* start of medium tablet styles */
+    .login-menu {
+        display: none;
     }
-    .bottomBarContainer {
-        top: calc(100vh - 152);
-    }
-    .slick-list {
-        height: 142px;
-    }
-    .slider-item img {
-        height: 132px;
-        padding: 5px;
-    }
+}
+
+@media screen and (max-width: 479px) {
+    /* start of phone styles */
+
 }
