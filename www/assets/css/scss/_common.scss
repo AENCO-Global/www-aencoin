@@ -1,0 +1,480 @@
+body {
+    background-color: #002d35;
+    font-family: 'Titillium Web', sans-serif;
+    color: #FFFFFF;
+}
+div {
+    position: relative;
+}
+iframe{ 
+    border: none;
+    width: 100%;
+    height: 100%;
+    margin: auto;
+}
+table {
+    border: none;
+    border-collapse: unset;
+    width: 100%;
+}
+ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+a:focus {
+    outline: none;
+}
+.lang {
+    color: #000000;
+}
+.fleft {
+    float: left;
+}
+.fright {
+    float: right;
+}
+.ralign {
+    text-align: right;
+}
+.lalign {
+    text-align: left;
+}
+.calign {
+    text-align: center;
+}
+.content {
+    padding: 60px 0 70px;
+}
+.header {
+    z-index: 99;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100px;
+    padding-top: 28px;
+    background-color: rgba(0, 0, 0, 0);
+    &.faq-header {
+        background-color: rgba(0, 0, 0, 1);
+    }
+}
+.header-content {
+    margin: auto;
+}
+.bottomBar {
+    margin: auto;
+}
+.bottomBarContainer {
+    width: 100%;
+    position: fixed;
+    left: 0;
+    bottom: 1px;
+    background-color: $color-blue;
+    z-index: 99;
+    text-align: center;
+}
+.bottom-bar-area {
+    width: 100%;
+    height: #{$bottom-bar-height};
+}
+.bottomBar {
+    height: #{$bottom-bar-height};
+    display: inline-block;
+}
+.main-container {
+    width: 100%;
+}
+.margin-auto {
+    margin: auto;
+}
+.footer {
+    margin: auto;
+}
+.clear {
+    clear: both;
+}
+.margin-auto {
+    margin: auto;
+}
+h2 {
+    color: #FFFFFF;
+    font-size: 45px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-align: center;
+}
+h3 {
+    color: #FFFFFF;
+    font-size: 32px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: center;
+}
+h5 {
+    color: #FFFFFF;
+    font-size: 18px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.5;
+}
+a, button {
+    cursor: pointer;
+}
+a:hover, button:hover {
+    opacity: 0.6;
+}
+.footer-content {
+    font-size: 15px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    padding: 15px 0 30px;
+}
+.company-name {
+    margin-left: 57px;
+}
+.version {
+    margin-right: 38px;
+}
+.menu {
+    position: relative;
+    margin-right: 9px;
+    margin-top: 9px;
+    float: right;
+}
+.menu ul li a {
+    text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
+    font-size: 25px;
+    letter-spacing: 0.05em;
+}
+.login-menu {
+    position: relative;
+    margin-right: 50px;
+    margin-top: 9px;
+    float: right;
+}
+.bottomBar ul li, .menu ul li, .login-menu ul li {
+    display: inline-block;
+    position: relative;
+}
+.mobile-menu {
+    display: none;
+    font-size: 48px;
+    position: absolute;
+    width: 90vw;
+}
+.mobile-menu .navbar {
+    padding: 0;
+}
+.mobile-menu .collapse {
+    width: 90vw;
+    position: absolute;
+    top: 40px;
+    margin-left: 5vw;
+}
+.mobile-menu .collapsing {
+    width: 90vw;
+    position: absolute;
+    top: 40px;
+    margin-left: 5vw;
+}
+.mobile-menu button {
+    position: absolute;
+    right: 0;
+    top: -50px;
+}
+.mobile-menu .navbar-toggler {
+    padding: 0;
+}
+button:focus {
+    outline: none;
+}
+.mobile-menu .menu-content {
+    padding: 0 1.5rem!important;
+}
+.mobile-menu .list-group-item {
+    color: #FFFFFF;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 6px;
+    background-color: #000000;
+}
+.mobile-menu .list-group-item:hover {
+    background-color: #252525;
+    opacity: 1;
+}
+.mobile-menu .list-group-item:hover {
+    background-color: #252525;
+}
+.menu ul li {
+    padding: 0 15px;
+}
+.login-menu ul li {
+    padding: 0 8px;
+}
+.menu ul li.group-account {
+    margin: 0 7px;
+}
+.menu ul li.telegram {
+    margin-right: 15px;
+    margin-left: -6px;
+}
+.menu ul li.telegram a {
+    vertical-align: middle;
+}
+.fa-3x {
+    font-size: 38px;
+}
+.txt-signup {
+    color: $color-blue;
+}
+.txt-login {
+    color: $color-green;
+}
+.menu ul li a {
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
+    letter-spacing: 0.05em;
+}
+.login-menu ul li a {
+    font-family: 'Teko', sans-serif;
+    font-size: 28px;
+    letter-spacing: 2px;
+}
+.brand-logo {
+    display: inline-block;
+    background: url($welcome-logo-url) no-repeat;
+    background-size: 170px;
+    width: 200px;
+    height: 56px;
+    margin-left: 50px;
+    margin-top: -3px;
+}
+.txt-join-community {
+    font-family: "Teko", sans-serif;
+    font-size: 35px;
+    font-weight: 400;
+    font-style: normal;
+    margin-top: 24px;
+    letter-spacing: 0.05em;
+}
+.bottomBar i {
+    font-size: 48px;
+}
+.bottomBar ul {
+    display: flex;
+    list-style: none;
+    padding: 0;
+    max-width: 570px;
+    margin: 16px auto auto 50px;
+}
+.bottomBar ul li {
+    margin: 0 auto;
+    margin-right: 34px;
+}
+.bottomBar nav {
+    width: 50%;
+}
+.more-btn-container {
+    text-align: center;
+    margin: 50px 0;
+}
+.btn-more {
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    color: #FFFFFF;
+    border: 0.15em solid #0093a5;
+    border-radius: 24px;
+    background-color: transparent;
+    letter-spacing: 0.05em;
+    padding: 4px 35px 1px;
+}
+#exampleModalLabel.modal-title {
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    font-size: 36px;
+    letter-spacing: 6px;
+    margin: auto;
+    width: 100%;
+}
+.modal-dialog {
+    max-width: 90vw;
+    &.team-member-popup {
+        max-width: fit-content;
+        margin-top: 20vh;
+        .modal-header {
+            display: none;
+        }
+    }
+    &.video-popup {
+        max-width: fit-content;
+    }
+    .close {
+        font-size: 3rem;
+        color: #FFFFFF;
+        margin-right: -0.7rem;
+        margin-top: -3rem;
+    }
+    .modal-content {
+        background-color: $color-light-blue;
+        box-shadow: 0.5vw 0.5vw 0.5vw 0.1vw rgba(0, 147, 165, 0.2);
+    }
+    .modal-title {
+        color: #FFFFFF;
+    }
+    .modal-header {
+        border: 0;
+        background-color: $color-deep-blue;
+        padding-bottom: 0;
+        h5 {
+            color: #FFFFFF;
+            font-size: 2.1rem;
+            letter-spacing: 0.2rem;
+            font-family: "Teko", sans-serif;
+            font-weight: 400;
+            margin-left: 2vw;
+        }
+        span {
+            font-family: 'Flamenco', cursive;
+            font-weight: 300;
+            font-size: 5rem;
+        }
+    }
+}
+.no-langauge-bar {
+    padding-top: 6%;
+}
+#pdfContainer {
+    width: 100%;
+    height: 75vh;
+}
+.pdf-frame {
+    background-color: $color-medium-blue;
+    padding: 1%;
+}
+.languageSelector{
+    margin-top: 3%;
+    margin-bottom: 0.5%;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 400;
+    font-size: 0.8rem;
+    letter-spacing: 0.1rem;
+}
+.video-frame {
+    background-color: $color-medium-blue;
+    padding: 1%;
+    margin: auto;
+    width: calc(48vh * 16 / 9);
+    height: 48vh;
+}
+.popup-video-container {
+    width: 100%;
+    margin: auto;
+}
+
+.slick-prev:before,
+.slick-next:before {
+  color: black;
+}
+.slick-slide {
+  transition: all ease-in-out .3s;
+  opacity: .2;
+}
+.slick-active {
+  opacity: .5;
+}
+.slick-current {
+  opacity: 1;
+}
+.slick-next:before {
+    content: '>';
+}
+.slick-prev:before {
+    content: '<';
+}
+.slick-prev:before, .slick-next:before {
+    font-family: 'Flamenco', cursive;
+    font-weight: 400;
+    font-size: 60px;
+    line-height: 1;
+    color: $color-blue;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+.slick-prev, .slick-next {
+    font-size: 0;
+    position: absolute;
+    top: 50%;
+    display: block;
+    padding: 0;
+    -webkit-transform: translate(0, -50%);
+    -ms-transform: translate(0, -50%);
+    transform: translate(0, -50%);
+    cursor: pointer;
+    color: transparent;
+    border: none;
+    outline: none;
+    background: transparent;
+    text-shadow: 0px 0px 10px #00101a, 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
+}
+.slick-next {
+    right: -5%;
+    z-index: 80;
+    top: 45%;
+}
+.slick-prev {
+    left: -5%;
+    z-index: 80;
+    top: 45%;
+}
+.slider-item img {
+    margin: auto;
+}
+.slick-slide {
+    margin: 0 15px;
+    opacity: 1;
+}
+.icon-social {
+    width: 40px;
+    height: 45px;
+}
+.icon-bitcointalk {
+    background: center no-repeat url($icon-bitcointalk);
+}
+.icon-youtube {
+    background: center no-repeat url($icon-youtube);
+}
+.icon-discord {
+    background: center no-repeat url($icon-discord);
+}
+.icon-facebook {
+    background: center no-repeat url($icon-facebook);
+}
+.icon-medium {
+    background: center no-repeat url($icon-medium);
+}
+.icon-reddit {
+    background: center no-repeat url($icon-reddit);
+}
+.icon-twitter {
+    background: center no-repeat url($icon-twitter);
+}
+.icon-linkedin {
+    background: center no-repeat url($icon-linkedin);
+}
+.icon-telegram {
+    background: center no-repeat url($icon-telegram);
+}
+.modal-body {
+    padding: 2rem 8rem 5rem;
+}
+.table th, .table td {
+    border-top: none;
+}

@@ -1,4 +1,4 @@
-// @include font($normal, 16px);
+/** @include font($normal, 16px); */
 @mixin font($tip, $size) {
 	font-weight: $tip;
 	font-size: $size;

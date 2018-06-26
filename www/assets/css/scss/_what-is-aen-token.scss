@@ -1,0 +1,50 @@
+.what-is-aen-token-area {
+  .main-container {
+    width: 100%;
+    margin: auto;
+  }
+  .content {
+    width: 1534px;
+    margin: auto;
+    display: flex;
+  }
+  .message-container {
+    max-width: 680px;
+    padding: 0 30px;
+  }
+  h2 {
+    color: #b6d84e;
+    text-align: left;
+  }
+  h3 {
+    text-align: left;
+  }
+  h5 {
+    text-align: left;
+  }
+  .video-container {
+    margin: auto;
+    margin-top: 0px;
+    width: 600px;
+    height: 337px;
+    img {
+      width: 100%;
+    }
+  }
+  .video {
+    width: 536px;
+    height: 378px;
+  }
+}
+
+.ytp-title-text, .ytp-watch-later-icon, .ytp-chrome-top .ytp-share-button {
+  display: none;
+}
+
+.ytp-watch-later-icon {
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: none;
+}
