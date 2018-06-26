@@ -304,7 +304,7 @@ function getContributionsContent() {
                 <tr>
                     <td>People's Republic of China</td>
                     <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                    <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                    <td>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</td>
                 </tr>
                 <tr>
                     <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
@@ -360,7 +360,7 @@ function getLearnMoreContent() {
                             <tr>
                                 <td>People's Republic of China</td>
                                 <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                                <td>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</td>
                             </tr>
                             <tr>
                                 <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
