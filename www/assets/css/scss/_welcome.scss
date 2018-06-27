@@ -1,125 +1,171 @@
+/**
+ *  Welcome area styling
+ */
+
 .welcome-area {
-    position: relative;
-    .main-container {
-        width: 100%;
+  min-height: 620px;
+  position: relative;
+
+  &.bg-top-right {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      background: url("#{$img-url}blue-background.png") center no-repeat;
+      z-index: 3;
     }
-    .background {
-        background: no-repeat center url($welcome-background-image-url);
-        background-position-y: 0;
+  }
+
+  &.bg-bottom-center {
+    &:before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      left: 0px;
+      top: 0px;
+      background: url("#{$img-url}section-bg-bottom.png") bottom center no-repeat;
+      z-index: 3;
     }
-    .content {
-        width: 1400px;
-        margin: auto;
-        padding: 45px;
+  }
+
+  &:after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    left: 0px;
+    top: 0px;
+    background-image: linear-gradient(134deg, $gradientDark 0%, $gradientLight 100%);
+    z-index: 2;
+  }
+
+  canvas {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    z-index: 4;
+  }
+
+  .header-token {
+    position: absolute;
+    width: 100%;
+    top: 65.5%;
+    left: 0;
+    z-index: 5;
+    -webkit-transform: translateY(-65%);
+    transform: translateY(-65%);
+
+    &.basic {
+      top: 62%;
     }
-    .core-message {
-        width: 1000px;
-        margin: auto;
-        margin-top: 150px;
-        font-size: 48px;
-        text-align: center;
-        line-height: 55px;
-        letter-spacing: 0.06em;
-        font-family: 'Teko', sans-serif;
-        font-weight: 400;
-        text-shadow: 0px 0px 10px rgb(0, 16, 26), 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
+
+    &.text {
+      top: 60%;
     }
-    .sub-message-container {
-        margin-top: -15px;
+
+    .box {
+      margin-top: 20px;
     }
-    .sub-message {
-        font-size: 20px;
-        text-align: center;
-        margin: 25px auto 20px;
-        font-family: 'Titillium Web', sans-serif;
-        font-weight: 200;
-        letter-spacing: 0.02em;
-        line-height: 1.5;
-        text-shadow: 0px 0px 10px rgb(0, 16, 26), 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
+
+    h1 {
+      @include font($normal, 36px);
+      color: #FFFFFF;
+      line-height: 46px;
+      letter-spacing: 0.7px;
+      margin-bottom: 30px;
+
+      text-align: center;
     }
-    .private-sale-notice {
-        margin-top: 30px;
+
+    .btn-secondary-box {
+      width: 250px;
     }
-    .private-sale-txt {
-        color: #b2d254;
-        text-align: right;
-        font-size: 45px;
-        font-weight: 400;
-        margin-right: -7px;
-        letter-spacing: 0.02em;
+
+    p {
+      @include font($normal, 16px);
+      color: $textLight;
+      line-height: 28px;
+      letter-spacing: 1px;
+      margin-bottom: 40px;
+
+      text-align: center;
     }
-    .btn-join {
-        background-color: #8aa739;
-        border-radius: 24px;
-        padding: 1px 24px 3px;
-        margin-top: 6px;
-        float: left;
-    }
-    .btn-txt {
-        color: #FFFFFF;
-        font-size: 22px;
-        font-family: "Titillium Web", sans-serif;
-        font-weight: 400;
-        letter-spacing: 0.02em;
-    }
-    .row-contributor {
-        margin-top: -25px;
-        .link-group {
-            margin: auto;
-            a, span {
-                line-height: 71px;
-                color: #FFFFFF;
-                font-size: 20px;
-                font-family: "Titillium Web", sans-serif;
-                font-weight: 300;
-                letter-spacing: 0.02em;
-            }
+  }
+
+  .scroll-to {
+    position: absolute;
+    width: 100%;
+    bottom: -30px;
+    z-index: 6;
+    text-align: center;
+
+    a {
+      display: inline-block;
+      width: 60px;
+      height: 60px;
+      background: #fff;
+      margin: auto;
+      @include radius(100px);
+      position: relative;
+      line-height: 60px;
+      font-size: 24px;
+      color: $primaryColor;
+
+      &:before {
+        content: '';
+        position: absolute;
+        left: -10px;
+        top: -10px;
+        width: 80px;
+        height: 80px;
+        background: $primaryColor;
+        opacity: .19;
+        z-index: -1;
+        @include radius(100px);
+        box-shadow: 0 1px 15px 1px rgba(69, 65, 78, 0.70);
+        @include transition(.3s);
+      }
+
+      &:hover {
+        &:before {
+          width: 90px;
+          height: 90px;
+          left: -15px;
+          top: -15px;
         }
+      }
     }
-    ul {
-        list-style: none;
-        margin: 0;
-        padding: 0;
+  }
+}
+
+@media (max-width: 991px) {
+  .welcome-area {
+
+    .header-token {
+      position: relative;
+      -webkit-transform: translateY(0%) !important;
+      transform: translateY(0%) !important;
+      padding-top: 150px;
+
+      .box {
+        margin-top: 90px;
+        margin-bottom: 100px;
+      }
+
+      .btn-secondary-box {
+        display: block;
+      }
     }
-    li {
-        list-style: none;
-        display: inline;
+
+    .header-image {
+      margin-top: 60px;
+      margin-bottom: 90px;
     }
-    li a {
-        font-weight: 400;
-        font-size: 16px;
-        font-family: "Titillium Web", sans-serif;
-        letter-spacing: 0.02em;
-    }
-    .link-group-container {
-        margin-top: 40px;
-    }
-    .link-list {
-        margin: auto;
-        text-align: center;
-    }
-    .sepeartor {
-        font-size: 24px;
-        font-weight: 300;
-        color: $color-blue;
-        line-height: 36px;
-        margin: 0 8px;
-    }
-    .link-txt {
-        line-height: 36px;
-        height: 36px;
-        margin: auto;
-    }
-    .rating-container {
-        width: 80%;
-        margin: 65px auto;
-    }
-    .badge-container {
-        padding: 14px 5px;
-        background-color: #252525;
-    }
-    .txt-bonus-program {
-        color: #00b7ce !important;
-        font-weight: 500 !important;
-    }
+  }
 }
