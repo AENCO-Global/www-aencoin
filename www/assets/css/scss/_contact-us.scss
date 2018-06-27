@@ -7,17 +7,16 @@
     .content {
         display: grid;
         margin: auto;
-        padding: 87px 0;
         grid-template-columns: 2fr 2fr 2fr 1fr;
         grid-gap: 45px;
         max-width: 1520px;
     }
     .moon-contact {
-        margin-top: 16px;
+        margin-top: 25px;
         font-weight: 400;
         font-family: 'Teko', sans-serif;
-        font-size: 35px;
-        letter-spacing: 2px;
+        font-size: 30px;
+        letter-spacing: 0.03em;
     }
     .social-items {
         width: 100%;
@@ -26,10 +25,11 @@
         margin-bottom: 48px;
     }
     .text-reg-addr {
-        margin-top: 24px;
-        font-family: 'Titillium Web', sans-serif;
-        font-weight: 400;
-        font-size: 26px;
+        margin-top: 15px;
+        font-family: "Teko", sans-serif;
+        font-weight: 300;
+        font-size: 30px;
+        letter-spacing: 0.02em;
     }
     .row-join-telegram {
         margin-top: 28px;
@@ -46,19 +46,20 @@
     }
     .title {
         font-family: 'Teko', sans-serif;
-        font-size: 35px;
+        font-size: 30px;
         font-weight: 400;
+        letter-spacing: 0.02em;
     }
     .footer-menu ul li {
         font-family: 'Teko', sans-serif;
         font-weight: 300;
-        font-size: 35px;
-        letter-spacing: 2px;
+        font-size: 30px;
+        letter-spacing: 0.03em;
     }
     .txt-registerd-address {
         font-family: 'Titillium Web', sans-serif;
         font-weight: 400;
-        font-size: 24px;
+        font-size: 20px;
     }
     .txt-email {
         margin-left: 10px;
@@ -72,11 +73,45 @@
             margin: 0;
             &.seperator {
                 background-color: #FFFFFF;
-                width: 2px;
-                height: 36px;
-                margin: auto 10px;
+                width: 0.05em;
+                height: 23px;
+                margin: 8px 12px;
                 display: inline-block;
             }
+        }
+    }
+    @media (max-width: 1600px) {
+        .content {
+            width: 96%;
+        }
+    }
+    @media (max-width: 1060px) {
+        .content {
+            width: 96%;
+        }
+        .title {
+            font-size: 24px;
+        }
+        .footer-menu ul li {
+            font-size: 24px;
+        }
+        .text-reg-addr {
+            font-size: 24px;
+        }
+        .txt-registerd-address {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 700px) {
+        .content {
+            width: 90%;
+            grid-template-columns: 2fr 2fr;
+        }
+    }
+    @media (max-width: 560px) {
+        .content {
+            width: 90%;
+            grid-template-columns: 1fr;
         }
     }
 }

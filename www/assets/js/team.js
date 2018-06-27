@@ -11,19 +11,18 @@ var teamMemberData = [
         title: 'Co-Founder',
         image: './assets/img/profile/darren-lui.png',
         linkedin: 'https://www.linkedin.com/in/darren-lui/',
-        id: 2,
-        desc: '<ul><li>Co-Founder of Aptorum Group Limited, a biotech platform</li><li>Co-Founder of Aeneas Group -Former Founder and Director at Varengold Capital, a HK based regulated asset manager and prime broker</li><li>Former Director at Barclays Capital, Barclays Bank PLC. London, Singapore and New York offices</li><li>Qualified Chartered Accountant (ICAS) at Ernst & Young LLP(UK)</li><li>CFA Charterholder<li><li>Associate of Chartered Institute of Securities & Investments</li><li>First Class Honours BSc in Biochemistry, Imperial College London</li></ul>'
+        id: 2
     },
     {
-        name: 'Kenrick Fok',
-        title: 'CFO',
+        name: 'KENRICK H. FOK',
+        title: 'Chief Financial Officer',
         image: './assets/img/profile/kenrick-fok.png',
         linkedin: 'https://www.linkedin.com/in/kenrickfok/',
         id: 3
     },
     {
-        name: 'Geoff Tipy',
-        title: 'CTO',
+        name: 'GEOFFREY TIPTON',
+        title: 'Chief Technology Officer',
         image: './assets/img/profile/geoffrey-tipton.png',
         linkedin: 'https://www.linkedin.com/in/geoff-tipy/',
         id: 4
@@ -43,73 +42,73 @@ var teamMemberData = [
         id: 6
     },
     {
-        name: 'Isabella Lai',
-        title: 'Senior Director',
-        image: './assets/img/profile/isabella-lai.png',
-        linkedin: 'https://www.linkedin.com/in/isabella-lai/',
-        id: 7
-    },
-    {
-        name: 'Teddy Ip',
-        title: 'Senior Director',
-        image: './assets/img/profile/teddy-ip.png',
-        linkedin: 'https://www.linkedin.com/in/teddyip/',
-        id: 8
-    },
-    {
         name: 'Nick Wan',
         title: 'Co-Investment Director',
         image: './assets/img/profile/nick-wan.png',
         linkedin: 'https://www.linkedin.com/in/nickhywan/',
-        id: 9
+        id: 7
     },
     {
         name: 'Calvin Poon',
         title: 'Co-Investment Director',
         image: './assets/img/profile/calvin-poon.png',
         linkedin: 'https://www.linkedin.com/in/calvin-poon/',
-        id: 10
+        id: 8
     },
     {
         name: 'Ally Cheung',
         title: 'Head of Community Management',
         image: './assets/img/profile/ally-cheung.png',
         linkedin: 'https://www.linkedin.com/in/allycheung/',
-        id: 11
+        id: 9
     },
     {
         name: 'David Carey',
         title: 'Senior Cloud Engineer',
         image: './assets/img/profile/david-carey.png',
         linkedin: 'https://www.linkedin.com/in/david-carey/',
+        id: 10
+    },
+    {
+        name: 'Michelle Au',
+        title: 'Creative Specialist',
+        image: './assets/img/profile/michelle-au.png',
+        linkedin: 'https://www.linkedin.com/in/michelleaudesign/',
+        id: 11
+    },
+    {
+        name: 'Issac Cheung',
+        title: 'Full Stack Developer',
+        image: './assets/img/profile/issac-cheung.png',
+        linkedin: 'https://www.linkedin.com/in/issac-cheung-6b02a1147/',
         id: 12
     },
     {
-        name: 'Aaron Regala',
-        title: 'BUsiness Analyst',
-        image: './assets/img/profile/aaron-regala.png',
-        linkedin: 'https://www.linkedin.com/in/aaron-regala/',
+        name: 'Isabella Lai',
+        title: 'Senior Director',
+        image: './assets/img/profile/isabella-lai.png',
+        linkedin: 'https://www.linkedin.com/in/isabella-lai/',
         id: 13
+    },
+    {
+        name: 'Teddy Ip',
+        title: 'Senior Director',
+        image: './assets/img/profile/teddy-ip.png',
+        linkedin: 'https://www.linkedin.com/in/teddyip/',
+        id: 14
     },
     {
         name: 'Andy Chan',
         title: 'Head of Insurance',
         image: './assets/img/profile/andy-chan.png',
         linkedin: 'https://www.linkedin.com/in/atmchan/',
-        id: 14
-    },
-    {
-        name: 'Michelle Au',
-        title: 'Designer',
-        image: './assets/img/profile/michelle-au.png',
-        linkedin: '',
         id: 15
     },
     {
-        name: 'Issac Cheung',
-        title: 'Full-stack Developer',
-        image: './assets/img/profile/issac-cheung.png',
-        linkedin: 'https://www.linkedin.com/in/issac-cheung-6b02a1147/',
+        name: 'Aaron Regala',
+        title: 'Business Analyst',
+        image: './assets/img/profile/aaron-regala.png',
+        linkedin: 'https://www.linkedin.com/in/aaron-regala/',
         id: 16
     }
 ];
@@ -122,23 +121,52 @@ var advisorsData = [
         linkedin: 'http://www.law.hku.hk/faculty/staff/arner_douglas.php',
         id: 1,
         desc: [
-            'Director of HOYA Surgical Optics, a specialist provider of ophthalmologists with high-quality intraocular lenses for use in the treatment of cataracts for over 25 years',
+            'Director of HOYA Surgical Optics, a specialist provider of ophthalmologists with high-quality intraocular lenses for use in the treatment of cataracts for over 25 years;',
             'Former Vice President Business Development at Advanced First Aid Research, a medical device company focused on wound care product development;',
             'Former Managing Director at Vendor Management Consulting Asia, a boutique consulting firm connecting European medical devices, pharma, biotech, and FMCG companies with Asia',
             'Master Business Administration, University of Melbourne.'
         ]
     },
     {
-        name: 'Julian Ting',
+        name: 'DR S.M. YIU',
+        title: 'Advisor',
+        image: './assets/img/profile/sm-yiu.png',
+        linkedin: 'https://www.cs.hku.hk/people/profile.jsp?teacher=smyiu',
+        id: 2,
+        desc: [
+            'Associate Professor in the Department of Computer Science at the University of Hong Kong;',
+            'Research and areas of expertise are computer security, cryptography,bioinformatics;',
+            'Published over 100 papers in journals and conferences - Google Scholar statistics: Citations (8627), h-index (41), i10-index (98);',
+            'Experience in industrial projects with Huawei, Hong Kong Sanatorium & Hospital, Astri, and Bank of China;',
+            'PhD in Computer Science, The University of Hong Kong;',
+            'MS in Computer and Information Science, Temple University (USA);',
+            'BSc in Computer Science, The Chinese University of Hong Kong.'
+        ]
+    },
+    {
+        name: 'JEFF MARQUASS',
+        title: 'Advisor',
+        image: './assets/img/profile/jeff-marquass.png',
+        linkedin: 'https://www.linkedin.com/in/jeff-marquass-4a37995/',
+        id: 3,
+        desc: [
+            'Director of HOYA Surgical Optics, a specialist provider of ophthalmologists with high-quality intraocular lenses for use in the treatment of cataracts for over 25 years;',
+            'Former Vice President Business Development at Advanced First Aid Research, a medical device company focused on wound care product development;',
+            'Former Managing Director at Vendor Management Consulting Asia, a boutique consulting firm connecting European medical devices, pharma, biotech, and FMCG companies with Asia;',
+            'Master Business Administration, University of Melbourne.'
+        ]
+    },
+    {
+        name: 'JULIAN TING',
         title: 'Advisor',
         image: './assets/img/profile/julian-ting.png',
         linkedin: 'https://www.linkedin.com/in/julianywting/',
-        id: 2,
+        id: 4,
         desc: [
-            'Former General Manager at Innovative Diagnostics, a leading Asian pathology diagnostic group',
-            'Formerly worked at Grange Partners in Singapore, a family office backed institution focusing on Southeast Asian Private Equity',
-            'Formerly held positions at HSBC Private Wealth Solutions and ECM Libra Investment Bank',
-            'Masters in Business Administration (MBA) from Columbia Business School (Dean’s Honors); Private Equity Fellow',
+            'Former General Manager at Innovative Diagnostics, a leading Asian pathology diagnostic group;',
+            'Formerly worked at Grange Partners in Singapore, a family office backed institution focusing on Southeast Asian Private Equity;',
+            'Formerly held positions at HSBC Private Wealth Solutions and ECM Libra Investment Bank;',
+            'Masters in Business Administration (MBA) from Columbia Business School (Dean’s Honors); Private Equity Fellow;',
             'Bachelor of Laws – LLB (Hons) Programme from London School of Economics.'
         ]
     },
@@ -147,10 +175,10 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/kenny-yu.png',
         linkedin: 'https://www.researchgate.net/profile/Kenny_Yu',
-        id: 3,
+        id: 5,
         desc: [
             'Clinical Research Fellow at the Salford Royal NHS Foundation Trust in the UK',
-            'PhD at The University of Manchester – Faculty of Medical and Human Sciences – Stem Cell and Neurotherapies Laboratory',
+            'PhD at The University of Manchester â€“ Faculty of Medical and Human Sciences â€“ Stem Cell and Neurotherapies Laboratory',
             'Key areas of research interests include Cancer Biology, Oncology, Cell Culture, Genetic Engineering, Neurosurgery, and Cancer Immunology',
             'Neurosurgeon at The University of Manchester'
         ]
@@ -160,7 +188,7 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/william-wu.png',
         linkedin: 'https://www.lihs.cuhk.edu.hk/en-us/research/investigators/wu,kakeiwilliam.aspx',
-        id: 4,
+        id: 6,
         desc: [
             'Assistant Professor at the Department of Anesthesia and Intensive Care at The Chinese University of Hong Kong;',
             'Expert in molecular pharmacology and toxicology',
@@ -174,7 +202,7 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/sunny-wong.png',
         linkedin: 'http://www.mect.cuhk.edu.hk/people/sunnywong.html',
-        id: 5,
+        id: 7,
         desc: [
             'Assistant Professor in the Department of Medicine and Therapeutics at The Chinese University of Hong Kong;',
             'Principal investigator at the Li Ka Shing Institute of Health Science, the Institute of Digestive Disease and the State Key Laboratory of Digestive Disease;',
@@ -188,7 +216,7 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/albert-leung.png',
         linkedin: 'https://www.bloomberg.com/research/stocks/people/person.asp?personId=53151654&amp;capId=883253&amp;previousCapId=141391086&amp;previousTitle=GOLDENWAY%20INC',
-        id: 6,
+        id: 8,
         desc: [
             'Financial and Business Development Consultant of Beauchamp International Development Limited based in Hong Kong',
             'Former Assistant Vice President at Citicorp International in Hong Kong and engaging in major IPO corporate finance matters;',
@@ -204,15 +232,15 @@ var advisorsData = [
         name: 'Dr. Kwok Ka Wai',
         title: 'Advisor',
         image: './assets/img/profile/kwok-ka-wai.png',
-        linkedin: '#',
-        id: 7,
+        linkedin: 'http://hub.hku.hk/cris/rp/rp01924',
+        id: 9,
         desc: [
             'Assistant Professor in the Department of Mechanical Engineering at The University of Hong Kong',
             'Research focuses on image-guided robotic surgeries and their associated master-slave control interfaces',
             'PhD in Computing from Imperial College London',
             'BEng and MPhil degrees in Automation and Computer-Aided Engineering, The Chinese University of Hong Kong',
             'Recipient of the Croucher Foundation Fellowship, which currently supported his postdoctoral research jointly hosted by University of Georgia, and Brigham and',
-            'Women’s Hospital - Harvard Medical School.'
+            'Womenâ€™s Hospital - Harvard Medical School.'
         ]
     },
     {
@@ -220,7 +248,7 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/joe-hui.png',
         linkedin: 'https://icb.hkuspace.hku.hk/chs/staff/detail/joe-hui',
-        id: 8,
+        id: 10,
         desc: [
             'Investment Director, Quantitative Strategies, Eagle Eye Group;',
             'Guest speaker at the Institute for China Business, HKU Space',
@@ -236,9 +264,9 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/owen-ko.png',
         linkedin: 'http://www.mect.cuhk.edu.hk/people/owenko.html',
-        id: 9,
+        id: 11,
         desc: [
-            'Clinical Lecturer in the Department of Medicine and Therapeutics at The Chinese University of Hong Kong (“CUHK”);',
+            'Clinical Lecturer in the Department of Medicine and Therapeutics at The Chinese University of Hong Kong (â€œCUHKâ€);',
             'Published two first authored Nature papers and one first authored Nature Neuroscience paper',
             'Bachelor of Medicine and Bachelor of Surgery Programme (MBChB) at CUHK in 2005. Bachelor of Medical Sciences (BMedSci) under the mentorship of Professor Wing-ho Yung in the School of Biomedical Sciences',
             'PhD programme in Neuroscience at University College London (UCL) under the guidance of Professor Thomas Mrsic-Flogel. His breakthrough research has led to his Runnerup Award of the Eppendorf & Science Prize for Neurobiology as the first awardee in Hong Kong.'
@@ -249,7 +277,7 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/shell-chung.png',
         linkedin: 'https://www.alpacian.com/',
-        id: 10,
+        id: 12,
         desc: [
             'Security Consultant at Alpacian Limited, a Hong Kong based enterprise I.T. security firm',
             'Information Security & Computer Forensics Specialist',
@@ -263,7 +291,7 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/kevin-chan.png',
         linkedin: 'http://www.cachetam.com/en/management.php',
-        id: 11,
+        id: 13,
         desc: [
             '20 years of experience in finance and asset management;',
             'Currently a Managing Director at Cachet Asset Management, a firm that offers proprietary hedge funds, private equities, and direct investment opportunities for investors',
@@ -278,12 +306,12 @@ var advisorsData = [
         title: 'Advisor',
         image: './assets/img/profile/jason-yau.png',
         linkedin: 'https://www.linkedin.com/in/jasonctyau/',
-        id: 12,
+        id: 14,
         desc: [
-            'Partner at St. James’s Place Wealth Management – Asia based in Hong Kong; Services Hong Kong’s top local lawyers as well as some of the most recognizable international law firms and established barrister chambers in the locale',
+            'Partner at St. Jamesâ€™s Place Wealth Management â€“ Asia based in Hong Kong; Services Hong Kongâ€™s top local lawyers as well as some of the most recognizable international law firms and established barrister chambers in the locale',
             'Former Financial Planning Analyst with Fisher Investments UK, engaging in client on-boarding, sales support functions, income strategies and tax planning, pension transfers and portfolio consolidation',
             'Former Wealth Management Advisor at Intrinsic Financial Services and other financial advisory roles based in London, UK.',
-            'B.A. – Business from the University of Brighton'
+            'B.A. â€“ Business from the University of Brighton'
         ]
     },
     {
@@ -291,7 +319,7 @@ var advisorsData = [
         title: 'Marketing Advisor',
         image: './assets/img/profile/virginia-lam.png',
         linkedin: 'https://www.linkedin.com/in/lamvirginia/',
-        id: 13,
+        id: 15,
         desc: [
             '15 years of marketing experience in startups-turned-listed-companies;Passion for blockchain innovations',
             'Co-Founder of COINS Marketing, a partner for fintech and blockchain projects',
@@ -299,7 +327,7 @@ var advisorsData = [
             'Marketing Lead at The Abyss, a crypto reward ecosystem for gamers and developers',
             'Co-Founder of V Partnership, a digital marketing agency',
             'Former Marketing Director at Ensogo Limited (ASX: E88), operator of ecommerce businesses across Asia',
-            'BA – University of Sydney, English and Psychology.'
+            'BA â€“ University of Sydney, English and Psychology.'
         ]
     },
     {
@@ -307,14 +335,14 @@ var advisorsData = [
         title: 'Marketing Advisor',
         image: './assets/img/profile/douglas-ching.png',
         linkedin: 'https://www.linkedin.com/in/dougching/',
-        id: 14,
+        id: 16,
         desc: [
             'Over 20 years of marketing experience including digital marketing and social media marketing across the ecommerce and consumer electronics industries',
             'Co-Founder of two marketing agencies under OOKEA Group: Coins Marketing (Token sale consultant agency) and V Partnership (Digital marketing agency)',
             'Former General Manager at Ensogo Limited (ASX:E88), established China headquarters',
             'Marketing Lead at The Abyss, a crypto reward ecosystem for gamers and developers',
             'Qualified Google Analytics Individual; Cisco CCNA; Microsoft MCSE + MCDBA',
-            'BA – Economics, University of Toronto, Canada'
+            'BA â€“ Economics, University of Toronto, Canada'
         ]
     }
 ];
@@ -326,7 +354,7 @@ function isNumItemChanged() {
 }
 
 function getNumItemEachRow () {
-    return 8;
+    return 12;
 }
 
 var teamList = {};
@@ -367,27 +395,33 @@ function memberLoad(selector, btnSelector, data, type) {
                 return `<div class="team-round" style="display:none;">
                         <div class="profile">
                             <div class="img">
-                                <img src="${imagePath}" alt="${name}">
-                                <ul class="social">
-                                    <li><a href="#" data-toggle="modal" data-target="#modal-container" onclick="showDetailInfo(${id}, ${type});"><div class="icon icon-profile"></div></a></li>
-                                    <li><a target="_blank" href="${linkedUrl}"><div class="icon icon-linkedin"></div></a><div class="clear"></div></li>
-                                </ul>
+                                <img src="${imagePath}" alt="${name}" width="120" height="120">
                             </div>
                             <div class="name">${name}</div>
                             <div class="title">${title}</div>
+                            <div class="link">
+                                <ul class="social">
+                                    <li><a href="#" data-toggle="modal" data-target="#modal-container" onclick="showDetailInfo(${id}, ${type});"><div class="icon icon-profile"></div></a></li>
+                                    <li><a target="_blank" href="${linkedUrl}"><div class="icon icon-linkedin"></div></a></li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
                         </div>
                     </div>`;
             } else {
                 return `<div class="team-round" style="display:none;">
                         <div class="profile">
                             <div class="img">
-                                <img src="${imagePath}" alt="${name}">
-                                <ul class="social">
-                                    <li><a target="_blank" href="${linkedUrl}"><i class="fab fa-linkedin-in"></i></a></li>
-                                </ul>
+                                <img src="${imagePath}" alt="${name}" width="120" height="120">
                             </div>
                             <div class="name">${name}</div>
                             <div class="title">${title}</div>
+                            <div class="link">
+                                <ul class="social">
+                                    <li><a target="_blank" href="${linkedUrl}"><div class="icon icon-linkedin single-item"></div></a></li>
+                                    <div class="clear"></div>
+                                </ul>
+                            </div>
                         </div>
                     </div>`;
             }

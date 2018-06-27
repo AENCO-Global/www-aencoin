@@ -4,65 +4,80 @@
     margin: auto;
   }
   .content {
-    width: 1534px;
+    width: 1434px;
     margin: auto;
-    padding: 97px 0;
-    display: flex;
   }
   .message-container {
     max-width: 680px;
     padding: 0 30px;
+    float: left;
+    margin-left: 4%;
   }
   h2 {
     color: #b6d84e;
-    font-weight: 500;
-    font-size: 56px;
-    letter-spacing: 3px;
-    margin: 0;
+    text-align: left;
   }
   h3 {
-    letter-spacing: 4px;
-    font-weight: 400;
-    font-size: 48px;
-    line-height: 1.35;
-    margin: 0;
-    margin-top: 18px;
+    text-align: left;
   }
   h5 {
-    font-size: 18px;
-    line-height: 1.75;
-    color: #FFFFFF;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 300;
-    margin: 0;
-    margin-top: 18px;
+    text-align: left;
   }
   .video-container {
     margin: auto;
-    margin-top: 18px;
-    width: 700px;
-    height: 460px;
+    margin-top: 0px;
+    width: 600px;
+    height: 337px;
+    float: left;
     img {
       width: 100%;
     }
   }
-  .video {
-    width: 536px;
-    height: 378px;
-  }
-  @media screen and (max-width: 1600px) {
+  @media (max-width: 1420px) {
     .content {
-        width: 90%;
+        width: 96%;
+    }
+    .message-container {
+      width: 50%;
     }
     .video-container {
-      width: calc(100vw / 1600 * 700);
-      height: calc(100vw / 1600 * 460);
+      width: 540px;
+      height: 303px;
     }
   }
-  @media screen and (max-width: 769px) {
-    /* start of medium tablet styles */
-    .content {
-      flex-wrap: wrap;
+  @media (max-width: 1250px) {
+    .video-container {
+      width: 480px;
+      height: 270px;
     }
   }
+  @media (max-width: 1120px) {
+    .video-container {
+      width: 420px;
+      height: 236px;
+    }
+  }
+  @media (max-width: 980px) {
+    .video-container {
+      float: none;
+      margin-top: 5%;
+    }
+    .message-container {
+      float: none;
+      width: 100%;
+      margin: auto;
+    }
+  }
+}
+
+.ytp-title-text, .ytp-watch-later-icon, .ytp-chrome-top .ytp-share-button {
+  display: none;
+}
+
+.ytp-watch-later-icon {
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: none;
 }

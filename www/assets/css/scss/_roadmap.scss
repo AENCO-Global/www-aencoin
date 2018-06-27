@@ -5,17 +5,11 @@ $primary-color-hover: scale-color($primary-color, $lightness: 32%);
   .main-container {
     background-color: #000000;
   }
-  .content {
-    padding: 75px 0;
-  }
   .container-fluid {
     margin-top: 48px;
   }
-  h2 {
-    text-align: center;
-    font-weight: 500;
-    font-size: 52px;
-    letter-spacing: 2.5px;
+  h3 {
+    text-align: left;
   }
 }
 h2.timeline-title {
@@ -27,11 +21,14 @@ h2.timeline-title {
 
 h3.timeline-title {
 	text-transform: uppercase;
-	font-family: "Teko", san-serif;
-	font-weight: 300;
-	font-size: 25px;
-	color: #fff;	
-	}
+  font-family: "Teko", san-serif;
+  font-weight: 300;
+  font-size: 35px;
+  color: #fff;
+  text-align: left;
+  padding: 5px;
+  letter-spacing: 0.02em;
+}
 	
 h6.timeline-subtitle {
 	font-family: "Titillium Web", san-serif;
@@ -140,6 +137,9 @@ a:hover {
   bottom: 0;
   left: 6px;
 }
+.end-point:after {
+  height: 0;
+}
 
 .ico:before {
     background: #00b6cd;
@@ -199,7 +199,6 @@ a:hover {
 }
 .period .timeline-marker:after {
   content: "";
-  height: 32px;
   top: auto;
 }
 .period .timeline-content {
@@ -281,6 +280,9 @@ a:hover {
     text-align: left;
     padding-left: 30px;
   }
+  .timeline-centered > .timeline-item:nth-child(odd) .timeline-content h3 {
+    text-align: left;
+  }
   .timeline-centered > .timeline-item:nth-child(even) .timeline-info {
     float: right;
     text-align: left;
@@ -291,6 +293,9 @@ a:hover {
     text-align: right;
     padding-right: 30px;
   }
+  .timeline-centered > .timeline-item:nth-child(even) .timeline-content h3 {
+    text-align: right;
+  }
   .timeline-centered > .timeline-item.period .timeline-content {
     float: none;
     padding: 0;
@@ -298,12 +303,14 @@ a:hover {
     text-align: center;
   }
   .timeline-centered .timeline-item.period {
-    padding: 50px 0 90px;
+    padding: 0 0 10px;
   }
   .timeline-centered .period .timeline-marker:after {
-    height: 30px;
     bottom: 0;
     top: auto;
+  }
+  .end-point:after {
+    height: 0;
   }
   .timeline-centered .period .timeline-title {
     left: auto;

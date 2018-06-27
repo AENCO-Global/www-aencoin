@@ -153,4 +153,12 @@ $(function () {
         $("#navbarToggleExternalContent").removeClass("show");
     });
 
+    $(window).scroll(function(event){
+        var st = $(this).scrollTop();
+        if (st > 80) {
+            $(".header").css("background-color", "rgba(0,0,0,1)");
+        } else {
+            $(".header").css("background-color", "rgba(0,0,0," + st / 80 + ")");
+        }
+    });
 });

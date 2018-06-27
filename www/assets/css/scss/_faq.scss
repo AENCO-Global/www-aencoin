@@ -1,4 +1,5 @@
 .faq-area {
+    text-align: left;
     .main-container {
       width: 100%;
       background-color: #002d35;
@@ -7,16 +8,13 @@
     .content {
       max-width: 1580px;
       margin: auto;
-      padding: 182px 0;
+      padding: 160px 0 70px;
+    }
+    .btn, .mb-0 {
+        text-align: left;
     }
     h2 {
-        font-family: "Teko", sans-serif;
-        font-weight: 400;
         color: #b1d249;
-        font-size: 56px;
-        letter-spacing: 3px;
-        margin: 0;
-        text-align: center;
     }
     .subtitle {
         font-family: 'Titillium Web', sans-serif;

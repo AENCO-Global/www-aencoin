@@ -1,16 +1,16 @@
 .team-area {
   .team-round {
-    margin-bottom: 30px;
+    margin: 0 auto;
+    margin-bottom: 10px;
     -ms-flex: 0 0 25%;
-    flex: 0 0 25%;
+    flex: 0 0 16.6666667%;
     position: inherit;
     .profile {
       margin: auto;
-      @include radius(100);
       position: relative;
       text-align: center;
       padding-top: 10px;
-      width: 220px;
+      width: 150px;
       margin-bottom: 18px;
   
       &:before {
@@ -25,41 +25,12 @@
       }
   
       .img {
-        width: 220px;
-        height: 220px;
+        width: 150px;
+        height: 120px;
         position: relative;
         overflow: hidden;
-        @include radius(110px);
-        margin-left: 10px;
-  
         img {
-          width: 220px;
-          height: 220px;
           overflow: hidden;
-          @include radius(110px);
-        }
-  
-        .social {
-          content: '';
-          position: absolute;
-          width: 220px;
-          height: 220px;
-          @include radius(110px);
-          top: 0px;
-          left: -220px;
-          background-color: #00b7ce;
-          opacity: 0.83;
-          text-align: center;
-          @include transition(.3s);
-  
-          li {
-            display: inline-block;
-            margin: 82px 10px;
-            a {
-              font-size: 36px;
-              color: #fff;
-            }
-          }
         }
       }
     }
@@ -80,15 +51,6 @@
   .content {
     width: 1300px;
     margin: auto;
-    padding: 180px 0 80px 0;
-  }
-  h2 {
-    font-size: 40px;
-    font-weight: 400;
-    letter-spacing: 6px;
-  }
-  h2 {
-    text-align: center;
   }
   .team-member-list {
     margin: auto;
@@ -98,36 +60,61 @@
   }
   .name {
     text-align: center;
-    font-size: 28px;
+    font-size: 25px;
     font-family: 'Teko', sans-serif;
-    font-weight: 400;
-    letter-spacing: 2px;
+    font-weight: 300;
+    letter-spacing: 0.05em;
     line-height: 1;
-    margin-top: 34px;
+    margin-top: 20px;
+    text-transform: uppercase;
   }
   .title {
     text-align: center;
-    font-size: 15px;
+    font-size: 16px;
     font-family: 'Titillium Web', sans-serif;
     font-weight: 300;
     letter-spacing: 1px;
-    line-height: 1;
-    color: #a0a0a0;
+    line-height: 1.4;
+    color: #ffffff90;
+    margin-top: 4px;
   }
   .btn-more:hover {
     opacity: 0.8;
   }
   .icon {
     width: 30px;
-    height: 50px;
+    height: 40px;
     text-align: center;
-    float: left;
+    background-size: 18px;
+    opacity: 0.5;
+  }
+  .icon.single-item {
+    margin-left: 32px;
   }
   .icon-linkedin {
     background: center no-repeat url($icon-linkedin);
+    background-size: 18px;
+
   }
   .icon-profile {
     background: center no-repeat url($icon-profile);
+    background-size: 20px;
+    margin: 0 10px;
+
+  }
+  ul.social {
+    margin: auto 28px;
+    li {
+      float: left;
+    }
+  }
+  @media (max-width: 1320px) {
+    .content {
+        width: 96%;
+    }
+  }
+  @media (max-width: 960px) {
+    
   }
 }
 
@@ -164,4 +151,24 @@
       margin-left: 2em;
     }
   }
+}
+.popup-name {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.popup-title {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  color: #ffffff90;
+  margin-top: 4px;
 }

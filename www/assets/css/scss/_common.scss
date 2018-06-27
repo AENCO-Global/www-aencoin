@@ -43,15 +43,21 @@ a:focus {
 .calign {
     text-align: center;
 }
+.content {
+    padding: 60px 0 70px;
+}
 .header {
     z-index: 99;
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
-    height: 140px;
-    padding-top: 45px;
+    height: 100px;
+    padding-top: 28px;
     background-color: rgba(0, 0, 0, 0);
+    &.faq-header {
+        background-color: rgba(0, 0, 0, 1);
+    }
 }
 .header-content {
     margin: auto;
@@ -91,22 +97,38 @@ a:focus {
 .margin-auto {
     margin: auto;
 }
+h1 {
+    font-size: 48px;
+    text-align: center;
+    line-height: 55px;
+    letter-spacing: 0.06em;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+}
 h2 {
     color: #FFFFFF;
-    font-size: 62px;
+    font-size: 45px;
     font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.05em;
+    text-align: center;
 }
 h3 {
-    font-size: 58px;
-    line-height: 71px;
     color: #FFFFFF;
+    font-size: 32px;
     font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    text-align: center;
 }
 h5 {
-    font-size: 22px;
-    line-height: 44px;
     color: #FFFFFF;
+    font-size: 18px;
     font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+    text-align: center;
+    line-height: 1.5;
 }
 a, button {
     cursor: pointer;
@@ -115,11 +137,11 @@ a:hover, button:hover {
     opacity: 0.6;
 }
 .footer-content {
-    font-size: 22px;
-    font-family: 'Titillium Web', sans-serif;
+    font-size: 15px;
+    font-family: "Titillium Web", sans-serif;
     font-weight: 300;
-    letter-spacing: 2px;
-    padding: 20px 0;
+    letter-spacing: 0.02em;
+    padding: 15px 0 30px;
 }
 .company-name {
     margin-left: 57px;
@@ -135,6 +157,8 @@ a:hover, button:hover {
 }
 .menu ul li a {
     text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
+    font-size: 25px;
+    letter-spacing: 0.05em;
 }
 .login-menu {
     position: relative;
@@ -146,30 +170,34 @@ a:hover, button:hover {
     display: inline-block;
     position: relative;
 }
+.p-4 {
+    padding: 0 !important;
+}
 .mobile-menu {
     display: none;
     font-size: 48px;
     position: absolute;
-    width: 90vw;
+    width: 98%;
+    h2 {
+        text-align: left;
+    }
 }
 .mobile-menu .navbar {
     padding: 0;
 }
 .mobile-menu .collapse {
-    width: 90vw;
+    width: 98%;
     position: absolute;
-    top: 40px;
-    margin-left: 5vw;
+    margin-left: 2%;
 }
 .mobile-menu .collapsing {
-    width: 90vw;
+    width: 98%;
     position: absolute;
-    top: 40px;
-    margin-left: 5vw;
+    margin-left: 2%;
 }
 .mobile-menu button {
     position: absolute;
-    right: 0;
+    right: 3%;
     top: -50px;
 }
 .mobile-menu .navbar-toggler {
@@ -177,9 +205,6 @@ a:hover, button:hover {
 }
 button:focus {
     outline: none;
-}
-.mobile-menu .menu-content {
-    padding: 0 1.5rem!important;
 }
 .mobile-menu .list-group-item {
     color: #FFFFFF;
@@ -200,7 +225,7 @@ button:focus {
     padding: 0 15px;
 }
 .login-menu ul li {
-    padding: 0 15px;
+    padding: 0 8px;
 }
 .menu ul li.group-account {
     margin: 0 7px;
@@ -224,7 +249,7 @@ button:focus {
 .menu ul li a {
     font-family: 'Teko', sans-serif;
     font-size: 28px;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
 }
 .login-menu ul li a {
     font-family: 'Teko', sans-serif;
@@ -234,18 +259,19 @@ button:focus {
 .brand-logo {
     display: inline-block;
     background: url($welcome-logo-url) no-repeat;
-    background-size: 200px;
+    background-size: 170px;
     width: 200px;
     height: 56px;
     margin-left: 50px;
+    margin-top: -3px;
 }
 .txt-join-community {
     font-family: "Teko", sans-serif;
-    font-size: 49px;
+    font-size: 35px;
     font-weight: 400;
     font-style: normal;
-    margin-top: 16px;
-    letter-spacing: 5px;
+    margin-top: 24px;
+    letter-spacing: 0.05em;
 }
 .bottomBar i {
     font-size: 48px;
@@ -254,8 +280,8 @@ button:focus {
     display: flex;
     list-style: none;
     padding: 0;
-    max-width: 570px;
     margin: 16px auto auto 50px;
+    flex-wrap: wrap;
 }
 .bottomBar ul li {
     margin: 0 auto;
@@ -269,17 +295,15 @@ button:focus {
     margin: 50px 0;
 }
 .btn-more {
-    width: 210px;
-    height: 48px;
-    line-height: 42px;
-    font-size: 22px;
+    font-size: 25px;
     font-family: 'Teko', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     color: #FFFFFF;
-    border: 4px solid #0a92a4;
+    border: 0.15em solid #0093a5;
     border-radius: 24px;
     background-color: transparent;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
+    padding: 4px 35px 1px;
 }
 #exampleModalLabel.modal-title {
     font-family: 'Teko', sans-serif;
@@ -297,6 +321,9 @@ button:focus {
         .modal-header {
             display: none;
         }
+    }
+    &.video-popup {
+        max-width: fit-content;
     }
     .close {
         font-size: 3rem;
@@ -404,48 +431,122 @@ button:focus {
     border: none;
     outline: none;
     background: transparent;
+    text-shadow: 0px 0px 10px #00101a, 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
 }
 .slick-next {
-    right: -10%;
+    right: -5%;
     z-index: 80;
+    top: 45%;
 }
 .slick-prev {
-    left: -10%;
+    left: -5%;
     z-index: 80;
+    top: 45%;
 }
 .slider-item img {
     margin: auto;
 }
 .slick-slide {
-    margin: 0 24px;
+    margin: 0 15px;
     opacity: 1;
 }
-@media screen and (max-width: 1240px) {
-    /* start of large tablet styles */
-    .mobile-menu {
-        display: block;
-    }
+.icon-social {
+    width: 40px;
+    height: 45px;
+}
+.icon-bitcointalk {
+    background: center no-repeat url($icon-bitcointalk);
+}
+.icon-youtube {
+    background: center no-repeat url($icon-youtube);
+}
+.icon-discord {
+    background: center no-repeat url($icon-discord);
+}
+.icon-facebook {
+    background: center no-repeat url($icon-facebook);
+}
+.icon-medium {
+    background: center no-repeat url($icon-medium);
+}
+.icon-reddit {
+    background: center no-repeat url($icon-reddit);
+}
+.icon-twitter {
+    background: center no-repeat url($icon-twitter);
+}
+.icon-linkedin {
+    background: center no-repeat url($icon-linkedin);
+}
+.icon-telegram {
+    background: center no-repeat url($icon-telegram);
+}
+.modal-body {
+    padding: 2rem 8rem 5rem;
+}
+.table th, .table td {
+    border-top: none;
+}
+@media (max-width: 1200px) {
     .menu {
         display: none;
     }
     .login-menu {
-        margin-right: 14vw;
+        margin-right: 10%;
+    }
+    .mobile-menu {
+        display: block;
+    }
+    h1 {
+        font-size: 45px;
+    }
+    h2 {
+        font-size: 40px;
+    }
+    .footer-content {
+        width: 90%;
     }
 }
-
-@media screen and (max-width: 991px) {
-    /* start of large tablet styles */
-
+@media (max-width: 1060px) {
+    .bottomBar .fleft {
+        float: none;
+    }
+    .bottom-bar-area {
+        height: 120px;
+    }
 }
-
-@media screen and (max-width: 767px) {
-    /* start of medium tablet styles */
+@media (max-width: 700px) {
+    .company-name {
+        margin-left: 0;
+    }
+    .version {
+        margin-right: 0;
+    }
+    .footer {
+        text-align: center;
+    }
+    .footer .fleft, .footer .fright {
+        float: none;
+    }
+}
+@media (max-width: 640px) {
+    .bottomBar ul {
+        display: block;
+    }
+    .bottom-bar-area {
+        height: 168px;
+    }
+}
+@media (max-width: 520px) {
     .login-menu {
         display: none;
     }
+    .footer-content {
+        font-size: 12px;
+    }
 }
-
-@media screen and (max-width: 479px) {
-    /* start of phone styles */
-
+@media (max-width: 455px) {
+    .bottom-bar-area {
+        height: 220px;
+    }
 }

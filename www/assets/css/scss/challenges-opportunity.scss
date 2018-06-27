@@ -4,39 +4,33 @@
     }
     .content {
         margin: auto;
+        padding: 0;
     }
     .challenge-area {
         float: left;
         width: 50%;
         background-color: #0193a5;
+        padding: 0 3%;
     }
     .opportunities-area {
         float: right;
         width: 50%;
         background-color: #02b7ce;
-    }
-    h2 {
-        font-family: 'Teko', sans-serif;
-        font-weight: 400;
-        font-size: 54px;
-        letter-spacing: 3.5px;
-        text-align: center;
+        padding: 0 3%;
     }
     .challenge-box {
-        width: 786px;
+        width: 100%;
         margin: auto;
         float: right;
         padding: 64px 0;
     }
     .opportunity-box {
-        width: 786px;
+        width: 100%;
         margin: auto;
         float: left;
         padding: 64px 0;
     }
     .logo {
-        width: 115px;
-        height: 115px;
         float:left;
     }
     .desc {
@@ -45,55 +39,55 @@
         margin-left: 35px;
         font-family: 'Titillium Web', sans-serif;
         font-weight: 300;
-        font-size: 23px;
-        letter-spacing: 1px;
+        font-size: 20px;
+        letter-spacing: 0.02em;
     }
     .challenge-one-logo {
         background: url($challenge-one-logo) no-repeat;
-        width: 92px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .challenge-two-logo {
         background: url($challenge-two-logo) no-repeat;
-        width: 94px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .challenge-three-logo {
         background: url($challenge-three-logo) no-repeat;
-        width: 54px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .challenge-four-logo {
         background: url($challenge-four-logo) no-repeat;
-        width: 91px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .opportunity-one-logo {
         background: url($opportunity-one-logo) no-repeat;
-        width: 92px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .opportunity-two-logo {
         background: url($opportunity-two-logo) no-repeat;
-        width: 105px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .opportunity-three-logo {
         background: url($opportunity-three-logo) no-repeat;
-        width: 115px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .opportunity-four-logo {
         background: url($opportunity-four-logo) no-repeat;
-        width: 115px;
-        height: 99px;
+        width: 100px;
+        height: 90px;
         margin: auto;
     }
     .items {
@@ -103,5 +97,41 @@
         width: 484px;
         margin: auto;
         margin-top: 49px;
+    }
+    @media (max-width: 1200px) {
+        .challenge-one-logo, .challenge-two-logo, .challenge-three-logo, .challenge-four-logo, .opportunity-one-logo, .opportunity-two-logo, .opportunity-three-logo, .opportunity-four-logo {
+            width: 90px;
+            height: 81px;
+            background-size: 90px 81px;
+        }
+        .desc {
+            font-size: 18px;
+        }
+    }
+    @media (max-width: 1020px) {
+        .desc {
+            width: 300px;
+        }
+    }
+    @media (max-width: 960px) {
+        .challenge-area {
+            float: none;
+            width: 100%;
+        }
+        .opportunities-area {
+            float: none;
+            width: 100%;
+        }
+    }
+    @media (max-width: 540px) {
+        .item {
+            width: 100%;
+        }
+        .logo {
+            float: none;
+        }
+        .desc {
+            margin-top: 5%;
+        }
     }
 }

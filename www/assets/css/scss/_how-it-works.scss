@@ -7,7 +7,6 @@
   .content {
     max-width: 1580px;
     margin: auto;
-    padding: 58px 0;
   }
   .items {
     margin: auto;
@@ -23,49 +22,28 @@
     padding: 0 10px;
   }
   .info {
-    margin-top: 39px;
+    margin-top: 35px;
   }
   .logo {
     margin: auto;
   }
   .logo-global {
-    width: 219px;
-    height: 180px;
+    width: 200px;
+    height: 150px;
     background: url($how-it-works-icon-global) no-repeat;
   }
   .logo-solution {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 150px;
     background: url($how-it-works-icon-solution) no-repeat;
   }
   .logo-partner {
-    width: 180px;
-    height: 180px;
+    width: 200px;
+    height: 150px;
     background: url($how-it-works-icon-partners) no-repeat;
-  }
-  h2 {
-    font-size: 53px;
-    font-weight: 400;
-    letter-spacing: 4px;
-  }
-  h2, h3, h5 {
-    text-align: center;
-  }
-  h3 {
-    font-weight: 400;
-    font-size: 40px;
   }
   .subtitle {
     line-height: 1.1;
     letter-spacing: 1.75px;
-  }
-  h5 {
-    font-size: 20px;
-    font-family: 'Titillium Web', sans-serif;
-    font-weight: 300;
-    letter-spacing: 1px;
-    line-height: 1.6;
-    margin-top: 15px;
-
   }
 }

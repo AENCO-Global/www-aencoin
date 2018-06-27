@@ -1,60 +1,58 @@
 .ecosystem-area {
     .main-container {
         width: 100%;
-        background-color: #016e7d;
+        background-color: #006e7c;
     }
     .content {
         width: 1600px;
         margin: auto;
-        padding: 75px 0;
-    }
-    h2 {
-        font-size: 54px;
-        font-weight: 400;
-        letter-spacing: 3.5px;
-        text-align: center;
     }
     .diagram {
         margin-top: 44px;
         height: 615px;
     }
     .diagram-border {
-        @include radius(160px);
-        border: 18px solid #1c94a2;
         width: 1200px;
-        height: 662px;
+        height: 684px;
         position: absolute;
-        top: -45px;
-        left: 208px;
+        top: -100px;
+        left: 200px;
+        background: no-repeat center url(../img/border.png);
+        background-size: 1000px;
     }
     .diagram-title {
-        width: 564px;
-        height: 58px;
+        width: 400px;
         position: absolute;
         top: -66px;
-        left: 527px;
-        background-color: #1c94a2;
+        left: 600px;
+        background-color: #0093a5;
         font-family: "Teko", sans-serif;
         font-weight: 400;
-        font-size: 32px;
-        letter-spacing: 2px;
-        line-height: 2;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        line-height: 1.7;
         text-align: center;
+        padding: 3px 0 2px;
+        box-shadow: 0px 0px 10px rgb(0, 110, 124), 0px 0px 15px rgb(0, 110, 124);
     }
     .diagram-pointer {
-        width: 300px;
-        height: 94px;
+        width: 250px;
+        height: 96px;
         position: absolute;
-        top: -84px;
-        left: 153px;
-        background-color: #FFFFFF;
+        top: -81px;
+        left: 250px;
         font-family: "Teko", sans-serif;
-        font-weight: 400;
-        font-size: 41px;
-        letter-spacing: 2px;
-        line-height: 2.5;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        line-height: 3.2;
         text-align: center;
-        color: #016e7d;
+        color: #0093a5;
+        padding: 3px 0 2px;
+        background: no-repeat center url($arrow-image);
+        span {
+            margin-left: -20px;
+        }
     }
     .items {
         padding: 10px 160px;
@@ -63,22 +61,17 @@
         margin-top: 124px;
     }
     .item {
-        padding: 32px 0px;
+        padding: 15px 20px 25px;
         border-bottom: 2px solid #FFFFFF;
         .title {
-            font-family: 'Teko', sans-serif;
-            font-weight: 400;
-            font-size: 43px;
-            letter-spacing: 2px;
-            line-height: 1;
             float: left;
             width: 280px;
             text-align: center;
             &.title-row-one {
-                margin-top: 5%;
+                margin-top: 30px;
             }
             &.title-row-two {
-                margin-top: 9%;
+                margin-top: 12px;
             }
             &.title-row-three {
                 margin-top: 1%;
@@ -86,24 +79,32 @@
         }
         .desc {
             float: left;
-            margin-left: 60px;
+            margin-left: 30px;
             width: 530px;
             ul {
                 list-style-type: circle;
+                &.list-row-1 {
+                    margin-top: 7px;
+                }
                 &.list-row-2 {
-                    margin-top: 5%;
+                    margin-top: 30px;
+                }
+                &.list-row-3 {
+                    margin-top: 21px;
                 }
             }
-            li {
-                font-family: 'Titillium Web', sans-serif;
-                font-weight: 300;
-                font-size: 21px;
-                letter-spacing: 2px;
-                line-height: 1.5;
+            li h5 {
+                text-align: left;
             }
         }
     }
     .no-border {
         border: none;
+    }
+    .challenges-opportunity-area .opportunity-box {
+        padding: 60px 0 70px;
+    }
+    .challenges-opportunity-area .challenge-box{
+        padding: 60px 0 70px;
     }
 }

@@ -1,42 +1,21 @@
 .token-distribution-area {
     .main-container {
         width: 100%;
-        background-color: #0a92a4;
+        background-color: #0093a5;
     }
     .content {
         width: 1200px;
         margin: auto;
-        padding: 50px 0;
-    }
-    h2 {
-        text-align: center;
-        font-size: 40px;
-        font-weight: 400;
-        letter-spacing: 6px;
     }
     .chart-title {
         margin-top: 42px;
-    }
-    h3 {
-        text-align: center;
-        font-size: 27px;
-        font-weight: 400;
-        letter-spacing: 2.5px;
-        line-height: 1;
-    }
-    h5 {
-        text-align: center;
-        font-size: 14px;
-        font-weight: 400;
-        letter-spacing: 1px;
-        line-height: 1;
     }
     .col {
         text-align: center;
         position: inherit;
     }
     .chart-descriptions {
-        width: 400px;
+        width: 450px;
         margin: auto;
         margin-top: 32px;
         .col {
@@ -46,7 +25,7 @@
             font-size: 14px;
         }
         .row {
-            padding: 8px;
+            padding: 5px;
         }
         .unselected {
             background-color: transparent;
@@ -55,5 +34,24 @@
     .pie-chart {
         height: 290px;
         margin-top: 25px;
+    }
+    .chart-subtitle h5 {
+        text-align: center;
+    }
+    h5 {
+        text-align: left;
+    }
+    @media (max-width: 1200px) {
+        .content {
+            width: 96%;
+        }
+    }
+    @media (max-width: 600px) {
+        .chart-descriptions {
+            width: 90%;
+        }
+        h5 {
+            font-size: 16px;
+        }
     }
 }

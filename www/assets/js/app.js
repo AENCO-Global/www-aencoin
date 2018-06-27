@@ -2,29 +2,29 @@ var currentIndex = 0;
 var numItemEachRow = 4;
 var data = [
     {
+        path: './assets/img/video-aenco-explained.jpg',
+        label: 'AENCO EXPLAINED',
+        url: 'https://www.youtube.com/embed/r9zOftJvvPE'
+    },
+    {
         path: './assets/img/video-rollout-thumb.jpg',
-        label: 'OUR VISION',
+        label: 'TECHNOLOGY ROLLOUT',
         url: 'https://www.youtube.com/embed/Vv4lgRwoX08?rel=0'
     },
     {
         path: './assets/img/video-community-thumb.jpg',
-        label: 'TECHNOLOGY ROOLOUT',
+        label: 'OUR COMMUNITY',
         url: 'https://www.youtube.com/embed/-l4mUSPZWUI?rel=0'
     },
     {
         path: './assets/img/video-vison-thumb.jpg',
+        label: 'OUR VISION',
+        url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
+    },
+    {
+        path: './assets/img/video-regulatory-thumb.jpg',
         label: 'REGULATORY LANDSCAPE',
-        url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
-    },
-    {
-        path: './assets/img/video-regulatory-thumb.jpg',
-        label: 'OUR COMMUNITY',
-        url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
-    },
-    {
-        path: './assets/img/video-regulatory-thumb.jpg',
-        label: 'OUR COMMUNITY',
-        url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
+        url: 'https://www.youtube.com/embed/xXvdMVgl8aQ?rel=0'
     }
 ];
 
@@ -164,7 +164,7 @@ var partnerDataLoader = {
 
 function openVideo (id) {
     var content = getVideoContent(data[id].url);
-    initModal(data[id].label, content);
+    initModal(data[id].label, content, false, "video-popup");
 }
 
 function getDom(path, subtitle, id) {
@@ -264,8 +264,8 @@ function getMemberDetailedInfo(imgPath  = "", name  = "", title = "", desc = [])
         </div>
         <div class="info">
             <ul>
-                <li class="name">${name}</li>
-                <li class="title">${title}</li>
+                <li class="name popup-name">${name}</li>
+                <li class="title popup-title">${title}</li>
                 <li class="desc">
                     ${descTxt}
                 </li>
@@ -304,7 +304,7 @@ function getContributionsContent() {
                 <tr>
                     <td>People's Republic of China</td>
                     <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                    <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                    <td>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</td>
                 </tr>
                 <tr>
                     <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
@@ -321,22 +321,14 @@ function getContributionsContent() {
 function getLearnMoreContent() {
     return `<section class="section" id="token-sale-terms">
                 <div class="container">
-                    <!-- Title -->
-                    <div class="row">
-                        <div class="col-lg-12">
-                            <div class="center-heading">
-                                <h1>Summary of Token Sale Terms and Conditions</h1>
-                            </div>
-                        </div>
-                    </div>
                     <!-- Token Sale Terms Summary -->
                     <p>The following shows the summary of information for the Aenco Token Sale such as the terms and conditions, schedule, and bonus details. For more information, please check out our <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> paper and <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</p>
                     <p>Please feel free to ask us questions. We recommend posting your question on our Telegram Group:<a target="_blank" href="https://t.me/AENCO">Aencoin Community</a>.</p>
-                    <h2>Schedule of Private Sale</h2>
+                    <h3>Schedule of Private Sale</h3>
                     <p><b>Private Sale</b></p>
                     <ul>
                         <li><b>Start:</b> Now</li>
-                        <li><b>End Date:</b> 30th June 11:59 pm UTC time OR once the soft cap is met, under Aenco Management's discretion.</li>
+                        <li><b>End Date:</b> 26th July 11:59 pm UTC time OR once the soft cap is met, under Aenco Management's discretion.</li>
                         <li><b>Minimum Contribution:</b> USD 20,000 equivalent of ETH or BTC.</li>
                         <li><b>Bonus:</b> +60% AEN tokens</li>
                     </ul>
@@ -368,7 +360,7 @@ function getLearnMoreContent() {
                             <tr>
                                 <td>People's Republic of China</td>
                                 <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
+                                <td>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</td>
                             </tr>
                             <tr>
                                 <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
@@ -381,7 +373,7 @@ function getLearnMoreContent() {
                         </tbody>
                     </table>
                     <p>We would like to give thanks to our community for the continued support.</p>
-                    <p><i>Disclaimer: The last update is on the 25th of May 2018. The information above may be subject to change.</i></p>
+                    <p><i>Disclaimer: The last update is on the 26th of Jun 2018. The information above may be subject to change.</i></p>
                 </div>
             </section>`;
 }
@@ -513,16 +505,12 @@ function initCallback() {
         });
     }
 
-    $(".btn-launch-video").on("click", function() {
-        initModal("Team Video", getVideoContent("https://www.youtube.com/embed/qDYAOZP2dTg?rel=0"));
-    });
-
     $("#btn-contributors").on("click", function() {
-        initModal("Contributors", getContributionsContent());
+        initModal("Eligible Contributors", getContributionsContent());
     });
 
     $("#btn-learn").on("click", function() {
-        initModal("Learn", getLearnMoreContent());
+        initModal("Summary of Token Sale Terms and Conditions", getLearnMoreContent());
     });
 }
 

@@ -13,30 +13,26 @@
         padding: 45px;
     }
     .core-message {
-        width: 1190px;
+        width: 1000px;
         margin: auto;
-        margin-top: 172px;
-        font-size: 67px;
-        text-align: center;
-        line-height: 1.25;
-        letter-spacing: 5px;
-        font-family: 'Teko', sans-serif;
-        font-weight: 400;
+        margin-top: 150px;
+        text-shadow: 0px 0px 10px rgb(0, 16, 26), 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
     }
     .sub-message-container {
         margin-top: -15px;
     }
     .sub-message {
-        font-size: 21px;
+        font-size: 20px;
         text-align: center;
-        margin: 20px auto;
+        margin: 25px auto 20px;
         font-family: 'Titillium Web', sans-serif;
-        font-weight: 400;
-        letter-spacing: 1.3px;
+        font-weight: 200;
+        letter-spacing: 0.02em;
         line-height: 1.5;
+        text-shadow: 0px 0px 10px rgb(0, 16, 26), 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
     }
     .private-sale-notice {
-        margin-top: 40px;
+        margin-top: 30px;
     }
     .private-sale-txt {
         color: #b2d254;
@@ -47,36 +43,31 @@
         letter-spacing: 0.02em;
     }
     .btn-join {
-        background-color: #b2d254;
+        background-color: #8aa739;
         border-radius: 24px;
-        padding: 8px 24px;
+        padding: 1px 24px 3px;
         margin-top: 6px;
+        float: left;
     }
     .btn-txt {
         color: #FFFFFF;
-        font-size: 26px;
-        font-family: 'Teko', sans-serif;
+        font-size: 22px;
+        font-family: "Titillium Web", sans-serif;
         font-weight: 400;
-        letter-spacing: 4px;
-    }
-    h3 {
-        margin: auto;
-        font-size: 24px;
-        font-family: 'Teko', sans-serif;
-        font-weight: 300;
-        letter-spacing: 3px;
+        letter-spacing: 0.02em;
     }
     .row-contributor {
         margin-top: -25px;
+        text-align: center;
         .link-group {
             margin: auto;
             a, span {
                 line-height: 71px;
                 color: #FFFFFF;
-                font-size: 24px;
-                font-family: 'Teko', sans-serif;
+                font-size: 20px;
+                font-family: "Titillium Web", sans-serif;
                 font-weight: 300;
-                letter-spacing: 3px;
+                letter-spacing: 0.02em;
             }
         }
     }
@@ -91,9 +82,9 @@
     }
     li a {
         font-weight: 400;
-        font-size: 20px;
-        font-family: 'Teko', sans-serif;
-        letter-spacing: 4px;
+        font-size: 16px;
+        font-family: "Titillium Web", sans-serif;
+        letter-spacing: 0.02em;
     }
     .link-group-container {
         margin-top: 40px;
@@ -107,7 +98,7 @@
         font-weight: 300;
         color: $color-blue;
         line-height: 36px;
-        margin: 0 12px;
+        margin: 0 8px;
     }
     .link-txt {
         line-height: 36px;
@@ -124,74 +115,16 @@
     }
     .txt-bonus-program {
         color: #00b7ce !important;
+        font-weight: 500 !important;
     }
-    @media screen and (max-width: 1390px) {
+    @media (max-width: 1400px) {
         .content {
-            width: 100%;
-        }
-        .core-message {
-            font-size: 67px;
-            line-height: 1.25;
-            letter-spacing: 5px;
+            width: 96%;
         }
     }
-    @media (max-width: 1240px) {
-        .header {
-            padding-top: 50px;
-        }
-        .background {
-            background-image: url($mobile-welcome-background-image-url);
-        }
-        .core-message {
-            font-size: 4em;
-        }
-    }
-    @media screen and (max-width: 1025px) {
-        /* start of large tablet styles */
-        .core-message {
-            font-size: 3.5em;
-        }
-        .btn-join {
-            margin-top: 4px;
-        }
-        .btn-txt {
-            font-size: 18px;
-        }
-    }
-    
-    @media screen and (max-width: 769px) {
-        /* start of medium tablet styles */
+    @media (max-width: 660px) {
         .content {
-            padding-right: 45px;
-            padding-left: 45px;
-        }
-        .core-message {
-            font-size: 3em;
-            margin-top: 172px;
-        }
-        .col {
-            -ms-flex: 0 0 100%;
-            flex: 0 0 100%;
-            max-width: 100%;
-            text-align: center;
-        }
-        .private-sale-txt {
-            text-align: center;
-        }
-        .row-contributor {
-            margin-top: 0;
-        }
-    }
-    
-    @media screen and (max-width: 479px) {
-        /* start of phone styles */
-        .content {
-            padding-right: 10px;
-            padding-left: 10px;
-        }
-        .core-message {
-            font-size: 2em;
-            margin-top: 172px;
+            width: 96%;
         }
     }
 }

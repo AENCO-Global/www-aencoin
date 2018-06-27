@@ -52,19 +52,19 @@
 </div>
 <!-- End Modals -->
 <!-- Header -->
-<header class="header">
+<header class="header faq-header">
     <div class="header-content">
         <a href="./index.html"><div class="brand-logo"></div></a>
         <div class="mobile-menu pos-f-t">
             <nav class="navbar navbar-dark">
-              <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
+                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
-              </button>
+                </button>
             </nav>
             <div class="collapse" id="navbarToggleExternalContent">
                 <div class="p-4 menu-content">
                     <div class="list-group">
-                        <a href="./index.html#welcome-area" class="list-group-item list-group-item-action">WHITEPAPER</a>
+                        <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a>
                         <a href="./index.html#what-is-ean-token-area" class="list-group-item list-group-item-action">AEN TOKEN</a>
                         <a href="./index.html#roadmap-area" class="list-group-item list-group-item-action">ROADMAP</a>
                         <a href="./index.html#team-area" class="list-group-item list-group-item-action">TEAM</a>
@@ -82,17 +82,17 @@
         </nav>
         <nav class="menu">
             <ul>
-                <li><a href="./index.html#welcome-area">WHITEPAPER</a></li>
+                <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a></li>
                 <li><a href="./index.html#what-is-ean-token-area">AEN TOKEN</a></li>
                 <li><a href="./index.html#roadmap-area">ROADMAP</a></li>
                 <li><a href="./index.html#team-area">TEAM</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
                 <li><a href="./index.html#contact-us-area">CONTACT</a></li>
             </ul>
         </nav>
     </div>
 </header>
 <!-- Header End -->
-
 <!-- bottom bar -->
 <div class="bottomBarContainer">
     <div class="bottomBar">
@@ -101,17 +101,24 @@
         </div>
         <div class="fleft">
             <ul>
-                <li><a target="_blank" href="https://t.me/AENCO"><i class="fab fa-telegram fa-3x"></i></a>
+                <li><a target="_blank" href="https://t.me/AENCO"><div class="icon-social icon-telegram"></div></a>
                 </li>
-                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><i class="fab fa-facebook fa-3x"></i></a></li>
-                <li><a target="_blank" href="https://twitter.com/aencoin"><i class="fab fa-twitter-square fa-3x"></i></a></li>
-                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><i class="fab fa-discord fa-3x"></i></a></li>
-                <li><a target="_blank" href="https://medium.com/@aencoin"><i class="fab fa-medium fa-3x"></i></a></li>
-                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><i class="fab fa-linkedin fa-3x"></i></a></li>
-                <li><a target="_blank" href="https://github.com/AENCO-Global"><i class="fab fa-github-square fa-3x"></i></a></li>
-                <li><a target="_blank" href="https://reddit.com/r/Aenco"><i class="fab fa-reddit fa-3x"></i></a>
+                <li><a target="_blank" href="https://twitter.com/aencoin"><div class="icon-social icon-twitter"></div></a>
                 </li>
-                <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><i class="fab fa-btc fa-3x"></i></a></li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><div class="icon-social icon-linkedin"></div></a>
+                </li>
+                <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><div class="icon-social icon-bitcointalk"></div></a>
+                </li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCfDdfAGfY12GW1gisr3ELtw"><div class="icon-social icon-youtube"></div></a>
+                </li>
+                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><div class="icon-social icon-discord"></div></a>
+                </li>
+                <li><a target="_blank" href="https://medium.com/@aencoin"><div class="icon-social icon-medium"></div></a>
+                </li>
+                <li><a target="_blank" href="https://reddit.com/r/Aenco"><div class="icon-social icon-reddit"></div></a>
+                </li>
+                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><div class="icon-social icon-facebook"></div></a>
+                </li>
             </ul>
         </div>
         <div class="clear"></div>
@@ -228,6 +235,23 @@
                             </div>
                         </div>
                     </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingEight">
+                            <h5 class="mb-0">
+                                <button class="btn btn-link collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <div class="sign"></div><div class="btn-label">What are the smart contract address and details of AEN Tokens?</div><div class="clear"></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Contract Address: 0x0bef619cf38cf0c22967289b8419720fbd1db9f7
+                                </p>
+                                <p>Total Supply: 4,000,000,000 AEN</p>
+                                <p>Other Details: <a href="https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7">https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7</a></p>
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -239,28 +263,27 @@
     <div class="main-container">
         <div class="content">
             <div class="footer-menu">
-                <span class="title">WHITE PAPER</span>
+                <span class="title"><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></span>
                 <ul>
-                    <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a></li>
-                    <li><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">TOKEN PAPER</a></li>
-                    <li><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">TWO PAGER</a></li>
-                    <li><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">SLIDE PRESENTATION</a></li>
+                    <li><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">Token Paper</a></li>
+                    <li><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">Two Pager</a></li>
+                    <li><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">Slide Presentation</a></li>
                     <li><div class="empty"><br /></div></li>
-                    <li><a href="#roadmap-area">ROADMAP</a></li>
-                    <li><a href="#team-area">TEAM & ADVISORS</a></li>
-                    <li><a href="#media-area">MEDIA CONVERGAE</a></li>
-                    <li><a href="#partners-area">OUR PARTNERS</a></li>
+                    <li><a href="./index.html#roadmap-area">Roadmap</a></li>
+                    <li><a href="./index.html#team-area">Team & Advisors</a></li>
+                    <li><a href="./index.html#media-area">Media Coverage</a></li>
+                    <li><a href="./index.html#partners-area">Our Partners</a></li>
                 </ul>
             </div>
             <div class="footer-menu">
-                <span class="title">AEN TOKEN</span>
+                <span class="title"><a href="./index.html#what-is-ean-token-area">AEN TOKEN</a></span>
                 <ul>
-                    <li><a href="./index.html#explore-aenco-area">EXPLORE AENCO</a></li>
-                    <li><a href="./index.html#how-it-works-area">HOW IT WORKS</a></li>
-                    <li><a href="./index.html#ecosystem-area">ECOSYSTEM SOLUTIONS</a></li>
-                    <li><a href="./index.html#challenges-opportunity-area">CHALLENGES & OPPORTUNITIES</a></li>
-                    <li><a href="./index.html#token-economy-area">TOKEN ECONOMY</a></li>
-                    <li><a href="./index.html#token-distribution-area">TOKEN DISTRIBUTION</a></li>
+                    <li><a href="./index.html#explore-aenco-area">Explore Aenco</a></li>
+                    <li><a href="./index.html#how-it-works-area">How It Works</a></li>
+                    <li><a href="./index.html#ecosystem-area">Ecosystem Solutions</a></li>
+                    <li><a href="./index.html#challenges-opportunity-area">Challenges & Opportunities</a></li>
+                    <li><a href="./index.html#token-economy-area">Token Economy</a></li>
+                    <li><a href="./index.html#token-distribution-area">Token Distribution</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
                 </ul>
             </div>
@@ -269,30 +292,29 @@
                 <ul>
                     <li>
                         <ul class="row-sign">
-                            <li class="display-inline"><a href="https://signup.aencoin.com/register">SIGNUP</a></li>
+                            <li class="display-inline"><a href="https://signup.aencoin.com/register">Signup</a></li>
                             <li class="display-inline seperator"></li>
-                            <li class="display-inline"><a href="https://signup.aencoin.com/login">LOGIN</a></li>
+                            <li class="display-inline"><a href="https://signup.aencoin.com/login">Login</a></li>
                         </ul>
                     </li>
                     <li><div class="empty"><br /></div></li>
-                    <li><a href="#">NEWS</a></li>
-                    <li><a href="#">EVENTS</a></li>
+                    <li><a href="https://medium.com/@aencoin">News</a></li>
                     <li><div class="empty"><br /></div></li>
-                    <li><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">DISCLAIMER</a></li>
-                    <li><a class="btn-policy" data-toggle="modal" data-target="#modal-container">PRIVACY POLICY</a></li>
+                    <li><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">Disclaimer</a></li>
+                    <li><a class="btn-policy" data-toggle="modal" data-target="#modal-container">Privacy Policy</a></li>
                 </ul>
             </div>
             <div class="contact" id="contact">
                 <span class="title">CONTACT US</span>
                 <ul>
-                    <li class="text-reg-addr">REGISTRED ADDRESS</li>
+                    <li class="text-reg-addr">Registered Address</li>
                     <li class="txt-registerd-address">Vistra Corporate Services Centre, Ground Floor NPF Building, Beach Road, Apia, Samoa</li>
                     <li>
-                        <div class="moon-contact">ENQUIRIES<span class="txt-registerd-address txt-email"><a href="mailto:moon@aencoin.com" target="_blank">moon@aencoin.com</a></span>
+                        <div class="moon-contact">Enquiries<span class="txt-registerd-address txt-email"><a href="mailto:moon@aencoin.com" target="_blank">moon@aencoin.com</a></span>
                         </div>
                     </li>
                     <li class="row-join-telegram"> 
-                        <span class="moon-contact">JOIN US ON TELEGRAM</span>
+                        <span class="moon-contact">Join Us On Telegram</span>
                         <a target="_blank" href="https://t.me/AENCO"><i class="fab fa-telegram-plane fa-3x"></i></a>
                     </li>
                 </ul>

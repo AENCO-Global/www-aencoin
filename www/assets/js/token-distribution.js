@@ -171,8 +171,8 @@ var charts = [];
 var tokenDistribution = {
     getDom: function(percent, text, selector) {
         return `<div class="row ${selector}">
-            <div class="col col-2">${percent}%</div>
-            <div class="col">${text}</div>
+            <div class="col col-2"><h5>${percent}%</h5></div>
+            <div class="col"><h5>${text}</h5></div>
         </div>`;
     },
     render: function(props) {
