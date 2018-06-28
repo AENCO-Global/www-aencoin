@@ -1,1 +1,7 @@
 .DS_Store
+
+#Jetbrains IDE metadata
+.idea/
+
+#SASS cache
+assets/css/scss/.sass-cache

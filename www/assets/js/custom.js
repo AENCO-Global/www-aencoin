@@ -16,7 +16,7 @@
 
         $('.launch-modal').on('click', function(e){
             e.preventDefault();
-            $( '#' + $(this).data('modal-id') ).modal();
+            $('#' + $(this).data('modal-id')).modal();
         });
         $('.close').click(function(){
             $('#what-is-aenco-video').attr('src', $('#what-is-aenco-video').attr('src'));
