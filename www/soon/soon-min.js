@@ -1,1 +1,0 @@
-!function(p){"use strict";p("body").vide({mp4:"soon/bg.mp4",poster:"soon/bg-mobile-fallback.jpg"},{posterType:"jpg"})}(jQuery);
