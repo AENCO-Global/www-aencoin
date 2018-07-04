@@ -21,6 +21,7 @@
     <link type="text/css" href="./assets/css/vendor/fa-regular.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/fa-brands.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/fontawesome.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/flipclock.css" rel="stylesheet">
     <!-- Font Family -->
     <link href="https://fonts.googleapis.com/css?family=Teko:100,200,300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:100,200,300,400,600" rel="stylesheet">
@@ -37,6 +38,8 @@
     <!-- Bootstrap -->
     <script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
     <script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
+    <!-- count-down -->
+    <script type="text/javascript" src="./assets/js/vendor/flipclock.min.js"></script>
     <!-- pdf -->
     <script type="text/javascript" src="./assets/js/vendor/pdfobject.min.js"></script>
     <!-- pie -->
@@ -66,7 +69,7 @@
     <div class="modal-dialog" role="document">
         <div class="modal-content">
             <div class="modal-header">
-                <h2 class="modal-title"></h2>
+                <h3 class="modal-title"></h3>
                 <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                 <span aria-hidden="true">&times;</span>
                 </button>
@@ -182,6 +185,19 @@
                     <a href="https://bountyhive.io/join/Aenco" class="txt-bonus-program" target="_blank">Bounty Program</a>
                 </div>
             </div>
+            <div class="count-down-container">
+                <div class="header-count-down">PRE-ICO START IN:</div>
+                <div class="clock"></div>
+                <script type="text/javascript">
+                    var now = Date.now();
+                    var endTime = Date.parse('July 27, 2018 00:00:00');
+                    var diff = (endTime - now) / 1000;
+                    var clock = $('.clock').FlipClock(diff, {
+                        clockFace: 'DailyCounter',
+                        countdown: true
+                    });
+                </script>
+            </div>
             <div class="row link-group-container">
                 <ul class="link-list">
                     <li class="link-txt"><a herf="#" class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></li>
@@ -251,6 +267,24 @@
     </div>
 </section>
 <!-- What is Aen Token End -->
+
+<!-- Sponsorship-->
+<!--<section id="sponsorship-area" class="section section-top section-full sponsorship-area">
+    <div class="main-container">
+        <div class="content">
+            <div class="message-container">
+                <h2>Sponsorship &amp; Charity</h2>
+                <h5>Description</h5>
+            </div>
+            <div class="badge-container">
+                <img src="#" />
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>-->
+<!-- What is Aen Token End -->
+
 <!-- How is works -->
 <section id="how-it-works-area" class="section section-top section-full how-it-works-area">
     <div class="main-container">
@@ -289,9 +323,16 @@
         <div class="content">
             <h2>THE AENCO ECOSYSTEM SOLUTIONS</h2>
             <div class="diagram">
-
-                <div class="diagram-border"></div>
-
+                <div class="diagram-border-container">
+                    <div class="top-left-corner"></div>
+                    <div class="top-border"></div>
+                    <div class="top-right-corner"></div>
+                    <div class="left-border"></div>
+                    <div class="right-border"></div>
+                    <div class="bottom-left-corner"></div>
+                    <div class="bottom-border-end"></div>
+                    <div class="bottom-right-corner"></div>
+                </div>
                 <div class="diagram-title">Ecosystem Utility Membership Access</div>
                 <div class="diagram-pointer"><span>AEN TOKEN</span></div>
                 <div class="items">
@@ -509,7 +550,7 @@
                         </tr>
                     </table>
                 </div>
-                <div class="desc fright">
+                <div class="desc fleft">
                     <table cellpadding="0" cellspacing="3">
                         <tr>
                             <td class="col3 top-left-corner">PRIVATE SALE<br/>(June/July 2018)</td>

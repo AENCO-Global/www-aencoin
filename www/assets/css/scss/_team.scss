@@ -93,12 +93,12 @@
   }
   .icon-linkedin {
     background: center no-repeat url($icon-linkedin);
-    background-size: 18px;
+    background-size: 18px !important;
 
   }
   .icon-profile {
     background: center no-repeat url($icon-profile);
-    background-size: 20px;
+    background-size: 18px;
     margin: 0 10px;
 
   }
@@ -112,9 +112,6 @@
     .content {
         width: 96%;
     }
-  }
-  @media (max-width: 960px) {
-    
   }
 }
 

@@ -319,61 +319,81 @@ function getContributionsContent() {
 }
 
 function getLearnMoreContent() {
-    return `<section class="section" id="token-sale-terms">
+    return `<section class="section learn-more-area" id="token-sale-terms">
                 <div class="container">
                     <!-- Token Sale Terms Summary -->
                     <p>The following shows the summary of information for the Aenco Token Sale such as the terms and conditions, schedule, and bonus details. For more information, please check out our <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> paper and <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</p>
                     <p>Please feel free to ask us questions. We recommend posting your question on our Telegram Group:<a target="_blank" href="https://t.me/AENCO">Aencoin Community</a>.</p>
-                    <h3>Schedule of Private Sale</h3>
-                    <p><b>Private Sale</b></p>
-                    <ul>
-                        <li><b>Start:</b> Now</li>
-                        <li><b>End Date:</b> 26th July 11:59 pm UTC time OR once the soft cap is met, under Aenco Management's discretion.</li>
-                        <li><b>Minimum Contribution:</b> USD 20,000 equivalent of ETH or BTC.</li>
-                        <li><b>Bonus:</b> +60% AEN tokens</li>
-                    </ul>
-                    <p><b>Pre-Sale and Crowd Sale</b></p>
-                    <p>Please refer to our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> and <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> documents.</p>
-                    <p>The <b>Soft Cap</b> for the token sale is USD 15,000,000</p>
-                    <p>The <b>Target Cap</b> for the token sale is USD 60,000,000</p>
-                    <p>The <b>Token Price</b>: USD 0.10</p>
-                    <p><b>Eligibility &amp; Restrictions:</b></p>
-                    <ol>
-                        <li>1.) You must read, understand and agree to the <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</li>
-                        <li>2.) Register your details at: <a target="_blank" href="https://signup.aencoin.com/register">https://signup.aencoin.com/register</a>.</li>
-                        <li>3.) Provide your Identity and Address documents for Identity Verification (collectively known as Know Your Customer (KYC) documents)</li>
-                    </ol>
-                    <table class="table table-bordered">
-                        <thead>
+                    <div class="section-private-sale">
+                        <h4>Schedule of Private Sale</h4>
+                        <table>
                             <tr>
-                                <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
-                                <th scope="col">Hong Kong Residents</th>
-                                <th scope="col">Rest of the World</th>
-                            </tr>
-                        </thead>
-                        <tbody>
-                            <tr>
-                                <td>United States of America (USA), <br> Independent State of Samoa (Samoa)</td>
-                                <td>Proof of Identity: Passport or HKID</td>
-                                <td>Proof of Identity: Passport</td>
+                                <td>Start:</td>
+                                <td>Now</td>
                             </tr>
                             <tr>
-                                <td>People's Republic of China</td>
-                                <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                                <td>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</td>
+                                <td>End Date:</td>
+                                <td>26th July 11:59 pm UTC time OR once the soft cap is met, under Aenco Management's discretion.</td>
                             </tr>
                             <tr>
-                                <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
-                                </td>
-                                <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
-                                    (excluding Real Estate) in excess of HKD 8 mil
-                                </td>
-                                <td></td>
+                                <td>Minimum Contribution:</td>
+                                <td>USD 20,000 equivalent of ETH or BTC</td>
                             </tr>
-                        </tbody>
-                    </table>
-                    <p>We would like to give thanks to our community for the continued support.</p>
-                    <p><i>Disclaimer: The last update is on the 26th of Jun 2018. The information above may be subject to change.</i></p>
+                            <tr>
+                                <td>Bonus:</td>
+                                <td>+60% AEN tokens</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="section-pre-sale">
+                        <h4>Pre-Sale and Crowd Sale</h4>
+                        <p>Please refer to our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> and <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> documents.</p>
+                        <table>
+                            <tr>
+                                <td>Soft Cap:</td>
+                                <td>USD 15,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>Target Cap:</td>
+                                <td>USD 60,000,000</td>
+                            </tr>
+                            <tr>
+                                <td>Token Price:</td>
+                                <td>USD 0.10</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="section-eligibility">
+                        <h4>Eligibility &amp; Restrictions:</h4>
+                        <ul>
+                            <li>You must read, understand and agree to the <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</li>
+                            <li>Register your details at: <a target="_blank" href="https://signup.aencoin.com/register">https://signup.aencoin.com/register</a>.</li>
+                            <li>Provide your Identity and Address documents for Identity Verification (collectively known as Know Your Customer (KYC) documents)</li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        <div class="sub-header">Restricted Individuals (Nationals or Residents of)</div>
+                        <ul>
+                            <li>United States of America (USA). Independent State of Samoa (Samoa)</li>
+                            <li>People's Republic of China</li>
+                            <li>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a></li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        <div class="sub-header">Hong Kong Residents</div>
+                        <ul>
+                            <li>Proof of Identity: Passport or HKID</li>
+                            <li>Proof of Address: Utility Bill or Bank Statement within the last three months</li>
+                            <li>roof of Wealth: 1 or combined statements indicating cash or equivalents, securities (excluding Real Estate) in excess of HKD 8 mil</li>
+                        </ul>
+                    </div>
+                    <div class="sub-section">
+                        <div class="sub-header">Rest of the World</div>
+                        <ul>
+                            <li>Proof of Identity: Passport</li>
+                            <li>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</li>
+                        </ul>
+                    </div>
                 </div>
             </section>`;
 }
@@ -538,6 +558,7 @@ function renderSlider() {
         slidesToScroll: 1,
         variableWidth: true,
         centerMode: true,
+        autoplay: true,
         responsive: [
             {
               breakpoint: 1400 * scale,

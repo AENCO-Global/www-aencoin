@@ -44,7 +44,7 @@ a:focus {
     text-align: center;
 }
 .content {
-    padding: 60px 0 70px;
+    padding: 60px 50px 70px;
 }
 .header {
     z-index: 99;
@@ -69,7 +69,7 @@ a:focus {
     width: 100%;
     position: fixed;
     left: 0;
-    bottom: 1px;
+    bottom: 0px;
     background-color: $color-blue;
     z-index: 99;
     text-align: center;
@@ -79,7 +79,7 @@ a:focus {
     height: #{$bottom-bar-height};
 }
 .bottomBar {
-    height: #{$bottom-bar-height};
+    height: 63px;
     display: inline-block;
 }
 .main-container {
@@ -120,6 +120,13 @@ h3 {
     font-weight: 400;
     letter-spacing: 0.02em;
     text-align: center;
+}
+h4 {
+    color: #FFFFFF;
+    font-size: 28px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
 }
 h5 {
     color: #FFFFFF;
@@ -179,7 +186,9 @@ a:hover, button:hover {
     position: absolute;
     width: 98%;
     h2 {
-        text-align: left;
+        font-weight: 300;
+        letter-spacing: 0.02em;
+        font-size: 25px !important;
     }
 }
 .mobile-menu .navbar {
@@ -188,12 +197,10 @@ a:hover, button:hover {
 .mobile-menu .collapse {
     width: 98%;
     position: absolute;
-    margin-left: 2%;
 }
 .mobile-menu .collapsing {
     width: 98%;
     position: absolute;
-    margin-left: 2%;
 }
 .mobile-menu button {
     position: absolute;
@@ -212,14 +219,15 @@ button:focus {
     font-weight: 400;
     font-size: 36px;
     letter-spacing: 6px;
-    background-color: #000000;
+    background-color: #002d35;
 }
 .mobile-menu .list-group-item:hover {
-    background-color: #252525;
+    background-color: #00b7ce;
     opacity: 1;
 }
-.mobile-menu .list-group-item:hover {
-    background-color: #252525;
+.list-group-item:first-child {
+    border-top-left-radius: 0;
+    border-top-right-radius: 0;
 }
 .menu ul li {
     padding: 0 15px;
@@ -270,7 +278,7 @@ button:focus {
     font-size: 35px;
     font-weight: 400;
     font-style: normal;
-    margin-top: 24px;
+    margin-top: 16px;
     letter-spacing: 0.05em;
 }
 .bottomBar i {
@@ -280,12 +288,12 @@ button:focus {
     display: flex;
     list-style: none;
     padding: 0;
-    margin: 16px auto auto 50px;
+    margin: 10px auto auto 50px;
     flex-wrap: wrap;
 }
 .bottomBar ul li {
     margin: 0 auto;
-    margin-right: 34px;
+    margin-right: 23px;
 }
 .bottomBar nav {
     width: 50%;
@@ -358,7 +366,7 @@ button:focus {
     }
 }
 .no-langauge-bar {
-    padding-top: 6%;
+    padding-top: 0;
 }
 #pdfContainer {
     width: 100%;
@@ -482,10 +490,28 @@ button:focus {
     background: center no-repeat url($icon-telegram);
 }
 .modal-body {
-    padding: 2rem 8rem 5rem;
+    padding: 40px 50px 50px;
 }
 .table th, .table td {
     border-top: none;
+}
+div#modal-container {
+    padding-right: 0px !important;
+}
+.pdf-frame {
+    background-color: transparent;
+    padding: 0%;
+}
+.modal-header {
+    padding: 18px 10px 10px 50px;
+    border-bottom: 1px solid #e9ecef;
+    border-top-left-radius: 0px;
+    border-top-right-radius: 0px;
+}
+@media (min-width: 768px) {
+    .modal-dialog {
+        margin: 10% auto !important;
+    }
 }
 @media (max-width: 1200px) {
     .menu {
@@ -515,7 +541,7 @@ button:focus {
         height: 120px;
     }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
     .company-name {
         margin-left: 0;
     }

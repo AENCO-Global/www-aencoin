@@ -13,7 +13,8 @@
         text-align: center;
     }
     .desc {
-        max-width: 800px;
+        max-width: 50%;
+        padding: 0 15px;
     }
     td.lalign {
         text-align: left;
@@ -163,21 +164,19 @@
     .empty-row td {
         padding: 19px 0;
     }
-    @media (max-width: 1660px) {
+    @media (max-width: 1600px) {
         .content {
-            width: 96%;
-        }
-        .coin-info {
             width: 100%;
-        }
-        .coin-detailed-info {
-            width: 100%;
-        }
-        .desc {
-            width: 50%;
         }
     }
-    @media (max-width: 880px) {
+    @media (max-width: 1024px) {
+        .desc {
+            width: 100%;
+            max-width: 100%;
+            margin-bottom: 30px;
+        }
+    }
+    @media (max-width: 768px) {
         .soft-cap {
             flex: 0 0 100%;
             max-width: 100%;

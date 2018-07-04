@@ -15,11 +15,11 @@
     display: flex;
   }
   .item {
-    width: 420px;
+    width: 33.33333%;
     position: inherit;
     text-align: center;
     margin: 0 auto;
-    padding: 0 10px;
+    padding: 0 20px;
   }
   .info {
     margin-top: 35px;
@@ -45,5 +45,14 @@
   .subtitle {
     line-height: 1.1;
     letter-spacing: 1.75px;
+  }
+  @media (max-width: 1024px) {
+    .item {
+      width: 100%;
+      position: inherit;
+      text-align: center;
+      margin: 0 auto;
+      padding: 20px 15%;
+    }
   }
 }
