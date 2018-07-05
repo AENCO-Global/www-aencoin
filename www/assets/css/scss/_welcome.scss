@@ -8,7 +8,7 @@
         background-position-y: 0;
     }
     .content {
-        width: 1400px;
+        max-width: 1600px;
         margin: auto;
         padding: 45px;
     }
@@ -122,19 +122,169 @@
     }
     .header-count-down {
         color: #FFFFFF;
-        font-size: 22px;
+        font-size: 25px;
         font-family: "Teko", sans-serif;
-        font-weight: 400;
+        font-weight: 300;
+        margin: 30px 0 0 0;
         letter-spacing: 0.02em;
     }
-    @media (max-width: 1400px) {
+    .flip-clock-wrapper {
+        -webkit-user-select: none;
+        font-weight: 400;
+        font-size: 12px;
+        font-family: "Titillium Web", sans-serif;
+        letter-spacing: 0.02em;
+        text-transform: uppercase;
+    }
+    .flip-clock-divider .flip-clock-label {
+        top: 8.5em;
+    }
+    .flip-clock-divider .flip-clock-label {
+        right: initial;
+        width: 120px;
+        text-align: center;
+    }
+    .flip-clock-divider.minutes .flip-clock-label {
+        right: initial;
+    }
+    .welcome-area .link-group-container {
+        margin-top: 60px;
+    }
+    .flip-clock-wrapper ul li a div.up:before {
+        width: 7px;
+        left: -1px;
+        box-shadow: 0px -2px 1px rgba(0, 63, 71, 0.82);
+    }
+    .flip-clock-wrapper ul li a div.down:before {
+        width: 7px;
+        left: -1px;
+        box-shadow: 0 2px 1px rgba(255, 255, 255, 0.31);
+    }
+    
+    .flip-clock-wrapper ul li a div.up:after {
+        width: 7px;
+        right: -1px;
+        box-shadow: 0px -2px 1px rgba(0, 63, 71, 0.82);
+    }
+    
+    .flip-clock-wrapper ul li a div.down:after {
+        width: 7px;
+        right: -1px;
+        box-shadow: 0 2px 1px rgba(255, 255, 255, 0.31);
+    }
+    
+    .flip-clock-wrapper ul li a div div.inn {
+        position: absolute;
+        left: 0;
+        z-index: 1;
+        width: 100%;
+        height: 200%;
+        color: #fff;
+        text-shadow: 0px 1px 1px #ffffff47, 0 -1px 1px #003f47d1;
+        text-align: center;
+        background-color: #009aad;
+        border-radius: 6px;
+        font-size: 70px;
+        box-shadow: inset 0px 3px 1px #ffffff3b, inset 0 -2px 1px #003f47d1;
+        font-family: "teko", sans-serif;
+        font-weight: 300;
+        padding-top: 7px;
+    }
+    .flip-clock-wrapper a {
+        cursor: initial;
+    }
+    .flip-clock-wrapper a:hover {
+        color: #fff; 
+        opacity: 1;
+    }
+    .flip-clock-dot {
+        width: 8px;
+        height: 8px;
+    }
+    .col-7 {
+        -ms-flex: 0 0 58.333333%;
+        flex: 0 0 55.5%;
+        max-width: 55.5%;
+    }
+    .col-5 {
+        -ms-flex: 0 0 41.666667%;
+        flex: 0 0 44.5%;
+        max-width: 44.5%;
+    }
+    @media (max-width: 1024px) {
         .content {
-            width: 96%;
+            max-width: 1024px;
+        }
+        .col-7 {
+            -ms-flex: 0 0 59.2%;
+            flex: 0 0 59.2%;
+            max-width: 59.2%;
+        }
+        .col-5 {
+            -ms-flex: 0 0 40.8%;
+            flex: 0 0 40.8%;
+            max-width: 40.8%;
         }
     }
-    @media (max-width: 660px) {
+    @media (max-width: 768px) {
+        .count-down-container {
+            ul {
+                width: calc(100vw * 60 / 768);
+                height: calc(100vw * 90 / 768);
+            }
+            li {
+                line-height: calc(100vw * 87 / 768);
+            }
+            .flip-clock-divider {
+                width: calc(100vw * 10 / 768);
+            }
+            .flip-clock-label {
+                width: calc(100vw * 128 / 768);
+                top: calc(100vw * 96 / 768);
+                right: initial;
+            }
+            .flip-clock-wrapper ul li a div div.inn {
+                font-size: calc(100vw * 80 / 768);
+            }
+            .flip-clock-wrapper ul li a div.up:before {
+                width: calc(100vw * 8 / 768);
+                height: calc(100vw * 10 / 768);
+                top: calc(100vw * 36 / 768);
+            }
+            .flip-clock-wrapper ul li a div.up:after {
+                width: calc(100vw * 8 / 768);
+                height: calc(100vw * 10 / 768);
+                top: calc(100vw * 36 / 768);
+            }
+            .flip-clock-wrapper ul li a div.down:before {
+                width: calc(100vw * 8 / 768);
+                height: calc(100vw * 10 / 768);
+            }
+            .flip-clock-wrapper ul li a div.down:after {
+                width: calc(100vw * 8 / 768);
+                height: calc(100vw * 10 / 768);
+            }
+        }
+    }
+    @media (max-width: 479px) {
         .content {
-            width: 96%;
+            padding-left: 20px;
+            padding-right: 20px;
+        }
+        .count-down-container {
+            li {
+                line-height: calc(100vw * 74 / 768);
+            }
+            .flip-clock-divider {
+                width: calc(100vw * 8 / 768);
+                height: calc(100vw * 90 * 0.8 / 768);
+            }
+            .flip-clock-label {
+                right: initial;
+            }
+            .flip-clock-wrapper ul li a div div.inn {
+                font-size: calc(100vw * 64 / 768);
+            }
         }
     }
 }

@@ -122,7 +122,12 @@ var partnerData = [
         url: "https://identitymindglobal.com/"
     },
     {
-        image: "./assets/img/partners/stevensons-lawyers.png"
+        image: "./assets/img/partners/tidebit.png",
+        url: "https://www.tidebit.com/"
+    },
+    {
+        image: "./assets/img/partners/eea.png",
+        url: "https://www.tidebit.com/"
     }
 ];
 
@@ -149,7 +154,7 @@ var partnerDataLoader = {
         if (url === "") {
             return `<li><img src="${imagePath}" /></li>`;
         }
-        return `<li><a href="${url}"><img src="${imagePath}" /></a></li>`;
+        return `<li><a target="_blank" href="${url}"><img src="${imagePath}" /></a></li>`;
     },
     render: function(props) {
         var data = props.data || [];
@@ -324,7 +329,7 @@ function getLearnMoreContent() {
                     <!-- Token Sale Terms Summary -->
                     <p>The following shows the summary of information for the Aenco Token Sale such as the terms and conditions, schedule, and bonus details. For more information, please check out our <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> paper and <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</p>
                     <p>Please feel free to ask us questions. We recommend posting your question on our Telegram Group:<a target="_blank" href="https://t.me/AENCO">Aencoin Community</a>.</p>
-                    <div class="section-private-sale">
+                    <div class="sub-section section-private-sale">
                         <h4>Schedule of Private Sale</h4>
                         <table>
                             <tr>
@@ -345,7 +350,7 @@ function getLearnMoreContent() {
                             </tr>
                         </table>
                     </div>
-                    <div class="section-pre-sale">
+                    <div class="sub-section section-pre-sale">
                         <h4>Pre-Sale and Crowd Sale</h4>
                         <p>Please refer to our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> and <a target="_blank" href="./assets/docs/aenco-token-economics.pdf">Token Economics</a> documents.</p>
                         <table>
@@ -363,7 +368,7 @@ function getLearnMoreContent() {
                             </tr>
                         </table>
                     </div>
-                    <div class="section-eligibility">
+                    <div class="sub-section section-eligibility">
                         <h4>Eligibility &amp; Restrictions:</h4>
                         <ul>
                             <li>You must read, understand and agree to the <a target="_blank" href="./assets/docs/aenco-terms-conditions.pdf">Token Sale Terms and Conditions</a>.</li>
@@ -374,7 +379,8 @@ function getLearnMoreContent() {
                     <div class="sub-section">
                         <div class="sub-header">Restricted Individuals (Nationals or Residents of)</div>
                         <ul>
-                            <li>United States of America (USA). Independent State of Samoa (Samoa)</li>
+                            <li>United States of America (USA).</li>
+                            <li>Independent State of Samoa (Samoa)</li>
                             <li>People's Republic of China</li>
                             <li>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a></li>
                         </ul>
@@ -384,7 +390,7 @@ function getLearnMoreContent() {
                         <ul>
                             <li>Proof of Identity: Passport or HKID</li>
                             <li>Proof of Address: Utility Bill or Bank Statement within the last three months</li>
-                            <li>roof of Wealth: 1 or combined statements indicating cash or equivalents, securities (excluding Real Estate) in excess of HKD 8 mil</li>
+                            <li>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities (excluding Real Estate) in excess of HKD 8 mil</li>
                         </ul>
                     </div>
                     <div class="sub-section">

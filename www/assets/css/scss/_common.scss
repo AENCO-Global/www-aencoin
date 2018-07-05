@@ -47,7 +47,7 @@ a:focus {
     padding: 60px 50px 70px;
 }
 .header {
-    z-index: 99;
+    z-index: 90;
     position: fixed;
     top: 0;
     left: 0;
@@ -71,7 +71,7 @@ a:focus {
     left: 0;
     bottom: 0px;
     background-color: $color-blue;
-    z-index: 99;
+    z-index: 90;
     text-align: center;
 }
 .bottom-bar-area {
@@ -180,15 +180,46 @@ a:hover, button:hover {
 .p-4 {
     padding: 0 !important;
 }
+.mobile-menu-btn {
+    position: absolute;
+    top: 14px;
+    right: 40px;
+    z-index: 20;
+    ul li {
+        padding: 4px 15px;
+        border-top: 3px solid #FFFFFF;
+    }
+    display: none;
+}
+.overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #002d35;
+    opacity: 0.4;
+    z-index: 95;
+    display: none;
+}
 .mobile-menu {
     display: none;
     font-size: 48px;
-    position: absolute;
-    width: 98%;
+    position: fixed;
+    top: 0;
+    right: -300px;
+    z-index: 99;
+    width: 300px;
+    height: 100%;
+    background-color: #002d35;
     h2 {
         font-weight: 300;
         letter-spacing: 0.02em;
         font-size: 25px !important;
+        text-align: left;
+    }
+    .menu-area {
+        padding: 60px 0px;
     }
 }
 .mobile-menu .navbar {
@@ -508,20 +539,34 @@ div#modal-container {
     border-top-left-radius: 0px;
     border-top-right-radius: 0px;
 }
+.sub-section {
+    margin-top: 40px;
+    ul {
+        margin-left: 24px;
+    }
+}
 @media (min-width: 768px) {
     .modal-dialog {
         margin: 10% auto !important;
     }
 }
-@media (max-width: 1200px) {
+@media (max-width: 1300px) {
     .menu {
         display: none;
     }
-    .login-menu {
-        margin-right: 10%;
-    }
     .mobile-menu {
         display: block;
+    }
+    .login-menu {
+        margin-right: 90px;
+    }
+    .mobile-menu-btn {
+        display: block;
+    }
+}
+@media (max-width: 1024px) {
+    .content {
+        padding: 60px 30px 70px;
     }
     h1 {
         font-size: 45px;
@@ -531,6 +576,16 @@ div#modal-container {
     }
     .footer-content {
         width: 90%;
+    }
+    .slick-next {
+        right: -10%;
+    }
+    .slick-prev {
+        left: -10%;
+    }
+    .more-btn-container {
+        text-align: center;
+        margin: 10px 0 50px;
     }
 }
 @media (max-width: 1060px) {
@@ -569,6 +624,12 @@ div#modal-container {
     }
     .footer-content {
         font-size: 12px;
+    }
+}
+@media (max-width: 479px) {
+    .content {
+        padding-left: 0;
+        padding-right: 0;
     }
 }
 @media (max-width: 455px) {

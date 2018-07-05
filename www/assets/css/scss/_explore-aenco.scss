@@ -23,8 +23,8 @@
     text-align: center;
     margin: auto auto 30px auto;
     img {
-      width: 370px;
-      height: 243px;
+      width: 350px;
+      height: 230px;
       margin: auto;  
     }
   }
@@ -47,7 +47,7 @@
   }
   .more-btn-container {
     text-align: center;
-    margin-top: 50px;
+    margin: 20px 0 50px;
   }
   .btn-more-videos {
     line-height: 1;
@@ -60,6 +60,12 @@
     background-color: transparent;
     letter-spacing: 0.02em;
     padding: 11px 50px 8px;
+  }
+  @media (max-width: 1024px) {
+    .item img {
+      width: 320px;
+      height: 210px;
+    }
   }
   @media (max-width: 470px) {
     .item img {

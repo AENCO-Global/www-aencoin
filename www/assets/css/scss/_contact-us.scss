@@ -9,13 +9,13 @@
         margin: auto;
         grid-template-columns: 2fr 2fr 2fr 1fr;
         grid-gap: 45px;
-        max-width: 1520px;
+        max-width: 1300px;
     }
     .moon-contact {
         margin-top: 25px;
         font-weight: 400;
         font-family: 'Teko', sans-serif;
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 0.03em;
     }
     .social-items {
@@ -28,11 +28,8 @@
         margin-top: 15px;
         font-family: "Teko", sans-serif;
         font-weight: 300;
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 0.02em;
-    }
-    .row-join-telegram {
-        margin-top: 28px;
     }
     li {
         list-style: none;
@@ -46,20 +43,20 @@
     }
     .title {
         font-family: 'Teko', sans-serif;
-        font-size: 30px;
+        font-size: 25px;
         font-weight: 400;
         letter-spacing: 0.02em;
     }
     .footer-menu ul li {
         font-family: 'Teko', sans-serif;
         font-weight: 300;
-        font-size: 30px;
+        font-size: 25px;
         letter-spacing: 0.03em;
     }
     .txt-registerd-address {
         font-family: 'Titillium Web', sans-serif;
         font-weight: 400;
-        font-size: 20px;
+        font-size: 18px;
     }
     .txt-email {
         margin-left: 10px;
@@ -80,15 +77,16 @@
             }
         }
     }
+    .row-join-telegram .icon-telegram {
+        margin-top: 25px;
+        margin-left: 10px;
+    }
     @media (max-width: 1600px) {
         .content {
             width: 96%;
         }
     }
     @media (max-width: 1060px) {
-        .content {
-            width: 96%;
-        }
         .title {
             font-size: 24px;
         }
@@ -100,6 +98,11 @@
         }
         .txt-registerd-address {
             font-size: 16px;
+        }
+    }
+    @media (max-width: 1024px) {
+        .content {
+            width: 100%;
         }
     }
     @media (max-width: 700px) {

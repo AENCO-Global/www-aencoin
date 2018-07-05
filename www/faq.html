@@ -51,29 +51,56 @@
     </div>
 </div>
 <!-- End Modals -->
-<!-- Header -->
-<header class="header faq-header">
-    <div class="header-content">
-        <a href="./index.html"><div class="brand-logo"></div></a>
-        <div class="mobile-menu pos-f-t">
-            <nav class="navbar navbar-dark">
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarToggleExternalContent" aria-controls="navbarToggleExternalContent" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-                </button>
-            </nav>
-            <div class="collapse" id="navbarToggleExternalContent">
-                <div class="p-4 menu-content">
-                    <div class="list-group">
-                        <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a>
-                        <a href="./index.html#what-is-ean-token-area" class="list-group-item list-group-item-action">AEN TOKEN</a>
-                        <a href="./index.html#roadmap-area" class="list-group-item list-group-item-action">ROADMAP</a>
-                        <a href="./index.html#team-area" class="list-group-item list-group-item-action">TEAM</a>
-                        <a href="./faq.html" class="list-group-item list-group-item-action">FAQ</a>
-                        <a href="./index.html#contact-us-area" class="list-group-item list-group-item-action">CONTACT</a>
-                    </div>
-                </div>
-            </div>
+<!-- mobile menu -->
+<div class="overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <div class="menu-area">
+        <div class="list-group">
+            <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"><h2>WHITEPAPER</h2></a>
+            <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action"><h2>AEN TOKEN</h2></a>
+            <a href="#roadmap-area" class="list-group-item list-group-item-action"><h2>ROADMAP</h2></a>
+            <a href="#team-area" class="list-group-item list-group-item-action"><h2>TEAM</h2></a>
+            <a href="./faq.html" class="list-group-item list-group-item-action"><h2>FAQ</h2></a>
+            <a href="https://medium.com/@aencoin" class="list-group-item list-group-item-action"><h2>BLOG</h2></a>
+            <a href="#contact-us-area" class="list-group-item list-group-item-action"><h2>CONTACT</h2></a>
         </div>
+    </div>
+</div>
+<!-- mobile menu end -->
+
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <a href="#welcome-area"><div class="brand-logo"></div></a>
+        <a href="#">
+            <div id="mobile-menu-btn" class="mobile-menu-btn">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </a>
+        <script>
+            function openMobileMenu() {
+                $(".overlay").show();
+                $("#mobile-menu").animate({
+                    right: 0
+                }, 200);
+            }
+            function closeMobileMenu() {
+                $(".overlay").hide();
+                $("#mobile-menu").animate({
+                    right: -300
+                }, 200);
+            }
+            $("#mobile-menu-btn").on("click", function() {
+                openMobileMenu();
+            });
+            $(".overlay").on("click", function() {
+                closeMobileMenu();
+            });
+        </script>
         <nav class="login-menu">
             <ul>
                 <li class="group-account"><a href="https://signup.aencoin.com/register"><span class="txt-signup">SIGN UP</span></a></li>
@@ -83,11 +110,12 @@
         <nav class="menu">
             <ul>
                 <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a></li>
-                <li><a href="./index.html#what-is-ean-token-area">AEN TOKEN</a></li>
-                <li><a href="./index.html#roadmap-area">ROADMAP</a></li>
-                <li><a href="./index.html#team-area">TEAM</a></li>
+                <li><a href="#what-is-ean-token-area">AEN TOKEN</a></li>
+                <li><a href="#roadmap-area">ROADMAP</a></li>
+                <li><a href="#team-area">TEAM</a></li>
                 <li><a href="./faq.html">FAQ</a></li>
-                <li><a href="./index.html#contact-us-area">CONTACT</a></li>
+                <li><a href="https://medium.com/@aencoin">BLOG</a></li>
+                <li><a href="#contact-us-area">CONTACT</a></li>
             </ul>
         </nav>
     </div>
@@ -285,6 +313,7 @@
                     <li><a href="./index.html#token-economy-area">Token Economy</a></li>
                     <li><a href="./index.html#token-distribution-area">Token Distribution</a></li>
                     <li><a href="./faq.html">FAQ</a></li>
+                    <li><a href="https://medium.com/@aencoin">BLOG</a></li>
                 </ul>
             </div>
             <div class="footer-menu">
@@ -314,8 +343,9 @@
                         </div>
                     </li>
                     <li class="row-join-telegram"> 
-                        <span class="moon-contact">Join Us On Telegram</span>
-                        <a target="_blank" href="https://t.me/AENCO"><i class="fab fa-telegram-plane fa-3x"></i></a>
+                        <div class="moon-contact fleft">Join Us On Telegram</div>
+                        <a target="_blank" href="https://t.me/AENCO"><div class="icon-social icon-telegram fleft"></div></a>
+                        <div class="clear"></div>
                     </li>
                 </ul>
             </div>

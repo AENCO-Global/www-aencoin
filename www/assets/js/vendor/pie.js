@@ -2,7 +2,7 @@ function toRadians(degree) {
     return degree * Math.PI / 180;
 }
 
-function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
+function drawPieSlice(ctx, centerX, centerY, radius, startAngle, endAngle, color){
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.moveTo(centerX,centerY);

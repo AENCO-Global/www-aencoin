@@ -4,14 +4,13 @@
     margin: auto;
   }
   .content {
-    width: 1434px;
+    max-width: 1600px;
     margin: auto;
   }
   .message-container {
-    max-width: 680px;
+    max-width: 50%;
     padding: 0px 30px 0 0;
     float: left;
-    margin-left: 4%;
   }
   h2 {
     color: #b6d84e;
@@ -26,7 +25,7 @@
   .video-container {
     margin: auto;
     margin-top: 0px;
-    width: 600px;
+    width: 50%;
     height: 337px;
     float: left;
     img {
@@ -38,11 +37,12 @@
       width: 96%;
     }
     .message-container {
-      width: 48%;
+      max-width: 100%;
+      padding: 0;
     }
     .video-container {
-      width: 48%;
-      height: calc(48vw * 9 / 16);
+      margin-top: 35px;
+      width: 100%;
     }
   }
   @media (max-width: 768px) {

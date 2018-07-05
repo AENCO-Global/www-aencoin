@@ -1,17 +1,6 @@
 $primary-color: #b1d349;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
-.roadmap-area {
-  .main-container {
-    background-color: #002d35;
-  }
-  .container-fluid {
-    margin-top: 48px;
-  }
-  h3 {
-    text-align: left;
-  }
-}
 h2.timeline-title {
     font-family: "Teko", sans-serif;
     font-weight: 500;
@@ -216,7 +205,6 @@ a:hover {
     display: table;
   }
   .timeline-split .timeline-item, .timeline-centered .timeline-item {
-    display: table-row;
     padding: 0;
   }
   .timeline-split .timeline-info, .timeline-centered .timeline-info,
@@ -326,4 +314,16 @@ a:hover {
 }
 .marker-outline .timeline-item:hover .timeline-marker:before {
   background: #FF6B6B;
+}
+
+.roadmap-area {
+  .main-container {
+    background-color: #002d35;
+  }
+  .container-fluid {
+    margin-top: 48px;
+  }
+  h3 {
+    text-align: left;
+  }
 }
