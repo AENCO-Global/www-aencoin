@@ -33,12 +33,12 @@
     }
     .desc {
         float: left;
-        width: 330px;
         margin-left: 35px;
         font-family: 'Titillium Web', sans-serif;
         font-weight: 300;
         font-size: 20px;
         letter-spacing: 0.02em;
+        max-width: 70%;
     }
     .challenge-one-logo {
         background: url($challenge-one-logo) no-repeat;
@@ -92,26 +92,16 @@
         margin-top: 50px;
     }
     .item {
-        width: 484px;
+        width: 80%;
         margin: auto;
         margin-top: 49px;
     }
-    @media (max-width: 1200px) {
-        .challenge-one-logo, .challenge-two-logo, .challenge-three-logo, .challenge-four-logo, .opportunity-one-logo, .opportunity-two-logo, .opportunity-three-logo, .opportunity-four-logo {
-            width: 90px;
-            height: 81px;
-            background-size: 90px 81px;
-        }
-        .desc {
-            font-size: 18px;
+    @media (max-width: 1300px) {
+        .item {
+            width: 100%;
         }
     }
-    @media (max-width: 1020px) {
-        .desc {
-            width: 300px;
-        }
-    }
-    @media (max-width: 960px) {
+    @media (max-width: 1060px) {
         .challenge-area {
             float: none;
             width: 100%;
@@ -120,8 +110,10 @@
             float: none;
             width: 100%;
         }
-    }
-    @media (max-width: 540px) {
+        .items {
+            max-width: 70%;
+            margin: auto;
+        }
         .item {
             width: 100%;
         }
@@ -129,7 +121,18 @@
             float: none;
         }
         .desc {
-            margin-top: 5%;
+            text-align: center;
+            padding: 0 20px;
+            float: none;
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
+        }
+    }
+    @media (max-width: 479px) {
+        .items {
+            max-width: 90%;
+            margin: auto;
         }
     }
 }

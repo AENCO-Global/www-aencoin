@@ -32,7 +32,7 @@
         }
     }
     .pie-chart {
-        height: 290px;
+        height: 220px;
         margin-top: 25px;
     }
     .chart-subtitle h5 {
@@ -40,6 +40,9 @@
     }
     h5 {
         text-align: left;
+    }
+    .row {
+        margin: 0;
     }
     @media (max-width: 1200px) {
         .content {

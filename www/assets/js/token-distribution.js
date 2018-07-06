@@ -15,13 +15,18 @@ function checkPoint(radius, x, y, startAngle, endAngle) {
     }
 }
 
-function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color ){
+function drawPieSlice(ctx,centerX, centerY, radius, startAngle, endAngle, color, isShowText, textX, textY, text){
     ctx.fillStyle = color;
     ctx.beginPath();
     ctx.moveTo(centerX,centerY);
     ctx.arc(centerX, centerY, radius, startAngle, endAngle);
     ctx.closePath();
     ctx.fill();
+    if (isShowText) {
+        ctx.font = '24px Teko';
+        ctx.fillStyle = "#FFFFFF";
+        ctx.fillText(text, textX, textY);
+    }
 }
 
 var colors = ['#b1d349', '#95cb74', '#87c786', '#66c0a5', '#076f7d', '#0d8596', '#15b8ce'];
@@ -110,17 +115,37 @@ var getPieChart = function() {
             var startAngle = 0;
             var endAngleDegree = 0;
             var newRadius = 0;
-            var radius = (width - offset * 2) / 2;
+            var radius = (width - offset * 4) / 2;
             var centerX = width / 2;
             var centerY = width / 2;
+            var textX = 0;
+            var textY = 0;
+            var text = "";
+            var isShowText = false;
+            var midAngleRadian = 0;
+            var midAngle =0;
             for(var i = 0; i < data.length; i++) {
                 endAngleDegree = startAngle + data[i] / 100 * 360;
                 if (i === state.selectedSegment) {
                     newRadius = radius + offset;
+                    midAngle = (startAngle + endAngleDegree) / 2;
+                    midAngleRadian = toRadians(midAngle);
+                    sign = midAngle >= 90 && midAngle <= 270 ? -1 : -1;
+                    centerX = centerX + Math.cos(midAngleRadian) * offset;
+                    centerY = centerY + Math.sin(midAngleRadian) * offset;
+                    textX = centerX + Math.cos(midAngleRadian) * (radius - 30);
+                    textY = centerY + Math.sin(midAngleRadian) * (radius - 30);
+                    textX -= 15;
+                    textY += 8;
+                    text = data[i] + "%";
+                    isShowText = true;
                 } else {
                     newRadius = radius;
+                    centerX = width / 2;
+                    centerY = width / 2;
+                    isShowText = false;
                 }
-                drawPieSlice(ctx, centerX, centerY, newRadius, toRadians(startAngle), toRadians(endAngleDegree), colors[i]);
+                drawPieSlice(ctx, centerX, centerY, newRadius, toRadians(startAngle), toRadians(endAngleDegree), colors[i], isShowText, textX, textY, text);
                 startAngle = endAngleDegree;
             }
         }
@@ -190,8 +215,8 @@ var tokenDistribution = {
         var allocationDom = "";
         var useOfProceedsDom = "";
         var color = "transparent";
-        var pieChartSize = 290;
-        var pieChartOffset = Math.ceil(pieChartSize * 0.05);
+        var pieChartSize = 200;
+        var pieChartOffset = Math.ceil(pieChartSize * 0.02);
 
         for(let i = 0; i < allocationData.length; i++) {
             allocationDom += that.getDom(allocationData[i].value, allocationData[i].label, "item" + i);

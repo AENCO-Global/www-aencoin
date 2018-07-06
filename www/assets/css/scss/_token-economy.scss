@@ -9,7 +9,6 @@
     }
     td {
         padding: 5px 8px;
-        width: 378px;
         text-align: center;
     }
     .desc {
@@ -211,9 +210,14 @@
         }
         .desc {
             float: none;
-            width: 90%;
+            width: 100%;
             margin: auto;
             margin-top: 5%;
+            font-size: 13px;
+        }
+        td {
+            padding: 5px 0px;
+            text-align: center;
         }
     }
     @media (max-width: 479px) {

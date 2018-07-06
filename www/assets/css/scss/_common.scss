@@ -79,7 +79,6 @@ a:focus {
     height: #{$bottom-bar-height};
 }
 .bottomBar {
-    height: 63px;
     display: inline-block;
 }
 .main-container {
@@ -182,12 +181,12 @@ a:hover, button:hover {
 }
 .mobile-menu-btn {
     position: absolute;
-    top: 14px;
-    right: 40px;
+    top: 15px;
+    right: 30px;
     z-index: 20;
     ul li {
-        padding: 4px 15px;
-        border-top: 3px solid #FFFFFF;
+        padding: 3px 13px;
+        border-top: 3px solid #0a92a4;
     }
     display: none;
 }
@@ -198,7 +197,7 @@ a:hover, button:hover {
     width: 100%;
     height: 100%;
     background-color: #002d35;
-    opacity: 0.4;
+    opacity: 0.7;
     z-index: 95;
     display: none;
 }
@@ -207,9 +206,9 @@ a:hover, button:hover {
     font-size: 48px;
     position: fixed;
     top: 0;
-    right: -300px;
+    right: -200px;
     z-index: 99;
-    width: 300px;
+    width: 200px;
     height: 100%;
     background-color: #002d35;
     h2 {
@@ -297,20 +296,14 @@ button:focus {
 }
 .brand-logo {
     display: inline-block;
-    background: url($welcome-logo-url) no-repeat;
-    background-size: 170px;
-    width: 200px;
-    height: 56px;
     margin-left: 50px;
     margin-top: -3px;
+    height: 53px;
+    width: auto;
 }
 .txt-join-community {
-    font-family: "Teko", sans-serif;
-    font-size: 35px;
-    font-weight: 400;
-    font-style: normal;
-    margin-top: 16px;
-    letter-spacing: 0.05em;
+    margin: 0;
+    padding-top: 10px;
 }
 .bottomBar i {
     font-size: 48px;
@@ -375,6 +368,7 @@ button:focus {
         box-shadow: 0.5vw 0.5vw 0.5vw 0.1vw rgba(0, 147, 165, 0.2);
     }
     .modal-title {
+        max-width: 80%;
         color: #FFFFFF;
     }
     .modal-header {
@@ -419,8 +413,6 @@ button:focus {
     background-color: $color-medium-blue;
     padding: 1%;
     margin: auto;
-    width: calc(48vh * 16 / 9);
-    height: 48vh;
 }
 .popup-video-container {
     width: 100%;
@@ -545,10 +537,12 @@ div#modal-container {
         margin-left: 24px;
     }
 }
-@media (min-width: 768px) {
-    .modal-dialog {
-        margin: 10% auto !important;
-    }
+.modal-dialog {
+    margin: 10% auto !important;
+}
+.video-popup iframe {
+    width: 50vw;
+    height: calc(50vw * 9 / 16);
 }
 @media (max-width: 1300px) {
     .menu {
@@ -565,6 +559,9 @@ div#modal-container {
     }
 }
 @media (max-width: 1024px) {
+    body {
+        overflow-x: hidden;
+    }
     .content {
         padding: 60px 30px 70px;
     }
@@ -573,9 +570,6 @@ div#modal-container {
     }
     h2 {
         font-size: 40px;
-    }
-    .footer-content {
-        width: 90%;
     }
     .slick-next {
         right: -10%;
@@ -587,16 +581,25 @@ div#modal-container {
         text-align: center;
         margin: 10px 0 50px;
     }
+    .bottomBar ul {
+        display: block;
+        margin: 0;
+    }
+    .bottomBar ul li {
+        margin: 0 10px;
+    }
 }
 @media (max-width: 1060px) {
     .bottomBar .fleft {
         float: none;
     }
-    .bottom-bar-area {
-        height: 120px;
-    }
 }
 @media (max-width: 768px) {
+    .brand-logo {
+        margin-left: 7%;
+        margin-top: -3%;
+        width: 130px;
+    }
     .company-name {
         margin-left: 0;
     }
@@ -609,21 +612,88 @@ div#modal-container {
     .footer .fleft, .footer .fright {
         float: none;
     }
+    .link-group span {
+        display: none;
+    }
+    .slick-slide {
+        margin: 0 35px 0 20px;
+    }
+    .content {
+        width: 100%;
+        padding: 40px 30px 40px;
+    }
+    h1 {
+        font-size: 35px;
+        line-height: 40px;
+        letter-spacing: 0.03em;
+    }
+    h2 {
+        font-size: 35px;
+    }
+    h3 {
+        font-size: 28px;
+    }
+    h5 {
+        font-size: 17px;
+    }
+    .modal-open .modal {
+        overflow: hidden;
+    }
+    .modal-dialog {
+        margin: 0 !important;
+    }
+    .modal-dialog {
+        margin: 0;
+        width: 100%;
+        max-width: 100%;
+        height: 100%;
+        position: fixed;
+    }
+    .modal-header {
+        display: block;
+        h3 {
+            display: inline-block;
+        }
+    }
+    .modal-content {
+        height: 100%;
+        overflow-x: hidden;
+        overflow-y: scroll;
+        -webkit-overflow-scrolling:touch; 
+    }
+    .modal-dialog.video-popup {
+        max-width: 100%;
+    }
+    .modal-body .container {
+        padding: 0;
+    }
+    .login-menu ul li a {
+        font-size: 24px;
+    }
+    .icon-social {
+        width: 10%;
+        height: auto;
+    }
 }
 @media (max-width: 640px) {
     .bottomBar ul {
         display: block;
-    }
-    .bottom-bar-area {
-        height: 168px;
     }
 }
 @media (max-width: 520px) {
     .login-menu {
         display: none;
     }
+    .bottomBar ul li {
+        margin: 0 4px;
+    }
+    .bottomBar img {
+        width: auto;
+        height: 35px;
+        padding: 5px 0px;
+    }
     .footer-content {
-        font-size: 12px;
+        font-size: 50%;
     }
 }
 @media (max-width: 479px) {
@@ -631,9 +701,24 @@ div#modal-container {
         padding-left: 0;
         padding-right: 0;
     }
-}
-@media (max-width: 455px) {
+    .brand-logo {
+        margin-left: 5%;
+        margin-top: 1%;
+        width: 160px;
+        height: auto;
+    }
     .bottom-bar-area {
-        height: 220px;
+        height: 45px;
+    }
+    .bottomBar h2 {
+        display: none;
+    }
+    .header {
+        padding: 10px 0;
+        height: 70px;
+    }
+    .video-popup iframe {
+        width: 100%;
+        height: calc(100% * 9 / 16);
     }
 }

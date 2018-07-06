@@ -313,7 +313,7 @@
                 height: 43px;
                 width: calc(100% - 300px);
                 background-size: 900px;
-                background-position: calc(-285px - (285px - 100vw * 285 / 768)) -467px;
+                background-position: calc(-325px - (325px - 100vw * 325 / 768)) -467px;
             }
         }
         .item {
@@ -321,23 +321,26 @@
                 font-size: 24px;
             }
             h5 {
-                font-size: 16px;
+                font-size: 15px;
             }
         }
         .diagram-pointer {
-            left: -10px;
+            left: -1%;
             top: -12px;
             background-size: 160px;
-            font-size: 20px;
-            line-height: 2.4;
-            background-position: -40px 0;
+            font-size: 18px;
+            line-height: 2.5;
+            background-position: -63px 0;
             width: 111px;
+            span {
+                margin-left: -34px;
+            }
         }
         .diagram-title {
             width: 160px;
             font-size: 22px;
-            left: calc(100% / 2 - 80px);
-            top: -27px;
+            left: 28%;
+            top: -20px;
         }
     }
     @media (max-width: 479px) {

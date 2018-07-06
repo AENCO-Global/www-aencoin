@@ -127,7 +127,15 @@ var partnerData = [
     },
     {
         image: "./assets/img/partners/eea.png",
-        url: "https://www.tidebit.com/"
+        url: "https://entethalliance.org/members-2/"
+    },
+    {
+        image: "./assets/img/partners/ico101.png",
+        url: "http://ico101podcast.com/"
+    },
+    {
+        image: "./assets/img/partners/crypto101.png",
+        url: "https://crypto101podcast.com/"
     }
 ];
 
@@ -291,39 +299,42 @@ function getLanguageSelector(languages, urls) {
     </ul>`;
 }
 
+function getContributionSection() {
+    var contributionContent = getContributionsContent();
+    return `<section class="section learn-more-area" id="contribution-area">
+                ${contributionContent}
+            </section>`;
+}
+
 function getContributionsContent() {
-    return `<table class="table">
-                <thead>
-                <tr>
-                    <th scope="col">Restricted Individuals (Nationals or Residents of)</th>
-                    <th scope="col">Hong Kong Residents</th>
-                    <th scope="col">Rest of the World</th>
-                </tr>
-                </thead>
-                <tbody>
-                <tr>
-                    <td>United States of America (USA), <br> Independent State of Samoa (Samoa)</td>
-                    <td>Proof of Identity: Passport or HKID</td>
-                    <td>Proof of Identity: Passport</td>
-                </tr>
-                <tr>
-                    <td>People's Republic of China</td>
-                    <td>Proof of Address: Utility Bill or Bank Statement within the last three months</td>
-                    <td>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</td>
-                </tr>
-                <tr>
-                    <td>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a>
-                    </td>
-                    <td>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities
-                        (excluding Real Estate) in excess of HKD 8 mil
-                    </td>
-                    <td></td>
-                </tr>
-                </tbody>
-            </table>`;
+    return `<div class="sub-section">
+                <div class="sub-header">Restricted Individuals (Nationals or Residents of)</div>
+                <ul>
+                    <li>United States of America (USA).</li>
+                    <li>Independent State of Samoa (Samoa)</li>
+                    <li>People's Republic of China</li>
+                    <li>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a></li>
+                </ul>
+            </div>
+            <div class="sub-section">
+                <div class="sub-header">Hong Kong Residents</div>
+                <ul>
+                    <li>Proof of Identity: Passport or HKID</li>
+                    <li>Proof of Address: Utility Bill or Bank Statement within the last three months</li>
+                    <li>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities (excluding Real Estate) in excess of HKD 8 mil</li>
+                </ul>
+            </div>
+            <div class="sub-section">
+                <div class="sub-header">Rest of the World</div>
+                <ul>
+                    <li>Proof of Identity: Passport</li>
+                    <li>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</li>
+                </ul>
+            </div>`;
 }
 
 function getLearnMoreContent() {
+    var contributionContent = getContributionsContent();
     return `<section class="section learn-more-area" id="token-sale-terms">
                 <div class="container">
                     <!-- Token Sale Terms Summary -->
@@ -376,30 +387,7 @@ function getLearnMoreContent() {
                             <li>Provide your Identity and Address documents for Identity Verification (collectively known as Know Your Customer (KYC) documents)</li>
                         </ul>
                     </div>
-                    <div class="sub-section">
-                        <div class="sub-header">Restricted Individuals (Nationals or Residents of)</div>
-                        <ul>
-                            <li>United States of America (USA).</li>
-                            <li>Independent State of Samoa (Samoa)</li>
-                            <li>People's Republic of China</li>
-                            <li>OFAC Sanctioned Countries * <a target="_blank" href="https://sanctionssearch.ofac.treas.gov/">https://sanctionssearch.ofac.treas.gov/</a></li>
-                        </ul>
-                    </div>
-                    <div class="sub-section">
-                        <div class="sub-header">Hong Kong Residents</div>
-                        <ul>
-                            <li>Proof of Identity: Passport or HKID</li>
-                            <li>Proof of Address: Utility Bill or Bank Statement within the last three months</li>
-                            <li>Proof of Wealth: 1 or combined statements indicating cash or equivalents, securities (excluding Real Estate) in excess of HKD 8 mil</li>
-                        </ul>
-                    </div>
-                    <div class="sub-section">
-                        <div class="sub-header">Rest of the World</div>
-                        <ul>
-                            <li>Proof of Identity: Passport</li>
-                            <li>Proof of Address: Utility bill, bank statement within the last three months or valid driver's license with address.</li>
-                        </ul>
-                    </div>
+                    ${contributionContent}
                 </div>
             </section>`;
 }
@@ -465,7 +453,17 @@ var modalBtnCallback = [
         btnSelector: ".btn-two-pager",
         options: {
             type: 2,
-            url: "./assets/docs/aenco-two-pager.pdf"
+            url: "./assets/docs/aenco-two-pager.pdf",
+            languages: [
+                {
+                    id: 'ENGLISH',
+                    url: './assets/docs/aenco-two-pager.pdf'
+                },
+                {
+                    id: '中文',
+                    url: './assets/docs/aenco-two-pager-cn.pdf'
+                }
+            ]
         },
         title: "TWO PAGER"
     },
@@ -532,7 +530,7 @@ function initCallback() {
     }
 
     $("#btn-contributors").on("click", function() {
-        initModal("Eligible Contributors", getContributionsContent());
+        initModal("Eligible Contributors", getContributionSection());
     });
 
     $("#btn-learn").on("click", function() {

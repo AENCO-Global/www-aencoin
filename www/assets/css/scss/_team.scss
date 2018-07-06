@@ -130,17 +130,18 @@
   }
   .name {
     font-family: 'Teko', sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-size: 36px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 0.02em;
   }
   .title {
-    font-family: 'Teko', sans-serif;
-    font-weight: 400;
-    font-size: 36px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
     text-align: center;
-    letter-spacing: 2px;
+    letter-spacing: 0.02em;
+    margin: 0 0 20px 0;
   }
   .desc {
     ul {
@@ -168,4 +169,25 @@
   line-height: 1.4;
   color: #ffffff90;
   margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    &.team-member-popup {
+      .modal-header {
+          display: block;
+      }
+    }
+  }
+  .team-member-popup {
+    .modal-header {
+      display: block;
+    }
+    .modal-title {
+      display: none;
+    }
+    .member-info-container .info {
+      width: 100%;
+    }
+  }
 }
