@@ -17,6 +17,12 @@ table {
     border-collapse: unset;
     width: 100%;
 }
+p {
+    word-wrap: break-word;
+}
+a {
+    word-wrap: break-word;
+}
 ul {
     list-style: none;
     padding: 0;
