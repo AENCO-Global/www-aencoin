@@ -722,8 +722,9 @@ div#modal-container {
 @media (max-width: 768px) {
   .brand-logo {
     margin-left: 7%;
-    margin-top: -3%;
+    margin-top: 1%;
     width: 130px;
+    height: auto;
   }
 
   .company-name {
