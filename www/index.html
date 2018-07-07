@@ -1,0 +1,932 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aenco bringing Innovation, Impact & Integrity">
+    <meta name="keywords" content="Aencoin, Bitcoin, Ethereum, ICO, Token, AEN, BTC, ETH">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <!-- DNS Prefetch -->
+    <link rel="dns-prefetch" href="https://www.youtube.com/">
+
+    <title>Aenco - Global HealthTech Blockchain Financial Solutions</title>
+
+    <!-- Bootstrap -->
+    <link type="text/css" href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link type="text/css" href="./assets/css/vendor/fa-solid.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/fa-regular.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/fa-brands.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/fontawesome.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/flipclock.css" rel="stylesheet">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Teko:100,200,300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:100,200,300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco:300,400" rel="stylesheet">
+    <!-- slider -->
+    <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
+    <!-- Theme -->
+    <link rel="stylesheet" href="./assets/css/aenco.css" type="text/css">
+    <!-- Matomo -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- slick -->
+    <script type="text/javascript" src="./assets/js/vendor/slick.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
+    <!-- count-down -->
+    <script type="text/javascript" src="./assets/js/vendor/flipclock.min.js"></script>
+    <!-- pdf -->
+    <script type="text/javascript" src="./assets/js/vendor/pdfobject.min.js"></script>
+    <!-- pie -->
+    <script type="text/javascript" src="./assets/js/vendor/pie.js"></script>
+    <script type="text/javascript">
+        var _paq = _paq || [];
+        /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
+        _paq.push(['trackPageView']);
+        _paq.push(['enableLinkTracking']);
+        (function () {
+            var u = "//stats.aencoin.com/";
+            _paq.push(['setTrackerUrl', u + 'piwik.php']);
+            _paq.push(['setSiteId', '1']);
+            var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+            g.type = 'text/javascript';
+            g.async = true;
+            g.defer = true;
+            g.src = u + 'piwik.js';
+            s.parentNode.insertBefore(g, s);
+        })();
+    </script>
+    <!-- End Matomo Code -->
+</head>
+<body>
+<!-- Modals -->
+<div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="modal-body" class="modal-body">
+                <div id="modal-body-content" class="modal-body-content no-langauge-bar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modals -->
+<!-- mobile menu -->
+<div class="overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <div class="menu-area">
+        <div class="list-group">
+            <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"><h2>WHITEPAPER</h2></a>
+            <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action"><h2>AEN TOKEN</h2></a>
+            <a href="#roadmap-area" class="list-group-item list-group-item-action"><h2>ROADMAP</h2></a>
+            <a href="#team-area" class="list-group-item list-group-item-action"><h2>TEAM</h2></a>
+            <a href="./faq.html" class="list-group-item list-group-item-action"><h2>FAQ</h2></a>
+            <a target="_blank" href="https://medium.com/@aencoin" class="list-group-item list-group-item-action"><h2>BLOG</h2></a>
+            <a href="#contact-us-area" class="list-group-item list-group-item-action"><h2>CONTACT</h2></a>
+            <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action"><h2>SIGN UP</h2></a>
+            <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action"><h2>LOGIN</h2></a>
+        </div>
+    </div>
+</div>
+<!-- mobile menu end -->
+
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <a href="#welcome-area">
+            <img class="brand-logo" src="./assets/img/logo.png" />
+        </a>
+        <a href="#">
+            <div id="mobile-menu-btn" class="mobile-menu-btn">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </a>
+        <script>
+            function openMobileMenu() {
+                $(".overlay").show();
+                $("#mobile-menu").animate({
+                    right: 0
+                }, 200);
+            }
+            function closeMobileMenu() {
+                $(".overlay").hide();
+                $("#mobile-menu").animate({
+                    right: -200
+                }, 200);
+            }
+            $("#mobile-menu-btn").on("click", function() {
+                openMobileMenu();
+            });
+            $(".overlay").on("click", function() {
+                closeMobileMenu();
+            });
+        </script>
+        <nav class="login-menu">
+            <ul>
+                <li class="group-account"><a href="https://signup.aencoin.com/register"><span class="txt-signup">SIGN UP</span></a></li>
+                <li class="group-account"><a href="https://signup.aencoin.com/login"><span class="txt-login">LOGIN</span></a></li>
+            </ul>
+        </nav>
+        <nav class="menu">
+            <ul>
+                <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a></li>
+                <li><a href="#what-is-ean-token-area">AEN TOKEN</a></li>
+                <li><a href="#roadmap-area">ROADMAP</a></li>
+                <li><a href="#team-area">TEAM</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
+                <li><a href="#contact-us-area">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Header End -->
+
+<!-- bottom bar -->
+<div class="bottomBarContainer">
+    <div class="bottomBar">
+        <div class="fleft">
+            <h2 class="txt-join-community">JOIN OUR COMMUNITY</h2>
+        </div>
+        <div class="fleft">
+            <ul>
+                <li><a target="_blank" href="https://t.me/AENCO"><img src="./assets/img/social/icon-telegram.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://twitter.com/aencoin"><img src="./assets/img/social/icon-twitter.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><img src="./assets/img/social/icon-linkedin.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><img src="./assets/img/social/icon-bitcointalk.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCfDdfAGfY12GW1gisr3ELtw"><img src="./assets/img/social/icon-youtube.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><img src="./assets/img/social/icon-discord.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://medium.com/@aencoin"><img src="./assets/img/social/icon-medium.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://reddit.com/r/Aenco"><img src="./assets/img/social/icon-reddit.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><img src="./assets/img/social/icon-facebook.png" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- bottom bar end -->
+
+<!-- Welcome Area Start -->
+<section id="welcome-area" class="section section-top section-full welcome-area">
+    <div class="background">
+        <div class="content">
+            <div class="row-core-message">
+                <h1 class="core-message">AENCO IS THE WORLD'S FIRST BLOCKCHAIN-BASED HEALTHCARE FINANCIAL SOLUTIONS PLATFORM</h1>
+            </div>
+            <div class="sub-message-container">
+                <h3 class="sub-message">HealthTech, Smart Capital, and Prime Brokerage Solutions Under One Umbrella</h3>
+            </div>
+            <div class="private-sale-notice">
+                <div class="col2"><h2 class="private-sale-txt">PRIVATE SALE IS LIVE!</h2></div>
+                <div class="col2">
+                    <a href="https://signup.aencoin.com/register" class="btn-join">
+                        <span class="btn-txt">JOIN NOW</span>
+                    </a>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="row-contributor">
+                <div class="link-group">
+                    <a href="#" id="btn-contributors" data-toggle="modal" data-target="#modal-container">Eligible Contributors</a>
+                    <span>|</span> 
+                    <a id="btn-learn" data-toggle="modal" data-target="#modal-container">Learn More</a>
+                    <span>|</span>
+                    <a href="https://bountyhive.io/join/Aenco" class="txt-bonus-program" target="_blank">Bounty Program</a>
+                </div>
+            </div>
+            <div class="count-down-container">
+                <div class="header-count-down">PRE-SALE STARTS IN:</div>
+                <div class="clock"></div>
+                <script type="text/javascript">
+                    var now = Date.now();
+                    var endTime = Date.parse('July 27, 2018 00:00:00');
+                    var diff = (endTime - now) / 1000;
+                    var clock = $('.clock').FlipClock(diff, {
+                        clockFace: 'DailyCounter',
+                        countdown: true
+                    });
+                </script>
+            </div>
+            <div class="row link-group-container">
+                <ul class="link-list">
+                    <li class="link-txt"><a herf="#" class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">TOKEN PAPER</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" class="btn-two-pager" data-toggle="modal" data-target="#modal-container">2 PAGER</a></li>
+                    <li class="sepeartor">|</li>
+                    <li class="link-txt"><a href="#" class="btn-presentation" data-toggle="modal" data-target="#modal-container">SLIDE PRESENTATION</a></li>
+                </ul>
+            </div>
+            <div class="rating-container">
+                <div class="regular slider">
+                    <div class="slider-item">
+                        <a href="https://icobench.com/ico/aenco" target="_blank" rel="nofollow" title="Aenco on ICObench"><img border="0" src="https://icobench.com/rated/aenco?shape=horizontal&size=s" width="133px" height="50px" alt="Aenco ICO rating"/></a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://icomarks.com/ico/aenco" target="_blank" rel="nofollow" title="Aenco"><img border="0" src="https://icomarks.com/widget/a/aenco/horizontal.svg" width="160px" height="50px" alt="Aenco ICO rating"/></a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://www.trackico.io/ico/aenco/"
+                            target="_blank"
+                            title="Aenco on TrackICO">
+                             <img border="0"
+                                  src="https://www.trackico.io/widget/horizontal/aenco/240.png"
+                                  width="182px" height="50px" alt="Aenco TrackICO rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://findico.io/ico/aenco" 
+                            target="_blank" 
+                            title="Aenco (AEN) on FindICO">
+                            <img border="0" 
+                                src="https://findico.io/widget/horizontal/aenco/216.png" 
+                                width="180px" 
+                                height="auto" 
+                                alt="Aenco (AEN) FindICO rating">
+                        </a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://foundico.com/ico/aenco.html" target="_blank" rel="nofollow" title="AENCO on Foundico.com"><img width="143" height="50" border="0" src="https://foundico.com/widget/?p=14573&f=h" alt="AENCO score on Foundico.com" /></a>
+                    </div>
+                    <div class="slider-item">
+                        <div id="cs-trust-badge"></div>
+                        <script type="text/javascript" src="https://www.coinschedule.com/link-to-us/badge-js?id=2826&size=small&type=7"></script>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://cryptonext.com/ico/aenco" target="_blank" rel="nofollow" title="AENCO on Foundico.com"><img border="0" src="./assets/img/badge/crypto-next.png"/></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Welcome Area End -->
+<!-- What is Aen Token -->
+<section id="what-is-ean-token-area" class="section section-top section-full what-is-aen-token-area">
+    <div class="main-container">
+        <div class="content">
+            <div class="message-container">
+                <h2>WHAT IS AEN TOKEN?</h2>
+                <h3>AEN Token Fuels and Facilitates an Ecosystem for HealthTech Entrepreneurialism, Innovation, and Research</h3>
+                <h5>As a one-stop-shop solutions provider and research collaboration hub for healthcare companies involved in blockchain development, Aenco combines it solutions platform and core financial ecosystem through the release of the AEN token, as the key building block and extensions across all service and community deliveries.</h5>
+            </div>
+            <div class="video-container">
+                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen=""></iframe>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>
+<!-- What is Aen Token End -->
+<!-- How is works -->
+<section id="how-it-works-area" class="section section-top section-full how-it-works-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>HOW IT WORKS?</h2>
+            <div class="items">
+                    <div class="item">
+                        <div class="logo logo-partner "></div>
+                        <div class="info">
+                            <h3 class="subtitle">GLOBAL COMMUNITY</h3>
+                            <h5>To enjoy platform membership, priority access to evolving ecosystem opportunities, utility, community rewards, and platform solutions.</h5>
+                        </div>
+                    </div>
+                <div class="item">
+                    <div class="logo logo-solution"></div>
+                    <div class="info">
+                        <h3 class="subtitle">AENCO GLOBAL HEALTHTECH FINANCIAL SOLUTIONS</h3>
+                        <h5>Ecosystem opportunities and utility across three core application platforms: Aenco IB, Prime, and SmartCap Solutions.</h5>
+                    </div>
+                </div>
+                <div class="item">
+                    <div class="logo logo-global"></div>
+                    <div class="info">
+                        <h3 class="subtitle">HEALTHTECH PARTNERS & SPONSORED PROJECTS</h3>
+                        <h5>Medical utility across an existing pipeline, and expanding network of HealthTech partners specializing in therapeutics, medical infrastructure, medical data analytics, and innovative forms of healthcare technology services.</h5>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- How is works End -->
+<!-- Ecosystem -->
+<section id="ecosystem-area" class="section section-top section-full ecosystem-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>AENCO ECOSYSTEM SOLUTIONS</h2>
+            <div class="diagram">
+                <div class="diagram-border-container">
+                    <div class="top-left-corner"></div>
+                    <div class="top-border"></div>
+                    <div class="top-right-corner"></div>
+                    <div class="left-border"></div>
+                    <div class="right-border"></div>
+                    <div class="bottom-left-corner"></div>
+                    <div class="bottom-border-end"></div>
+                    <div class="bottom-right-corner"></div>
+                </div>
+                <div class="diagram-title">Ecosystem Utility Membership Access</div>
+                <div class="diagram-pointer"><span>AEN TOKEN</span></div>
+                <div class="items">
+                    <div class="item">
+                        <div class="title title-row-one"><h3>AENCO <br />IB SOLUTIONS</h3></div>
+                        <div class="desc">
+                            <ul class="list-row-1">
+                                <li><h5>ICO Integrity Program</h5></li>
+                                <li><h5>AENX: Trading Exchange for HealthTech participants</h5></li>
+                                <li><h5>Ongoing Research Coverage of issuers and data analytics for subscribers and issuers</h5></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="item">
+                        <div class="title title-row-two"><h3>AENCO <br />PRIME SOLUTIONS</h3></div>
+                        <div class="desc">
+                            <ul class="list-row-2">
+                                <li><h5>Aenco Decentralized Prime Brokerage Platform</h5></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                    <div class="item no-border">
+                        <div class="title title-row-three"><h3>AENCO <br />SMARTCAP SOLUTIONS</h3></div>
+                        <div class="desc">
+                            <ul class="list-row-3">
+                                <li><h5>Technology Driven Digital Banking Platform for HealthTech industry</h5></li>
+                                <li><h5>Alternative Financing</h5></li>
+                            </ul>
+                        </div>
+                        <div class="clear"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Ecosystem End -->
+<!-- Opportunities and Challenge -->
+<section id="challenges-opportunity-area" class="section section-top section-full challenges-opportunity-area">
+    <div class="main-container">
+        <div class="content">
+            <div class="challenge-area">
+                <div class="challenge-box">
+                    <h2>HEALTHTECH CHALLENGES</h2>
+                    <div class="items">
+                        <div class="item">
+                            <div class="logo">
+                                <div class="challenge-one-logo"></div>
+                            </div>
+                            <div class="desc">Lack of a robust financial ecosystem for HealthTech innovations</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo">
+                                <div class="challenge-two-logo"></div>
+                            </div>
+                            <div class="desc">High entry barriers and burdensome hurdles in fundrasing</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo">
+                                <div class="challenge-three-logo"></div>
+                            </div>
+                            <div class="desc">Little options for start-ups requiring one-stop-shop smart capital solutions</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo">
+                                <div class="challenge-four-logo"></div>
+                            </div>
+                            <div class="desc">Lack of a credible, global-accredited standard for ICO best practices</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="opportunities-area">
+                <div class="opportunity-box">
+                    <h2>THE OPPORTUNITIES</h2>
+                    <div class="items">
+                        <div class="item">
+                            <div class="logo">
+                                <div class="opportunity-one-logo"></div>
+                            </div>
+                            <div class="desc">A pressing need for disruptive and sustainable medical innovations</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo">
+                                <div class="opportunity-two-logo"></div>
+                            </div>
+                            <div class="desc">Growing demand for medical entrepreneurialism and technologies</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo">
+                                <div class="opportunity-three-logo"></div>
+                            </div>
+                            <div class="desc">Ongoing needs for deep impact solutions, such as treatment and prevention of diseases</div>
+                            <div class="clear"></div>
+                        </div>
+                        <div class="item">
+                            <div class="logo">
+                                <div class="opportunity-four-logo"></div>
+                            </div>
+                            <div class="desc">The growing maturity of blockchain technologies has democratized fundrasing</div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <div class="clear"></div>
+            </div>
+            <div class="clear"></div>
+        </div>
+    </div>
+</section>
+<!-- Opportunities and Challenge End -->
+<!-- Explore Aenco -->
+<section id="explore-aenco-area" class="section section-top section-full explore-aenco-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>EXPLORE AENCO</h2>
+            <div class="items" id="video-list"></div>
+            <div class="more-btn-container">
+                <button class="btn-more-videos" onclick="loadMore();" >MORE VIDEOS</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Explore Aenco End -->
+<!-- Token Economy -->
+<section id="token-economy-area" class="section section-top section-full token-economy-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>TOKEN ECONOMY</h2>
+            <div class="row coin-info">
+                <div class="soft-cap col">
+                    <div class="circle">
+                        <div class="title">SOFT CAP</div>
+                        <div class="value">
+                            USD<br />15,000,000
+                        </div>
+                    </div>
+                </div>
+                <div class="soft-cap col">
+                    <div class="circle">
+                        <div class="title">TARGET CAP</div>
+                        <div class="value">
+                            USD<br />60,000,000
+                        </div>
+                    </div>
+                </div>
+                <div class="soft-cap col">
+                    <div class="circle green-circle">
+                        <div class="title">ACCEPTED<br/>CRYPTO</div>
+                        <div class="value">
+                            BTC<br />ETH
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="coin-detailed-info">
+                <div class="desc fleft">
+                    <table class="tb-two-col" cellpadding="0" cellspacing="3">
+                        <tr>
+                            <td class="col1 left-col">Token Symbol</td>
+                            <td class="col2 right-col">AEN</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Token Name</td>
+                            <td class="col2 right-col">AEN Coin</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Token Type</td>
+                            <td class="col2 right-col">ERC223</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">USD Price per token at ICO Sale</td>
+                            <td class="col2 right-col">0.1 + bonus based on week number</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">USD Price per token at Pre-ICO Sale</td>
+                            <td class="col2 right-col">0.1 + bonus based on participation size</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Total Token Supply</td>
+                            <td class="col2 right-col">4,000,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Tokens Being Sold</td>
+                            <td class="col2 right-col">600,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Tokens Unsold</td>
+                            <td class="col2 right-col">Allocated to Reserves for Mining Rewards</td>
+                        </tr>
+                        <tr class="empty-row">
+                            <td></td>
+                            <td></td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Softcap on Token Sale (USD)</td>
+                            <td class="col2 right-col">$15,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Target Cap on Token Sale (USD)</td>
+                            <td class="col2 right-col">$60,000,000</td>
+                        </tr>
+                        <tr>
+                            <td class="col1 left-col">Accepted Crypto Assets</td>
+                            <td class="col2 right-col">BTC, ETH</td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="desc fleft">
+                    <table cellpadding="0" cellspacing="3">
+                        <tr>
+                            <td class="col3 top-left-corner">PRIVATE SALE<br/>(June/July 2018)</td>
+                            <td colspan="2" class="col3 top-right-corner">Contact us at aencoin.com for more information</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="5" class="col4">PRE-ICO SALE<br/>(July/August 2018)</td>
+                            <td class="col4">Participation Size *</td>
+                            <td class="col4">Bonus Tokens</td>
+                        </tr>
+                        <tr>
+                            <td class="col4">> 15 ETH</td>
+                            <td class="col4">+ 50%</td>
+                        </tr>
+                        <tr>
+                            <td class="col4">> 5 ETH and ≤ 15 ETH</td>
+                            <td class="col4">+ 40%</td>
+                        </tr>
+                        <tr>
+                            <td class="col4">≥ 1 ETH and ≤ 5 ETH (min  1  ETH)</td>
+                            <td class="col4">+ 30%</td>
+                        </tr>
+                        <tr>
+                            <td class="col4">FOMO Offering: First 24 hours!</td>
+                            <td class="col4">Additional +5%</td>
+                        </tr>
+                        <tr>
+                            <td rowspan="4" class="col3 bottom-left-corner">ICO CROWD SALE<br/>(3Q 2018 Announcement)</td>
+                            <td class="col3">Week No.</td>
+                            <td class="col3">Bonus Tokens</td>
+                        </tr>
+                        <tr>
+                            <td class="col3">1</td>
+                            <td class="col3">+ 15%</td>
+                        </tr>
+                        <tr>
+                            <td class="col3">2</td>
+                            <td class="col3">+ 10%</td>
+                        </tr>
+                        <tr>
+                            <td class="col3">3</td>
+                            <td class="col3 bottom-right-corner">+ 5%</td>
+                        </tr>
+                        <tr>
+                            <td class="lalign" colspan="3">
+                                <div class="fleft remark-sign">*</div>
+                                <div class="fleft remark-text">The ETH equivalent shall be calculated for BTC contributions for the purpose of bonus allocations (based on exchange rate at time of subscription).</div>
+                            <div class="clear"></div></td>
+                        </tr>
+                    </table>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Topken Economy End -->
+<!-- Token Distribution -->
+<section id="token-distribution-area" class="section section-top section-full token-distribution-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>TOKEN DISTRIBUTION</h2>
+            <div class="row">
+                <div class="col">
+                    <div class="chart-title">
+                        <h3>TOKEN ALLOCATION</h3>
+                    </div>
+                    <div class="chart-subtitle">
+                        <h5>(% of total token supply) <br />Total supply 4,000,000,000 AEN</h5>
+                    </div>
+                    <div class="pie-chart">
+                        <canvas id="allocation-pie"></canvas>
+                    </div>
+                    <div id="token-allocation" class="chart-descriptions"></div>
+                </div>
+                <div class="col">
+                    <div class="chart-title">
+                        <h3>USE OF PROCEEDS</h3>
+                    </div>
+                    <div class="chart-subtitle">
+                        <h5>(% of softcap allocation) <br />Tokens being sold 600,000,000 AEN</h5>
+                    </div>
+                    <div class="pie-chart">
+                        <canvas id="use-of-proceeds-pie"></canvas>
+                    </div>
+                    <div id="use-of-proceeds" class="chart-descriptions"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Token Distribution End -->
+<!-- Roadmap -->
+<section id="roadmap-area" class="section section-top section-full roadmap-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>ROADMAP</h2>
+            <div class="container-fluid">
+                <div class="row example-centered">
+                    <div class="margin-auto col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
+                        <ul class="timeline timeline-centered">
+                            <li class="timeline-item">
+                                <div class="timeline-info"> </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">4Q 2010</h3>
+                                    <p>Assets managed by Aeneas deployed into health care private equity and direct investments<br>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info"> </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">2Q 2016</h3>
+                                    <p>Aeneas Group builds healthtech partnership with Aptorum Group, a multi-disciplinary medical innovations platform based in HK<br>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info"> </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">3Q 2017</h3>
+                                    <p>
+                                    
+                                    - Aeneas Capital initiates to expand its licenses with the SFC in HK to include dealing and advising in securities<br>
+                                    - 
+                                    Aeneas expands partnerships with healthtech companies specializing in neuro, infectious diseases, and robotic surgeary devices<br>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info"> </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">1Q 2018</h3>
+                                    <p>- Aeneas Capital, LLC. established in New Jersey, U.S.A. to set up a FINRA regulated broker dealer (in progress) <br>
+                                    - Aneas Group establishing a full-service banking license in Europe (in progress)<br>
+                                    </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item">
+                                <div class="timeline-info"> </div>
+                                <div class="timeline-marker"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">2Q 2018</h3>
+                                    <h6 class="timeline-smtitle">T-2M</h6>
+                                    <p><strong>- June/July  Initiate  Private Sale</strong><br>
+                                    - Aeneas Capital granted expanded  licenses by the SFC in HK to deal  and advise in securities <br>
+                                    - Community investors outreach                      </p>
+                                    <h6 class="timeline-smtitle">T-1M</h6>
+                                    <p><strong>July/August Initiate  Pre-ICO Sale:  Bonus scheme  based on  participation size</strong></p>
+                                </div>
+                            </li>
+                            <li class="timeline-item period">
+                                <div class="timeline-info"></div>
+                                <div class="timeline-marker end-point"></div>
+                            </li>
+                            <li class="timeline-item period" style="padding-bottom: 50px;padding-top: 50px;">
+                                <div class="timeline-content">
+                                    <h2 class="timeline-title">ICO<br>
+                                    </h2>
+                                    <h6 class="timeline-subtitle">ICO  Crowd Sale:  3rd Quarter 2018  Announcement ("T") </h6>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">ICO Public sales</h3>
+                                    <p><strong>WEEK 1:</strong> 15% Bonus<br>
+                                    <strong>WEEK 2:</strong> 10% Bonus<br>
+                                    <strong>WEEK 3:</strong> 5% Bonus<br>
+                                    <strong>WEEK 4 Public Sale starting:</strong> No Bonus</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">POST-ICO</h3>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">4Q 2018</h3>
+                                    <p><strong>T+2M</strong><br>Expand team:  Developers</p>
+                                    <p><strong>T+3M</strong><br>1st pipeline healthtech ICO launch</p>
+                                    <p><strong>T+3M</strong><br>Launch first generation  smart wallet &  infrastucture  (AEN Connect)</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <p><strong>T+6M</strong><br>Second generation  custodial wallet &  escow services</p>
+                                    <p><strong>T+6M</strong><br>2nd pipeline healthtech ICO launch</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <p><strong>T+9M</strong><br>3rd pipeline healthtech ICO launch</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">4Q 2019</h3>
+                                    <p><strong>T+15M</strong><br>
+                                    Second generation:  AENX trading exchange</p>
+                                </div>
+                            </li>
+                            <li class="timeline-item ico">
+                                <div class="timeline-marker ico"></div>
+                                <div class="timeline-content">
+                                    <h3 class="timeline-title">2Q 2020</h3>
+                                    <p><strong>T+21M</strong><br>
+                                    Third generation:  AENCO prime  brokerage  platform<br>
+                                    <br>
+                                    Ongoing service  & expansion of  pipeline  HealthTech  partners                        </p>
+                                </div>
+                            </li>
+                            <li class="timeline-item period">
+                                <div class="timeline-info"></div>
+                                <div class="timeline-marker ico2"></div>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Roadmap End -->
+<!-- Media -->
+<section id="media-area" class="section section-top section-full media-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>MEDIA COVERAGE</h2>
+            <div class="media-list-container">
+                <ul id="media-list" class="media-list"></ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Media End-->
+<!-- Partners -->
+<section id="partners-area" class="section section-top section-full partners-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>PARTNERS &amp; MEMBERS</h2>
+            <div class="partner-list-container">
+                <ul id="partner-list" class="partner-list"></ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Partners End -->
+<!-- Team -->
+<section id="team-area" class="section section-top section-full team-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>OUR TEAM</h2>
+            <div id="team-member-list" class="team-member-list"></div>
+            <div class="more-btn-container">
+                <button id="btn-team-more" class="btn-more" onclick="getMemberLoad('#team-member-list').loadMoreMembers();">SHOW MORE</button>
+            </div>
+            <h2>OUR ADVISORS</h2>
+            <div id="advisor-list" class="team-member-list"></div>
+            <div class="more-btn-container">
+                <button id="btn-advisors-more" class="btn-more" onclick="getMemberLoad('#advisor-list').loadMoreMembers();">SHOW MORE</button>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Team End -->
+<!-- Contact Us -->
+<section id="contact-us-area" class="section section-top section-full contact-us-area">
+    <div class="main-container">
+        <div class="content">
+            <div class="footer-menu">
+                <span class="title"><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></span>
+                <ul>
+                    <li><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">Token Paper</a></li>
+                    <li><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">Two Pager</a></li>
+                    <li><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">Slide Presentation</a></li>
+                    <li><div class="empty"><br /></div></li>
+                    <li><a href="#roadmap-area">Roadmap</a></li>
+                    <li><a href="#team-area">Team & Advisors</a></li>
+                    <li><a href="#media-area">Media Coverage</a></li>
+                    <li><a href="#partners-area">Our Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <span class="title"><a href="#what-is-ean-token-area">AEN TOKEN</a></span>
+                <ul>
+                    <li><a href="#explore-aenco-area">Explore Aenco</a></li>
+                    <li><a href="#how-it-works-area">How It Works</a></li>
+                    <li><a href="#ecosystem-area">Ecosystem Solutions</a></li>
+                    <li><a href="#challenges-opportunity-area">Challenges & Opportunities</a></li>
+                    <li><a href="#token-economy-area">Token Economy</a></li>
+                    <li><a href="#token-distribution-area">Token Distribution</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <span class="title">ACCOUNT</span>
+                <ul>
+                    <li>
+                        <ul class="row-sign">
+                            <li class="display-inline"><a href="https://signup.aencoin.com/register">Signup</a></li>
+                            <li class="display-inline seperator"></li>
+                            <li class="display-inline"><a href="https://signup.aencoin.com/login">Login</a></li>
+                        </ul>
+                    </li>
+                    <li><div class="empty"><br /></div></li>
+                    <li><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">Disclaimer</a></li>
+                    <li><a class="btn-policy" data-toggle="modal" data-target="#modal-container">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="contact" id="contact">
+                <span class="title">CONTACT US</span>
+                <ul>
+                    <li class="text-reg-addr">Registered Address</li>
+                    <li class="txt-registerd-address">Vistra Corporate Services Centre, Ground Floor NPF Building, Beach Road, Apia, Samoa</li>
+                    <li>
+                        <div class="moon-contact">Enquiries<span class="txt-registerd-address txt-email"><a href="mailto:moon@aencoin.com" target="_blank">moon@aencoin.com</a></span>
+                        </div>
+                    </li>
+                    <li class="row-join-telegram"> 
+                        <div class="moon-contact fleft">Join Us On Telegram</div>
+                        <a target="_blank" href="https://t.me/AENCO"><div class="icon-social icon-telegram fleft"></div></a>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Us End -->
+<footer>
+    <div class="footer footer-content">
+        <div class="fleft company-name">2018 © Aenco Solutions Ltd - Global Health Blockchain Financial Solutions</div>
+        <div class="fright version">VER 2.1.1</div>
+        <div class="clear"></div>
+    </div>
+</footer>
+<!-- Hidden Bottom Bar Area -->
+<section class="section section-top section-full bottom-bar-area">
+    <div class="main-container">
+        <div class="mockup">
+        </div>
+    </div>
+</section>
+<!-- Hidden Bottom Bar  End -->
+<script type="text/javascript" src="./assets/js/team.js"></script>
+<script type="text/javascript" src="./assets/js/token-distribution.js"></script>
+<script type="text/javascript" src="./assets/js/app.js"></script>
+</body>
+</html>

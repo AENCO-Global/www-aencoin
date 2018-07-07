@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
+    <meta http-equiv="Expires" content="0">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Aenco bringing Innovation, Impact & Integrity">
+    <meta name="keywords" content="Aencoin, Bitcoin, Ethereum, ICO, Token, AEN, BTC, ETH">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="./assets/img/favicon.png">
+    <!-- DNS Prefetch -->
+    <title>Aenco - Global HealthTech Blockchain Financial Solutions</title>
+    <!-- Bootstrap -->
+    <link type="text/css" href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet">
+    <!-- FontAwesome -->
+    <link type="text/css" href="./assets/css/vendor/fa-solid.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/fa-regular.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/fa-brands.css" rel="stylesheet">
+    <link type="text/css" href="./assets/css/vendor/fontawesome.css" rel="stylesheet">
+    <!-- Font Family -->
+    <link href="https://fonts.googleapis.com/css?family=Teko:100,200,300,400,500" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Titillium+Web:100,200,300,400,600" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco:300,400" rel="stylesheet">
+    <!-- Theme -->
+    <link rel="stylesheet" href="./assets/css/aenco.css" type="text/css">
+    <!-- Matomo -->
+    <!-- JQuery -->
+    <script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
+    <!-- Bootstrap -->
+    <script type="text/javascript" src="./assets/js/vendor/popper.min.js"></script>
+    <script type="text/javascript" src="./assets/js/vendor/bootstrap.min.js"></script>
+    <!-- pdf -->
+    <script type="text/javascript" src="./assets/js/vendor/pdfobject.min.js"></script>
+</head>
+<body>
+<!-- Modals -->
+<div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container" aria-hidden="true">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h3 class="modal-title"></h3>
+                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+            <div id="modal-body" class="modal-body">
+                <div id="modal-body-content" class="modal-body-content no-langauge-bar"></div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- End Modals -->
+<!-- mobile menu -->
+<div class="overlay"></div>
+<div class="mobile-menu" id="mobile-menu">
+    <div class="menu-area">
+        <div class="list-group">
+            <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"><h2>WHITEPAPER</h2></a>
+            <a href="./index.html#what-is-ean-token-area" class="list-group-item list-group-item-action"><h2>AEN TOKEN</h2></a>
+            <a href="./index.html#roadmap-area" class="list-group-item list-group-item-action"><h2>ROADMAP</h2></a>
+            <a href="./index.html#team-area" class="list-group-item list-group-item-action"><h2>TEAM</h2></a>
+            <a href="./faq.html" class="list-group-item list-group-item-action"><h2>FAQ</h2></a>
+            <a target="_blank" href="https://medium.com/@aencoin" class="list-group-item list-group-item-action"><h2>BLOG</h2></a>
+            <a href="#contact-us-area" class="list-group-item list-group-item-action"><h2>CONTACT</h2></a>
+        </div>
+    </div>
+</div>
+<!-- mobile menu end -->
+
+<!-- Header -->
+<header class="header">
+    <div class="header-content">
+        <a href="./index.html">
+            <img class="brand-logo" src="./assets/img/logo.png" />
+        </a>
+        <a href="#">
+            <div id="mobile-menu-btn" class="mobile-menu-btn">
+                <ul>
+                    <li></li>
+                    <li></li>
+                    <li></li>
+                </ul>
+            </div>
+        </a>
+        <script>
+            function openMobileMenu() {
+                $(".overlay").show();
+                $("#mobile-menu").animate({
+                    right: 0
+                }, 200);
+            }
+            function closeMobileMenu() {
+                $(".overlay").hide();
+                $("#mobile-menu").animate({
+                    right: -300
+                }, 200);
+            }
+            $("#mobile-menu-btn").on("click", function() {
+                openMobileMenu();
+            });
+            $(".overlay").on("click", function() {
+                closeMobileMenu();
+            });
+        </script>
+        <nav class="login-menu">
+            <ul>
+                <li class="group-account"><a href="https://signup.aencoin.com/register"><span class="txt-signup">SIGN UP</span></a></li>
+                <li class="group-account"><a href="https://signup.aencoin.com/login"><span class="txt-login">LOGIN</span></a></li>
+            </ul>
+        </nav>
+        <nav class="menu">
+            <ul>
+                <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a></li>
+                <li><a href="./index.html#what-is-ean-token-area">AEN TOKEN</a></li>
+                <li><a href="./index.html#roadmap-area">ROADMAP</a></li>
+                <li><a href="./index.html#team-area">TEAM</a></li>
+                <li><a href="./faq.html">FAQ</a></li>
+                <li><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
+                <li><a href="#contact-us-area">CONTACT</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+<!-- Header End -->
+<!-- bottom bar -->
+<div class="bottomBarContainer">
+    <div class="bottomBar">
+        <div class="fleft">
+            <h2 class="txt-join-community">JOIN OUR COMMUNITY</h2>
+        </div>
+        <div class="fleft">
+            <ul>
+                <li><a target="_blank" href="https://t.me/AENCO"><img src="./assets/img/social/icon-telegram.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://twitter.com/aencoin"><img src="./assets/img/social/icon-twitter.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><img src="./assets/img/social/icon-linkedin.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><img src="./assets/img/social/icon-bitcointalk.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://www.youtube.com/channel/UCfDdfAGfY12GW1gisr3ELtw"><img src="./assets/img/social/icon-youtube.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><img src="./assets/img/social/icon-discord.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://medium.com/@aencoin"><img src="./assets/img/social/icon-medium.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://reddit.com/r/Aenco"><img src="./assets/img/social/icon-reddit.png" /></a>
+                </li>
+                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><img src="./assets/img/social/icon-facebook.png" /></a>
+                </li>
+            </ul>
+        </div>
+        <div class="clear"></div>
+    </div>
+</div>
+<!-- bottom bar end -->
+<!-- FAQ -->
+<section id="faq-area" class="section section-top section-full faq-area">
+    <div class="main-container">
+        <div class="content">
+            <h2>FREQUENTLY ASKED QUESTIONS</h2>
+            <div class="subtitle">We have provided answers to common questions we have been asked below</div>
+            <div class="questions-container">
+                <div id="accordion">
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><div class="sign"></div><div class="btn-label">What is Aenco?</div><div class="clear"></div></a>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Aenco is a "one stop shop" for the delivery of cutting edge institutional financing, prime brokerage, and smart capital solutions for the HealthTech industry, as well as a research and collaboration hub for healthcare companies and projects involved in the field of blockchain development.</p>
+                                <p>Aenco will be combining its solutions platform and core financing ecosystem with the wider healthcare technology community, through the AEN token, as the key ecosystem building block and extensions across all its service and community deliveries.</p>
+                                <p>Check out our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> for more information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div class="sign"></div><div class="btn-label">Do you accept other methods of contribution such as credit card?</div><div class="clear"></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>No. Bitcoin (BTC) and Ethereum (ETH) are the only accepted method of contribution
+                                    as part of the token sale.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div class="sign"></div><div class="btn-label">Can I / How do I participate in the token sale?</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>The token sale is currently on private sale phase.</p>
+                                <p>We are not accepting contributions from residents of USA, Samoa, China, and OFAC sanctioned countries. For Hong Kong based contributors, you must qualify and provide wealth proof as a "Professional Investor" under the Hong Kong SFC Guidance and Rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <div class="sign"></div><div class="btn-label">What are the requirements to participate in the token sale?</div><div class="clear"></div> 
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>We require you to go through our Sign Up process. To acquire AEN tokens, we also
+                                    require you to go through our
+                                    KYC Verfication.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <div class="sign"></div><div class="btn-label">Will you offer any early bird bonus?</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Yes, we do operate an early bird bonus for the private sale and the pre-sale period. Please refer to the community announcements or the token paper for details.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingSix">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <div class="sign"></div><div class="btn-label">Do you have any Bounty Program?</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Yes, we value your support and reward bounty AEN tokens for your efforts. Stay tuned for the announcement of the details on the Bounty Program.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <div class="sign"></div><div class="btn-label">When will I receive my AEN tokens?</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>AEN tokens will be allocated to you upon confirmation of contribution. The distribution date of the token will be after the ICO. The exact date will be announced soon. Depending on the stage of contribution, there will be lock up restrictions on the withdrawal.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingEight">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <div class="sign"></div><div class="btn-label">What are the smart contract address and details of AEN Tokens?</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>Contract Address: 0x0bef619cf38cf0c22967289b8419720fbd1db9f7
+                                </p>
+                                <p>Total Supply: 4,000,000,000 AEN</p>
+                                <p>Other Details: <a target="_blank" href="https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7">https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ End -->
+<!-- Contact Us -->
+<section id="contact-us-area" class="section section-top section-full contact-us-area">
+    <div class="main-container">
+        <div class="content">
+            <div class="footer-menu">
+                <span class="title"><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></span>
+                <ul>
+                    <li><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">Token Paper</a></li>
+                    <li><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">Two Pager</a></li>
+                    <li><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">Slide Presentation</a></li>
+                    <li><div class="empty"><br /></div></li>
+                    <li><a href="./index.html#roadmap-area">Roadmap</a></li>
+                    <li><a href="./index.html#team-area">Team & Advisors</a></li>
+                    <li><a href="./index.html#media-area">Media Coverage</a></li>
+                    <li><a href="./index.html#partners-area">Our Partners</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <span class="title"><a href="./index.html#what-is-ean-token-area">AEN TOKEN</a></span>
+                <ul>
+                    <li><a href="./index.html#explore-aenco-area">Explore Aenco</a></li>
+                    <li><a href="./index.html#how-it-works-area">How It Works</a></li>
+                    <li><a href="./index.html#ecosystem-area">Ecosystem Solutions</a></li>
+                    <li><a href="./index.html#challenges-opportunity-area">Challenges & Opportunities</a></li>
+                    <li><a href="./index.html#token-economy-area">Token Economy</a></li>
+                    <li><a href="./index.html#token-distribution-area">Token Distribution</a></li>
+                    <li><a href="./faq.html">FAQ</a></li>
+                    <li><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
+                </ul>
+            </div>
+            <div class="footer-menu">
+                <span class="title">ACCOUNT</span>
+                <ul>
+                    <li>
+                        <ul class="row-sign">
+                            <li class="display-inline"><a href="https://signup.aencoin.com/register">Signup</a></li>
+                            <li class="display-inline seperator"></li>
+                            <li class="display-inline"><a href="https://signup.aencoin.com/login">Login</a></li>
+                        </ul>
+                    </li>
+                    <li><div class="empty"><br /></div></li>
+                    <li><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">Disclaimer</a></li>
+                    <li><a class="btn-policy" data-toggle="modal" data-target="#modal-container">Privacy Policy</a></li>
+                </ul>
+            </div>
+            <div class="contact" id="contact">
+                <span class="title">CONTACT US</span>
+                <ul>
+                    <li class="text-reg-addr">Registered Address</li>
+                    <li class="txt-registerd-address">Vistra Corporate Services Centre, Ground Floor NPF Building, Beach Road, Apia, Samoa</li>
+                    <li>
+                        <div class="moon-contact">Enquiries<span class="txt-registerd-address txt-email"><a href="mailto:moon@aencoin.com" target="_blank">moon@aencoin.com</a></span>
+                        </div>
+                    </li>
+                    <li class="row-join-telegram"> 
+                        <div class="moon-contact fleft">Join Us On Telegram</div>
+                        <a target="_blank" href="https://t.me/AENCO"><div class="icon-social icon-telegram fleft"></div></a>
+                        <div class="clear"></div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Contact Us End -->
+<footer>
+    <div class="footer footer-content">
+        <div class="fleft company-name">2018 © Aenco Solutions Ltd - Global Health Blockchain Financial Solutions</div>
+        <div class="fright version">VER 2.1.1</div>
+        <div class="clear"></div>
+    </div>
+</footer>
+<!-- Hidden Bottom Bar Area -->
+<section class="section section-top section-full bottom-bar-area">
+    <div class="main-container">
+        <div class="mockup">
+        </div>
+    </div>
+</section>
+<!-- Hidden Bottom Bar  End -->
+</body>
+<script type="text/javascript" src="./assets/js/faq.js"></script>
+</html>

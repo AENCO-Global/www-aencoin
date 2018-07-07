@@ -1,0 +1,60 @@
+.token-distribution-area {
+    .main-container {
+        width: 100%;
+        background-color: #0093a5;
+    }
+    .content {
+        width: 1200px;
+        margin: auto;
+    }
+    .chart-title {
+        margin-top: 42px;
+    }
+    .col {
+        text-align: center;
+        position: inherit;
+    }
+    .chart-descriptions {
+        width: 450px;
+        margin: auto;
+        margin-top: 32px;
+        .col {
+            text-align: left;
+            font-family: 'Titillium Web', sans-serif;
+            font-weight: 300;
+            font-size: 14px;
+        }
+        .row {
+            padding: 5px;
+        }
+        .unselected {
+            background-color: transparent;
+        }
+    }
+    .pie-chart {
+        height: 220px;
+        margin-top: 25px;
+    }
+    .chart-subtitle h5 {
+        text-align: center;
+    }
+    h5 {
+        text-align: left;
+    }
+    .row {
+        margin: 0;
+    }
+    @media (max-width: 1200px) {
+        .content {
+            width: 96%;
+        }
+    }
+    @media (max-width: 600px) {
+        .chart-descriptions {
+            width: 90%;
+        }
+        h5 {
+            font-size: 16px;
+        }
+    }
+}

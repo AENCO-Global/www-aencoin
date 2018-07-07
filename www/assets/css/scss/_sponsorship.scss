@@ -1,0 +1,74 @@
+.sponsorship-area {
+    background-color: #004954;
+    a {
+      color: #00b7ce;
+    }
+    .main-container {
+      width: 100%;
+      margin: auto;
+    }
+    .content {
+      max-width: 1600px;
+      margin: auto;
+    }
+    .message-container {
+      max-width: 50%;
+      padding: 0px 30px 0 0;
+      float: left;
+    }
+    h2 {
+      color: #ffffff;
+      text-transform: uppercase;
+    }
+    h3 {
+      text-align: left;
+    }
+    h5 {
+      text-align: left;
+    }
+    .badge-container {
+      height: 337px;
+      margin: auto;
+      max-width: 550px;
+      float: left;
+      width: 50%;
+      img {
+        width: 100%;
+      }
+    }
+    @media (max-width: 1024px) {
+      .content {
+        width: 96%;
+      }
+      .message-container {
+        max-width: 100%;
+        float: none;
+        h5 {
+          text-align: justify !important;
+        }
+      }
+      .badge-container {
+        width: 80%;
+        margin-top: 40px;
+        float: none;
+        margin-bottom: -20px;
+      }
+      h2 {
+        color: #ffffff;
+        text-align: center;
+        text-transform: uppercase;
+      }
+    }
+    @media (max-width: 768px) {
+      .badge-container {
+        float: none;
+        margin-top: 5%;
+      }
+      .message-container {
+        float: none;
+        width: 100%;
+        margin: auto;
+      }
+    }
+  }
+

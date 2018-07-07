@@ -1,0 +1,52 @@
+.partners-area {
+    .main-container {
+        width: 100%;
+        background-color: $color-deep-blue;
+    }
+    .content {
+        width: 1024px;
+        margin: auto;
+    }
+    .partner-list-container {
+        margin-top: 30px;
+    }
+    .partner-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .partner-list li {
+        text-align: center;
+        margin: auto;
+        padding: 20px 20px 30px;
+    }
+    .partner-list  img {
+        max-width: 100%;
+        height: 100%;
+    }
+    @media (max-width: 1024px) {
+        .content {
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .partner-list {
+            li {
+                width: 33%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+    @media (max-width: 479px) {
+        .partner-list {
+            li {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+}

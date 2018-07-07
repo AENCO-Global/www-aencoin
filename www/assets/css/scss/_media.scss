@@ -1,0 +1,52 @@
+.media-area {
+    .main-container {
+        width: 100%;
+        background-color: $color-blue;
+    }
+    .content {
+        width: 1024px;
+        margin: auto;
+    }
+    .media-list-container {
+        margin-top: 30px;
+    }
+    .media-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .media-list li {
+        margin: auto;
+        text-align: center;
+        padding: 20px 20px 30px;
+    }
+    .media-list img {
+        max-width: 100%;
+        height: 100%;
+    }
+    @media (max-width: 1024px) {
+        .content {
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .media-list {
+            li {
+                width: 33%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+    @media (max-width: 479px) {
+        .media-list {
+            li {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+}

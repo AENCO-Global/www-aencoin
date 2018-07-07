@@ -1,0 +1,72 @@
+.what-is-aen-token-area {
+  .main-container {
+    width: 100%;
+    margin: auto;
+  }
+  .content {
+    max-width: 1600px;
+    margin: auto;
+  }
+  .message-container {
+    max-width: 50%;
+    padding: 0px 30px 0 0;
+    float: left;
+  }
+  h2 {
+    color: #b6d84e;
+    text-align: left;
+  }
+  h3 {
+    text-align: left;
+  }
+  h5 {
+    text-align: left;
+  }
+  .video-container {
+    margin: auto;
+    margin-top: 0px;
+    width: 50%;
+    height: 337px;
+    float: left;
+    img {
+      width: 100%;
+    }
+  }
+  @media (max-width: 1024px) {
+    .content {
+      width: 96%;
+    }
+    .message-container {
+      max-width: 100%;
+      padding: 0;
+    }
+    .video-container {
+      margin-top: 35px;
+      width: 100%;
+    }
+  }
+  @media (max-width: 768px) {
+    .video-container {
+      float: none;
+      margin-top: 5%;
+    }
+    .message-container {
+      float: none;
+      width: 100%;
+      margin: auto;
+      padding: 0 20px;
+    }
+  }
+}
+
+.ytp-title-text, .ytp-watch-later-icon, .ytp-chrome-top .ytp-share-button {
+  display: none;
+}
+
+.ytp-watch-later-icon {
+  margin: auto;
+  width: 36px;
+  height: 36px;
+  position: relative;
+  display: none;
+}
