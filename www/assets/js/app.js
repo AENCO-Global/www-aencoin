@@ -143,6 +143,7 @@ var partnerData = [
     }
 ];
 
+
 var mediaDataLoader = {
     getDom: function(imagePath, url = "") {
         if (url === "") {
