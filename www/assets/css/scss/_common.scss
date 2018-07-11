@@ -31,6 +31,15 @@ ul {
 a:focus {
     outline: none;
 }
+.display-none {
+    display: none;
+}
+.done-0 {
+    display: none;
+}
+.done-1 {
+    display: block;
+}
 .lang {
     color: #000000;
 }
@@ -79,6 +88,7 @@ a:focus {
     background-color: $color-blue;
     z-index: 90;
     text-align: center;
+    box-shadow: 0 -3px 9px 3px rgba(0, 110, 124, 0.35);
 }
 .bottom-bar-area {
     width: 100%;
@@ -139,8 +149,43 @@ h5 {
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
     letter-spacing: 0.02em;
-    text-align: center;
     line-height: 1.5;
+}
+h6 {
+    font-size: 15px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+.f1 {
+    font-size: 30px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+.f2 {
+    font-size: 20px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+.f3 {
+    font-size: 22px;
+    font-family: "Titillium Web", sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+}
+.f4 {
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.02em;
+}
+.f5 {
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
 }
 a, button {
     cursor: pointer;
@@ -149,10 +194,6 @@ a:hover, button:hover {
     opacity: 0.6;
 }
 .footer-content {
-    font-size: 15px;
-    font-family: "Titillium Web", sans-serif;
-    font-weight: 300;
-    letter-spacing: 0.02em;
     padding: 15px 0 30px;
 }
 .company-name {
@@ -216,6 +257,7 @@ a:hover, button:hover {
     z-index: 99;
     width: 200px;
     height: 100%;
+    overflow-y: scroll;
     background-color: #002d35;
     h2 {
         font-weight: 300;
@@ -298,7 +340,8 @@ button:focus {
 .login-menu ul li a {
     font-family: 'Teko', sans-serif;
     font-size: 28px;
-    letter-spacing: 2px;
+    letter-spacing: 0.05em;
+    text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
 }
 .brand-logo {
     display: inline-block;
@@ -333,14 +376,10 @@ button:focus {
     margin: 50px 0;
 }
 .btn-more {
-    font-size: 25px;
-    font-family: 'Teko', sans-serif;
-    font-weight: 300;
     color: #FFFFFF;
     border: 0.15em solid #0093a5;
     border-radius: 24px;
     background-color: transparent;
-    letter-spacing: 0.05em;
     padding: 4px 35px 1px;
 }
 #exampleModalLabel.modal-title {
@@ -550,6 +589,105 @@ div#modal-container {
     width: 50vw;
     height: calc(50vw * 9 / 16);
 }
+.language-selector:before {
+    content: "";
+    border-bottom: solid #FFFFFF 20px;
+    border-left: solid transparent 20px;
+    border-right: solid transparent 20px;
+    position: absolute;
+    top: -18px;
+    width: 19px;
+    height: 20px;
+    right: 20px;
+}
+.language-selector-container {
+    position: fixed;
+    top: 41px;
+    right: 209px;
+    padding: 40px 0 0 0;
+    z-index: 99;
+    width: 32px;
+    height: 32px;
+}
+.language-selector-container.expanded {
+    position: fixed;
+    top: 40px;
+    right: 183px;
+    padding: 54px 0 0 0;
+    z-index: 99;
+    width: auto;
+    height: auto;
+}
+.language-selector {
+    padding: 20px 40px;
+    background-color: #FFFFFF;
+    display: none;
+    img {
+        width: 100%;
+        height: auto;
+    }
+    .flag {
+        max-width: 20%;
+        display: inline-block;
+    }
+    .lang {
+        max-width: 70%;
+        display: inline-block;
+        margin-left: 5%;
+    }
+    h5 {
+        color: #252525;
+        text-align: left;
+    }
+}
+.app.lang-zhcn {
+    font-family: 'Noto Sans SC';
+    h1 {
+        font-family: 'Noto Sans SC'
+    }
+    h2 {
+        font-family: 'Noto Sans SC';
+    }
+    h3 {
+        font-family: 'Noto Sans SC';
+    }
+    h4 {
+        font-family: 'Noto Sans SC';
+    }
+    h5 {
+        font-family: 'Noto Sans SC';
+    }
+    .menu ul li a {
+        font-family: 'Noto Sans SC';
+    }
+    .login-menu ul li a {
+        font-family: 'Noto Sans SC';
+    }
+}
+.app.lang-kr {
+    font-family: 'Nanum Gothic Coding', monospace;
+    h1 {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    h2 {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    h3 {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    h4 {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    h5 {
+        font-family: 'Nanum Gothic Coding', monospace;
+    }
+    .menu ul li a {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    .login-menu ul li a {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+}
 @media (max-width: 1300px) {
     .menu {
         display: none;
@@ -562,6 +700,12 @@ div#modal-container {
     }
     .mobile-menu-btn {
         display: block;
+    }
+    .language-selector-container {
+        right: 248px;
+    }
+    .language-selector-container.expanded {
+        right: 223px;
     }
 }
 @media (max-width: 1024px) {
@@ -593,6 +737,18 @@ div#modal-container {
     }
     .bottomBar ul li {
         margin: 0 10px;
+    }
+    .footer-content {
+        font-size: 12px;
+    }
+    .icon-telegram {
+        background-size: 25px;
+    }
+    .txt-join-community {
+        margin: 0 0 5px;
+    }
+    h2 {
+        font-size: 30px;
     }
 }
 @media (max-width: 1060px) {

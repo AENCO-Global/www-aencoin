@@ -7,16 +7,12 @@
     .content {
         display: grid;
         margin: auto;
-        grid-template-columns: 2fr 2fr 2fr 1fr;
+        grid-template-columns: 2fr 2fr 2fr 2fr;
         grid-gap: 45px;
         max-width: 1300px;
     }
     .moon-contact {
         margin-top: 25px;
-        font-weight: 400;
-        font-family: 'Teko', sans-serif;
-        font-size: 25px;
-        letter-spacing: 0.03em;
     }
     .social-items {
         width: 100%;
@@ -26,10 +22,6 @@
     }
     .text-reg-addr {
         margin-top: 15px;
-        font-family: "Teko", sans-serif;
-        font-weight: 300;
-        font-size: 25px;
-        letter-spacing: 0.02em;
     }
     li {
         list-style: none;
@@ -41,25 +33,9 @@
     .fa-3x {
         font-size: 38px;
     }
-    .title {
-        font-family: 'Teko', sans-serif;
-        font-size: 25px;
-        font-weight: 400;
-        letter-spacing: 0.02em;
-    }
-    .footer-menu ul li {
-        font-family: 'Teko', sans-serif;
-        font-weight: 300;
-        font-size: 25px;
-        letter-spacing: 0.03em;
-    }
-    .txt-registerd-address {
-        font-family: 'Titillium Web', sans-serif;
-        font-weight: 400;
-        font-size: 18px;
-    }
     .txt-email {
         margin-left: 10px;
+        display: inline-block;
     }
     .display-inline {
         display: inline-block;
@@ -103,6 +79,32 @@
     @media (max-width: 1024px) {
         .content {
             width: 100%;
+            grid-template-columns: auto auto auto auto;
+            padding: 50px 20px 50px 30px;
+            grid-gap: 25px;
+        }
+        .footer-menu ul li {
+            font-size: 20px;
+        }
+        .title {
+            font-size: 20px;
+        }
+        .text-reg-addr {
+            font-size: 20px;
+        }
+        .txt-registerd-address {
+            font-size: 14px;
+        }
+        .moon-contact {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .row-sign li.seperator {
+            height: 16px;
+        }
+        .row-join-telegram .icon-telegram {
+            margin-top: 11px;
+            margin-left: 2px;
         }
     }
     @media (max-width: 700px) {

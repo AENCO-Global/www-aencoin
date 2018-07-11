@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<html ng-app="todoApp">
 <head>
     <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
     <meta http-equiv="Cache-control" content="no-cache, no-store, must-revalidate">
@@ -17,20 +18,19 @@
     <!-- Bootstrap -->
     <link type="text/css" href="./assets/css/vendor/bootstrap.min.css" rel="stylesheet">
     <!-- FontAwesome -->
-    <link type="text/css" href="./assets/css/vendor/fa-solid.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/vendor/fa-regular.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/vendor/fa-brands.css" rel="stylesheet">
-    <link type="text/css" href="./assets/css/vendor/fontawesome.css" rel="stylesheet">
     <link type="text/css" href="./assets/css/vendor/flipclock.css" rel="stylesheet">
     <!-- Font Family -->
     <link href="https://fonts.googleapis.com/css?family=Teko:100,200,300,400,500" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Titillium+Web:100,200,300,400,600" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Flamenco:300,400" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/earlyaccess/notosanssc.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&amp;subset=korean" rel="stylesheet">
     <!-- slider -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Theme -->
     <link rel="stylesheet" href="./assets/css/aenco.css" type="text/css">
     <!-- Matomo -->
+    <script src="./assets/js/vendor/angular.min.js"></script>
     <!-- JQuery -->
     <script type="text/javascript" src="./assets/js/vendor/jquery-3.3.1.min.js"></script>
     <!-- slick -->
@@ -42,8 +42,7 @@
     <script type="text/javascript" src="./assets/js/vendor/flipclock.min.js"></script>
     <!-- pdf -->
     <script type="text/javascript" src="./assets/js/vendor/pdfobject.min.js"></script>
-    <!-- pie -->
-    <script type="text/javascript" src="./assets/js/vendor/pie.js"></script>
+    <!--<script src="./assets/js/text.js"></script>-->
     <script type="text/javascript">
         var _paq = _paq || [];
         /* tracker methods like "setCustomDimension" should be called before "trackPageView" */
@@ -64,181 +63,164 @@
     <!-- End Matomo Code -->
 </head>
 <body>
-<!-- Modals -->
-<div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container" aria-hidden="true">
-    <div class="modal-dialog" role="document">
-        <div class="modal-content">
-            <div class="modal-header">
-                <h3 class="modal-title"></h3>
-                <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                <span aria-hidden="true">&times;</span>
-                </button>
-            </div>
-            <div id="modal-body" class="modal-body">
-                <div id="modal-body-content" class="modal-body-content no-langauge-bar"></div>
+<div class="app display-none done-{{app.done}} lang-{{app.lang}}" ng-controller="AppController as app">
+    <!-- Modals -->
+    <div class="modal fade" id="modal-container" tabindex="-1" role="dialog" aria-labelledby="modal-container" aria-hidden="true">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h3 class="modal-title"></h3>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                    <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div id="modal-body" class="modal-body">
+                    <div id="modal-body-content" class="modal-body-content"></div>
+                </div>
             </div>
         </div>
     </div>
-</div>
-<!-- End Modals -->
-<!-- mobile menu -->
-<div class="overlay"></div>
-<div class="mobile-menu" id="mobile-menu">
-    <div class="menu-area">
-        <div class="list-group">
-            <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"><h2>WHITEPAPER</h2></a>
-            <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action"><h2>AEN TOKEN</h2></a>
-            <a href="#roadmap-area" class="list-group-item list-group-item-action"><h2>ROADMAP</h2></a>
-            <a href="#team-area" class="list-group-item list-group-item-action"><h2>TEAM</h2></a>
-            <a href="./faq.html" class="list-group-item list-group-item-action"><h2>FAQ</h2></a>
-            <a target="_blank" href="https://medium.com/@aencoin" class="list-group-item list-group-item-action"><h2>BLOG</h2></a>
-            <a href="#contact-us-area" class="list-group-item list-group-item-action"><h2>CONTACT</h2></a>
-            <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action"><h2>SIGN UP</h2></a>
-            <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action"><h2>LOGIN</h2></a>
+    <!-- End Modals -->
+    <!-- mobile menu -->
+    <div class="overlay"></div>
+    <div class="mobile-menu" id="mobile-menu">
+        <div class="menu-area">
+            <div class="list-group">
+                <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"><h2>{{ app.getTranslatedText('text0009') }}</h2></a>
+                <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0024') }}</h2></a>
+                <a href="#roadmap-area" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0131') }}</h2></a>
+                <a href="#team-area" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0196') }}</h2></a>
+                <a href="#faq-area" class="list-group-item list-group-item-action btn-faq"><h2>FAQ</h2></a>
+                <a target="_blank" href="https://medium.com/@aencoin" class="list-group-item list-group-item-action"><h2>BLOG</h2></a>
+                <a href="#contact-us-area" class="list-group-item list-group-item-action"><h2>CONTACT</h2></a>
+                <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0181') }}</h2></a>
+                <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0182') }}</h2></a>
+            </div>
         </div>
     </div>
-</div>
-<!-- mobile menu end -->
-
-<!-- Header -->
-<header class="header">
-    <div class="header-content">
-        <a href="#welcome-area">
-            <img class="brand-logo" src="./assets/img/logo.png" />
-        </a>
-        <a href="#">
-            <div id="mobile-menu-btn" class="mobile-menu-btn">
+    <!-- mobile menu end -->
+    <!-- language selector -->
+    <div class="language-selector-container">
+        <div class="language-selector">
+            <ul>
+                <li><a href="#" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a></li>
+                <li><a href="#" ng-click="app.changeLang('zhcn')"><h5>中文簡體</h5></a></li>
+                <li><a href="#" ng-click="app.changeLang('kr')"><h5>한국어</h5></a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- language selector end-->
+    <!-- Header -->
+    <header class="header">
+        <div class="header-content">
+            <a href="#welcome-area">
+                <img class="brand-logo" src="./assets/img/logo.png" />
+            </a>
+            <a href="#">
+                <div id="mobile-menu-btn" class="mobile-menu-btn">
+                    <ul>
+                        <li></li>
+                        <li></li>
+                        <li></li>
+                    </ul>
+                </div>
+            </a>
+            <nav class="login-menu">
                 <ul>
-                    <li></li>
-                    <li></li>
-                    <li></li>
+                    <li class="group-account"><a href="#" class="btn-lang"><img src="./assets/img/icon-lang.png" /></a></li>
+                    <li class="group-account"><a href="https://signup.aencoin.com/register"><h4><span class="txt-signup">{{ app.getTranslatedText('text0181') }}</span></h4></a></li>
+                    <li class="group-account"><a href="https://signup.aencoin.com/login"><h4><span class="txt-login">{{ app.getTranslatedText('text0182') }}</span></h4></a></li>
+                </ul>
+            </nav>
+            <nav class="menu">
+                <ul>
+                    <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container"><h4>{{ app.getTranslatedText('text0009') }}</h4></a></li>
+                    <li><a href="#what-is-ean-token-area"><h4>{{ app.getTranslatedText('text0024') }}</h4></a></li>
+                    <li><a href="#roadmap-area"><h4>{{ app.getTranslatedText('text0131') }}</h4></a></li>
+                    <li><a href="#team-area"><h4>{{ app.getTranslatedText('text0196') }}</h4></a></li>
+                    <li><a href="#faq-area"><h4>FAQ</h4></a></li>
+                    <li><a target="_blank" href="https://medium.com/@aencoin"><h4>BLOG</h4></a></li>
+                    <li><a href="#contact-us-area"><h4>CONTACT</h4></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <!-- Header End -->
+
+    <!-- bottom bar -->
+    <div class="bottomBarContainer">
+        <div class="bottomBar">
+            <div class="fleft">
+                <h2 class="txt-join-community">{{ app.getTranslatedText('text0193') }}</h2>
+            </div>
+            <div class="fleft">
+                <ul>
+                    <li><a target="_blank" href="https://t.me/AENCO"><img src="./assets/img/social/icon-telegram.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://twitter.com/aencoin"><img src="./assets/img/social/icon-twitter.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><img src="./assets/img/social/icon-linkedin.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><img src="./assets/img/social/icon-bitcointalk.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.youtube.com/channel/UCfDdfAGfY12GW1gisr3ELtw"><img src="./assets/img/social/icon-youtube.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://discord.gg/5nTn4rC"><img src="./assets/img/social/icon-discord.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://medium.com/@aencoin"><img src="./assets/img/social/icon-medium.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://reddit.com/r/Aenco"><img src="./assets/img/social/icon-reddit.png" /></a>
+                    </li>
+                    <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><img src="./assets/img/social/icon-facebook.png" /></a>
+                    </li>
                 </ul>
             </div>
-        </a>
-        <script>
-            function openMobileMenu() {
-                $(".overlay").show();
-                $("#mobile-menu").animate({
-                    right: 0
-                }, 200);
-            }
-            function closeMobileMenu() {
-                $(".overlay").hide();
-                $("#mobile-menu").animate({
-                    right: -200
-                }, 200);
-            }
-            $("#mobile-menu-btn").on("click", function() {
-                openMobileMenu();
-            });
-            $(".overlay").on("click", function() {
-                closeMobileMenu();
-            });
-        </script>
-        <nav class="login-menu">
-            <ul>
-                <li class="group-account"><a href="https://signup.aencoin.com/register"><span class="txt-signup">SIGN UP</span></a></li>
-                <li class="group-account"><a href="https://signup.aencoin.com/login"><span class="txt-login">LOGIN</span></a></li>
-            </ul>
-        </nav>
-        <nav class="menu">
-            <ul>
-                <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITEPAPER</a></li>
-                <li><a href="#what-is-ean-token-area">AEN TOKEN</a></li>
-                <li><a href="#roadmap-area">ROADMAP</a></li>
-                <li><a href="#team-area">TEAM</a></li>
-                <li><a href="./faq.html">FAQ</a></li>
-                <li><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
-                <li><a href="#contact-us-area">CONTACT</a></li>
-            </ul>
-        </nav>
-    </div>
-</header>
-<!-- Header End -->
-
-<!-- bottom bar -->
-<div class="bottomBarContainer">
-    <div class="bottomBar">
-        <div class="fleft">
-            <h2 class="txt-join-community">JOIN OUR COMMUNITY</h2>
+            <div class="clear"></div>
         </div>
-        <div class="fleft">
-            <ul>
-                <li><a target="_blank" href="https://t.me/AENCO"><img src="./assets/img/social/icon-telegram.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://twitter.com/aencoin"><img src="./assets/img/social/icon-twitter.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://www.linkedin.com/company/aenco/"><img src="./assets/img/social/icon-linkedin.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://bitcointalk.org/index.php?topic=3710692"><img src="./assets/img/social/icon-bitcointalk.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://www.youtube.com/channel/UCfDdfAGfY12GW1gisr3ELtw"><img src="./assets/img/social/icon-youtube.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://discord.gg/5nTn4rC"><img src="./assets/img/social/icon-discord.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://medium.com/@aencoin"><img src="./assets/img/social/icon-medium.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://reddit.com/r/Aenco"><img src="./assets/img/social/icon-reddit.png" /></a>
-                </li>
-                <li><a target="_blank" href="https://www.facebook.com/AENCOIN/"><img src="./assets/img/social/icon-facebook.png" /></a>
-                </li>
-            </ul>
-        </div>
-        <div class="clear"></div>
     </div>
-</div>
-<!-- bottom bar end -->
+    <!-- bottom bar end -->
 
 <!-- Welcome Area Start -->
-<section id="welcome-area" class="section section-top section-full welcome-area">
+<section id="welcome-area" class="section section-top section-full welcome-area section-cat-one">
     <div class="background">
         <div class="content">
             <div class="row-core-message">
-                <h1 class="core-message">AENCO IS THE WORLD'S FIRST BLOCKCHAIN-BASED HEALTHCARE FINANCIAL SOLUTIONS PLATFORM</h1>
+                <h1 class="core-message">{{ app.getTranslatedText('text0001') }}</h1>
             </div>
             <div class="sub-message-container">
-                <h3 class="sub-message">HealthTech, Smart Capital, and Prime Brokerage Solutions Under One Umbrella</h3>
+                <h3 class="sub-message">{{ app.getTranslatedText('text0002') }}</h3>
             </div>
             <div class="private-sale-notice">
-                <div class="col2"><h2 class="private-sale-txt">PRIVATE SALE IS LIVE!</h2></div>
+                <div class="col2"><h2 class="private-sale-txt">{{ app.getTranslatedText('text0003') }}</h2></div>
                 <div class="col2">
                     <a href="https://signup.aencoin.com/register" class="btn-join">
-                        <span class="btn-txt">JOIN NOW</span>
+                        <span class="f3">{{ app.getTranslatedText('text0004') }}</span>
                     </a>
                 </div>
                 <div class="clear"></div>
             </div>
             <div class="row-contributor">
                 <div class="link-group">
-                    <a href="#" id="btn-contributors" data-toggle="modal" data-target="#modal-container">Eligible Contributors</a>
+                    <a class="f3 btn-contributors" id="btn-contributors" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0005') }}</a>
                     <span>|</span> 
-                    <a id="btn-learn" data-toggle="modal" data-target="#modal-container">Learn More</a>
+                    <a class="f3 btn-learn" id="btn-learn" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0006') }}</a>
                     <span>|</span>
-                    <a href="https://bountyhive.io/join/Aenco" class="txt-bonus-program" target="_blank">Bounty Program</a>
+                    <a class="f3 txt-bonus-program" href="https://bountyhive.io/join/Aenco" target="_blank">{{ app.getTranslatedText('text0007') }}</a>
                 </div>
             </div>
             <div class="count-down-container">
-                <div class="header-count-down">PRE-SALE STARTS IN:</div>
+                <div class="header-count-down">{{ app.getTranslatedText('text0195') }}</div>
                 <div class="clock"></div>
-                <script type="text/javascript">
-                    var now = Date.now();
-                    var endTime = Date.parse('July 27, 2018 00:00:00');
-                    var diff = (endTime - now) / 1000;
-                    var clock = $('.clock').FlipClock(diff, {
-                        clockFace: 'DailyCounter',
-                        countdown: true
-                    });
-                </script>
             </div>
             <div class="row link-group-container">
                 <ul class="link-list">
-                    <li class="link-txt"><a herf="#" class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></li>
+                    <li class="link-txt"><a herf="#" class="f3 btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0009') }}</a></li>
                     <li class="sepeartor">|</li>
-                    <li class="link-txt"><a href="#" class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">TOKEN PAPER</a></li>
+                    <li class="link-txt"><a href="#" class="f3 btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0010') }}</a></li>
                     <li class="sepeartor">|</li>
-                    <li class="link-txt"><a href="#" class="btn-two-pager" data-toggle="modal" data-target="#modal-container">2 PAGER</a></li>
+                    <li class="link-txt"><a href="#" class="f3 btn-two-pager" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0011') }}</a></li>
                     <li class="sepeartor">|</li>
-                    <li class="link-txt"><a href="#" class="btn-presentation" data-toggle="modal" data-target="#modal-container">SLIDE PRESENTATION</a></li>
+                    <li class="link-txt"><a href="#" class="f3 btn-presentation" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0012') }}</a></li>
                 </ul>
             </div>
             <div class="rating-container">
@@ -286,13 +268,13 @@
 </section>
 <!-- Welcome Area End -->
 <!-- What is Aen Token -->
-<section id="what-is-ean-token-area" class="section section-top section-full what-is-aen-token-area">
+<section id="what-is-ean-token-area" class="section section-top section-full what-is-aen-token-area section-cat-one">
     <div class="main-container">
         <div class="content">
             <div class="message-container">
-                <h2>WHAT IS AEN TOKEN?</h2>
-                <h3>AEN Token Fuels and Facilitates an Ecosystem for HealthTech Entrepreneurialism, Innovation, and Research</h3>
-                <h5>As a one-stop-shop solutions provider and research collaboration hub for healthcare companies involved in blockchain development, Aenco combines it solutions platform and core financial ecosystem through the release of the AEN token, as the key building block and extensions across all service and community deliveries.</h5>
+                <h2>{{ app.getTranslatedText('text0014') }}</h2>
+                <h3>{{ app.getTranslatedText('text0015') }}</h3>
+                <h5>{{ app.getTranslatedText('text0016') }}</h5>
             </div>
             <div class="video-container">
                 <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen=""></iframe>
@@ -303,7 +285,7 @@
 </section>
 <!-- What is Aen Token End -->
 <!-- How is works -->
-<section id="how-it-works-area" class="section section-top section-full how-it-works-area">
+<section id="how-it-works-area" class="section section-top section-full how-it-works-area section-cat-one">
     <div class="main-container">
         <div class="content">
             <h2>HOW IT WORKS?</h2>
@@ -311,22 +293,22 @@
                     <div class="item">
                         <div class="logo logo-partner "></div>
                         <div class="info">
-                            <h3 class="subtitle">GLOBAL COMMUNITY</h3>
-                            <h5>To enjoy platform membership, priority access to evolving ecosystem opportunities, utility, community rewards, and platform solutions.</h5>
+                            <h3 class="subtitle">{{ app.getTranslatedText('text0017') }}</h3>
+                            <h5>{{ app.getTranslatedText('text0018') }}</h5>
                         </div>
                     </div>
                 <div class="item">
                     <div class="logo logo-solution"></div>
                     <div class="info">
-                        <h3 class="subtitle">AENCO GLOBAL HEALTHTECH FINANCIAL SOLUTIONS</h3>
-                        <h5>Ecosystem opportunities and utility across three core application platforms: Aenco IB, Prime, and SmartCap Solutions.</h5>
+                        <h3 class="subtitle">{{ app.getTranslatedText('text0019') }}</h3>
+                        <h5>{{ app.getTranslatedText('text0020') }}</h5>
                     </div>
                 </div>
                 <div class="item">
                     <div class="logo logo-global"></div>
                     <div class="info">
-                        <h3 class="subtitle">HEALTHTECH PARTNERS & SPONSORED PROJECTS</h3>
-                        <h5>Medical utility across an existing pipeline, and expanding network of HealthTech partners specializing in therapeutics, medical infrastructure, medical data analytics, and innovative forms of healthcare technology services.</h5>
+                        <h3 class="subtitle">{{ app.getTranslatedText('text0021') }}</h3>
+                        <h5>{{ app.getTranslatedText('text0022') }}</h5>
                     </div>
                 </div>
             </div>
@@ -335,10 +317,10 @@
 </section>
 <!-- How is works End -->
 <!-- Ecosystem -->
-<section id="ecosystem-area" class="section section-top section-full ecosystem-area">
+<section id="ecosystem-area" class="section section-top section-full ecosystem-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>AENCO ECOSYSTEM SOLUTIONS</h2>
+            <h2 >{{ app.getTranslatedText('text0023') }}</h2>
             <div class="diagram">
                 <div class="diagram-border-container">
                     <div class="top-left-corner"></div>
@@ -350,35 +332,35 @@
                     <div class="bottom-border-end"></div>
                     <div class="bottom-right-corner"></div>
                 </div>
-                <div class="diagram-title">Ecosystem Utility Membership Access</div>
-                <div class="diagram-pointer"><span>AEN TOKEN</span></div>
+                <div class="diagram-title">{{ app.getTranslatedText('text0025') }}</div>
+                <div class="diagram-pointer"><span class="f1">{{ app.getTranslatedText('text0024') }}</span></div>
                 <div class="items">
                     <div class="item">
-                        <div class="title title-row-one"><h3>AENCO <br />IB SOLUTIONS</h3></div>
+                        <div class="title title-row-one"><h3 ng-bind-html="app.getTranslatedText('text0026')"></h3></div>
                         <div class="desc">
                             <ul class="list-row-1">
-                                <li><h5>ICO Integrity Program</h5></li>
-                                <li><h5>AENX: Trading Exchange for HealthTech participants</h5></li>
-                                <li><h5>Ongoing Research Coverage of issuers and data analytics for subscribers and issuers</h5></li>
+                                <li><h5>{{ app.getTranslatedText('text0027') }}</h5></li>
+                                <li><h5>{{ app.getTranslatedText('text0028') }}</h5></li>
+                                <li><h5>{{ app.getTranslatedText('text0029') }}</h5></li>
                             </ul>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div class="item">
-                        <div class="title title-row-two"><h3>AENCO <br />PRIME SOLUTIONS</h3></div>
+                        <div class="title title-row-two"><h3 ng-bind-html="app.getTranslatedText('text0030')"></h3></div>
                         <div class="desc">
                             <ul class="list-row-2">
-                                <li><h5>Aenco Decentralized Prime Brokerage Platform</h5></li>
+                                <li><h5>{{ app.getTranslatedText('text0031') }}</h5></li>
                             </ul>
                         </div>
                         <div class="clear"></div>
                     </div>
                     <div class="item no-border">
-                        <div class="title title-row-three"><h3>AENCO <br />SMARTCAP SOLUTIONS</h3></div>
+                        <div class="title title-row-three"><h3 ng-bind-html="app.getTranslatedText('text0032')"></h3></div>
                         <div class="desc">
                             <ul class="list-row-3">
-                                <li><h5>Technology Driven Digital Banking Platform for HealthTech industry</h5></li>
-                                <li><h5>Alternative Financing</h5></li>
+                                <li><h5>{{ app.getTranslatedText('text0033') }}</h5></li>
+                                <li><h5>{{ app.getTranslatedText('text0034') }}</h5></li>
                             </ul>
                         </div>
                         <div class="clear"></div>
@@ -390,39 +372,39 @@
 </section>
 <!-- Ecosystem End -->
 <!-- Opportunities and Challenge -->
-<section id="challenges-opportunity-area" class="section section-top section-full challenges-opportunity-area">
+<section id="challenges-opportunity-area" class="section section-top section-full challenges-opportunity-area section-cat-one">
     <div class="main-container">
         <div class="content">
             <div class="challenge-area">
                 <div class="challenge-box">
-                    <h2>HEALTHTECH CHALLENGES</h2>
+                    <h2>{{ app.getTranslatedText('text0035') }}</h2>
                     <div class="items">
                         <div class="item">
                             <div class="logo">
                                 <div class="challenge-one-logo"></div>
                             </div>
-                            <div class="desc">Lack of a robust financial ecosystem for HealthTech innovations</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0036') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="challenge-two-logo"></div>
                             </div>
-                            <div class="desc">High entry barriers and burdensome hurdles in fundrasing</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0037') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="challenge-three-logo"></div>
                             </div>
-                            <div class="desc">Little options for start-ups requiring one-stop-shop smart capital solutions</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0038') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="challenge-four-logo"></div>
                             </div>
-                            <div class="desc">Lack of a credible, global-accredited standard for ICO best practices</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0039') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -431,34 +413,34 @@
             </div>
             <div class="opportunities-area">
                 <div class="opportunity-box">
-                    <h2>THE OPPORTUNITIES</h2>
+                    <h2>{{ app.getTranslatedText('text0040') }}</h2>
                     <div class="items">
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-one-logo"></div>
                             </div>
-                            <div class="desc">A pressing need for disruptive and sustainable medical innovations</div>
+                            <div class="desc">{{ app.getTranslatedText('text0041') }}</div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-two-logo"></div>
                             </div>
-                            <div class="desc">Growing demand for medical entrepreneurialism and technologies</div>
+                            <div class="desc">{{ app.getTranslatedText('text0042') }}</div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-three-logo"></div>
                             </div>
-                            <div class="desc">Ongoing needs for deep impact solutions, such as treatment and prevention of diseases</div>
+                            <div class="desc">{{ app.getTranslatedText('text0043') }}</div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-four-logo"></div>
                             </div>
-                            <div class="desc">The growing maturity of blockchain technologies has democratized fundrasing</div>
+                            <div class="desc">{{ app.getTranslatedText('text0044') }}</div>
                             <div class="clear"></div>
                         </div>
                     </div>
@@ -471,45 +453,42 @@
 </section>
 <!-- Opportunities and Challenge End -->
 <!-- Explore Aenco -->
-<section id="explore-aenco-area" class="section section-top section-full explore-aenco-area">
+<section id="explore-aenco-area" class="section section-top section-full explore-aenco-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>EXPLORE AENCO</h2>
+            <h2>{{ app.getTranslatedText('text0045') }}</h2>
             <div class="items" id="video-list"></div>
             <div class="more-btn-container">
-                <button class="btn-more-videos" onclick="loadMore();" >MORE VIDEOS</button>
+                <button class="btn-more-videos" id="btn-more-videos">{{ app.getTranslatedText('text0051') }}</button>
             </div>
         </div>
     </div>
 </section>
 <!-- Explore Aenco End -->
 <!-- Token Economy -->
-<section id="token-economy-area" class="section section-top section-full token-economy-area">
+<section id="token-economy-area" class="section section-top section-full token-economy-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>TOKEN ECONOMY</h2>
+            <h2>{{ app.getTranslatedText('text0052') }}</h2>
             <div class="row coin-info">
                 <div class="soft-cap col">
                     <div class="circle">
-                        <div class="title">SOFT CAP</div>
-                        <div class="value">
-                            USD<br />15,000,000
+                        <div class="title"><h3>{{ app.getTranslatedText('text0053') }}</h3></div>
+                        <div class="value f3" ng-bind-html="app.getTranslatedText('text0054')">
                         </div>
                     </div>
                 </div>
                 <div class="soft-cap col">
                     <div class="circle">
-                        <div class="title">TARGET CAP</div>
-                        <div class="value">
-                            USD<br />60,000,000
+                        <div class="title"><h3>{{ app.getTranslatedText('text0055') }}</h3></div>
+                        <div class="value f3" ng-bind-html="app.getTranslatedText('text0056')">
                         </div>
                     </div>
                 </div>
                 <div class="soft-cap col">
                     <div class="circle green-circle">
-                        <div class="title">ACCEPTED<br/>CRYPTO</div>
-                        <div class="value">
-                            BTC<br />ETH
+                        <div class="title"><h3 ng-bind-html="app.getTranslatedText('text0057')"></h3></div>
+                        <div class="value f3" ng-bind-html="app.getTranslatedText('text0058')">
                         </div>
                     </div>
                 </div>
@@ -518,103 +497,109 @@
                 <div class="desc fleft">
                     <table class="tb-two-col" cellpadding="0" cellspacing="3">
                         <tr>
-                            <td class="col1 left-col">Token Symbol</td>
-                            <td class="col2 right-col">AEN</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0059') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0060') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Token Name</td>
-                            <td class="col2 right-col">AEN Coin</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0061') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0062') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Token Type</td>
-                            <td class="col2 right-col">ERC223</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0063') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0064') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">USD Price per token at ICO Sale</td>
-                            <td class="col2 right-col">0.1 + bonus based on week number</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0065') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0066') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">USD Price per token at Pre-ICO Sale</td>
-                            <td class="col2 right-col">0.1 + bonus based on participation size</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0067') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0068') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Total Token Supply</td>
-                            <td class="col2 right-col">4,000,000,000</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0069') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0070') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Tokens Being Sold</td>
-                            <td class="col2 right-col">600,000,000</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0071') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0072') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Tokens Unsold</td>
-                            <td class="col2 right-col">Allocated to Reserves for Mining Rewards</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0073') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0074') }}</td>
                         </tr>
                         <tr class="empty-row">
                             <td></td>
                             <td></td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Softcap on Token Sale (USD)</td>
-                            <td class="col2 right-col">$15,000,000</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0075') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0076') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Target Cap on Token Sale (USD)</td>
-                            <td class="col2 right-col">$60,000,000</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0077') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0078') }}</td>
                         </tr>
                         <tr>
-                            <td class="col1 left-col">Accepted Crypto Assets</td>
-                            <td class="col2 right-col">BTC, ETH</td>
+                            <td class="col1 left-col">{{ app.getTranslatedText('text0079') }}</td>
+                            <td class="col2 right-col">{{ app.getTranslatedText('text0080') }}</td>
                         </tr>
                     </table>
                 </div>
                 <div class="desc fleft">
                     <table cellpadding="0" cellspacing="3">
                         <tr>
-                            <td class="col3 top-left-corner">PRIVATE SALE<br/>(June/July 2018)</td>
-                            <td colspan="2" class="col3 top-right-corner">Contact us at aencoin.com for more information</td>
+                            <td class="col3 top-left-corner">{{ app.getTranslatedText('text0081') }}<br />{{ app.getTranslatedText('text0082') }}</td>
+                            <td colspan="2" class="col3 top-right-corner">{{ app.getTranslatedText('text0083') }}</td>
                         </tr>
                         <tr>
-                            <td rowspan="5" class="col4">PRE-ICO SALE<br/>(July/August 2018)</td>
-                            <td class="col4">Participation Size *</td>
-                            <td class="col4">Bonus Tokens</td>
+                            <td rowspan="5" class="col4">
+                                {{ app.getTranslatedText('text0084') }}<br />
+                                {{ app.getTranslatedText('text0085') }}
+                            </td>
+                            <td class="col4">{{ app.getTranslatedText('text0086') }}</td>
+                            <td class="col4">{{ app.getTranslatedText('text0087') }}</td>
                         </tr>
                         <tr>
-                            <td class="col4">> 15 ETH</td>
-                            <td class="col4">+ 50%</td>
+                            <td class="col4">{{ app.getTranslatedText('text0088') }}</td>
+                            <td class="col4">{{ app.getTranslatedText('text0089') }}</td>
                         </tr>
                         <tr>
-                            <td class="col4">> 5 ETH and ≤ 15 ETH</td>
-                            <td class="col4">+ 40%</td>
+                            <td class="col4">{{ app.getTranslatedText('text0090') }}</td>
+                            <td class="col4">{{ app.getTranslatedText('text0091') }}</td>
                         </tr>
                         <tr>
-                            <td class="col4">≥ 1 ETH and ≤ 5 ETH (min  1  ETH)</td>
-                            <td class="col4">+ 30%</td>
+                            <td class="col4">{{ app.getTranslatedText('text0092') }}</td>
+                            <td class="col4">{{ app.getTranslatedText('text0093') }}</td>
                         </tr>
                         <tr>
-                            <td class="col4">FOMO Offering: First 24 hours!</td>
-                            <td class="col4">Additional +5%</td>
+                            <td class="col4">{{ app.getTranslatedText('text0094') }}</td>
+                            <td class="col4">{{ app.getTranslatedText('text0095') }}</td>
                         </tr>
                         <tr>
-                            <td rowspan="4" class="col3 bottom-left-corner">ICO CROWD SALE<br/>(3Q 2018 Announcement)</td>
-                            <td class="col3">Week No.</td>
-                            <td class="col3">Bonus Tokens</td>
+                            <td rowspan="4" class="col3 bottom-left-corner">
+                                {{ app.getTranslatedText('text0096') }}<br />
+                                {{ app.getTranslatedText('text0097') }}
+                            </td>
+                            <td class="col3">{{ app.getTranslatedText('text0098') }}</td>
+                            <td class="col3">{{ app.getTranslatedText('text0087') }}</td>
                         </tr>
                         <tr>
-                            <td class="col3">1</td>
-                            <td class="col3">+ 15%</td>
+                            <td class="col3">{{ app.getTranslatedText('text0099') }}</td>
+                            <td class="col3">{{ app.getTranslatedText('text0100') }}</td>
                         </tr>
                         <tr>
-                            <td class="col3">2</td>
-                            <td class="col3">+ 10%</td>
+                            <td class="col3">{{ app.getTranslatedText('text0101') }}</td>
+                            <td class="col3">{{ app.getTranslatedText('text0102') }}</td>
                         </tr>
                         <tr>
-                            <td class="col3">3</td>
-                            <td class="col3 bottom-right-corner">+ 5%</td>
+                            <td class="col3">{{ app.getTranslatedText('text0103') }}</td>
+                            <td class="col3 bottom-right-corner">{{ app.getTranslatedText('text0104') }}</td>
                         </tr>
                         <tr>
                             <td class="lalign" colspan="3">
                                 <div class="fleft remark-sign">*</div>
-                                <div class="fleft remark-text">The ETH equivalent shall be calculated for BTC contributions for the purpose of bonus allocations (based on exchange rate at time of subscription).</div>
+                                <div class="fleft remark-text">{{ app.getTranslatedText('text0105') }}</div>
                             <div class="clear"></div></td>
                         </tr>
                     </table>
@@ -626,17 +611,17 @@
 </section>
 <!-- Topken Economy End -->
 <!-- Token Distribution -->
-<section id="token-distribution-area" class="section section-top section-full token-distribution-area">
+<section id="token-distribution-area" class="section section-top section-full token-distribution-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>TOKEN DISTRIBUTION</h2>
+            <h2>{{ app.getTranslatedText('text0106') }}</h2>
             <div class="row">
                 <div class="col">
                     <div class="chart-title">
-                        <h3>TOKEN ALLOCATION</h3>
+                        <h3>{{ app.getTranslatedText('text0107') }}</h3>
                     </div>
                     <div class="chart-subtitle">
-                        <h5>(% of total token supply) <br />Total supply 4,000,000,000 AEN</h5>
+                        <h5>{{ app.getTranslatedText('text0108')}} <br /> {{ app.getTranslatedText('text0109')}}</h5>
                     </div>
                     <div class="pie-chart">
                         <canvas id="allocation-pie"></canvas>
@@ -645,10 +630,10 @@
                 </div>
                 <div class="col">
                     <div class="chart-title">
-                        <h3>USE OF PROCEEDS</h3>
+                        <h3>{{ app.getTranslatedText('text0118') }}</h3>
                     </div>
                     <div class="chart-subtitle">
-                        <h5>(% of softcap allocation) <br />Tokens being sold 600,000,000 AEN</h5>
+                        <h5>{{ app.getTranslatedText('text0119') }}<br />{{ app.getTranslatedText('text0120') }}</h5>
                     </div>
                     <div class="pie-chart">
                         <canvas id="use-of-proceeds-pie"></canvas>
@@ -661,10 +646,10 @@
 </section>
 <!-- Token Distribution End -->
 <!-- Roadmap -->
-<section id="roadmap-area" class="section section-top section-full roadmap-area">
+<section id="roadmap-area" class="section section-top section-full roadmap-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>ROADMAP</h2>
+            <h2>{{ app.getTranslatedText('text0131') }}</h2>
             <div class="container-fluid">
                 <div class="row example-centered">
                     <div class="margin-auto col-xs-10 col-xs-offset-1 col-sm-8 col-sm-offset-2">
@@ -673,8 +658,8 @@
                                 <div class="timeline-info"> </div>
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">4Q 2010</h3>
-                                    <p>Assets managed by Aeneas deployed into health care private equity and direct investments<br>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0132') }}</h3>
+                                    <p><h6>{{ app.getTranslatedText('text0133') }}</h6><br>
                                     </p>
                                 </div>
                             </li>
@@ -682,8 +667,8 @@
                                 <div class="timeline-info"> </div>
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">2Q 2016</h3>
-                                    <p>Aeneas Group builds healthtech partnership with Aptorum Group, a multi-disciplinary medical innovations platform based in HK<br>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0134') }}</h3>
+                                    <p><h6>{{ app.getTranslatedText('text0135') }}</h6>
                                     </p>
                                 </div>
                             </li>
@@ -691,36 +676,28 @@
                                 <div class="timeline-info"> </div>
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">3Q 2017</h3>
-                                    <p>
-                                    
-                                    - Aeneas Capital initiates to expand its licenses with the SFC in HK to include dealing and advising in securities<br>
-                                    - 
-                                    Aeneas expands partnerships with healthtech companies specializing in neuro, infectious diseases, and robotic surgeary devices<br>
-                                    </p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0136') }}</h3>
+                                    <p><h6>{{ app.getTranslatedText('text0137') }}<br />{{ app.getTranslatedText('text0138') }}</h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item">
                                 <div class="timeline-info"> </div>
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">1Q 2018</h3>
-                                    <p>- Aeneas Capital, LLC. established in New Jersey, U.S.A. to set up a FINRA regulated broker dealer (in progress) <br>
-                                    - Aneas Group establishing a full-service banking license in Europe (in progress)<br>
-                                    </p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0139') }}</h3>
+                                    <p><h6>{{ app.getTranslatedText('text0140') }}<br />{{ app.getTranslatedText('text0141') }}</h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item">
                                 <div class="timeline-info"> </div>
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">2Q 2018</h3>
-                                    <h6 class="timeline-smtitle">T-2M</h6>
-                                    <p><strong>- June/July  Initiate  Private Sale</strong><br>
-                                    - Aeneas Capital granted expanded  licenses by the SFC in HK to deal  and advise in securities <br>
-                                    - Community investors outreach                      </p>
-                                    <h6 class="timeline-smtitle">T-1M</h6>
-                                    <p><strong>July/August Initiate  Pre-ICO Sale:  Bonus scheme  based on  participation size</strong></p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0142') }}</h3>
+                                    <h6 class="timeline-smtitle">{{ app.getTranslatedText('text0143') }}</h6>
+                                    <strong>{{ app.getTranslatedText('text0144') }}</strong>
+                                    <p><h6>{{ app.getTranslatedText('text0145') }}<br />{{ app.getTranslatedText('text0146') }}</h6></p>
+                                    <h6 class="timeline-smtitle">{{ app.getTranslatedText('text0147') }}</h6>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0148') }}</strong></h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item period">
@@ -729,71 +706,71 @@
                             </li>
                             <li class="timeline-item period" style="padding-bottom: 50px;padding-top: 50px;">
                                 <div class="timeline-content">
-                                    <h2 class="timeline-title">ICO<br>
+                                    <h2 class="timeline-title">{{ app.getTranslatedText('text0149') }}<br>
                                     </h2>
-                                    <h6 class="timeline-subtitle">ICO  Crowd Sale:  3rd Quarter 2018  Announcement ("T") </h6>
+                                    <h6 class="timeline-subtitle">{{ app.getTranslatedText('text0150') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">ICO Public sales</h3>
-                                    <p><strong>WEEK 1:</strong> 15% Bonus<br>
-                                    <strong>WEEK 2:</strong> 10% Bonus<br>
-                                    <strong>WEEK 3:</strong> 5% Bonus<br>
-                                    <strong>WEEK 4 Public Sale starting:</strong> No Bonus</p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0151') }}</h3>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0152') }}</strong><br>
+                                    <strong>{{ app.getTranslatedText('text0153') }}</strong><br>
+                                    <strong>{{ app.getTranslatedText('text0154') }}</strong><br>
+                                    <strong>{{ app.getTranslatedText('text0155') }}</strong></h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">POST-ICO</h3>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0156') }}</h3>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">4Q 2018</h3>
-                                    <p><strong>T+2M</strong><br>Expand team:  Developers</p>
-                                    <p><strong>T+3M</strong><br>1st pipeline healthtech ICO launch</p>
-                                    <p><strong>T+3M</strong><br>Launch first generation  smart wallet &  infrastucture  (AEN Connect)</p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0157') }}</h3>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0158') }}</strong><br>{{ app.getTranslatedText('text0159') }}</h6></p>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0160') }}</strong><br>{{ app.getTranslatedText('text0161') }}</h6></p>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0160') }}</strong><br>{{ app.getTranslatedText('text0162') }}</h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <p><strong>T+6M</strong><br>Second generation  custodial wallet &  escow services</p>
-                                    <p><strong>T+6M</strong><br>2nd pipeline healthtech ICO launch</p>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0163') }}</strong><br>{{ app.getTranslatedText('text0164') }}</h6></p>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0163') }}</strong><br>{{ app.getTranslatedText('text0165') }}</h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <p><strong>T+9M</strong><br>3rd pipeline healthtech ICO launch</p>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0166') }}</strong><br>{{ app.getTranslatedText('text0167') }}</h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">4Q 2019</h3>
-                                    <p><strong>T+15M</strong><br>
-                                    Second generation:  AENX trading exchange</p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0168') }}</h3>
+                                    <p><h6><strong>{{ app.getTranslatedText('text0169') }}</strong><br>
+                                        {{ app.getTranslatedText('text0170') }}</h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <h3 class="timeline-title">2Q 2020</h3>
-                                    <p><strong>T+21M</strong><br>
-                                    Third generation:  AENCO prime  brokerage  platform<br>
-                                    <br>
-                                    Ongoing service  & expansion of  pipeline  HealthTech  partners                        </p>
+                                    <h3 class="timeline-title">{{ app.getTranslatedText('text0171') }}</h3>
+                                    <strong>{{ app.getTranslatedText('text0172') }}</strong><br>
+                                    <p><h6>
+                                        {{ app.getTranslatedText('text0173') }}<br /><br />
+                                        {{ app.getTranslatedText('text0174') }}
+                                    </h6></p>
                                 </div>
                             </li>
                             <li class="timeline-item period">
                                 <div class="timeline-info"></div>
                                 <div class="timeline-marker ico2"></div>
-                                </div>
                             </li>
                         </ul>
                     </div>
@@ -804,10 +781,10 @@
 </section>
 <!-- Roadmap End -->
 <!-- Media -->
-<section id="media-area" class="section section-top section-full media-area">
+<section id="media-area" class="section section-top section-full media-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>MEDIA COVERAGE</h2>
+            <h2>{{ app.getTranslatedText('text0175') }}</h2>
             <div class="media-list-container">
                 <ul id="media-list" class="media-list"></ul>
             </div>
@@ -816,10 +793,10 @@
 </section>
 <!-- Media End-->
 <!-- Partners -->
-<section id="partners-area" class="section section-top section-full partners-area">
+<section id="partners-area" class="section section-top section-full partners-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>PARTNERS &amp; MEMBERS</h2>
+            <h2>{{ app.getTranslatedText('text0176') }}</h2>
             <div class="partner-list-container">
                 <ul id="partner-list" class="partner-list"></ul>
             </div>
@@ -828,79 +805,208 @@
 </section>
 <!-- Partners End -->
 <!-- Team -->
-<section id="team-area" class="section section-top section-full team-area">
+<section id="team-area" class="section section-top section-full team-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>OUR TEAM</h2>
+            <h2>{{ app.getTranslatedText('text0178') }}</h2>
             <div id="team-member-list" class="team-member-list"></div>
             <div class="more-btn-container">
-                <button id="btn-team-more" class="btn-more" onclick="getMemberLoad('#team-member-list').loadMoreMembers();">SHOW MORE</button>
+                <button id="btn-team-more" class="btn-more f4">{{ app.getTranslatedText('text0177') }}</button>
             </div>
-            <h2>OUR ADVISORS</h2>
+            <h2>{{ app.getTranslatedText('text0179') }}</h2>
             <div id="advisor-list" class="team-member-list"></div>
             <div class="more-btn-container">
-                <button id="btn-advisors-more" class="btn-more" onclick="getMemberLoad('#advisor-list').loadMoreMembers();">SHOW MORE</button>
+                <button id="btn-advisors-more" class="btn-more f4">{{ app.getTranslatedText('text0177') }}</button>
             </div>
         </div>
     </div>
 </section>
 <!-- Team End -->
+<!-- FAQ -->
+<section id="faq-area" class="section section-top section-full faq-area section-cat-two">
+    <div class="main-container">
+        <div class="content">
+            <h2>{{ app.getTranslatedText('text1001') }}</h2>
+            <div class="subtitle">{{ app.getTranslatedText('text1002') }}</div>
+            <div class="questions-container">
+                <div id="accordion">
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingOne">
+                            <h5 class="mb-0">
+                                <a data-toggle="collapse" data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne"><div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1003') }}</div><div class="clear"></div></a>
+                            </h5>
+                        </div>
+                        <div id="collapseOne" class="collapse show" aria-labelledby="headingOne" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1004') }}</p>
+                                <p>{{ app.getTranslatedText('text1005') }}</p>
+                                <p>Check out our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> for more information.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingTwo">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1007') }}</div><div class="clear"></div>
+                                </button>
+                            </h5>
+                        </div>
+                        <div id="collapseTwo" class="collapse" aria-labelledby="headingTwo" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1008') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingThree">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1009') }}</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1010') }}</p>
+                                <p>We are not accepting contributions from residents of USA, Samoa, China, and OFAC sanctioned countries. For Hong Kong based contributors, you must qualify and provide wealth proof as a "Professional Investor" under the Hong Kong SFC Guidance and Rules.</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingFour">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1011') }}</div><div class="clear"></div> 
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1012') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingFive">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1013') }}</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1014') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingSix">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1015') }}</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1016') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingSeven">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1017') }}</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1018') }}</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="new-card">
+                        <div class="new-card-header" id="headingEight">
+                            <h5 class="mb-0">
+                                <a class="collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1019') }}</div><div class="clear"></div>
+                                </a>
+                            </h5>
+                        </div>
+                        <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
+                            <div class="card-body">
+                                <p>{{ app.getTranslatedText('text1020') }}</p>
+                                <p>{{ app.getTranslatedText('text1021') }}</p>
+                                <p>Other Details: <a target="_blank" href="https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7">https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7</a></p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- FAQ End -->
 <!-- Contact Us -->
 <section id="contact-us-area" class="section section-top section-full contact-us-area">
     <div class="main-container">
         <div class="content">
             <div class="footer-menu">
-                <span class="title"><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">WHITE PAPER</a></span>
+                <span class="title f5"><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0009') }}</a></span>
                 <ul>
-                    <li><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">Token Paper</a></li>
-                    <li><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">Two Pager</a></li>
-                    <li><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">Slide Presentation</a></li>
-                    <li><div class="empty"><br /></div></li>
-                    <li><a href="#roadmap-area">Roadmap</a></li>
-                    <li><a href="#team-area">Team & Advisors</a></li>
-                    <li><a href="#media-area">Media Coverage</a></li>
-                    <li><a href="#partners-area">Our Partners</a></li>
+                    <li class="f4"><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0010') }}</a></li>
+                    <li class="f4"><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0011') }}</a></li>
+                    <li class="f4"><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0012') }}</a></li>
+                    <li class="f4"><div class="empty"><br /></div></li>
+                    <li class="f4"><a href="#roadmap-area">{{ app.getTranslatedText('text0131') }}</a></li>
+                    <li class="f4"><a href="#team-area">{{ app.getTranslatedText('text0178') }}</a></li>
+                    <li class="f4"><a href="#media-area">{{ app.getTranslatedText('text0175') }}</a></li>
+                    <li class="f4"><a href="#partners-area">{{ app.getTranslatedText('text0176') }}</a></li>
                 </ul>
             </div>
             <div class="footer-menu">
-                <span class="title"><a href="#what-is-ean-token-area">AEN TOKEN</a></span>
+                <span class="title f5"><a href="#what-is-ean-token-area">{{ app.getTranslatedText('text0024') }}</a></span>
                 <ul>
-                    <li><a href="#explore-aenco-area">Explore Aenco</a></li>
-                    <li><a href="#how-it-works-area">How It Works</a></li>
-                    <li><a href="#ecosystem-area">Ecosystem Solutions</a></li>
-                    <li><a href="#challenges-opportunity-area">Challenges & Opportunities</a></li>
-                    <li><a href="#token-economy-area">Token Economy</a></li>
-                    <li><a href="#token-distribution-area">Token Distribution</a></li>
-                    <li><a href="./faq.html">FAQ</a></li>
-                    <li><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
+                    <li class="f4"><a href="#explore-aenco-area">{{ app.getTranslatedText('text0045') }}</a></li>
+                    <li class="f4"><a href="#how-it-works-area">How It Works</a></li>
+                    <li class="f4"><a href="#ecosystem-area">Ecosystem Solutions</a></li>
+                    <li class="f4"><a href="#challenges-opportunity-area">Challenges & Opportunities</a></li>
+                    <li class="f4"><a href="#token-economy-area">{{ app.getTranslatedText('text0052') }}</a></li>
+                    <li class="f4"><a href="#token-distribution-area">{{ app.getTranslatedText('text0106') }}</a></li>
+                    <li class="f4"><a href="#faq-area">FAQ</a></li>
+                    <li class="f4"><a target="_blank" href="https://medium.com/@aencoin">BLOG</a></li>
                 </ul>
             </div>
             <div class="footer-menu">
-                <span class="title">ACCOUNT</span>
+                <span class="title f5">{{ app.getTranslatedText('text0180') }}</span>
                 <ul>
-                    <li>
+                    <li class="f4">
                         <ul class="row-sign">
-                            <li class="display-inline"><a href="https://signup.aencoin.com/register">Signup</a></li>
+                            <li class="f4 display-inline"><a href="https://signup.aencoin.com/register">{{ app.getTranslatedText('text0181') }}</a></li>
                             <li class="display-inline seperator"></li>
-                            <li class="display-inline"><a href="https://signup.aencoin.com/login">Login</a></li>
+                            <li class="f4 display-inline"><a href="https://signup.aencoin.com/login">{{ app.getTranslatedText('text0182') }}</a></li>
                         </ul>
                     </li>
                     <li><div class="empty"><br /></div></li>
-                    <li><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">Disclaimer</a></li>
-                    <li><a class="btn-policy" data-toggle="modal" data-target="#modal-container">Privacy Policy</a></li>
+                    <li class="f4"><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0185') }}</a></li>
+                    <li class="f4"><a class="btn-policy" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0186') }}</a></li>
                 </ul>
             </div>
             <div class="contact" id="contact">
-                <span class="title">CONTACT US</span>
+                <span class="title f5">{{ app.getTranslatedText('text0187') }}</span>
                 <ul>
-                    <li class="text-reg-addr">Registered Address</li>
-                    <li class="txt-registerd-address">Vistra Corporate Services Centre, Ground Floor NPF Building, Beach Road, Apia, Samoa</li>
+                    <li class="f4 text-reg-addr">{{ app.getTranslatedText('text0188') }}</li>
+                    <li class="txt-registerd-address" ><h5 ng-bind-html="app.getTranslatedText('text0189')"></h5></li>
                     <li>
-                        <div class="moon-contact">Enquiries<span class="txt-registerd-address txt-email"><a href="mailto:moon@aencoin.com" target="_blank">moon@aencoin.com</a></span>
+                        <div class="moon-contact"><span class="f4">{{ app.getTranslatedText('text0190') }}</span><span class="txt-email"><a href="mailto:moon@aencoin.com" target="_blank"><h5>{{ app.getTranslatedText('text0191') }}</h5></a></span>
                         </div>
                     </li>
                     <li class="row-join-telegram"> 
-                        <div class="moon-contact fleft">Join Us On Telegram</div>
+                        <div class="f5 moon-contact fleft">{{ app.getTranslatedText('text0192') }}</div>
                         <a target="_blank" href="https://t.me/AENCO"><div class="icon-social icon-telegram fleft"></div></a>
                         <div class="clear"></div>
                     </li>
@@ -912,8 +1018,8 @@
 <!-- Contact Us End -->
 <footer>
     <div class="footer footer-content">
-        <div class="fleft company-name">2018 © Aenco Solutions Ltd - Global Health Blockchain Financial Solutions</div>
-        <div class="fright version">VER 2.1.1</div>
+        <div class="fleft company-name"><h6>{{ app.getTranslatedText('text0194') }}</h6></div>
+        <div class="fright version"><h6>VER 2.1.1</h6></div>
         <div class="clear"></div>
     </div>
 </footer>
@@ -925,8 +1031,11 @@
     </div>
 </section>
 <!-- Hidden Bottom Bar  End -->
-<script type="text/javascript" src="./assets/js/team.js"></script>
-<script type="text/javascript" src="./assets/js/token-distribution.js"></script>
-<script type="text/javascript" src="./assets/js/app.js"></script>
+<!--<script type="text/javascript" src="./assets/js/team.js"></script>-->
+<!--<script type="text/javascript" src="./assets/js/token-distribution.js"></script>-->
+<!--<script type="text/javascript" src="./assets/js/app.js"></script>-->
+<script src="./assets/js/bundle.js"></script>
+<!--<script src="./assets/js/app-controller.js"></script>-->
+</div>
 </body>
 </html>

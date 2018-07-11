@@ -1,32 +1,5 @@
 var currentIndex = 0;
 var numItemEachRow = 4;
-var data = [
-    {
-        path: './assets/img/video-aenco-explained.jpg',
-        label: 'AENCO EXPLAINED',
-        url: 'https://www.youtube.com/embed/r9zOftJvvPE'
-    },
-    {
-        path: './assets/img/video-rollout-thumb.jpg',
-        label: 'TECHNOLOGY ROLLOUT',
-        url: 'https://www.youtube.com/embed/Vv4lgRwoX08?rel=0'
-    },
-    {
-        path: './assets/img/video-community-thumb.jpg',
-        label: 'OUR COMMUNITY',
-        url: 'https://www.youtube.com/embed/-l4mUSPZWUI?rel=0'
-    },
-    {
-        path: './assets/img/video-vison-thumb.jpg',
-        label: 'OUR VISION',
-        url: 'https://www.youtube.com/embed/thFx7IndFR4?rel=0'
-    },
-    {
-        path: './assets/img/video-regulatory-thumb.jpg',
-        label: 'REGULATORY LANDSCAPE',
-        url: 'https://www.youtube.com/embed/xXvdMVgl8aQ?rel=0'
-    }
-];
 
 var mediaData = [
     {
@@ -605,7 +578,7 @@ function renderSlider() {
 }
 
 $(function () {
-    loadMore();
+    //loadMore();
     initCallback();
 })
 
@@ -630,10 +603,10 @@ $(function () {
     });
     window.onresize = function(e) {
         render(window.innerWidth, window.innerHeight);
-        if (isNumItemChanged()) {
+        /*if (isNumItemChanged()) {
             getMemberLoad("#team-member-list", "#btn-team-more", teamMemberData).loadMoreMembers();
             getMemberLoad("#advisor-list", "#btn-advisors-more", advisorsData).loadMoreMembers();
-        }
+        }*/
     };
     render(window.innerWidth, window.innerHeight);
 
@@ -661,4 +634,31 @@ $(function () {
             $(".header").css("background-color", "rgba(0,0,0," + st / 80 + ")");
         }
     });
+});
+
+function openMobileMenu() {
+    $(".overlay").show();
+    $("#mobile-menu").animate({
+        right: 0
+    }, 200);
+}
+function closeMobileMenu() {
+    $(".overlay").hide();
+    $("#mobile-menu").animate({
+        right: -200
+    }, 200);
+}
+$("#mobile-menu-btn").on("click", function() {
+    openMobileMenu();
+});
+$(".overlay").on("click", function() {
+    closeMobileMenu();
+});
+
+var now = Date.now();
+var endTime = Date.parse('July 27, 2018 00:00:00');
+var diff = (endTime - now) / 1000;
+var clock = $('.clock').FlipClock(diff, {
+    clockFace: 'DailyCounter',
+    countdown: true
 });

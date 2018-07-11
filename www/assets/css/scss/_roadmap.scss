@@ -2,43 +2,27 @@ $primary-color: #b1d349;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
 h2.timeline-title {
-    font-family: "Teko", sans-serif;
-    font-weight: 500;
     color: #00b6cd;
-    font-size: 35px;
 }
 
 h3.timeline-title {
 	text-transform: uppercase;
-  font-family: "Teko", san-serif;
-  font-weight: 300;
-  font-size: 35px;
   color: #fff;
   text-align: left;
   padding: 5px;
-  letter-spacing: 0.02em;
 }
 	
 h6.timeline-subtitle {
-	font-family: "Titillium Web", san-serif;
-	font-weight: 700;
-	font-size: 18px;
 	color: #00b6cd;
 	margin-bottom: -5px;
 	}
 	
 h6.timeline-smtitle {
-	font-family: "Titillium Web", san-serif;
-	font-weight: 700;
-	font-size: 15px;
 	color: #b1d349;
 	margin-bottom: -5px;
 	}
 
 .timeline-content {
-    font-family: "Titillium Web", san-serif;
-    font-weight: 300;
-    font-size: 15px;
     color: #fff;
     line-height: 23px;
 	}
@@ -85,8 +69,6 @@ a:hover {
 
 /*----- TIMELINE INFO -----*/
 .timeline-info {
-  font-size: 12px;
-  font-weight: 700;
   letter-spacing: 3px;
   margin: 0 0 .5em 0;
   text-transform: uppercase;

@@ -47,6 +47,18 @@ a:focus {
   outline: none;
 }
 
+.display-none {
+  display: none;
+}
+
+.done-0 {
+  display: none;
+}
+
+.done-1 {
+  display: block;
+}
+
 .lang {
   color: #000000;
 }
@@ -105,6 +117,7 @@ a:focus {
   background-color: #00b7ce;
   z-index: 90;
   text-align: center;
+  box-shadow: 0 -3px 9px 3px rgba(0, 110, 124, 0.35);
 }
 
 .bottom-bar-area {
@@ -177,8 +190,49 @@ h5 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 300;
   letter-spacing: 0.02em;
-  text-align: center;
   line-height: 1.5;
+}
+
+h6 {
+  font-size: 15px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.f1 {
+  font-size: 30px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f2 {
+  font-size: 20px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.f3 {
+  font-size: 22px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f4 {
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.f5 {
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
 }
 
 a, button {
@@ -190,10 +244,6 @@ a:hover, button:hover {
 }
 
 .footer-content {
-  font-size: 15px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
   padding: 15px 0 30px;
 }
 
@@ -267,6 +317,7 @@ a:hover, button:hover {
   z-index: 99;
   width: 200px;
   height: 100%;
+  overflow-y: scroll;
   background-color: #002d35;
 }
 .mobile-menu h2 {
@@ -368,7 +419,8 @@ button:focus {
 .login-menu ul li a {
   font-family: "Teko", sans-serif;
   font-size: 28px;
-  letter-spacing: 2px;
+  letter-spacing: 0.05em;
+  text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
 }
 
 .brand-logo {
@@ -411,14 +463,10 @@ button:focus {
 }
 
 .btn-more {
-  font-size: 25px;
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
   color: #FFFFFF;
   border: 0.15em solid #0093a5;
   border-radius: 24px;
   background-color: transparent;
-  letter-spacing: 0.05em;
   padding: 4px 35px 1px;
 }
 
@@ -666,6 +714,111 @@ div#modal-container {
   height: calc(50vw * 9 / 16);
 }
 
+.language-selector:before {
+  content: "";
+  border-bottom: solid #FFFFFF 20px;
+  border-left: solid transparent 20px;
+  border-right: solid transparent 20px;
+  position: absolute;
+  top: -18px;
+  width: 19px;
+  height: 20px;
+  right: 20px;
+}
+
+.language-selector-container {
+  position: fixed;
+  top: 41px;
+  right: 209px;
+  padding: 40px 0 0 0;
+  z-index: 99;
+  width: 32px;
+  height: 32px;
+}
+
+.language-selector-container.expanded {
+  position: fixed;
+  top: 40px;
+  right: 183px;
+  padding: 54px 0 0 0;
+  z-index: 99;
+  width: auto;
+  height: auto;
+}
+
+.language-selector {
+  padding: 20px 40px;
+  background-color: #FFFFFF;
+  display: none;
+}
+.language-selector img {
+  width: 100%;
+  height: auto;
+}
+.language-selector .flag {
+  max-width: 20%;
+  display: inline-block;
+}
+.language-selector .lang {
+  max-width: 70%;
+  display: inline-block;
+  margin-left: 5%;
+}
+.language-selector h5 {
+  color: #252525;
+  text-align: left;
+}
+
+.app.lang-zhcn {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn h1 {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn h2 {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn h3 {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn h4 {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn h5 {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn .menu ul li a {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn .login-menu ul li a {
+  font-family: "Noto Sans SC";
+}
+
+.app.lang-kr {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr h1 {
+  font-family: "Do Hyeon", sans-serif;
+}
+.app.lang-kr h2 {
+  font-family: "Do Hyeon", sans-serif;
+}
+.app.lang-kr h3 {
+  font-family: "Do Hyeon", sans-serif;
+}
+.app.lang-kr h4 {
+  font-family: "Do Hyeon", sans-serif;
+}
+.app.lang-kr h5 {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .menu ul li a {
+  font-family: "Do Hyeon", sans-serif;
+}
+.app.lang-kr .login-menu ul li a {
+  font-family: "Do Hyeon", sans-serif;
+}
+
 @media (max-width: 1300px) {
   .menu {
     display: none;
@@ -681,6 +834,14 @@ div#modal-container {
 
   .mobile-menu-btn {
     display: block;
+  }
+
+  .language-selector-container {
+    right: 248px;
+  }
+
+  .language-selector-container.expanded {
+    right: 223px;
   }
 }
 @media (max-width: 1024px) {
@@ -720,6 +881,22 @@ div#modal-container {
 
   .bottomBar ul li {
     margin: 0 10px;
+  }
+
+  .footer-content {
+    font-size: 12px;
+  }
+
+  .icon-telegram {
+    background-size: 25px;
+  }
+
+  .txt-join-community {
+    margin: 0 0 5px;
+  }
+
+  h2 {
+    font-size: 30px;
   }
 }
 @media (max-width: 1060px) {
@@ -958,10 +1135,6 @@ div#modal-container {
 .welcome-area .row-contributor .link-group a, .welcome-area .row-contributor .link-group span {
   line-height: 71px;
   color: #FFFFFF;
-  font-size: 20px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
   padding: 0 5px;
 }
 .welcome-area ul {
@@ -972,12 +1145,6 @@ div#modal-container {
 .welcome-area li {
   list-style: none;
   display: inline;
-}
-.welcome-area li a {
-  font-weight: 400;
-  font-size: 16px;
-  font-family: "Titillium Web", sans-serif;
-  letter-spacing: 0.02em;
 }
 .welcome-area .link-group-container {
   margin-top: 40px;
@@ -1230,6 +1397,22 @@ div#modal-container {
   }
 }
 
+.app.lang-zhcn .welcome-area .row-contributor .link-group a, .app.lang-zhcn .welcome-area .welcome-area .row-contributor .link-group span {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn .welcome-area .header-count-down {
+  font-family: "Noto Sans SC";
+}
+.app.lang-zhcn .welcome-area li a {
+  font-family: "Noto Sans SC";
+}
+
+.app.lang-kr .welcome-area .row-contributor .link-group a, .app.lang-kr .welcome-area .welcome-area .row-contributor .link-group span {
+  font-family: "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .welcome-area .header-count-down {
+  font-family: "Do Hyeon", sans-serif;
+}
 .what-is-aen-token-area .main-container {
   width: 100%;
   margin: auto;
@@ -1376,8 +1559,6 @@ div#modal-container {
   display: flex;
 }
 .explore-aenco-area .item {
-  -ms-flex: 0 0 25%;
-  flex: 0 0 25%;
   position: inherit;
   text-align: center;
   margin: auto auto 30px auto;
@@ -1488,13 +1669,9 @@ div#modal-container {
   color: #03c5dd;
 }
 .token-economy-area .value {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
   line-height: 1.3;
   color: #FFFFFF;
-  font-size: 22px;
   margin-top: 12px;
-  letter-spacing: 0.02em;
 }
 .token-economy-area .green-circle .title {
   color: #bae242;
@@ -1729,43 +1906,27 @@ div#modal-container {
 }
 
 h2.timeline-title {
-  font-family: "Teko", sans-serif;
-  font-weight: 500;
   color: #00b6cd;
-  font-size: 35px;
 }
 
 h3.timeline-title {
   text-transform: uppercase;
-  font-family: "Teko", san-serif;
-  font-weight: 300;
-  font-size: 35px;
   color: #fff;
   text-align: left;
   padding: 5px;
-  letter-spacing: 0.02em;
 }
 
 h6.timeline-subtitle {
-  font-family: "Titillium Web", san-serif;
-  font-weight: 700;
-  font-size: 18px;
   color: #00b6cd;
   margin-bottom: -5px;
 }
 
 h6.timeline-smtitle {
-  font-family: "Titillium Web", san-serif;
-  font-weight: 700;
-  font-size: 15px;
   color: #b1d349;
   margin-bottom: -5px;
 }
 
 .timeline-content {
-  font-family: "Titillium Web", san-serif;
-  font-weight: 300;
-  font-size: 15px;
   color: #fff;
   line-height: 23px;
 }
@@ -1816,8 +1977,6 @@ a:hover {
 
 /*----- TIMELINE INFO -----*/
 .timeline-info {
-  font-size: 12px;
-  font-weight: 700;
   letter-spacing: 3px;
   margin: 0 0 0.5em 0;
   text-transform: uppercase;
@@ -2087,8 +2246,6 @@ a:hover {
 .team-area .team-round {
   margin: 0 auto;
   margin-bottom: 10px;
-  -ms-flex: 0 0 25%;
-  flex: 0 0 16.6666667%;
   position: inherit;
 }
 .team-area .team-round .profile {
@@ -2134,6 +2291,9 @@ a:hover {
   display: flex;
   margin-top: 50px;
 }
+.team-area #team-member-list ul.social li {
+  float: none;
+}
 .team-area .name {
   text-align: center;
   font-size: 25px;
@@ -2163,6 +2323,7 @@ a:hover {
   text-align: center;
   background-size: 18px;
   opacity: 0.5;
+  margin: auto;
 }
 .team-area .icon.single-item {
   margin-left: 32px;
@@ -2265,16 +2426,12 @@ a:hover {
 .contact-us-area .content {
   display: grid;
   margin: auto;
-  grid-template-columns: 2fr 2fr 2fr 1fr;
+  grid-template-columns: 2fr 2fr 2fr 2fr;
   grid-gap: 45px;
   max-width: 1300px;
 }
 .contact-us-area .moon-contact {
   margin-top: 25px;
-  font-weight: 400;
-  font-family: "Teko", sans-serif;
-  font-size: 25px;
-  letter-spacing: 0.03em;
 }
 .contact-us-area .social-items {
   width: 100%;
@@ -2284,10 +2441,6 @@ a:hover {
 }
 .contact-us-area .text-reg-addr {
   margin-top: 15px;
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
-  font-size: 25px;
-  letter-spacing: 0.02em;
 }
 .contact-us-area li {
   list-style: none;
@@ -2299,25 +2452,9 @@ a:hover {
 .contact-us-area .fa-3x {
   font-size: 38px;
 }
-.contact-us-area .title {
-  font-family: "Teko", sans-serif;
-  font-size: 25px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-.contact-us-area .footer-menu ul li {
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
-  font-size: 25px;
-  letter-spacing: 0.03em;
-}
-.contact-us-area .txt-registerd-address {
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  font-size: 18px;
-}
 .contact-us-area .txt-email {
   margin-left: 10px;
+  display: inline-block;
 }
 .contact-us-area .display-inline {
   display: inline-block;
@@ -2361,6 +2498,32 @@ a:hover {
 @media (max-width: 1024px) {
   .contact-us-area .content {
     width: 100%;
+    grid-template-columns: auto auto auto auto;
+    padding: 50px 20px 50px 30px;
+    grid-gap: 25px;
+  }
+  .contact-us-area .footer-menu ul li {
+    font-size: 20px;
+  }
+  .contact-us-area .title {
+    font-size: 20px;
+  }
+  .contact-us-area .text-reg-addr {
+    font-size: 20px;
+  }
+  .contact-us-area .txt-registerd-address {
+    font-size: 14px;
+  }
+  .contact-us-area .moon-contact {
+    margin-top: 20px;
+    font-size: 20px;
+  }
+  .contact-us-area .row-sign li.seperator {
+    height: 16px;
+  }
+  .contact-us-area .row-join-telegram .icon-telegram {
+    margin-top: 11px;
+    margin-left: 2px;
   }
 }
 @media (max-width: 700px) {
@@ -2411,6 +2574,9 @@ a:hover {
   }
 }
 @media (max-width: 768px) {
+  .media-area .content {
+    padding: 0 10px;
+  }
   .media-area .media-list li {
     width: 33%;
   }
@@ -2458,6 +2624,9 @@ a:hover {
   }
 }
 @media (max-width: 768px) {
+  .partners-area .content {
+    padding: 0 10px;
+  }
   .partners-area .partner-list li {
     width: 33%;
   }
@@ -2475,6 +2644,7 @@ a:hover {
 }
 
 .faq-area {
+  display: none;
   text-align: left;
 }
 .faq-area .main-container {
@@ -2597,11 +2767,8 @@ a:hover {
 .challenges-opportunity-area .desc {
   float: left;
   margin-left: 35px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  font-size: 20px;
-  letter-spacing: 0.02em;
   max-width: 70%;
+  text-align: left;
 }
 .challenges-opportunity-area .challenge-one-logo {
   background: url("../img/challenges-1.png") no-repeat;

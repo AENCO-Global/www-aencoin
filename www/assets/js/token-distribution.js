@@ -219,15 +219,15 @@ var tokenDistribution = {
         var pieChartOffset = Math.ceil(pieChartSize * 0.02);
 
         for(let i = 0; i < allocationData.length; i++) {
-            allocationDom += that.getDom(allocationData[i].value, allocationData[i].label, "item" + i);
+            //allocationDom += that.getDom(allocationData[i].value, allocationData[i].label, "item" + i);
             allocationValues.push(allocationData[i].value);
         }
-        allocationSelector.html(allocationDom);
+        //allocationSelector.html(allocationDom);
         for(let i = 0; i < useOfProceedsData.length; i++) {
-            useOfProceedsDom += that.getDom(useOfProceedsData[i].value, useOfProceedsData[i].label, "item" + i);
+            //useOfProceedsDom += that.getDom(useOfProceedsData[i].value, useOfProceedsData[i].label, "item" + i);
             useOfProceedsValues.push(useOfProceedsData[i].value);
         }
-        useOfProceedsSelector.html(useOfProceedsDom);
+        //useOfProceedsSelector.html(useOfProceedsDom);
 
         var allocationPieProps = {
             selector: props.allocationPieSelector,

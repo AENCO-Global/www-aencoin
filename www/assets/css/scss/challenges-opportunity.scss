@@ -34,11 +34,8 @@
     .desc {
         float: left;
         margin-left: 35px;
-        font-family: 'Titillium Web', sans-serif;
-        font-weight: 300;
-        font-size: 20px;
-        letter-spacing: 0.02em;
         max-width: 70%;
+        text-align: left;
     }
     .challenge-one-logo {
         background: url($challenge-one-logo) no-repeat;

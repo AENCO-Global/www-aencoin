@@ -69,10 +69,6 @@
             a, span {
                 line-height: 71px;
                 color: #FFFFFF;
-                font-size: 20px;
-                font-family: "Titillium Web", sans-serif;
-                font-weight: 300;
-                letter-spacing: 0.02em;
                 padding: 0 5px;
             }
         }
@@ -85,12 +81,6 @@
     li {
         list-style: none;
         display: inline;
-    }
-    li a {
-        font-weight: 400;
-        font-size: 16px;
-        font-family: "Titillium Web", sans-serif;
-        letter-spacing: 0.02em;
     }
     .link-group-container {
         margin-top: 40px;
@@ -348,5 +338,29 @@
         .core-message {
             margin-top: 100px;
         }
+    }
+}
+
+.app.lang-zhcn .welcome-area {
+    .row-contributor .link-group a, .welcome-area .row-contributor .link-group span {
+        font-family: 'Noto Sans SC';
+    }
+    .header-count-down {
+        font-family: 'Noto Sans SC';
+    }
+    li a {
+        font-family: 'Noto Sans SC';
+    }
+}
+
+.app.lang-kr .welcome-area {
+    .row-contributor .link-group a, .welcome-area .row-contributor .link-group span {
+        font-family: 'Nanum Gothic Coding', monospace;
+    }
+    .header-count-down {
+        font-family: 'Do Hyeon', sans-serif;
+    }
+    li a {
+        
     }
 }

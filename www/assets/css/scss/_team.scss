@@ -2,8 +2,6 @@
   .team-round {
     margin: 0 auto;
     margin-bottom: 10px;
-    -ms-flex: 0 0 25%;
-    flex: 0 0 16.6666667%;
     position: inherit;
     .profile {
       margin: auto;
@@ -58,6 +56,9 @@
     display: flex;
     margin-top: 50px;
   }
+  #team-member-list ul.social li {
+    float: none;
+  }
   .name {
     text-align: center;
     font-size: 25px;
@@ -87,6 +88,7 @@
     text-align: center;
     background-size: 18px;
     opacity: 0.5;
+    margin: auto;
   }
   .icon.single-item {
     margin-left: 32px;
