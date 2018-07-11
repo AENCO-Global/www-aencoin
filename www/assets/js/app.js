@@ -109,6 +109,10 @@ var partnerData = [
     {
         image: "./assets/img/partners/crypto101.png",
         url: "https://crypto101podcast.com/"
+    },
+    {
+        image: "./assets/img/partners/idax.png",
+        url: "https://www.idax.mn"
     }
 ];
 
