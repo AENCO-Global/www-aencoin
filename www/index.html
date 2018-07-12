@@ -25,6 +25,7 @@
     <link href="https://fonts.googleapis.com/earlyaccess/notosanssc.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Do+Hyeon&amp;subset=korean" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Nanum+Gothic+Coding:400,700&amp;subset=korean" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Flamenco:300,400" rel="stylesheet">
     <!-- slider -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Theme -->
@@ -86,16 +87,22 @@
     <div class="mobile-menu" id="mobile-menu">
         <div class="menu-area">
             <div class="list-group">
-                <a class="btn-welcome-whitepaper list-group-item list-group-item-action" data-toggle="modal" data-target="#modal-container"><h2>{{ app.getTranslatedText('text0009') }}</h2></a>
-                <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0024') }}</h2></a>
-                <a href="#roadmap-area" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0131') }}</h2></a>
-                <a href="#team-area" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0196') }}</h2></a>
-                <a href="#faq-area" class="list-group-item list-group-item-action btn-faq"><h2>FAQ</h2></a>
-                <a target="_blank" href="https://medium.com/@aencoin" class="list-group-item list-group-item-action"><h2>BLOG</h2></a>
-                <a href="#contact-us-area" class="list-group-item list-group-item-action"><h2>CONTACT</h2></a>
-                <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0181') }}</h2></a>
-                <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action"><h2>{{ app.getTranslatedText('text0182') }}</h2></a>
+                <a class="list-group-item list-group-item-action close-when-click" target="_blank" href="{{ app.getPDFPath(0) }}"><h4>{{ app.getTranslatedText('text0224') }}</h4></a>
+                <a href="#what-is-ean-token-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0225') }}</h4></a>
+                <a href="#roadmap-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0226') }}</h4></a>
+                <a href="#team-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0196') }}</h4></a>
+                <a href="#faq-area" class="list-group-item list-group-item-action btn-faq close-when-click"><h4>{{ app.getTranslatedText('text0206') }}</h4></a>
+                <a target="_blank" href="https://medium.com/@aencoin" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0197') }}</h4></a>
+                <a href="#contact-us-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0198') }}</h4></a>
+                <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0181') }}</h4></a>
+                <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0182') }}</h4></a>
+                <a href="#" class="list-group-item list-group-item-action btn-language"><h4>{{ app.getTranslatedText('text0227') }}</h4></a>
             </div>
+        </div>
+        <div class="sub-menu">
+            <a href="#" class="btn-lang-item" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a>
+            <a href="#" class="btn-lang-item" ng-click="app.changeLang('zhcn')"><h5>中文</h5></a>
+            <!--<a href="#" class="btn-lang-item" ng-click="app.changeLang('kr')"><h5>한국어</h5></a>-->
         </div>
     </div>
     <!-- mobile menu end -->
@@ -104,8 +111,8 @@
         <div class="language-selector">
             <ul>
                 <li><a href="#" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a></li>
-                <li><a href="#" ng-click="app.changeLang('zhcn')"><h5>中文簡體</h5></a></li>
-                <li><a href="#" ng-click="app.changeLang('kr')"><h5>한국어</h5></a></li>
+                <li><a href="#" ng-click="app.changeLang('zhcn')"><h5>中文</h5></a></li>
+                <!--<li><a href="#" ng-click="app.changeLang('kr')"><h5>한국어</h5></a></li>-->
             </ul>
         </div>
     </div>
@@ -134,11 +141,11 @@
             </nav>
             <nav class="menu">
                 <ul>
-                    <li><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container"><h4>{{ app.getTranslatedText('text0009') }}</h4></a></li>
-                    <li><a href="#what-is-ean-token-area"><h4>{{ app.getTranslatedText('text0024') }}</h4></a></li>
-                    <li><a href="#roadmap-area"><h4>{{ app.getTranslatedText('text0131') }}</h4></a></li>
+                    <li><a target="_blank" href="{{ app.getPDFPath(0) }}"><h4>{{ app.getTranslatedText('text0224') }}</h4></a></li>
+                    <li><a href="#what-is-ean-token-area"><h4>{{ app.getTranslatedText('text0225') }}</h4></a></li>
+                    <li><a href="#roadmap-area"><h4>{{ app.getTranslatedText('text0226') }}</h4></a></li>
                     <li><a href="#team-area"><h4>{{ app.getTranslatedText('text0196') }}</h4></a></li>
-                    <li><a href="#faq-area"><h4>FAQ</h4></a></li>
+                    <li><a href="#faq-area"><h4>{{ app.getTranslatedText('text0206') }}</h4></a></li>
                     <li><a target="_blank" href="https://medium.com/@aencoin"><h4>{{ app.getTranslatedText('text0197') }}</h4></a></li>
                     <li><a href="#contact-us-area"><h4>{{ app.getTranslatedText('text0198') }}</h4></a></li>
                 </ul>
@@ -151,7 +158,7 @@
     <div class="bottomBarContainer">
         <div class="bottomBar">
             <div class="fleft">
-                <h2 class="txt-join-community">{{ app.getTranslatedText('text0193') }}</h2>
+                <h3 class="txt-join-community">{{ app.getTranslatedText('text0193') }}</h3>
             </div>
             <div class="fleft">
                 <ul>
@@ -214,13 +221,13 @@
             </div>
             <div class="row link-group-container">
                 <ul class="link-list">
-                    <li class="link-txt"><a herf="#" class="f3 btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0009') }}</a></li>
+                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(0) }}" class="f3">{{ app.getTranslatedText('text0009') }}</a></li>
                     <li class="sepeartor">|</li>
-                    <li class="link-txt"><a href="#" class="f3 btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0010') }}</a></li>
+                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(1) }}" class="f3">{{ app.getTranslatedText('text0010') }}</a></li>
                     <li class="sepeartor">|</li>
-                    <li class="link-txt"><a href="#" class="f3 btn-two-pager" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0011') }}</a></li>
+                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(2) }}" class="f3">{{ app.getTranslatedText('text0011') }}</a></li>
                     <li class="sepeartor">|</li>
-                    <li class="link-txt"><a href="#" class="f3 btn-presentation" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0012') }}</a></li>
+                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(3) }}" class="f3">{{ app.getTranslatedText('text0012') }}</a></li>
                 </ul>
             </div>
             <div class="rating-container">
@@ -276,9 +283,7 @@
                 <h3>{{ app.getTranslatedText('text0015') }}</h3>
                 <h5>{{ app.getTranslatedText('text0016') }}</h5>
             </div>
-            <div class="video-container">
-                <iframe class="embed-responsive-item" src="https://www.youtube.com/embed/kfWu3fKLe2I?rel=0" allowfullscreen=""></iframe>
-            </div>
+            <div class="video-container" ng-bind-html="app.getCoreVideoUrl()"></div>
             <div class="clear"></div>
         </div>
     </div>
@@ -288,7 +293,7 @@
 <section id="how-it-works-area" class="section section-top section-full how-it-works-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2>HOW IT WORKS?</h2>
+            <h2>{{ app.getTranslatedText('text0203') }}</h2>
             <div class="items">
                     <div class="item">
                         <div class="logo logo-partner "></div>
@@ -307,7 +312,7 @@
                 <div class="item">
                     <div class="logo logo-global"></div>
                     <div class="info">
-                        <h3 class="subtitle">{{ app.getTranslatedText('text0021') }}</h3>
+                        <h3 class="subtitle" ng-bind-html="app.getTranslatedText('text0021')"></h3>
                         <h5>{{ app.getTranslatedText('text0022') }}</h5>
                     </div>
                 </div>
@@ -332,8 +337,8 @@
                     <div class="bottom-border-end"></div>
                     <div class="bottom-right-corner"></div>
                 </div>
-                <div class="diagram-title">{{ app.getTranslatedText('text0025') }}</div>
-                <div class="diagram-pointer"><span class="f1">{{ app.getTranslatedText('text0024') }}</span></div>
+                <div class="diagram-title"><span class="f5">{{ app.getTranslatedText('text0025') }}</span></div>
+                <div class="diagram-pointer"><span class="f5">{{ app.getTranslatedText('text0024') }}</span></div>
                 <div class="items">
                     <div class="item">
                         <div class="title title-row-one"><h3 ng-bind-html="app.getTranslatedText('text0026')"></h3></div>
@@ -459,7 +464,7 @@
             <h2>{{ app.getTranslatedText('text0045') }}</h2>
             <div class="items" id="video-list"></div>
             <div class="more-btn-container">
-                <button class="btn-more-videos" id="btn-more-videos">{{ app.getTranslatedText('text0051') }}</button>
+                <button class="btn-more-videos f4" id="btn-more-videos">{{ app.getTranslatedText('text0051') }}</button>
             </div>
         </div>
     </div>
@@ -659,8 +664,7 @@
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0132') }}</h3>
-                                    <p><h6>{{ app.getTranslatedText('text0133') }}</h6><br>
-                                    </p>
+                                    <h6>{{ app.getTranslatedText('text0133') }}</h6><br>
                                 </div>
                             </li>
                             <li class="timeline-item">
@@ -668,8 +672,7 @@
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0134') }}</h3>
-                                    <p><h6>{{ app.getTranslatedText('text0135') }}</h6>
-                                    </p>
+                                    <h6>{{ app.getTranslatedText('text0135') }}</h6><br>
                                 </div>
                             </li>
                             <li class="timeline-item">
@@ -677,7 +680,7 @@
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0136') }}</h3>
-                                    <p><h6>{{ app.getTranslatedText('text0137') }}<br />{{ app.getTranslatedText('text0138') }}</h6></p>
+                                    <h6>{{ app.getTranslatedText('text0137') }}<br /><br />{{ app.getTranslatedText('text0138') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item">
@@ -685,7 +688,7 @@
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0139') }}</h3>
-                                    <p><h6>{{ app.getTranslatedText('text0140') }}<br />{{ app.getTranslatedText('text0141') }}</h6></p>
+                                    <h6>{{ app.getTranslatedText('text0140') }}<br /><br />{{ app.getTranslatedText('text0141') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item">
@@ -693,11 +696,16 @@
                                 <div class="timeline-marker"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0142') }}</h3>
-                                    <h6 class="timeline-smtitle">{{ app.getTranslatedText('text0143') }}</h6>
-                                    <strong>{{ app.getTranslatedText('text0144') }}</strong>
-                                    <p><h6>{{ app.getTranslatedText('text0145') }}<br />{{ app.getTranslatedText('text0146') }}</h6></p>
-                                    <h6 class="timeline-smtitle">{{ app.getTranslatedText('text0147') }}</h6>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0148') }}</strong></h6></p>
+                                    <h6 class="timeline-title">
+                                        <strong>{{ app.getTranslatedText('text0143') }}</strong><br>
+                                        {{ app.getTranslatedText('text0144') }}<br /><br />
+                                        {{ app.getTranslatedText('text0145') }}<br /><br />
+                                        {{ app.getTranslatedText('text0146') }}<br /><br />
+                                    </h6>
+                                    <h6 class="timeline-title">
+                                        <strong>{{ app.getTranslatedText('text0147') }}</strong><br>
+                                        {{ app.getTranslatedText('text0148') }}<br /><br />
+                                    </h6>
                                 </div>
                             </li>
                             <li class="timeline-item period">
@@ -715,10 +723,10 @@
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0151') }}</h3>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0152') }}</strong><br>
+                                    <h6><strong>{{ app.getTranslatedText('text0152') }}</strong><br>
                                     <strong>{{ app.getTranslatedText('text0153') }}</strong><br>
                                     <strong>{{ app.getTranslatedText('text0154') }}</strong><br>
-                                    <strong>{{ app.getTranslatedText('text0155') }}</strong></h6></p>
+                                    <strong>{{ app.getTranslatedText('text0155') }}</strong></h6>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
@@ -731,41 +739,40 @@
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0157') }}</h3>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0158') }}</strong><br>{{ app.getTranslatedText('text0159') }}</h6></p>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0160') }}</strong><br>{{ app.getTranslatedText('text0161') }}</h6></p>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0160') }}</strong><br>{{ app.getTranslatedText('text0162') }}</h6></p>
+                                    <h6><strong>{{ app.getTranslatedText('text0158') }}</strong><br>{{ app.getTranslatedText('text0159') }}</h6>
+                                    <h6><strong>{{ app.getTranslatedText('text0160') }}</strong><br>{{ app.getTranslatedText('text0161') }}</h6>
+                                    <h6><strong>{{ app.getTranslatedText('text0160') }}</strong><br>{{ app.getTranslatedText('text0162') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <p><h6><strong>{{ app.getTranslatedText('text0163') }}</strong><br>{{ app.getTranslatedText('text0164') }}</h6></p>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0163') }}</strong><br>{{ app.getTranslatedText('text0165') }}</h6></p>
+                                    <h6><strong>{{ app.getTranslatedText('text0163') }}</strong><br>{{ app.getTranslatedText('text0164') }}</h6>
+                                    <h6><strong>{{ app.getTranslatedText('text0163') }}</strong><br>{{ app.getTranslatedText('text0165') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
-                                    <p><h6><strong>{{ app.getTranslatedText('text0166') }}</strong><br>{{ app.getTranslatedText('text0167') }}</h6></p>
+                                    <h6><strong>{{ app.getTranslatedText('text0166') }}</strong><br>{{ app.getTranslatedText('text0167') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0168') }}</h3>
-                                    <p><h6><strong>{{ app.getTranslatedText('text0169') }}</strong><br>
-                                        {{ app.getTranslatedText('text0170') }}</h6></p>
+                                    <h6><strong>{{ app.getTranslatedText('text0169') }}</strong><br>{{ app.getTranslatedText('text0170') }}</h6>
                                 </div>
                             </li>
                             <li class="timeline-item ico">
                                 <div class="timeline-marker ico"></div>
                                 <div class="timeline-content">
                                     <h3 class="timeline-title">{{ app.getTranslatedText('text0171') }}</h3>
-                                    <strong>{{ app.getTranslatedText('text0172') }}</strong><br>
-                                    <p><h6>
+                                    <h6>
+                                        <strong>{{ app.getTranslatedText('text0172') }}</strong><br>
                                         {{ app.getTranslatedText('text0173') }}<br /><br />
                                         {{ app.getTranslatedText('text0174') }}
-                                    </h6></p>
+                                    </h6>
                                 </div>
                             </li>
                             <li class="timeline-item period">
@@ -840,7 +847,7 @@
                             <div class="card-body">
                                 <p>{{ app.getTranslatedText('text1004') }}</p>
                                 <p>{{ app.getTranslatedText('text1005') }}</p>
-                                <p>Check out our <a target="_blank" href="./assets/docs/aenco-whitepaper.pdf">Whitepaper</a> for more information.</p>
+                                <p ng-bind-html="app.getTranslatedTextWithPdf('text1006', 0)"></p>
                             </div>
                         </div>
                     </div>
@@ -869,7 +876,7 @@
                         <div id="collapseThree" class="collapse" aria-labelledby="headingThree" data-parent="#accordion">
                             <div class="card-body">
                                 <p>{{ app.getTranslatedText('text1010') }}</p>
-                                <p>We are not accepting contributions from residents of USA, Samoa, China, and OFAC sanctioned countries. For Hong Kong based contributors, you must qualify and provide wealth proof as a "Professional Investor" under the Hong Kong SFC Guidance and Rules.</p>
+                                <p>{{ app.getTranslatedText('text1011') }}</p>
                             </div>
                         </div>
                     </div>
@@ -877,13 +884,13 @@
                         <div class="new-card-header" id="headingFour">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-target="#collapseFour" aria-expanded="false" aria-controls="collapseFour">
-                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1011') }}</div><div class="clear"></div> 
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1012') }}</div><div class="clear"></div> 
                                 </a>
                             </h5>
                         </div>
                         <div id="collapseFour" class="collapse" aria-labelledby="headingFour" data-parent="#accordion">
                             <div class="card-body">
-                                <p>{{ app.getTranslatedText('text1012') }}</p>
+                                <p>{{ app.getTranslatedText('text1013') }}</p>
                             </div>
                         </div>
                     </div>
@@ -891,13 +898,13 @@
                         <div class="new-card-header" id="headingFive">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-target="#collapseFive" aria-expanded="false" aria-controls="collapseFive">
-                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1013') }}</div><div class="clear"></div>
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1014') }}</div><div class="clear"></div>
                                 </a>
                             </h5>
                         </div>
                         <div id="collapseFive" class="collapse" aria-labelledby="headingFive" data-parent="#accordion">
                             <div class="card-body">
-                                <p>{{ app.getTranslatedText('text1014') }}</p>
+                                <p>{{ app.getTranslatedText('text1015') }}</p>
                             </div>
                         </div>
                     </div>
@@ -905,13 +912,13 @@
                         <div class="new-card-header" id="headingSix">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-target="#collapseSix" aria-expanded="false" aria-controls="collapseSix">
-                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1015') }}</div><div class="clear"></div>
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1016') }}</div><div class="clear"></div>
                                 </a>
                             </h5>
                         </div>
                         <div id="collapseSix" class="collapse" aria-labelledby="headingSix" data-parent="#accordion">
                             <div class="card-body">
-                                <p>{{ app.getTranslatedText('text1016') }}</p>
+                                <p>{{ app.getTranslatedText('text1017') }}</p>
                             </div>
                         </div>
                     </div>
@@ -919,13 +926,13 @@
                         <div class="new-card-header" id="headingSeven">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-target="#collapseSeven" aria-expanded="false" aria-controls="collapseSeven">
-                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1017') }}</div><div class="clear"></div>
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1018') }}</div><div class="clear"></div>
                                 </a>
                             </h5>
                         </div>
                         <div id="collapseSeven" class="collapse" aria-labelledby="headingSeven" data-parent="#accordion">
                             <div class="card-body">
-                                <p>{{ app.getTranslatedText('text1018') }}</p>
+                                <p>{{ app.getTranslatedText('text1019') }}</p>
                             </div>
                         </div>
                     </div>
@@ -933,15 +940,15 @@
                         <div class="new-card-header" id="headingEight">
                             <h5 class="mb-0">
                                 <a class="collapsed" data-toggle="collapse" data-target="#collapseEight" aria-expanded="false" aria-controls="collapseEight">
-                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1019') }}</div><div class="clear"></div>
+                                    <div class="sign"></div><div class="btn-label">{{ app.getTranslatedText('text1020') }}</div><div class="clear"></div>
                                 </a>
                             </h5>
                         </div>
                         <div id="collapseEight" class="collapse" aria-labelledby="headingEight" data-parent="#accordion">
                             <div class="card-body">
-                                <p>{{ app.getTranslatedText('text1020') }}</p>
                                 <p>{{ app.getTranslatedText('text1021') }}</p>
-                                <p>Other Details: <a target="_blank" href="https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7">https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7</a></p>
+                                <p>{{ app.getTranslatedText('text1022') }}</p>
+                                <p ng-bind-html="app.getTranslatedTextWithUrl('text1023', 'https://etherscan.io/token/0x0bef619cf38cf0c22967289b8419720fbd1db9f7')"></p>
                             </div>
                         </div>
                     </div>
@@ -956,44 +963,44 @@
     <div class="main-container">
         <div class="content">
             <div class="footer-menu">
-                <span class="title f5"><a class="btn-welcome-whitepaper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0009') }}</a></span>
+                <span class="title f5"><a target="_blank" href="{{ app.getPDFPath(0) }}">{{ app.getTranslatedText('text0207') }}</a></span>
                 <ul>
-                    <li class="f4"><a class="btn-welcome-token-paper" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0010') }}</a></li>
-                    <li class="f4"><a class="btn-two-pager" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0011') }}</a></li>
-                    <li class="f4"><a class="btn-presentation" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0012') }}</a></li>
+                    <li class="f4"><a target="_blank" href="{{ app.getPDFPath(1) }}">{{ app.getTranslatedText('text0208') }}</a></li>
+                    <li class="f4"><a target="_blank" href="{{ app.getPDFPath(2) }}">{{ app.getTranslatedText('text0209') }}</a></li>
+                    <li class="f4"><a target="_blank" href="{{ app.getPDFPath(3) }}">{{ app.getTranslatedText('text0210') }}</a></li>
                     <li class="f4"><div class="empty"><br /></div></li>
-                    <li class="f4"><a href="#roadmap-area">{{ app.getTranslatedText('text0131') }}</a></li>
-                    <li class="f4"><a href="#team-area">{{ app.getTranslatedText('text0178') }}</a></li>
-                    <li class="f4"><a href="#media-area">{{ app.getTranslatedText('text0175') }}</a></li>
-                    <li class="f4"><a href="#partners-area">{{ app.getTranslatedText('text0176') }}</a></li>
+                    <li class="f4"><a href="#roadmap-area">{{ app.getTranslatedText('text0211') }}</a></li>
+                    <li class="f4"><a href="#team-area">{{ app.getTranslatedText('text0212') }}</a></li>
+                    <li class="f4"><a href="#media-area">{{ app.getTranslatedText('text0213') }}</a></li>
+                    <li class="f4"><a href="#partners-area">{{ app.getTranslatedText('text0214') }}</a></li>
                 </ul>
             </div>
             <div class="footer-menu">
-                <span class="title f5"><a href="#what-is-ean-token-area">{{ app.getTranslatedText('text0024') }}</a></span>
+                <span class="title f5"><a href="#what-is-ean-token-area">{{ app.getTranslatedText('text0215') }}</a></span>
                 <ul>
-                    <li class="f4"><a href="#explore-aenco-area">{{ app.getTranslatedText('text0045') }}</a></li>
-                    <li class="f4"><a href="#how-it-works-area">How It Works</a></li>
-                    <li class="f4"><a href="#ecosystem-area">Ecosystem Solutions</a></li>
-                    <li class="f4"><a href="#challenges-opportunity-area">Challenges & Opportunities</a></li>
-                    <li class="f4"><a href="#token-economy-area">{{ app.getTranslatedText('text0052') }}</a></li>
-                    <li class="f4"><a href="#token-distribution-area">{{ app.getTranslatedText('text0106') }}</a></li>
-                    <li class="f4"><a href="#faq-area">FAQ</a></li>
-                    <li class="f4"><a target="_blank" href="https://medium.com/@aencoin">{{ app.getTranslatedText('text0197') }}</a></li>
+                    <li class="f4"><a href="#explore-aenco-area">{{ app.getTranslatedText('text0216') }}</a></li>
+                    <li class="f4"><a href="#how-it-works-area">{{ app.getTranslatedText('text0203') }}</a></li>
+                    <li class="f4"><a href="#ecosystem-area">{{ app.getTranslatedText('text0204') }}</a></li>
+                    <li class="f4"><a href="#challenges-opportunity-area">{{ app.getTranslatedText('text0205') }}</a></li>
+                    <li class="f4"><a href="#token-economy-area">{{ app.getTranslatedText('text0217') }}</a></li>
+                    <li class="f4"><a href="#token-distribution-area">{{ app.getTranslatedText('text0218') }}</a></li>
+                    <li class="f4"><a href="#faq-area">{{ app.getTranslatedText('text0219') }}</a></li>
+                    <li class="f4"><a target="_blank" href="https://medium.com/@aencoin">{{ app.getTranslatedText('text0220') }}</a></li>
                 </ul>
             </div>
             <div class="footer-menu">
-                <span class="title f5">{{ app.getTranslatedText('text0180') }}</span>
+                <span class="title f5">{{ app.getTranslatedText('text0221') }}</span>
                 <ul>
                     <li class="f4">
                         <ul class="row-sign">
-                            <li class="f4 display-inline"><a href="https://signup.aencoin.com/register">{{ app.getTranslatedText('text0181') }}</a></li>
+                            <li class="f4 display-inline"><a href="https://signup.aencoin.com/register">{{ app.getTranslatedText('text0222') }}</a></li>
                             <li class="display-inline seperator"></li>
-                            <li class="f4 display-inline"><a href="https://signup.aencoin.com/login">{{ app.getTranslatedText('text0182') }}</a></li>
+                            <li class="f4 display-inline"><a href="https://signup.aencoin.com/login">{{ app.getTranslatedText('text0223') }}</a></li>
                         </ul>
                     </li>
                     <li><div class="empty"><br /></div></li>
-                    <li class="f4"><a class="btn-disclaimer" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0185') }}</a></li>
-                    <li class="f4"><a class="btn-policy" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0186') }}</a></li>
+                    <li class="f4"><a target="_blank" href="{{ app.getPDFPath(5) }}">{{ app.getTranslatedText('text0185') }}</a></li>
+                    <li class="f4"><a target="_blank" href="{{ app.getPDFPath(6) }}">{{ app.getTranslatedText('text0186') }}</a></li>
                 </ul>
             </div>
             <div class="contact" id="contact">

@@ -62,7 +62,7 @@
         }
         .bottom-left-corner {
             position: absolute;
-            top: 370px;
+            top: 368px;
             left: 0px;
             width: 180px;
             height: 180px;
@@ -71,7 +71,7 @@
         }
         .bottom-right-corner {
             position: absolute;
-            top: 370px;
+            top: 368px;
             left: 780px;
             width: 180px;
             height: 180px;
@@ -80,8 +80,8 @@
         }
         .bottom-border-end {
             position: absolute;
-            top: 370px;
-            left: 180px;
+            top: 368px;
+            left: 179px;
             width: 602px;
             height: 180px;
             background: no-repeat center url(../img/border.png);
@@ -123,7 +123,7 @@
         }
     }
     .items {
-        padding: 35px 20px;
+        padding: 65px 20px 35px 20px;
         width: 900px;
         margin: auto;
         margin-top: 124px;
@@ -209,18 +209,18 @@
                 background-position: 9px -150px;
             }
             .bottom-left-corner {
-                top: 590px;
+                top: 550px;
                 height: 280px;
                 background-position: 1px -380px;
             }
             .bottom-right-corner {
-                top: 590px;
+                top: 550px;
                 left: calc(100% - 182px);
                 height: 280px;
                 background-position: -1019px -380px;
             }
             .bottom-border-end {
-                top: 834px;
+                top: 793px;
                 left: 179px;
                 width: calc(100% - 360px);
                 height: 57px;
@@ -379,14 +379,14 @@
                 background-size: 600px;
             }
             .bottom-left-corner {
-                top: 418px;
+                top: 360px;
                 width: 100px;
                 height: 230px;
                 background-size: 600px;
                 background-position: 1px -100px;
             }
             .bottom-right-corner {
-                top: 418px;
+                top: 360px;
                 left: calc(100% - 102px);
                 width: 100px;
                 height: 230px;
@@ -394,7 +394,7 @@
                 background-position: -500px -100px;
             }
             .bottom-border-end {
-                top: 629px;
+                top: 571px;
                 left: 99px;
                 height: 30px;
                 width: calc(100% - 200px);
@@ -427,10 +427,16 @@
             left: 50%;
             width: 130px;
             font-size: 18px;
+            .f5 {
+                font-size: 18px;
+            }
         }
         .diagram-pointer {
             top: -18px;
             left: 1%;
+            .f5 {
+                font-size: 18px;
+            }
         }
     }
 }

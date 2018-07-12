@@ -215,7 +215,7 @@ h6 {
 }
 
 .f3 {
-  font-size: 22px;
+  font-size: 18px;
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
@@ -231,6 +231,13 @@ h6 {
 .f5 {
   font-size: 25px;
   font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f6 {
+  font-size: 12px;
+  font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
 }
@@ -315,10 +322,9 @@ a:hover, button:hover {
   top: 0;
   right: -200px;
   z-index: 99;
-  width: 200px;
+  width: 100%;
   height: 100%;
   overflow-y: scroll;
-  background-color: #002d35;
 }
 .mobile-menu h2 {
   font-weight: 300;
@@ -327,7 +333,30 @@ a:hover, button:hover {
   text-align: left;
 }
 .mobile-menu .menu-area {
-  padding: 60px 0px;
+  padding: 60px 0px 120px 0px;
+  position: absolute;
+  right: 0px;
+  background-color: #002d35;
+  width: 200px;
+  z-index: 10;
+  height: 100%;
+}
+.mobile-menu .sub-menu {
+  position: absolute;
+  top: 522px;
+  right: 0px;
+}
+.mobile-menu .sub-menu a {
+  background-color: #002d35;
+  padding: 0.75rem 1.25rem;
+  display: block;
+}
+.mobile-menu .sub-menu a:hover {
+  background-color: #00b7ce;
+  opacity: 1;
+}
+.mobile-menu .sub-menu h5 {
+  word-break: keep-all;
 }
 
 .mobile-menu .navbar {
@@ -417,9 +446,6 @@ button:focus {
 }
 
 .login-menu ul li a {
-  font-family: "Teko", sans-serif;
-  font-size: 28px;
-  letter-spacing: 0.05em;
   text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
 }
 
@@ -433,7 +459,7 @@ button:focus {
 
 .txt-join-community {
   margin: 0;
-  padding-top: 10px;
+  padding-top: 15px;
 }
 
 .bottomBar i {
@@ -499,7 +525,7 @@ button:focus {
   margin-top: -3rem;
 }
 .modal-dialog .modal-content {
-  background-color: #0093a5;
+  background-color: #002d35;
   box-shadow: 0.5vw 0.5vw 0.5vw 0.1vw rgba(0, 147, 165, 0.2);
 }
 .modal-dialog .modal-title {
@@ -549,7 +575,6 @@ button:focus {
 }
 
 .video-frame {
-  background-color: #0084a5;
   padding: 1%;
   margin: auto;
 }
@@ -769,54 +794,128 @@ div#modal-container {
   text-align: left;
 }
 
+h2 {
+  text-transform: uppercase;
+}
+
+.w30 {
+  width: 30%;
+}
+
 .app.lang-zhcn {
-  font-family: "Noto Sans SC";
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
 }
 .app.lang-zhcn h1 {
-  font-family: "Noto Sans SC";
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 45px;
+  line-height: 58px;
+  letter-spacing: 0.1em;
 }
 .app.lang-zhcn h2 {
-  font-family: "Noto Sans SC";
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
 }
 .app.lang-zhcn h3 {
-  font-family: "Noto Sans SC";
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
 .app.lang-zhcn h4 {
-  font-family: "Noto Sans SC";
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
 }
 .app.lang-zhcn h5 {
-  font-family: "Noto Sans SC";
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
 }
-.app.lang-zhcn .menu ul li a {
-  font-family: "Noto Sans SC";
+.app.lang-zhcn h6 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
 }
-.app.lang-zhcn .login-menu ul li a {
-  font-family: "Noto Sans SC";
+.app.lang-zhcn .f1 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .f2 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .f3 {
+  font-size: 20px;
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.app.lang-zhcn .f4 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 17px;
+}
+.app.lang-zhcn .f5 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 17px;
+}
+.app.lang-zhcn .f6 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .language-selector-container {
+  top: 33px;
+  right: 180px;
+}
+.app.lang-zhcn .language-selector-container.expanded {
+  right: 156px;
+}
+@media (max-width: 1300px) {
+  .app.lang-zhcn .language-selector-container {
+    top: 33px;
+    right: 219px;
+  }
+  .app.lang-zhcn .language-selector-container.expanded {
+    right: 196px;
+  }
 }
 
 .app.lang-kr {
-  font-family: "Nanum Gothic Coding", monospace;
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
 .app.lang-kr h1 {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h2 {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h3 {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h4 {
-  font-family: "Do Hyeon", sans-serif;
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h5 {
-  font-family: "Nanum Gothic Coding", monospace;
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
-.app.lang-kr .menu ul li a {
-  font-family: "Do Hyeon", sans-serif;
+.app.lang-kr h6 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
-.app.lang-kr .login-menu ul li a {
-  font-family: "Do Hyeon", sans-serif;
+.app.lang-kr .f1 {
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f2 {
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f3 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .f4 {
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f5 {
+  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f6 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
 
 @media (max-width: 1300px) {
@@ -825,7 +924,7 @@ div#modal-container {
   }
 
   .mobile-menu {
-    display: block;
+    display: none;
   }
 
   .login-menu {
@@ -995,10 +1094,6 @@ div#modal-container {
 
   .modal-body .container {
     padding: 0;
-  }
-
-  .login-menu ul li a {
-    font-size: 24px;
   }
 
   .icon-social {
@@ -1398,13 +1493,19 @@ div#modal-container {
 }
 
 .app.lang-zhcn .welcome-area .row-contributor .link-group a, .app.lang-zhcn .welcome-area .welcome-area .row-contributor .link-group span {
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC", sans-serif;
 }
 .app.lang-zhcn .welcome-area .header-count-down {
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC", sans-serif;
 }
 .app.lang-zhcn .welcome-area li a {
-  font-family: "Noto Sans SC";
+  font-family: "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .welcome-area .sub-message {
+  line-height: 2;
+}
+.app.lang-zhcn .welcome-area .core-message {
+  max-width: 750px;
 }
 
 .app.lang-kr .welcome-area .row-contributor .link-group a, .app.lang-kr .welcome-area .welcome-area .row-contributor .link-group span {
@@ -1418,12 +1519,12 @@ div#modal-container {
   margin: auto;
 }
 .what-is-aen-token-area .content {
-  max-width: 1600px;
+  max-width: 1300px;
   margin: auto;
 }
 .what-is-aen-token-area .message-container {
   max-width: 50%;
-  padding: 0px 30px 0 0;
+  padding: 3.5% 30px 0 0;
   float: left;
 }
 .what-is-aen-token-area h2 {
@@ -1627,7 +1728,7 @@ div#modal-container {
   text-align: center;
 }
 .token-economy-area .desc {
-  max-width: 50%;
+  width: 50%;
   padding: 0 15px;
 }
 .token-economy-area td.lalign {
@@ -1675,7 +1776,7 @@ div#modal-container {
 }
 .token-economy-area .green-circle .title {
   color: #bae242;
-  margin-top: 51px;
+  margin-top: 28%;
   line-height: 1.15;
 }
 .token-economy-area .green-circle .dollar {
@@ -1794,7 +1895,7 @@ div#modal-container {
     float: none;
     margin: auto;
     margin-top: 5%;
-    max-width: 100%;
+    width: 100%;
   }
   .token-economy-area .coin-info {
     max-width: 1024px;
@@ -2288,6 +2389,7 @@ a:hover {
 .team-area .team-member-list {
   margin: auto;
   flex-wrap: wrap;
+  flex: 14%;
   display: flex;
   margin-top: 50px;
 }
@@ -2374,7 +2476,7 @@ a:hover {
   font-size: 18px;
   text-align: center;
   letter-spacing: 0.02em;
-  margin: 0 0 20px 0;
+  margin: 10px 0 20px 0;
 }
 .member-info-container .desc ul {
   list-style-type: circle;
@@ -2647,6 +2749,9 @@ a:hover {
   display: none;
   text-align: left;
 }
+.faq-area a {
+  color: #00b7ce;
+}
 .faq-area .main-container {
   width: 100%;
   background-color: #002d35;
@@ -2673,8 +2778,7 @@ a:hover {
   text-align: center;
 }
 .faq-area .questions-container {
-  margin: auto;
-  margin-top: 72px;
+  margin: 50px auto 80px auto;
   max-width: 100%;
 }
 .faq-area .new-card button {
@@ -2769,6 +2873,7 @@ a:hover {
   margin-left: 35px;
   max-width: 70%;
   text-align: left;
+  padding-top: 3%;
 }
 .challenges-opportunity-area .challenge-one-logo {
   background: url("../img/challenges-1.png") no-repeat;
@@ -2930,7 +3035,7 @@ a:hover {
 }
 .ecosystem-area .diagram-border-container .bottom-left-corner {
   position: absolute;
-  top: 370px;
+  top: 368px;
   left: 0px;
   width: 180px;
   height: 180px;
@@ -2939,7 +3044,7 @@ a:hover {
 }
 .ecosystem-area .diagram-border-container .bottom-right-corner {
   position: absolute;
-  top: 370px;
+  top: 368px;
   left: 780px;
   width: 180px;
   height: 180px;
@@ -2948,8 +3053,8 @@ a:hover {
 }
 .ecosystem-area .diagram-border-container .bottom-border-end {
   position: absolute;
-  top: 370px;
-  left: 180px;
+  top: 368px;
+  left: 179px;
   width: 602px;
   height: 180px;
   background: no-repeat center url(../img/border.png);
@@ -2990,7 +3095,7 @@ a:hover {
   margin-left: -20px;
 }
 .ecosystem-area .items {
-  padding: 35px 20px;
+  padding: 65px 20px 35px 20px;
   width: 900px;
   margin: auto;
   margin-top: 124px;
@@ -3075,18 +3180,18 @@ a:hover {
     background-position: 9px -150px;
   }
   .ecosystem-area .diagram-border-container .bottom-left-corner {
-    top: 590px;
+    top: 550px;
     height: 280px;
     background-position: 1px -380px;
   }
   .ecosystem-area .diagram-border-container .bottom-right-corner {
-    top: 590px;
+    top: 550px;
     left: calc(100% - 182px);
     height: 280px;
     background-position: -1019px -380px;
   }
   .ecosystem-area .diagram-border-container .bottom-border-end {
-    top: 834px;
+    top: 793px;
     left: 179px;
     width: calc(100% - 360px);
     height: 57px;
@@ -3237,14 +3342,14 @@ a:hover {
     background-size: 600px;
   }
   .ecosystem-area .diagram-border-container .bottom-left-corner {
-    top: 418px;
+    top: 360px;
     width: 100px;
     height: 230px;
     background-size: 600px;
     background-position: 1px -100px;
   }
   .ecosystem-area .diagram-border-container .bottom-right-corner {
-    top: 418px;
+    top: 360px;
     left: calc(100% - 102px);
     width: 100px;
     height: 230px;
@@ -3252,7 +3357,7 @@ a:hover {
     background-position: -500px -100px;
   }
   .ecosystem-area .diagram-border-container .bottom-border-end {
-    top: 629px;
+    top: 571px;
     left: 99px;
     height: 30px;
     width: calc(100% - 200px);
@@ -3283,14 +3388,23 @@ a:hover {
     width: 130px;
     font-size: 18px;
   }
+  .ecosystem-area .diagram-title .f5 {
+    font-size: 18px;
+  }
   .ecosystem-area .diagram-pointer {
     top: -18px;
     left: 1%;
+  }
+  .ecosystem-area .diagram-pointer .f5 {
+    font-size: 18px;
   }
 }
 
 .learn-more-area .sub-section ul {
   list-style: disc;
+}
+.learn-more-area a {
+  color: #00b7ce;
 }
 
 /*# sourceMappingURL=aenco.css.map */

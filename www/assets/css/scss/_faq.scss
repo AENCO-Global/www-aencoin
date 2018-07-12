@@ -1,6 +1,9 @@
 .faq-area {
     display: none;
     text-align: left;
+    a {
+        color: #00b7ce;
+    }
     .main-container {
       width: 100%;
       background-color: #002d35;
@@ -27,8 +30,7 @@
         text-align: center;
     }
     .questions-container {
-        margin: auto;
-        margin-top: 72px;
+        margin: 50px auto 80px auto;
         max-width: 100%;
     }
     .new-card {

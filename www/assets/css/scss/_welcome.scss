@@ -343,13 +343,19 @@
 
 .app.lang-zhcn .welcome-area {
     .row-contributor .link-group a, .welcome-area .row-contributor .link-group span {
-        font-family: 'Noto Sans SC';
+        font-family: 'Noto Sans SC', sans-serif;
     }
     .header-count-down {
-        font-family: 'Noto Sans SC';
+        font-family: 'Noto Sans SC', sans-serif;
     }
     li a {
-        font-family: 'Noto Sans SC';
+        font-family: 'Noto Sans SC', sans-serif;
+    }
+    .sub-message {
+        line-height: 2;
+    }
+    .core-message {
+        max-width: 750px;
     }
 }
 
