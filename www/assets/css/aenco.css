@@ -1218,7 +1218,17 @@ div#modal-container {
     font-size: 100%;
   }
 
+  .f50 {
+    font-size: 50%;
+  }
+
   .app.lang-zhcn .f3 {
+    font-size: 100%;
+  }
+  .app.lang-zhcn .f50 {
+    font-size: 50%;
+  }
+  .app.lang-zhcn .f100 {
     font-size: 100%;
   }
 }
@@ -3515,6 +3525,7 @@ a:hover {
   box-shadow: none;
   overflow-y: hidden;
   overflow-x: hidden;
+  border: 0;
 }
 .promotion-popup .modal-body {
   padding: 0;
