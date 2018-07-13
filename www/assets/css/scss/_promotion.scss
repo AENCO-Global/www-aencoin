@@ -28,8 +28,8 @@
     }
 }
 .promotion-popup {
-    margin-top: 25vh !important;
     height: auto !important;
+    margin: 15vh auto !important;
     .modal-header {
         background-color: transparent;
     }
@@ -57,5 +57,46 @@
             width: 80%;
             margin: auto;
         }
+    }
+}
+@media (max-width: 479px) {
+    .promotion-area .tb-block {
+        vertical-align: top;
+        display: table-cell;
+        padding: 8% 15% 5%;
+        width: 100%;
+        float: left;
+        max-height: 50vh;
+    }
+    .promotion-popup {
+        margin-top: 0vh !important;
+        height: auto !important;
+    }
+    .promotion-popup .modal-content {
+        width: 100%;
+        margin: auto;
+    }
+    .promotion-popup .modal-header {
+        background-color: transparent;
+        height: 0;
+        z-index: 9;
+    }
+    .modal-dialog .modal-header span {
+        font-family: "Flamenco", cursive;
+        font-weight: 300;
+        font-size: 4rem;
+    }    
+    .promotion-popup .modal-body {
+        padding: 8%;
+    }
+    .f7 {
+        font-size: 25px;
+    }
+    .f3 {
+        font-size: 12px;
+    }
+    .promotion-area .msg-container {
+        text-align: center;
+        margin: 10% auto 5px;
     }
 }
