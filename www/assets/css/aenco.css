@@ -59,6 +59,10 @@ a:focus {
   display: block;
 }
 
+.modal-dialog {
+  max-width: fit-content;
+}
+
 .lang {
   color: #000000;
 }
@@ -240,6 +244,14 @@ h6 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 400;
   letter-spacing: 0.02em;
+}
+
+.f7 {
+  font-size: 40px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
 }
 
 a, button {
@@ -505,9 +517,6 @@ button:focus {
   width: 100%;
 }
 
-.modal-dialog {
-  max-width: 90vw;
-}
 .modal-dialog.team-member-popup {
   max-width: fit-content;
   margin-top: 20vh;
@@ -794,10 +803,6 @@ div#modal-container {
   text-align: left;
 }
 
-h2 {
-  text-transform: uppercase;
-}
-
 .w30 {
   width: 30%;
 }
@@ -860,6 +865,11 @@ h2 {
 }
 .app.lang-zhcn .f6 {
   font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .f7 {
+  font-size: 30px;
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  line-height: 1.5;
 }
 .app.lang-zhcn .language-selector-container {
   top: 33px;
@@ -1154,6 +1164,62 @@ h2 {
   .video-popup iframe {
     width: 100%;
     height: calc(100% * 9 / 16);
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  h2 {
+    font-size: 45px;
+  }
+
+  h3 {
+    font-size: 32px;
+  }
+
+  h4 {
+    font-size: 28px;
+  }
+
+  h5 {
+    font-size: 18px;
+  }
+
+  h6 {
+    font-size: 15px;
+  }
+
+  .f1 {
+    font-size: 30px;
+  }
+
+  .f2 {
+    font-size: 20px;
+  }
+
+  .f3 {
+    font-size: 22px;
+  }
+
+  .f4 {
+    font-size: 25px;
+  }
+
+  .f5 {
+    font-size: 25px;
+  }
+
+  .f6 {
+    font-size: 15px;
+  }
+
+  .f100 {
+    font-size: 100%;
+  }
+
+  .app.lang-zhcn .f3 {
+    font-size: 100%;
   }
 }
 .welcome-area {
@@ -3405,6 +3471,68 @@ a:hover {
 }
 .learn-more-area a {
   color: #00b7ce;
+}
+
+.promotion-area {
+  margin: auto;
+  width: 800px;
+}
+.promotion-area .tb-block {
+  vertical-align: top;
+  display: table-cell;
+  padding: 8% 4%;
+  width: 50%;
+}
+.promotion-area .blue {
+  background-color: #00b7ce;
+}
+.promotion-area .green {
+  background-color: #a1bf4b;
+}
+.promotion-area .img-container {
+  width: 100%;
+  text-align: center;
+}
+.promotion-area .img-container img {
+  width: 100%;
+  height: auto;
+}
+.promotion-area .msg-container {
+  text-align: center;
+  margin: 10% auto 0 auto;
+  max-width: 300px;
+}
+
+.promotion-popup {
+  margin-top: 25vh !important;
+  height: auto !important;
+}
+.promotion-popup .modal-header {
+  background-color: transparent;
+}
+.promotion-popup .modal-content {
+  background-color: transparent;
+  box-shadow: none;
+  overflow-y: hidden;
+  overflow-x: hidden;
+}
+.promotion-popup .modal-body {
+  padding: 0;
+}
+
+@media (max-width: 1024px) {
+  .promotion-area {
+    width: 100%;
+  }
+  .promotion-area .msg-container {
+    text-align: center;
+    margin: 10% auto;
+  }
+
+  .promotion-popup .modal-content {
+    width: 80%;
+    margin: auto;
+  }
 }
 
 /*# sourceMappingURL=aenco.css.map */

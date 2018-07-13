@@ -40,6 +40,9 @@ a:focus {
 .done-1 {
     display: block;
 }
+.modal-dialog {
+    max-width: fit-content;
+}
 .lang {
     color: #000000;
 }
@@ -192,6 +195,13 @@ h6 {
     font-family: "Titillium Web", sans-serif;
     font-weight: 400;
     letter-spacing: 0.02em;
+}
+.f7 {
+    font-size: 40px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 400;
+    letter-spacing: 0.02em;
+    line-height: 1.2;
 }
 a, button {
     cursor: pointer;
@@ -416,7 +426,6 @@ button:focus {
     width: 100%;
 }
 .modal-dialog {
-    max-width: 90vw;
     &.team-member-popup {
         max-width: fit-content;
         margin-top: 20vh;
@@ -664,9 +673,6 @@ div#modal-container {
         text-align: left;
     }
 }
-h2 {
-    text-transform: uppercase;
-}
 .w30 {
     width: 30%;
 }
@@ -727,6 +733,11 @@ h2 {
     }
     .f6 {
         font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+    }
+    .f7 {
+        font-size: 30px;
+        font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+        line-height: 1.5;
     }
     .language-selector-container {
         top: 33px;
@@ -976,5 +987,49 @@ h2 {
     .video-popup iframe {
         width: 100%;
         height: calc(100% * 9 / 16);
+    }
+    h1 {
+        font-size: 48px;
+    }
+    h2 {
+        font-size: 45px;
+    }
+    h3 {
+        font-size: 32px;
+    }
+    h4 {
+        font-size: 28px;
+    }
+    h5 {
+        font-size: 18px;
+    }
+    h6 {
+        font-size: 15px;
+    }
+    .f1 {
+        font-size: 30px;
+    }
+    .f2 {
+        font-size: 20px;
+    }
+    .f3 {
+        font-size: 22px;
+    }
+    .f4 {
+        font-size: 25px;
+    }
+    .f5 {
+        font-size: 25px;
+    }
+    .f6 {
+        font-size: 15px;
+    }
+    .f100 {
+        font-size: 100%;
+    }
+    .app.lang-zhcn {
+        .f3 {
+            font-size: 100%;
+        }
     }
 }

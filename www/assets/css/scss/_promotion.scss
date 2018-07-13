@@ -1,0 +1,60 @@
+.promotion-area {
+    margin: auto;
+    width: 800px;
+    .tb-block {
+        vertical-align: top;
+        display: table-cell;
+        padding: 8% 4%;
+        width: 50%;
+    }
+    .blue {
+        background-color: #00b7ce;
+    }
+    .green {
+        background-color: #a1bf4b;
+    }
+    .img-container {
+        width: 100%;
+        text-align: center;
+        img {
+            width: 100%;
+            height: auto;
+        }
+    }
+    .msg-container {
+        text-align: center;
+        margin: 10% auto 0 auto;
+        max-width: 300px;
+    }
+}
+.promotion-popup {
+    margin-top: 25vh !important;
+    height: auto !important;
+    .modal-header {
+        background-color: transparent;
+    }
+    .modal-content {
+        background-color: transparent;
+        box-shadow: none;
+        overflow-y: hidden;
+        overflow-x: hidden;
+    }
+    .modal-body {
+        padding: 0;
+    }
+}
+@media (max-width: 1024px) {
+    .promotion-area {
+        width: 100%;
+        .msg-container {
+            text-align: center;
+            margin: 10% auto;
+        }
+    }
+    .promotion-popup {
+        .modal-content {
+            width: 80%;
+            margin: auto;
+        }
+    }
+}
