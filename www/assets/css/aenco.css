@@ -1232,6 +1232,19 @@ div#modal-container {
     font-size: 100%;
   }
 }
+.header .language-bar {
+  text-align: right;
+  margin-right: 50px;
+}
+.header .language-bar ul li {
+  display: inline-block;
+  padding: 0 10px 0 9px;
+  border-right: 1px solid rgba(255, 255, 255, 0.5);
+}
+.header .language-bar ul li.last {
+  border-right: none;
+}
+
 .welcome-area {
   position: relative;
 }
