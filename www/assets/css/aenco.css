@@ -3486,7 +3486,7 @@ a:hover {
 
 .promotion-area {
   margin: auto;
-  width: 800px;
+  max-width: 800px;
 }
 .promotion-area .tb-block {
   vertical-align: top;
