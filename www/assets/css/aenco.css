@@ -97,8 +97,6 @@ a:focus {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100px;
-  padding-top: 28px;
   background-color: rgba(0, 0, 0, 0);
 }
 .header.faq-header {
@@ -107,6 +105,7 @@ a:focus {
 
 .header-content {
   margin: auto;
+  padding-bottom: 20px;
 }
 
 .bottomBar {
@@ -167,7 +166,7 @@ h2 {
   font-size: 45px;
   font-family: "Teko", sans-serif;
   font-weight: 400;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.02em;
   text-align: center;
 }
 
@@ -202,6 +201,8 @@ h6 {
   font-family: "Titillium Web", sans-serif;
   font-weight: 300;
   letter-spacing: 0.02em;
+  margin-bottom: 0;
+  line-height: 1.5;
 }
 
 .f1 {
@@ -289,7 +290,7 @@ a:hover, button:hover {
 
 .login-menu {
   position: relative;
-  margin-right: 50px;
+  margin-right: 25px;
   margin-top: 9px;
   float: right;
 }
@@ -303,16 +304,14 @@ a:hover, button:hover {
   padding: 0 !important;
 }
 
-.mobile-menu-btn {
-  position: absolute;
-  top: 15px;
-  right: 30px;
+.login-menu li .mobile-menu-btn {
   z-index: 20;
   display: none;
 }
-.mobile-menu-btn ul li {
+.login-menu li .mobile-menu-btn ul li {
   padding: 3px 13px;
   border-top: 3px solid #0a92a4;
+  display: block;
 }
 
 .overlay {
@@ -406,6 +405,8 @@ button:focus {
   font-size: 36px;
   letter-spacing: 6px;
   background-color: #002d35;
+  border: 0;
+  padding: 0.35rem 1.25rem;
 }
 
 .mobile-menu .list-group-item:hover {
@@ -424,6 +425,10 @@ button:focus {
 
 .login-menu ul li {
   padding: 0 8px;
+}
+
+.login-menu li.mobile-menu-listitem {
+  vertical-align: text-bottom;
 }
 
 .menu ul li.group-account {
@@ -455,10 +460,11 @@ button:focus {
   font-family: "Teko", sans-serif;
   font-size: 28px;
   letter-spacing: 0.05em;
+  text-shadow: 0 0 5px #00121c, 0 0 10px #00121c, 0 0 10px #00121c;
 }
 
 .login-menu ul li a {
-  text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
+  text-shadow: 0 0 5px #00121c, 0 0 10px #00121c, 0 0 10px #00121c;
 }
 
 .brand-logo {
@@ -812,9 +818,9 @@ div#modal-container {
 }
 .app.lang-zhcn h1 {
   font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 45px;
-  line-height: 58px;
-  letter-spacing: 0.1em;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.01em;
 }
 .app.lang-zhcn h2 {
   font-family: "Titillium Web", "Noto Sans SC", sans-serif;
@@ -823,7 +829,7 @@ div#modal-container {
 }
 .app.lang-zhcn h3 {
   font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 20px;
+  font-size: 18px;
   letter-spacing: 0.05em;
   line-height: 1.5;
 }
@@ -892,16 +898,16 @@ div#modal-container {
   font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
 .app.lang-kr h1 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h2 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h3 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h4 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr h5 {
   font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
@@ -910,22 +916,25 @@ div#modal-container {
   font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
 .app.lang-kr .f1 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr .f2 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr .f3 {
   font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
 }
 .app.lang-kr .f4 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr .f5 {
-  font-family: "Titillium Web", "Do Hyeon", sans-serif;
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 .app.lang-kr .f6 {
   font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .f7 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 
 @media (max-width: 1300px) {
@@ -937,11 +946,7 @@ div#modal-container {
     display: none;
   }
 
-  .login-menu {
-    margin-right: 90px;
-  }
-
-  .mobile-menu-btn {
+  .login-menu li .mobile-menu-btn {
     display: block;
   }
 
@@ -968,6 +973,10 @@ div#modal-container {
 
   h2 {
     font-size: 40px;
+  }
+
+  h3 {
+    font-size: 20px;
   }
 
   .slick-next {
@@ -1002,6 +1011,7 @@ div#modal-container {
 
   .txt-join-community {
     margin: 0 0 5px;
+    display: none;
   }
 
   h2 {
@@ -1117,7 +1127,7 @@ div#modal-container {
   }
 }
 @media (max-width: 520px) {
-  .login-menu {
+  .login-menu .group-account {
     display: none;
   }
 
@@ -1156,62 +1166,13 @@ div#modal-container {
     display: none;
   }
 
-  .header {
-    padding: 10px 0;
-    height: 70px;
-  }
-
   .video-popup iframe {
     width: 100%;
     height: calc(100% * 9 / 16);
   }
 
   h1 {
-    font-size: 48px;
-  }
-
-  h2 {
-    font-size: 45px;
-  }
-
-  h3 {
-    font-size: 32px;
-  }
-
-  h4 {
-    font-size: 28px;
-  }
-
-  h5 {
-    font-size: 18px;
-  }
-
-  h6 {
-    font-size: 15px;
-  }
-
-  .f1 {
-    font-size: 30px;
-  }
-
-  .f2 {
-    font-size: 20px;
-  }
-
-  .f3 {
-    font-size: 22px;
-  }
-
-  .f4 {
-    font-size: 25px;
-  }
-
-  .f5 {
-    font-size: 25px;
-  }
-
-  .f6 {
-    font-size: 15px;
+    font-size: 35px;
   }
 
   .f100 {
@@ -1222,6 +1183,12 @@ div#modal-container {
     font-size: 50%;
   }
 
+  .app.lang-zhcn h2 {
+    font-size: 25px;
+  }
+  .app.lang-zhcn h5 {
+    font-size: 15px;
+  }
   .app.lang-zhcn .f3 {
     font-size: 100%;
   }
@@ -1232,9 +1199,21 @@ div#modal-container {
     font-size: 100%;
   }
 }
+.header .tb-row {
+  margin-bottom: 10px;
+  padding: 12px 50px 12px;
+  background-color: #006e7c;
+  margin-bottom: 30px;
+}
+.header .promotion-text {
+  float: left;
+  text-align: left;
+  max-width: 60%;
+}
 .header .language-bar {
+  float: right;
   text-align: right;
-  margin-right: 50px;
+  max-width: 40%;
 }
 .header .language-bar ul li {
   display: inline-block;
@@ -1245,6 +1224,27 @@ div#modal-container {
   border-right: none;
 }
 
+@media (max-width: 768px) {
+  .header .promotion-text {
+    float: none;
+    text-align: center;
+    max-width: 100%;
+    margin-bottom: 15px;
+  }
+  .header .language-bar {
+    float: none;
+    text-align: center;
+    max-width: 100%;
+  }
+}
+@media (max-width: 479px) {
+  .header .promotion-text {
+    display: none;
+  }
+  .header .tb-row {
+    margin-bottom: 10px;
+  }
+}
 .welcome-area {
   position: relative;
 }
@@ -1259,6 +1259,7 @@ div#modal-container {
   max-width: 1600px;
   margin: auto;
   padding: 45px;
+  padding-top: 100px;
 }
 .welcome-area .col2 {
   display: inline-block;
@@ -1290,9 +1291,6 @@ div#modal-container {
 .welcome-area .private-sale-txt {
   color: #b2d254;
   text-align: right;
-  font-size: 45px;
-  font-weight: 400;
-  letter-spacing: 0.02em;
   margin: auto 5px;
 }
 .welcome-area .btn-join {
@@ -1511,7 +1509,6 @@ div#modal-container {
     background-size: cover;
   }
   .welcome-area .private-sale-txt {
-    font-size: 35px;
     line-height: 43px;
   }
   .welcome-area .sub-message-container {
@@ -1554,6 +1551,9 @@ div#modal-container {
     padding-left: 20px;
     padding-right: 20px;
   }
+  .welcome-area .core-message {
+    margin-top: 100px;
+  }
   .welcome-area .count-down-container li {
     line-height: calc(100vw * 74 / 768);
   }
@@ -1576,22 +1576,16 @@ div#modal-container {
     float: left;
     line-height: 30px;
   }
-  .welcome-area .core-message {
-    margin-top: 100px;
-  }
 }
 
 .app.lang-zhcn .welcome-area .row-contributor .link-group a, .app.lang-zhcn .welcome-area .welcome-area .row-contributor .link-group span {
-  font-family: "Noto Sans SC", sans-serif;
-}
-.app.lang-zhcn .welcome-area .header-count-down {
   font-family: "Noto Sans SC", sans-serif;
 }
 .app.lang-zhcn .welcome-area li a {
   font-family: "Noto Sans SC", sans-serif;
 }
 .app.lang-zhcn .welcome-area .sub-message {
-  line-height: 2;
+  line-height: 1.5;
 }
 .app.lang-zhcn .welcome-area .core-message {
   max-width: 750px;
@@ -2001,7 +1995,7 @@ div#modal-container {
     border: 7px solid #b1d34a;
   }
   .token-economy-area .green-circle .title {
-    margin-top: 31px;
+    margin-top: 39px;
   }
   .token-economy-area .circle {
     width: 210px;
@@ -2765,9 +2759,6 @@ a:hover {
   }
 }
 @media (max-width: 768px) {
-  .media-area .content {
-    padding: 0 10px;
-  }
   .media-area .media-list li {
     width: 33%;
   }
@@ -2815,9 +2806,6 @@ a:hover {
   }
 }
 @media (max-width: 768px) {
-  .partners-area .content {
-    padding: 0 10px;
-  }
   .partners-area .partner-list li {
     width: 33%;
   }
@@ -3559,6 +3547,19 @@ a:hover {
   }
 }
 @media (max-width: 479px) {
+  .promotion-area .f7 {
+    font-size: 20px;
+  }
+
+  .promotion-area .f3 {
+    font-size: 12px;
+  }
+
+  .promotion-area .msg-container {
+    text-align: center;
+    margin: 10% auto 5px;
+  }
+
   .promotion-area .tb-block {
     vertical-align: top;
     display: table-cell;
@@ -3592,19 +3593,6 @@ a:hover {
 
   .promotion-popup .modal-body {
     padding: 8%;
-  }
-
-  .f7 {
-    font-size: 25px;
-  }
-
-  .f3 {
-    font-size: 12px;
-  }
-
-  .promotion-area .msg-container {
-    text-align: center;
-    margin: 10% auto 5px;
   }
 }
 

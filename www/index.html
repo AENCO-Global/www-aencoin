@@ -100,18 +100,18 @@
                 <a href="#contact-us-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0198') }}</h4></a>
                 <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0181') }}</h4></a>
                 <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0182') }}</h4></a>
-                <a href="#" class="list-group-item list-group-item-action btn-language"><h4>{{ app.getTranslatedText('text0227') }}</h4></a>
+                <!--<a href="#" class="list-group-item list-group-item-action btn-language"><h4>{{ app.getTranslatedText('text0227') }}</h4></a>-->
             </div>
         </div>
-        <div class="sub-menu">
+        <!--<div class="sub-menu">
             <a href="#" class="btn-lang-item" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a>
             <a href="#" class="btn-lang-item" ng-click="app.changeLang('zhcn')"><h5>中文</h5></a>
             <a href="#" class="btn-lang-item" ng-click="app.changeLang('kr')"><h5>한국어</h5></a>
-        </div>
+        </div>-->
     </div>
     <!-- mobile menu end -->
     <!-- language selector -->
-    <div class="language-selector-container">
+    <!--<div class="language-selector-container">
         <div class="language-selector">
             <ul>
                 <li><a href="#" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a></li>
@@ -119,35 +119,43 @@
                 <li><a href="#" ng-click="app.changeLang('kr')"><h5>한국어</h5></a></li>
             </ul>
         </div>
-    </div>
+    </div>-->
     <!-- language selector end-->
     <!-- Header -->
     <header class="header">
         <div class="header-content">
-            <!--<div class="language-bar">
-                <ul>
-                    <li><a href="#" ng-click="app.changeLang('en')"><span class="f6">ENGLISH</span></a></li>
-                    <li><a href="#" ng-click="app.changeLang('zhcn')"><span class="f6">中文</span></a></li>
-                    <li class="last"><a href="#" ng-click="app.changeLang('kr')"><span class="f6">한국어</span></a></li>
-                </ul>
-            </div>-->
+            <div class="tb-row">
+                <div class="promotion-text">
+                    <h6>{{ app.getTranslatedText('text0232') }}</h6>
+                </div>
+                <div class="language-bar">
+                    <ul>
+                        <li><a href="#" ng-click="app.changeLang('en')"><h6>ENGLISH</h6></a></li>
+                        <li><a href="#" ng-click="app.changeLang('zhcn')"><h6>中文</h6></a></li>
+                        <li class="last"><a href="#" ng-click="app.changeLang('kr')"><h6>한국어</h6></a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+            </div>
             <a href="#welcome-area">
                 <img class="brand-logo" src="./assets/img/logo.png" />
             </a>
-            <a href="#">
-                <div id="mobile-menu-btn" class="mobile-menu-btn">
-                    <ul>
-                        <li></li>
-                        <li></li>
-                        <li></li>
-                    </ul>
-                </div>
-            </a>
             <nav class="login-menu">
                 <ul>
-                    <li class="group-account"><a href="#" class="btn-lang"><img src="./assets/img/icon-lang.png" /></a></li>
+                    <!--<li class="group-account"><a href="#" class="btn-lang"><img src="./assets/img/icon-lang.png" /></a></li>-->
                     <li class="group-account"><a href="https://signup.aencoin.com/register"><h4><span class="txt-signup">{{ app.getTranslatedText('text0181') }}</span></h4></a></li>
                     <li class="group-account"><a href="https://signup.aencoin.com/login"><h4><span class="txt-login">{{ app.getTranslatedText('text0182') }}</span></h4></a></li>
+                    <li class="mobile-menu-listitem">
+                        <a href="#">
+                            <div id="mobile-menu-btn" class="mobile-menu-btn">
+                                <ul>
+                                    <li></li>
+                                    <li></li>
+                                    <li></li>
+                                </ul>
+                            </div>
+                        </a>
+                    </li>
                 </ul>
             </nav>
             <nav class="menu">
@@ -227,7 +235,7 @@
                 </div>
             </div>
             <div class="count-down-container">
-                <div class="header-count-down">{{ app.getTranslatedText('text0195') }}</div>
+                <div class="header-count-down f4">{{ app.getTranslatedText('text0195') }}</div>
                 <div class="clock"></div>
             </div>
             <div class="row link-group-container">
