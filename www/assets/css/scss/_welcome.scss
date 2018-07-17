@@ -11,6 +11,7 @@
         max-width: 1600px;
         margin: auto;
         padding: 45px;
+        padding-top: 100px;
     }
     .col2 {
         display: inline-block;
@@ -42,9 +43,6 @@
     .private-sale-txt {
         color: #b2d254;
         text-align: right;
-        font-size: 45px;
-        font-weight: 400;
-        letter-spacing: 0.02em;
         margin: auto 5px;
     }
     .btn-join {
@@ -268,7 +266,6 @@
             background-size: cover;
         }
         .private-sale-txt {
-            font-size: 35px;
             line-height: 43px;
         }
         .sub-message-container {
@@ -311,6 +308,9 @@
             padding-left: 20px;
             padding-right: 20px;
         }
+        .core-message {
+            margin-top: 100px;
+        }
         .count-down-container {
             li {
                 line-height: calc(100vw * 74 / 768);
@@ -335,9 +335,6 @@
             float: left;
             line-height: 30px;
         }
-        .core-message {
-            margin-top: 100px;
-        }
     }
 }
 
@@ -345,14 +342,11 @@
     .row-contributor .link-group a, .welcome-area .row-contributor .link-group span {
         font-family: 'Noto Sans SC', sans-serif;
     }
-    .header-count-down {
-        font-family: 'Noto Sans SC', sans-serif;
-    }
     li a {
         font-family: 'Noto Sans SC', sans-serif;
     }
     .sub-message {
-        line-height: 2;
+        line-height: 1.5;
     }
     .core-message {
         max-width: 750px;

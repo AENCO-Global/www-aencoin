@@ -70,8 +70,6 @@ a:focus {
     top: 0;
     left: 0;
     width: 100%;
-    height: 100px;
-    padding-top: 28px;
     background-color: rgba(0, 0, 0, 0);
     &.faq-header {
         background-color: rgba(0, 0, 0, 1);
@@ -79,6 +77,7 @@ a:focus {
 }
 .header-content {
     margin: auto;
+    padding-bottom: 20px;
 }
 .bottomBar {
     margin: auto;
@@ -128,7 +127,7 @@ h2 {
     font-size: 45px;
     font-family: 'Teko', sans-serif;
     font-weight: 400;
-    letter-spacing: 0.05em;
+    letter-spacing: 0.02em;
     text-align: center;
 }
 h3 {
@@ -159,6 +158,8 @@ h6 {
     font-family: "Titillium Web", sans-serif;
     font-weight: 300;
     letter-spacing: 0.02em;
+    margin-bottom: 0;
+    line-height: 1.5;
 }
 .f1 {
     font-size: 30px;
@@ -231,7 +232,7 @@ a:hover, button:hover {
 }
 .login-menu {
     position: relative;
-    margin-right: 50px;
+    margin-right: 25px;
     margin-top: 9px;
     float: right;
 }
@@ -242,14 +243,12 @@ a:hover, button:hover {
 .p-4 {
     padding: 0 !important;
 }
-.mobile-menu-btn {
-    position: absolute;
-    top: 15px;
-    right: 30px;
+.login-menu li .mobile-menu-btn {
     z-index: 20;
     ul li {
         padding: 3px 13px;
         border-top: 3px solid #0a92a4;
+        display: block;
     }
     display: none;
 }
@@ -336,6 +335,8 @@ button:focus {
     font-size: 36px;
     letter-spacing: 6px;
     background-color: #002d35;
+    border: 0;
+    padding: 0.35rem 1.25rem;
 }
 .mobile-menu .list-group-item:hover {
     background-color: #00b7ce;
@@ -350,6 +351,9 @@ button:focus {
 }
 .login-menu ul li {
     padding: 0 8px;
+}
+.login-menu li.mobile-menu-listitem {
+    vertical-align: text-bottom;
 }
 .menu ul li.group-account {
     margin: 0 7px;
@@ -374,9 +378,10 @@ button:focus {
     font-family: 'Teko', sans-serif;
     font-size: 28px;
     letter-spacing: 0.05em;
+    text-shadow: 0 0 5px #00121c, 0 0 10px #00121c, 0 0 10px #00121c;
 }
 .login-menu ul li a {
-    text-shadow: 2px 2px #252525, 2px 2px #252525, 2px 2px #252525;
+    text-shadow: 0 0 5px #00121c, 0 0 10px #00121c, 0 0 10px #00121c;
 }
 .brand-logo {
     display: inline-block;
@@ -680,9 +685,9 @@ div#modal-container {
     font-family: "Titillium Web", "Noto Sans SC", sans-serif;
     h1 {
         font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-        font-size: 45px;
-        line-height: 58px;
-        letter-spacing: 0.1em;
+        font-size: 30px;
+        line-height: 45px;
+        letter-spacing: 0.01em;
     }
     h2 {
         font-family: "Titillium Web", "Noto Sans SC", sans-serif;
@@ -691,7 +696,7 @@ div#modal-container {
     }
     h3 {
         font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-        font-size: 20px;
+        font-size: 18px;
         letter-spacing: 0.05em;
         line-height: 1.5;
     }
@@ -759,16 +764,16 @@ div#modal-container {
 .app.lang-kr {
     font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
     h1 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     h2 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     h3 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     h4 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     h5 {
         font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
@@ -777,22 +782,25 @@ div#modal-container {
         font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
     }
     .f1 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     .f2 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     .f3 {
         font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
     }
     .f4 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     .f5 {
-        font-family: "Titillium Web", "Do Hyeon", sans-serif;
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
     .f6 {
         font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+    }
+    .f7 {
+        font-family: "Teko", "Do Hyeon", sans-serif;
     }
 }
 @media (max-width: 1300px) {
@@ -802,10 +810,7 @@ div#modal-container {
     .mobile-menu {
         display: none;
     }
-    .login-menu {
-        margin-right: 90px;
-    }
-    .mobile-menu-btn {
+    .login-menu li .mobile-menu-btn {
         display: block;
     }
     .language-selector-container {
@@ -827,6 +832,9 @@ div#modal-container {
     }
     h2 {
         font-size: 40px;
+    }
+    h3 {
+        font-size: 20px;
     }
     .slick-next {
         right: -10%;
@@ -853,6 +861,7 @@ div#modal-container {
     }
     .txt-join-community {
         margin: 0 0 5px;
+        display: none;
     }
     h2 {
         font-size: 30px;
@@ -948,7 +957,7 @@ div#modal-container {
     }
 }
 @media (max-width: 520px) {
-    .login-menu {
+    .login-menu .group-account {
         display: none;
     }
     .bottomBar ul li {
@@ -980,49 +989,12 @@ div#modal-container {
     .bottomBar h2 {
         display: none;
     }
-    .header {
-        padding: 10px 0;
-        height: 70px;
-    }
     .video-popup iframe {
         width: 100%;
         height: calc(100% * 9 / 16);
     }
     h1 {
-        font-size: 48px;
-    }
-    h2 {
-        font-size: 45px;
-    }
-    h3 {
-        font-size: 32px;
-    }
-    h4 {
-        font-size: 28px;
-    }
-    h5 {
-        font-size: 18px;
-    }
-    h6 {
-        font-size: 15px;
-    }
-    .f1 {
-        font-size: 30px;
-    }
-    .f2 {
-        font-size: 20px;
-    }
-    .f3 {
-        font-size: 22px;
-    }
-    .f4 {
-        font-size: 25px;
-    }
-    .f5 {
-        font-size: 25px;
-    }
-    .f6 {
-        font-size: 15px;
+        font-size: 35px;
     }
     .f100 {
         font-size: 100%;
@@ -1031,6 +1003,12 @@ div#modal-container {
         font-size: 50%;
     }
     .app.lang-zhcn {
+        h2 {
+            font-size: 25px;
+        }
+        h5 {
+            font-size: 15px;
+        }
         .f3 {
             font-size: 100%;
         }

@@ -1,6 +1,6 @@
 .promotion-area {
     margin: auto;
-    width: 800px;
+    max-width: 800px;
     .tb-block {
         vertical-align: top;
         display: table-cell;
@@ -60,6 +60,16 @@
     }
 }
 @media (max-width: 479px) {
+    .promotion-area .f7 {
+        font-size: 20px;
+    }
+    .promotion-area .f3 {
+        font-size: 12px;
+    }
+    .promotion-area .msg-container {
+        text-align: center;
+        margin: 10% auto 5px;
+    }
     .promotion-area .tb-block {
         vertical-align: top;
         display: table-cell;
@@ -88,15 +98,5 @@
     }    
     .promotion-popup .modal-body {
         padding: 8%;
-    }
-    .f7 {
-        font-size: 25px;
-    }
-    .f3 {
-        font-size: 12px;
-    }
-    .promotion-area .msg-container {
-        text-align: center;
-        margin: 10% auto 5px;
     }
 }
