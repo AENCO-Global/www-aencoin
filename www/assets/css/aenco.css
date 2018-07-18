@@ -1115,11 +1115,6 @@ div#modal-container {
   .modal-body .container {
     padding: 0;
   }
-
-  .icon-social {
-    width: 10%;
-    height: auto;
-  }
 }
 @media (max-width: 640px) {
   .bottomBar ul {
@@ -1253,7 +1248,7 @@ div#modal-container {
 }
 .welcome-area .background {
   background: no-repeat center url("../img/banner-bg.jpg");
-  background-position-y: 0;
+  background-size: cover;
 }
 .welcome-area .content {
   max-width: 1600px;
@@ -2611,7 +2606,7 @@ a:hover {
 .contact-us-area .content {
   display: grid;
   margin: auto;
-  grid-template-columns: 2fr 2fr 2fr 2fr;
+  grid-template-columns: auto auto auto auto;
   grid-gap: 45px;
   max-width: 1300px;
 }
@@ -2714,7 +2709,7 @@ a:hover {
 @media (max-width: 700px) {
   .contact-us-area .content {
     width: 90%;
-    grid-template-columns: 2fr 2fr;
+    grid-template-columns: auto auto;
   }
 }
 @media (max-width: 560px) {
@@ -3367,20 +3362,20 @@ a:hover {
   }
   .ecosystem-area .diagram-pointer {
     left: -1%;
-    top: -12px;
-    background-size: 160px;
+    top: -19px;
+    background-size: 189px;
     font-size: 18px;
     line-height: 2.5;
-    background-position: -63px 0;
-    width: 111px;
+    background-position: -60px 0;
+    width: 120px;
   }
   .ecosystem-area .diagram-pointer span {
-    margin-left: -34px;
+    margin-left: -22px;
   }
   .ecosystem-area .diagram-title {
     width: 160px;
     font-size: 22px;
-    left: 28%;
+    left: calc(100% / 2 - 74px);
     top: -20px;
   }
 }
@@ -3469,8 +3464,9 @@ a:hover {
     font-size: 18px;
   }
   .ecosystem-area .diagram-pointer {
-    top: -18px;
+    top: -23px;
     left: 1%;
+    line-height: 3;
   }
   .ecosystem-area .diagram-pointer .f5 {
     font-size: 18px;

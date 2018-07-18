@@ -326,20 +326,20 @@
         }
         .diagram-pointer {
             left: -1%;
-            top: -12px;
-            background-size: 160px;
+            top: -19px;
+            background-size: 189px;
             font-size: 18px;
             line-height: 2.5;
-            background-position: -63px 0;
-            width: 111px;
+            background-position: -60px 0;
+            width: 120px;
             span {
-                margin-left: -34px;
+                margin-left: -22px;
             }
         }
         .diagram-title {
             width: 160px;
             font-size: 22px;
-            left: 28%;
+            left: calc(100% / 2 - 74px);
             top: -20px;
         }
     }
@@ -432,8 +432,9 @@
             }
         }
         .diagram-pointer {
-            top: -18px;
+            top: -23px;
             left: 1%;
+            line-height: 3;
             .f5 {
                 font-size: 18px;
             }
