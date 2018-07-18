@@ -1,4 +1,5 @@
-$primary-color: #b1d349;
+$primary-color: #006e7c
+;
 $primary-color-hover: scale-color($primary-color, $lightness: 32%);
 
 h2.timeline-title {
@@ -18,7 +19,7 @@ h6.timeline-subtitle {
 	}
 	
 h6.timeline-smtitle {
-	color: #b1d349;
+	color: #006e7c;
 	margin-bottom: -5px;
 	}
 
@@ -85,7 +86,7 @@ a:hover {
   width: 15px;
 }
 .timeline-marker:before {
-  background: #b1d349;
+  background: #006e7c;
   border: 3px solid transparent;
   border-radius: 100%;
   content: "";
@@ -101,7 +102,7 @@ a:hover {
 .timeline-marker:after {
   content: "";
   width: 3px;
-  background: #b1d349;
+  background: #006e7c;
   display: block;
   position: absolute;
   top: 24px;
@@ -132,7 +133,7 @@ a:hover {
 
 .timeline-item:not(.period):hover .timeline-marker:before {
   background: transparent;
-  border: 3px solid #b1d349;
+  border: 3px solid #006e7c;
 }
 
 .ico:not(.period):hover .timeline-marker:before {
@@ -165,8 +166,8 @@ a:hover {
   top: 0;
   bottom: 30px;
   position: absolute;
-  border-top: 3px solid #b1d349;
-  border-bottom: 3px solid #b1d349;
+  border-top: 3px solid #006e7c;
+  border-bottom: 3px solid #006e7c;
 }
 .period .timeline-marker:after {
   content: "";
@@ -177,6 +178,25 @@ a:hover {
 }
 .period .timeline-title {
   margin: 0;
+}
+
+.timeline-item .timeline-content ul li {
+  text-indent: -17px;
+  margin-left: 15px;
+}
+
+.timeline-item .timeline-content ul li:before {
+  content: "-";
+  margin-right: 10px;
+}
+.period {
+  color: #006e7c;
+}
+.ico .period {
+  color: #00b6cd;
+}
+.txt-bc .period {
+  color: #b1d349;
 }
 
 /*----------------------------------------------
