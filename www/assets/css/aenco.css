@@ -1860,6 +1860,7 @@ div#modal-container {
 }
 .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box h3 {
   margin: auto;
+  text-align: center;
 }
 .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box .dblock {
   padding: 5px 20px 1px;
