@@ -5,11 +5,13 @@
         text-align: left;
     }
     .content {
-        display: grid;
+        display: flex;
         margin: auto;
-        grid-template-columns: auto auto auto auto;
-        grid-gap: 45px;
         max-width: 1300px;
+        flex-wrap: wrap;
+    }
+    .footer-menu {
+        width: 25%;
     }
     .moon-contact {
         margin-top: 25px;
@@ -107,16 +109,20 @@
             margin-left: 2px;
         }
     }
-    @media (max-width: 700px) {
+    @media (max-width: 768px) {
         .content {
             width: 90%;
-            grid-template-columns: auto auto
+        }
+        .footer-menu {
+            width: 50%;
         }
     }
     @media (max-width: 560px) {
         .content {
             width: 90%;
-            grid-template-columns: 1fr;
+        }
+        .footer-menu {
+            width: 100%;
         }
     }
 }

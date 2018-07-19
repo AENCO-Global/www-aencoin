@@ -6,6 +6,10 @@
         margin: auto;
         padding: 0;
     }
+    .margin-area {
+        width: calc(100% - 520px);
+        height: 100%;
+    }
     .challenge-area {
         float: left;
         width: 50%;
@@ -21,22 +25,27 @@
     .challenge-box {
         margin: auto;
         padding: 64px 0;
-        width: 100%;
+        width: 520px;
     }
     .opportunity-box {
-        margin: auto;
-        width: 100%;
+        margin: 0 auto;
+        width: 520px;
         padding: 64px 0;
     }
     .logo {
         float:left;
+        display: flex;
+        align-items: center;
+        align-content: center;
     }
     .desc {
         float: left;
         margin-left: 35px;
         max-width: 70%;
         text-align: left;
-        padding-top: 3%;
+        display: flex;
+        align-items: center;
+        align-content: center;
     }
     .challenge-one-logo {
         background: url($challenge-one-logo) no-repeat;
@@ -93,10 +102,20 @@
         width: 80%;
         margin: auto;
         margin-top: 49px;
+        display: flex;
     }
     @media (max-width: 1300px) {
         .item {
             width: 100%;
+        }
+        .margin-area {
+            width: 20%;
+        }
+        .challenge-box {
+            width: 80%;
+        }
+        .opportunity-box {
+            width: 80%;
         }
     }
     @media (max-width: 1060px) {
@@ -108,15 +127,27 @@
             float: none;
             width: 100%;
         }
+        .margin-area {
+            width: 0;
+            height: 100%;
+        }
+        .challenge-box {
+            max-width: 70%;
+        }
+        .opportunity-box {
+            max-width: 70%;
+        }
         .items {
             max-width: 70%;
             margin: auto;
         }
         .item {
             width: 100%;
+            display: block;
         }
         .logo {
             float: none;
+            display: block;
         }
         .desc {
             text-align: center;
@@ -125,6 +156,7 @@
             max-width: 100%;
             margin-left: 0;
             margin-top: 20px;
+            display: block;
         }
     }
     @media (max-width: 479px) {

@@ -6,6 +6,309 @@
 |02. Mixins
 |---------------------------------------------**/
 /** @include font($normal, 16px); */
+.table-container {
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+}
+
+.tb-col {
+  flex: auto;
+}
+
+.dflex {
+  display: flex;
+  align-items: center;
+  align-content: center;
+}
+
+h1 {
+  font-size: 48px;
+  text-align: center;
+  line-height: 55px;
+  letter-spacing: 0.06em;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+}
+
+h2 {
+  color: #FFFFFF;
+  font-size: 45px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+h3 {
+  color: #FFFFFF;
+  font-size: 32px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-align: center;
+}
+
+h4 {
+  color: #FFFFFF;
+  font-size: 28px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+h5 {
+  color: #FFFFFF;
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+}
+
+h6 {
+  font-size: 15px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+  margin-bottom: 0;
+  line-height: 1.5;
+}
+
+.f1 {
+  font-size: 30px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f2 {
+  font-size: 20px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.f3 {
+  font-size: 18px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f4 {
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+
+.f5 {
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f6 {
+  font-size: 12px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+}
+
+.f7 {
+  font-size: 40px;
+  font-family: "Teko", sans-serif;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+
+.f10p {
+  font-size: 10%;
+}
+
+.f15p {
+  font-size: 15%;
+}
+
+.f20p {
+  font-size: 20%;
+}
+
+.f25p {
+  font-size: 25%;
+}
+
+.f30p {
+  font-size: 30%;
+}
+
+.f35p {
+  font-size: 35%;
+}
+
+.f40p {
+  font-size: 40%;
+}
+
+.f45p {
+  font-size: 45%;
+}
+
+.f50p {
+  font-size: 50%;
+}
+
+.f55p {
+  font-size: 55%;
+}
+
+.f60p {
+  font-size: 60%;
+}
+
+.f65p {
+  font-size: 65%;
+}
+
+.f70p {
+  font-size: 70%;
+}
+
+.f75p {
+  font-size: 75%;
+}
+
+.f80p {
+  font-size: 80%;
+}
+
+.f85p {
+  font-size: 85%;
+}
+
+.f90p {
+  font-size: 90%;
+}
+
+.f95p {
+  font-size: 95%;
+}
+
+.f100p {
+  font-size: 100%;
+}
+
+.app.lang-zhcn {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn h1 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.01em;
+}
+.app.lang-zhcn h2 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.app.lang-zhcn h3 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.app.lang-zhcn h4 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+.app.lang-zhcn h5 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.app.lang-zhcn h6 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+.app.lang-zhcn .f1 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .f2 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .f3 {
+  font-size: 20px;
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.app.lang-zhcn .f4 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 17px;
+}
+.app.lang-zhcn .f5 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  font-size: 17px;
+}
+.app.lang-zhcn .f6 {
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+}
+.app.lang-zhcn .f7 {
+  font-size: 30px;
+  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
+  line-height: 1.5;
+}
+
+.app.lang-kr {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr h1 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr h2 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr h3 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr h4 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr h5 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr h6 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .f1 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f2 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f3 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .f4 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f5 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+.app.lang-kr .f6 {
+  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
+}
+.app.lang-kr .f7 {
+  font-family: "Teko", "Do Hyeon", sans-serif;
+}
+
 body {
   background-color: #002d35;
   font-family: "Titillium Web", sans-serif;
@@ -150,109 +453,6 @@ a:focus {
 
 .margin-auto {
   margin: auto;
-}
-
-h1 {
-  font-size: 48px;
-  text-align: center;
-  line-height: 55px;
-  letter-spacing: 0.06em;
-  font-family: "Teko", sans-serif;
-  font-weight: 400;
-}
-
-h2 {
-  color: #FFFFFF;
-  font-size: 45px;
-  font-family: "Teko", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
-
-h3 {
-  color: #FFFFFF;
-  font-size: 32px;
-  font-family: "Teko", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  text-align: center;
-}
-
-h4 {
-  color: #FFFFFF;
-  font-size: 28px;
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-}
-
-h5 {
-  color: #FFFFFF;
-  font-size: 18px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  line-height: 1.5;
-}
-
-h6 {
-  font-size: 15px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-  margin-bottom: 0;
-  line-height: 1.5;
-}
-
-.f1 {
-  font-size: 30px;
-  font-family: "Teko", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-.f2 {
-  font-size: 20px;
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-}
-
-.f3 {
-  font-size: 18px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-.f4 {
-  font-size: 25px;
-  font-family: "Teko", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-}
-
-.f5 {
-  font-size: 25px;
-  font-family: "Teko", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-.f6 {
-  font-size: 12px;
-  font-family: "Titillium Web", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-}
-
-.f7 {
-  font-size: 40px;
-  font-family: "Teko", sans-serif;
-  font-weight: 400;
-  letter-spacing: 0.02em;
-  line-height: 1.2;
 }
 
 a, button {
@@ -531,7 +731,7 @@ button:focus {
   display: none;
 }
 .modal-dialog.video-popup {
-  max-width: fit-content;
+  max-width: calc(50vw + 100px);
 }
 .modal-dialog .close {
   font-size: 3rem;
@@ -813,70 +1013,6 @@ div#modal-container {
   width: 30%;
 }
 
-.app.lang-zhcn {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-}
-.app.lang-zhcn h1 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 30px;
-  line-height: 45px;
-  letter-spacing: 0.01em;
-}
-.app.lang-zhcn h2 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 30px;
-  line-height: 1.5;
-}
-.app.lang-zhcn h3 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
-}
-.app.lang-zhcn h4 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 20px;
-  letter-spacing: 0.05em;
-}
-.app.lang-zhcn h5 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 18px;
-  letter-spacing: 0.05em;
-  line-height: 1.5;
-}
-.app.lang-zhcn h6 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 15px;
-  letter-spacing: 0.05em;
-}
-.app.lang-zhcn .f1 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-}
-.app.lang-zhcn .f2 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-}
-.app.lang-zhcn .f3 {
-  font-size: 20px;
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-weight: 300;
-  letter-spacing: 0.02em;
-}
-.app.lang-zhcn .f4 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 17px;
-}
-.app.lang-zhcn .f5 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  font-size: 17px;
-}
-.app.lang-zhcn .f6 {
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-}
-.app.lang-zhcn .f7 {
-  font-size: 30px;
-  font-family: "Titillium Web", "Noto Sans SC", sans-serif;
-  line-height: 1.5;
-}
 .app.lang-zhcn .language-selector-container {
   top: 33px;
   right: 180px;
@@ -892,49 +1028,6 @@ div#modal-container {
   .app.lang-zhcn .language-selector-container.expanded {
     right: 196px;
   }
-}
-
-.app.lang-kr {
-  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
-}
-.app.lang-kr h1 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr h2 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr h3 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr h4 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr h5 {
-  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
-}
-.app.lang-kr h6 {
-  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
-}
-.app.lang-kr .f1 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr .f2 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr .f3 {
-  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
-}
-.app.lang-kr .f4 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr .f5 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
-}
-.app.lang-kr .f6 {
-  font-family: "Titillium Web", "Nanum Gothic Coding", monospace;
-}
-.app.lang-kr .f7 {
-  font-family: "Teko", "Do Hyeon", sans-serif;
 }
 
 @media (max-width: 1300px) {
@@ -1114,6 +1207,19 @@ div#modal-container {
 
   .modal-body .container {
     padding: 0;
+  }
+
+  .video-popup .modal-content {
+    overflow-y: hidden;
+  }
+
+  .video-popup iframe {
+    width: 100%;
+    height: calc(100vw * 9 / 16);
+  }
+
+  .modal-dialog.video-popup {
+    max-width: 100%;
   }
 }
 @media (max-width: 640px) {
@@ -1592,62 +1698,386 @@ div#modal-container {
 .app.lang-kr .welcome-area .header-count-down {
   font-family: "Do Hyeon", sans-serif;
 }
-.what-is-aen-token-area .main-container {
+.what-is-aen-blockchain-area .main-container {
   width: 100%;
   margin: auto;
 }
-.what-is-aen-token-area .content {
+.what-is-aen-blockchain-area .content {
   max-width: 1300px;
+  font-size: 32px;
   margin: auto;
 }
-.what-is-aen-token-area .message-container {
+.what-is-aen-blockchain-area .message-container {
   max-width: 50%;
-  padding: 3.5% 30px 0 0;
-  float: left;
+  padding: 0 30px 0 0;
+  flex-wrap: wrap;
 }
-.what-is-aen-token-area h2 {
+.what-is-aen-blockchain-area h2 {
   color: #b6d84e;
   text-align: left;
 }
-.what-is-aen-token-area h3 {
+.what-is-aen-blockchain-area h3 {
   text-align: left;
 }
-.what-is-aen-token-area h5 {
+.what-is-aen-blockchain-area h5 {
   text-align: left;
 }
-.what-is-aen-token-area .video-container {
+.what-is-aen-blockchain-area .video-container {
   margin: auto;
-  margin-top: 0px;
   width: 50%;
   height: 337px;
-  float: left;
 }
-.what-is-aen-token-area .video-container img {
+.what-is-aen-blockchain-area .video-container img {
   width: 100%;
 }
+.what-is-aen-blockchain-area .blockchain-diagram {
+  height: calc(100vw * 300 / 1200);
+  margin: 50px auto;
+  text-align: center;
+  max-width: 1024px;
+}
+.what-is-aen-blockchain-area .blockchain-diagram h5 {
+  text-align: center;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .left-side {
+  width: 28%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 0px;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .middle-side {
+  width: 24%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 38%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .right-side {
+  width: 28%;
+  height: 80%;
+  position: absolute;
+  top: 10%;
+  left: 72%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .left-direction-line-container {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 28%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .left-line {
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  border-right: 3px solid #FFFFFF;
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  left: 0px;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .middle-left-line {
+  height: 3px;
+  width: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: calc(50% - 3px / 2);
+  left: 50%;
+  z-index: 5;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .right-direction-line-container {
+  width: 10%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 62%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .right-line {
+  border-top: 3px solid #FFFFFF;
+  border-bottom: 3px solid #FFFFFF;
+  border-left: 3px solid #FFFFFF;
+  width: 50%;
+  height: 20%;
+  position: absolute;
+  top: 40%;
+  right: 0px;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .middle-right-line {
+  height: 3px;
+  width: 50%;
+  background-color: #FFFFFF;
+  position: absolute;
+  top: calc(50% - 3px / 2);
+  right: 50%;
+  z-index: 5;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-top-line {
+  height: 10%;
+  width: 3px;
+  background-color: #FFFFFF;
+  margin: auto;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-bottom-line {
+  height: 10%;
+  width: 3px;
+  background-color: #FFFFFF;
+  margin: auto;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .left-top-box {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #637c27;
+  width: 100%;
+  height: 50%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .left-bottom-box {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #465b16;
+  width: 100%;
+  height: 50%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-top-box {
+  border-radius: 25px;
+  background-color: #637c27;
+  width: 80%;
+  height: 30%;
+  margin: auto;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box {
+  border-radius: 100px;
+  border: solid #637c27 10px;
+  background-color: #92af3d;
+  width: 100%;
+  height: 20%;
+  margin: auto;
+  text-align: center;
+  z-index: 10;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box span {
+  margin: auto;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box h3 {
+  margin: auto;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box .dblock {
+  padding: 5px 20px 1px;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .center-bottom-box {
+  border-radius: 25px;
+  background-color: #465b16;
+  width: 90%;
+  height: 30%;
+  margin: auto;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .right-top-box {
+  border-top-left-radius: 25px;
+  border-top-right-radius: 25px;
+  background-color: #637c27;
+  width: 100%;
+  height: 50%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .right-bottom-box {
+  border-bottom-left-radius: 25px;
+  border-bottom-right-radius: 25px;
+  background-color: #465b16;
+  width: 100%;
+  height: 50%;
+}
+.what-is-aen-blockchain-area .blockchain-diagram .dblock {
+  padding: 10px 25px;
+}
+@media (max-width: 1315px) {
+  .what-is-aen-blockchain-area .content {
+    font-size: calc(100vw * 32 / 1315);
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .dblock {
+    padding: calc(100vw * 10 / 1315) calc(100vw * 20 / 1315);
+  }
+}
 @media (max-width: 1024px) {
-  .what-is-aen-token-area .content {
+  .what-is-aen-blockchain-area .content {
     width: 96%;
   }
-  .what-is-aen-token-area .message-container {
+  .what-is-aen-blockchain-area .message-container {
     max-width: 100%;
     padding: 0;
   }
-  .what-is-aen-token-area .video-container {
+  .what-is-aen-blockchain-area .video-container {
     margin-top: 35px;
     width: 100%;
   }
+  .what-is-aen-blockchain-area .blockchain-diagram {
+    width: 100%;
+    height: 30vw;
+  }
 }
 @media (max-width: 768px) {
-  .what-is-aen-token-area .video-container {
+  .what-is-aen-blockchain-area .video-container {
     float: none;
     margin-top: 5%;
   }
-  .what-is-aen-token-area .message-container {
+  .what-is-aen-blockchain-area .message-container {
     float: none;
     width: 100%;
     margin: auto;
     padding: 0 20px;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram {
+    width: 80vw;
+    height: 80vw;
+    margin: 30px auto;
+    text-align: center;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .left-side {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: flex;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .middle-side {
+    width: 100%;
+    height: 30%;
+    position: absolute;
+    top: 35%;
+    left: 0px;
+    display: flex;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .right-side {
+    width: 100%;
+    height: 25%;
+    position: absolute;
+    top: 75%;
+    left: 0px;
+    display: flex;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .left-direction-line-container {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 25%;
+    left: 0;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .left-line {
+    border-top: 0;
+    border-left: 3px solid #FFFFFF;
+    border-bottom: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 0px;
+    left: 25%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .middle-left-line {
+    height: 160%;
+    width: 3px;
+    position: absolute;
+    top: 50%;
+    left: calc(50% - 3px / 2);
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .right-direction-line-container {
+    width: 100%;
+    height: 10%;
+    position: absolute;
+    top: 65%;
+    left: 0px;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .right-line {
+    border-bottom: 0;
+    border-top: 3px solid #FFFFFF;
+    border-right: 3px solid #FFFFFF;
+    border-left: 3px solid #FFFFFF;
+    width: 50%;
+    height: 50%;
+    position: absolute;
+    top: 50%;
+    right: 25%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .middle-right-line {
+    height: 151%;
+    width: 3px;
+    position: absolute;
+    top: -95%;
+    right: calc(50% - 5px / 2);
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-top-line {
+    height: 3px;
+    width: 5%;
+    margin: auto;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-bottom-line {
+    height: 3px;
+    width: 5%;
+    margin: auto;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .left-top-box {
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 50%;
+    height: 100%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .left-bottom-box {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    height: 100%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-top-box {
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box {
+    border-radius: 35px;
+    border-width: 8px;
+    width: 30%;
+    height: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box span {
+    margin: auto;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-bottom-box {
+    border-radius: 10px;
+    width: 30%;
+    height: 100%;
+    margin: auto;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .right-top-box {
+    border-radius: 0;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    width: 50%;
+    height: 100%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .right-bottom-box {
+    border-radius: 0;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    width: 50%;
+    height: 100%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .f55p {
+    font-size: 100%;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .f90p {
+    font-size: 120%;
+  }
+}
+@media (max-width: 479px) {
+  .what-is-aen-blockchain-area .blockchain-diagram {
+    height: 80vw;
+  }
+  .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box {
+    border-width: 8px;
   }
 }
 
@@ -1661,6 +2091,66 @@ div#modal-container {
   height: 36px;
   position: relative;
   display: none;
+}
+
+.app.lang-zhcn .what-is-aen-blockchain-area .f55p {
+  font-size: 55%;
+}
+.app.lang-zhcn .what-is-aen-blockchain-area .f90p {
+  font-size: 90%;
+}
+.app.lang-zhcn .what-is-aen-blockchain-area h3 {
+  font-family: "Teko", "Noto Sans SC", sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.app.lang-zhcn .what-is-aen-blockchain-area h5 {
+  letter-spacing: 0.02em;
+}
+
+.what-is-aen-token-area .main-container {
+  width: 100%;
+  margin: auto;
+  background-color: #02b7ce;
+}
+.what-is-aen-token-area .content {
+  max-width: 1300px;
+  margin: auto;
+}
+.what-is-aen-token-area .message-container {
+  margin-top: 20px;
+  text-align: center;
+}
+.what-is-aen-token-area h3 {
+  text-align: left;
+}
+.what-is-aen-token-area h5 {
+  text-align: left;
+}
+.what-is-aen-token-area .tb-col {
+  padding: auto 10px;
+  padding: 0 20px;
+  flex: 3 33%;
+}
+.what-is-aen-token-area .tb-col h5 {
+  text-align: justify;
+}
+@media (max-width: 1024px) {
+  .what-is-aen-token-area .content {
+    width: 96%;
+  }
+  .what-is-aen-token-area .message-container {
+    max-width: 100%;
+    padding: 0;
+  }
+}
+@media (max-width: 768px) {
+  .what-is-aen-token-area .message-container {
+    float: none;
+    width: 100%;
+    margin: auto;
+    padding: 0 20px;
+  }
 }
 
 .how-it-works-area .main-container {
@@ -2626,11 +3116,13 @@ a:hover {
   text-align: left;
 }
 .contact-us-area .content {
-  display: grid;
+  display: flex;
   margin: auto;
-  grid-template-columns: auto auto auto auto;
-  grid-gap: 45px;
   max-width: 1300px;
+  flex-wrap: wrap;
+}
+.contact-us-area .footer-menu {
+  width: 25%;
 }
 .contact-us-area .moon-contact {
   margin-top: 25px;
@@ -2728,16 +3220,20 @@ a:hover {
     margin-left: 2px;
   }
 }
-@media (max-width: 700px) {
+@media (max-width: 768px) {
   .contact-us-area .content {
     width: 90%;
-    grid-template-columns: auto auto;
+  }
+  .contact-us-area .footer-menu {
+    width: 50%;
   }
 }
 @media (max-width: 560px) {
   .contact-us-area .content {
     width: 90%;
-    grid-template-columns: 1fr;
+  }
+  .contact-us-area .footer-menu {
+    width: 100%;
   }
 }
 
@@ -2768,7 +3264,6 @@ a:hover {
 }
 .media-area .media-list img {
   max-width: 100%;
-  height: 100%;
 }
 @media (max-width: 1024px) {
   .media-area .content {
@@ -2815,7 +3310,6 @@ a:hover {
 }
 .partners-area .partner-list img {
   max-width: 100%;
-  height: 100%;
 }
 @media (max-width: 1024px) {
   .partners-area .content {
@@ -2937,6 +3431,10 @@ a:hover {
   margin: auto;
   padding: 0;
 }
+.challenges-opportunity-area .margin-area {
+  width: calc(100% - 520px);
+  height: 100%;
+}
 .challenges-opportunity-area .challenge-area {
   float: left;
   width: 50%;
@@ -2952,22 +3450,27 @@ a:hover {
 .challenges-opportunity-area .challenge-box {
   margin: auto;
   padding: 64px 0;
-  width: 100%;
+  width: 520px;
 }
 .challenges-opportunity-area .opportunity-box {
-  margin: auto;
-  width: 100%;
+  margin: 0 auto;
+  width: 520px;
   padding: 64px 0;
 }
 .challenges-opportunity-area .logo {
   float: left;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 .challenges-opportunity-area .desc {
   float: left;
   margin-left: 35px;
   max-width: 70%;
   text-align: left;
-  padding-top: 3%;
+  display: flex;
+  align-items: center;
+  align-content: center;
 }
 .challenges-opportunity-area .challenge-one-logo {
   background: url("../img/challenges-1.png") no-repeat;
@@ -3024,10 +3527,20 @@ a:hover {
   width: 80%;
   margin: auto;
   margin-top: 49px;
+  display: flex;
 }
 @media (max-width: 1300px) {
   .challenges-opportunity-area .item {
     width: 100%;
+  }
+  .challenges-opportunity-area .margin-area {
+    width: 20%;
+  }
+  .challenges-opportunity-area .challenge-box {
+    width: 80%;
+  }
+  .challenges-opportunity-area .opportunity-box {
+    width: 80%;
   }
 }
 @media (max-width: 1060px) {
@@ -3039,15 +3552,27 @@ a:hover {
     float: none;
     width: 100%;
   }
+  .challenges-opportunity-area .margin-area {
+    width: 0;
+    height: 100%;
+  }
+  .challenges-opportunity-area .challenge-box {
+    max-width: 70%;
+  }
+  .challenges-opportunity-area .opportunity-box {
+    max-width: 70%;
+  }
   .challenges-opportunity-area .items {
     max-width: 70%;
     margin: auto;
   }
   .challenges-opportunity-area .item {
     width: 100%;
+    display: block;
   }
   .challenges-opportunity-area .logo {
     float: none;
+    display: block;
   }
   .challenges-opportunity-area .desc {
     text-align: center;
@@ -3056,6 +3581,7 @@ a:hover {
     max-width: 100%;
     margin-left: 0;
     margin-top: 20px;
+    display: block;
   }
 }
 @media (max-width: 479px) {
@@ -3070,8 +3596,12 @@ a:hover {
   background-color: #006e7c;
 }
 .ecosystem-area .content {
-  max-width: 1600px;
+  max-width: 1100px;
   margin: auto;
+}
+.ecosystem-area .main-desc {
+  margin: 20px auto;
+  text-align: center;
 }
 .ecosystem-area .diagram {
   margin: auto;

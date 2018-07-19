@@ -100,27 +100,10 @@
                 <a href="#contact-us-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0198') }}</h4></a>
                 <a href="https://signup.aencoin.com/register" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0181') }}</h4></a>
                 <a href="https://signup.aencoin.com/login" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0182') }}</h4></a>
-                <!--<a href="#" class="list-group-item list-group-item-action btn-language"><h4>{{ app.getTranslatedText('text0227') }}</h4></a>-->
             </div>
         </div>
-        <!--<div class="sub-menu">
-            <a href="#" class="btn-lang-item" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a>
-            <a href="#" class="btn-lang-item" ng-click="app.changeLang('zhcn')"><h5>中文</h5></a>
-            <a href="#" class="btn-lang-item" ng-click="app.changeLang('kr')"><h5>한국어</h5></a>
-        </div>-->
     </div>
     <!-- mobile menu end -->
-    <!-- language selector -->
-    <!--<div class="language-selector-container">
-        <div class="language-selector">
-            <ul>
-                <li><a href="#" ng-click="app.changeLang('en')"><h5>ENGLISH</h5></a></li>
-                <li><a href="#" ng-click="app.changeLang('zhcn')"><h5>中文</h5></a></li>
-                <li><a href="#" ng-click="app.changeLang('kr')"><h5>한국어</h5></a></li>
-            </ul>
-        </div>
-    </div>-->
-    <!-- language selector end-->
     <!-- Header -->
     <header class="header">
         <div class="header-content">
@@ -130,9 +113,9 @@
                 </div>
                 <div class="language-bar">
                     <ul>
-                        <li><a href="#" ng-click="app.changeLang('en')"><h6>ENGLISH</h6></a></li>
-                        <li><a href="#" ng-click="app.changeLang('zhcn')"><h6>中文</h6></a></li>
-                        <li class="last"><a href="#" ng-click="app.changeLang('kr')"><h6>한국어</h6></a></li>
+                        <li><a ng-click="app.changeLang('en')"><h6>ENGLISH</h6></a></li>
+                        <li><a ng-click="app.changeLang('zhcn')"><h6>中文</h6></a></li>
+                        <li class="last"><a ng-click="app.changeLang('kr')"><h6>한국어</h6></a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>
@@ -142,11 +125,10 @@
             </a>
             <nav class="login-menu">
                 <ul>
-                    <!--<li class="group-account"><a href="#" class="btn-lang"><img src="./assets/img/icon-lang.png" /></a></li>-->
                     <li class="group-account"><a href="https://signup.aencoin.com/register"><h4><span class="txt-signup">{{ app.getTranslatedText('text0181') }}</span></h4></a></li>
                     <li class="group-account"><a href="https://signup.aencoin.com/login"><h4><span class="txt-login">{{ app.getTranslatedText('text0182') }}</span></h4></a></li>
                     <li class="mobile-menu-listitem">
-                        <a href="#">
+                        <a>
                             <div id="mobile-menu-btn" class="mobile-menu-btn">
                                 <ul>
                                     <li></li>
@@ -161,7 +143,7 @@
             <nav class="menu">
                 <ul>
                     <li><a target="_blank" href="{{ app.getPDFPath(0) }}"><h4>{{ app.getTranslatedText('text0224') }}</h4></a></li>
-                    <li><a href="#what-is-ean-token-area"><h4>{{ app.getTranslatedText('text0225') }}</h4></a></li>
+                    <li><a href="#what-is-aen-token-area"><h4>{{ app.getTranslatedText('text0225') }}</h4></a></li>
                     <li><a href="#roadmap-area"><h4>{{ app.getTranslatedText('text0226') }}</h4></a></li>
                     <li><a href="#team-area"><h4>{{ app.getTranslatedText('text0196') }}</h4></a></li>
                     <li><a href="#faq-area"><h4>{{ app.getTranslatedText('text0206') }}</h4></a></li>
@@ -172,7 +154,6 @@
         </div>
     </header>
     <!-- Header End -->
-
     <!-- bottom bar -->
     <div class="bottomBarContainer">
         <div class="bottomBar">
@@ -293,17 +274,65 @@
     </div>
 </section>
 <!-- Welcome Area End -->
-<!-- What is Aen Token -->
-<section id="what-is-ean-token-area" class="section section-top section-full what-is-aen-token-area section-cat-one">
+<!-- What is Aen Blockchain -->
+<section id="what-is-aen-blockchain-area " class="section section-top section-full what-is-aen-blockchain-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <div class="message-container">
-                <h2>{{ app.getTranslatedText('text0014') }}</h2>
-                <h3>{{ app.getTranslatedText('text0015') }}</h3>
-                <h5>{{ app.getTranslatedText('text0016') }}</h5>
+            <div class="table-container">
+                <div class="tb-col message-container dflex">
+                    <h2>{{ app.getTranslatedText('text0014') }}</h2>
+                    <h3>{{ app.getTranslatedText('text0015') }}</h3>
+                    <h5>{{ app.getTranslatedText('text0016') }}</h5>
+                </div>
+                <div class="tb-col video-container dflex" ng-bind-html="app.getCoreVideoUrl()"></div>
+                <div class="clear"></div>
             </div>
-            <div class="video-container" ng-bind-html="app.getCoreVideoUrl()"></div>
-            <div class="clear"></div>
+            <div class="blockchain-diagram">
+                <div class="left-side">
+                    <div class="left-top-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0248') }}</h5></div>
+                    <div class="left-bottom-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0247') }}</h5></div>
+                </div>
+                <div class="left-direction-line-container">
+                    <div class="left-line"></div>
+                    <div class="middle-left-line"></div>
+                </div>
+                <div class="middle-side">
+                    <div class="center-top-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0244') }}</h5></div>
+                    <div class="center-top-line"></div>
+                    <div class="center-middle-box dflex dblock"><h3 class="f90p">{{ app.getTranslatedText('text0242') }}</h3></div>
+                    <div class="center-bottom-line"></div>
+                    <div class="center-bottom-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0243') }}</h5></div>
+                </div>
+                <div class="right-direction-line-container">
+                    <div class="middle-right-line"></div>
+                    <div class="right-line"></div>
+                </div>
+                <div class="right-side">
+                    <div class="right-top-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0246') }}</h5></div>
+                    <div class="right-bottom-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0245') }}</h5></div>
+                </div>
+                <div class="clear"></div>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- What is Aen Blockchain End -->
+<!-- What is Aen Token -->
+<section id="what-is-aen-token-area" class="section section-top section-full what-is-aen-token-area section-cat-one">
+    <div class="main-container">
+        <div class="content">
+            <h2>{{ app.getTranslatedText('text0249') }}</h2>   
+            <div class="message-container">
+                <p>
+                    <span class="f3">{{ app.getTranslatedText('text0250') }}</span>
+                </p>
+                <p>
+                    <span class="f3">{{ app.getTranslatedText('text0251') }}</span>
+                </p>
+                <p>
+                    <span class="f3">{{ app.getTranslatedText('text0252') }}</span>
+                </p>
+            </div>
         </div>
     </div>
 </section>
@@ -344,7 +373,8 @@
 <section id="ecosystem-area" class="section section-top section-full ecosystem-area section-cat-one">
     <div class="main-container">
         <div class="content">
-            <h2 >{{ app.getTranslatedText('text0023') }}</h2>
+            <h2>{{ app.getTranslatedText('text0023') }}</h2>
+            <div class="f3 main-desc">{{ app.getTranslatedText('text0253') }}</div>
             <div class="diagram">
                 <div class="diagram-border-container">
                     <div class="top-left-corner"></div>
@@ -398,8 +428,9 @@
 <!-- Opportunities and Challenge -->
 <section id="challenges-opportunity-area" class="section section-top section-full challenges-opportunity-area section-cat-one">
     <div class="main-container">
-        <div class="content">
-            <div class="challenge-area">
+        <div class="content table-container">
+            <div class="challenge-area table-container">
+                <div class="margin-area"></div>
                 <div class="challenge-box">
                     <h2>{{ app.getTranslatedText('text0035') }}</h2>
                     <div class="items">
@@ -433,9 +464,8 @@
                         </div>
                     </div>
                 </div>
-                <div class="clear"></div>
             </div>
-            <div class="opportunities-area">
+            <div class="opportunities-area table-container">
                 <div class="opportunity-box">
                     <h2>{{ app.getTranslatedText('text0040') }}</h2>
                     <div class="items">
@@ -469,7 +499,7 @@
                         </div>
                     </div>
                 </div>
-                <div class="clear"></div>
+                <div class="margin-area"></div>
             </div>
             <div class="clear"></div>
         </div>
@@ -898,7 +928,7 @@
         <div class="content">
             <h2>{{ app.getTranslatedText('text0175') }}</h2>
             <div class="media-list-container">
-                <ul id="media-list" class="media-list"></ul>
+                <ul id="media-list" class="media-list dflex"></ul>
             </div>
         </div>
     </div>
@@ -910,7 +940,7 @@
         <div class="content">
             <h2>{{ app.getTranslatedText('text0176') }}</h2>
             <div class="partner-list-container">
-                <ul id="partner-list" class="partner-list"></ul>
+                <ul id="partner-list" class="partner-list dflex"></ul>
             </div>
         </div>
     </div>
@@ -1108,7 +1138,7 @@
                     <li class="f4"><a target="_blank" href="{{ app.getPDFPath(6) }}">{{ app.getTranslatedText('text0186') }}</a></li>
                 </ul>
             </div>
-            <div class="contact" id="contact">
+            <div class="contact footer-menu" id="contact">
                 <span class="title f5">{{ app.getTranslatedText('text0187') }}</span>
                 <ul>
                     <li class="f4 text-reg-addr">{{ app.getTranslatedText('text0188') }}</li>
@@ -1131,7 +1161,7 @@
 <footer>
     <div class="footer footer-content">
         <div class="fleft company-name"><h6>{{ app.getTranslatedText('text0194') }}</h6></div>
-        <div class="fright version"><h6>VER 2.1.2</h6></div>
+        <div class="fright version"><h6>VER 2.2.1</h6></div>
         <div class="clear"></div>
     </div>
 </footer>
