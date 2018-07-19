@@ -3348,7 +3348,7 @@ a:hover {
 .faq-area .content {
   max-width: 1600px;
   margin: auto;
-  padding: 45px;
+  padding: 120px 45px 45px;
 }
 .faq-area .btn, .faq-area .mb-0 {
   text-align: left;
@@ -3407,6 +3407,9 @@ a:hover {
   padding: 20px 0 0 60px;
 }
 @media (max-width: 479px) {
+  .faq-area .content {
+    padding: 45px;
+  }
   .faq-area .new-card {
     margin-top: 20px;
   }
