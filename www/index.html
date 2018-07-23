@@ -92,7 +92,6 @@
         <div class="menu-area">
             <div class="list-group">
                 <a class="list-group-item list-group-item-action close-when-click" target="_blank" href="{{ app.getPDFPath(0) }}"><h4>{{ app.getTranslatedText('text0224') }}</h4></a>
-                <a href="#what-is-aen-token-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0225') }}</h4></a>
                 <a href="#roadmap-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0226') }}</h4></a>
                 <a href="#team-area" class="list-group-item list-group-item-action close-when-click"><h4>{{ app.getTranslatedText('text0196') }}</h4></a>
                 <a href="#faq-area" class="list-group-item list-group-item-action btn-faq close-when-click"><h4>{{ app.getTranslatedText('text0206') }}</h4></a>
@@ -143,7 +142,6 @@
             <nav class="menu">
                 <ul>
                     <li><a target="_blank" href="{{ app.getPDFPath(0) }}"><h4>{{ app.getTranslatedText('text0224') }}</h4></a></li>
-                    <li><a href="#what-is-aen-token-area"><h4>{{ app.getTranslatedText('text0225') }}</h4></a></li>
                     <li><a href="#roadmap-area"><h4>{{ app.getTranslatedText('text0226') }}</h4></a></li>
                     <li><a href="#team-area"><h4>{{ app.getTranslatedText('text0196') }}</h4></a></li>
                     <li><a href="#faq-area"><h4>{{ app.getTranslatedText('text0206') }}</h4></a></li>
@@ -219,18 +217,23 @@
                 <div class="header-count-down f4">{{ app.getTranslatedText('text0195') }}</div>
                 <div class="clock"></div>
             </div>
-            <div class="row link-group-container">
-                <ul class="link-list">
-                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(0) }}" class="f3">{{ app.getTranslatedText('text0009') }}</a></li>
-                    <li class="sepeartor">|</li>
-                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(1) }}" class="f3">{{ app.getTranslatedText('text0010') }}</a></li>
-                    <li class="sepeartor">|</li>
-                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(2) }}" class="f3">{{ app.getTranslatedText('text0011') }}</a></li>
-                    <li class="sepeartor">|</li>
-                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(7) }}" class="f3">{{ app.getTranslatedText('text0255') }}</a></li>
-                    <li class="sepeartor">|</li>
-                    <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(3) }}" class="f3">{{ app.getTranslatedText('text0012') }}</a></li>
-                </ul>
+            <div class="link-group-container">
+                <div class="row">
+                    <ul class="link-list">
+                        <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(0) }}" class="f3">{{ app.getTranslatedText('text0009') }}</a></li>
+                        <li class="sepeartor">|</li>
+                        <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(1) }}" class="f3">{{ app.getTranslatedText('text0010') }}</a></li>
+                        <li class="sepeartor">|</li>
+                        <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(2) }}" class="f3">{{ app.getTranslatedText('text0011') }}</a></li>
+                    </ul>
+                </div>
+                <div class="row">
+                    <ul class="link-list">
+                        <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(7) }}" class="f3">{{ app.getTranslatedText('text0255') }}</a></li>
+                        <li class="sepeartor">|</li>
+                        <li class="link-txt"><a target="_blank" href="{{ app.getPDFPath(3) }}" class="f3">{{ app.getTranslatedText('text0012') }}</a></li>
+                    </ul>
+                </div>
             </div>
             <div class="rating-container">
                 <div class="regular slider">
@@ -262,13 +265,16 @@
                         <script type="text/javascript" src="https://www.coinschedule.com/link-to-us/badge-js?id=2826&size=small&type=7"></script>
                     </div>
                     <div class="slider-item">
-                        <a href="https://cryptonext.com/ico/aenco" target="_blank" rel="nofollow" title="AENCO on Foundico.com"><img border="0" src="./assets/img/badge/crypto-next.png"/></a>
+                        <a href="https://cryptonext.com/ico/aenco" target="_blank" rel="nofollow" title="CRYTO NEXT"><img border="0" src="./assets/img/badge/crypto-next.png"/></a>
                     </div>
                     <div class="slider-item">
                         <a href="https://cryptototem.com/ico-aencoin.com/" target="_blank" title="Aenco (AEN) rating on CryptoTotem"><img border="0" src="https://cryptototem.com/widgets/imggen.php?w=160&h=50&format=0&color=0&ico_id=13662" alt="Aenco (AEN) ICO rating"></a>
                     </div>
                     <div class="slider-item">
                         <a href="https://icocrunch.io/ico/Aenco" target="_blank" rel="nofollow" title="Aenco on ICOCrunch"><img src="https://icocrunch.io/rated_img?color=a&ico=Aenco&id=6181" width=" 130px" alt="Aenco ICO Rating"/></a>
+                    </div>
+                    <div class="slider-item">
+                        <a href="https://trulycoin.com/ico/aenco/" target="_blank" rel="nofollow" title="AENCO on TrulyCoin" tabindex="-1"><img border="0" src="./assets/img/badge/trulycoin.png"></a>
                     </div>
                 </div>
             </div>
@@ -475,28 +481,28 @@
                             <div class="logo">
                                 <div class="opportunity-one-logo"></div>
                             </div>
-                            <div class="desc">{{ app.getTranslatedText('text0041') }}</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0041') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-two-logo"></div>
                             </div>
-                            <div class="desc">{{ app.getTranslatedText('text0042') }}</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0042') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-three-logo"></div>
                             </div>
-                            <div class="desc">{{ app.getTranslatedText('text0043') }}</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0043') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                         <div class="item">
                             <div class="logo">
                                 <div class="opportunity-four-logo"></div>
                             </div>
-                            <div class="desc">{{ app.getTranslatedText('text0044') }}</div>
+                            <div class="desc"><h5>{{ app.getTranslatedText('text0044') }}</h5></div>
                             <div class="clear"></div>
                         </div>
                     </div>
