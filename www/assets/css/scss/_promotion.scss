@@ -4,22 +4,12 @@
     .tb-block {
         vertical-align: top;
         display: table-cell;
-        padding: 8% 4%;
         width: 50%;
+        float: left;
     }
-    .blue {
-        background-color: #00b7ce;
-    }
-    .green {
-        background-color: #a1bf4b;
-    }
-    .img-container {
+    img {
         width: 100%;
-        text-align: center;
-        img {
-            width: 100%;
-            height: auto;
-        }
+        height: auto;
     }
     .msg-container {
         text-align: center;
@@ -52,12 +42,6 @@
             margin: 10% auto;
         }
     }
-    .promotion-popup {
-        .modal-content {
-            width: 80%;
-            margin: auto;
-        }
-    }
 }
 @media (max-width: 479px) {
     .promotion-area .f7 {
@@ -73,10 +57,7 @@
     .promotion-area .tb-block {
         vertical-align: top;
         display: table-cell;
-        padding: 8% 15% 5%;
         width: 100%;
-        float: left;
-        max-height: 50vh;
     }
     .promotion-popup {
         margin-top: 0vh !important;

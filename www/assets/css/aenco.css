@@ -741,7 +741,7 @@ button:focus {
 }
 .modal-dialog .modal-content {
   background-color: #002d35;
-  box-shadow: 0.5vw 0.5vw 0.5vw 0.1vw rgba(0, 147, 165, 0.2);
+  box-shadow: 0 0 1vw 0vw rgba(0, 3, 4, 0.5);
 }
 .modal-dialog .modal-title {
   max-width: 80%;
@@ -4043,20 +4043,10 @@ a:hover {
 .promotion-area .tb-block {
   vertical-align: top;
   display: table-cell;
-  padding: 8% 4%;
   width: 50%;
+  float: left;
 }
-.promotion-area .blue {
-  background-color: #00b7ce;
-}
-.promotion-area .green {
-  background-color: #a1bf4b;
-}
-.promotion-area .img-container {
-  width: 100%;
-  text-align: center;
-}
-.promotion-area .img-container img {
+.promotion-area img {
   width: 100%;
   height: auto;
 }
@@ -4092,11 +4082,6 @@ a:hover {
     text-align: center;
     margin: 10% auto;
   }
-
-  .promotion-popup .modal-content {
-    width: 80%;
-    margin: auto;
-  }
 }
 @media (max-width: 479px) {
   .promotion-area .f7 {
@@ -4115,10 +4100,7 @@ a:hover {
   .promotion-area .tb-block {
     vertical-align: top;
     display: table-cell;
-    padding: 8% 15% 5%;
     width: 100%;
-    float: left;
-    max-height: 50vh;
   }
 
   .promotion-popup {
