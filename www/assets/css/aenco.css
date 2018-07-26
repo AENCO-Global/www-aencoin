@@ -869,7 +869,6 @@ button:focus {
 }
 
 .slick-slide {
-  margin: 0 15px;
   opacity: 1;
 }
 
@@ -1142,10 +1141,6 @@ div#modal-container {
 
   .link-group span {
     display: none;
-  }
-
-  .slick-slide {
-    margin: 0 35px 0 20px;
   }
 
   .content {
