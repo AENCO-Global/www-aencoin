@@ -4230,5 +4230,41 @@ a:hover {
     padding: 8%;
   }
 }
+.token-sale-area .content {
+  max-width: 1300px;
+  margin: auto;
+}
+.token-sale-area .table-container .tb-col {
+  width: 33.33%;
+}
+.token-sale-area .table-container .title {
+  margin: auto;
+}
+.token-sale-area .table-container .subtitle {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.token-sale-area .table-container .logo-container {
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 70%;
+}
+.token-sale-area .table-container .logo-container a {
+  margin: auto;
+}
+.token-sale-area .table-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 479px) {
+  .token-sale-area .table-container .tb-col {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
 
 /*# sourceMappingURL=aenco.css.map */
