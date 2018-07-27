@@ -16,6 +16,12 @@
         margin: 10% auto 0 auto;
         max-width: 300px;
     }
+    &.one-col-promotion {
+        max-width: 400px;
+        .tb-block {
+            width: 100%;
+        }
+    }
 }
 .promotion-popup {
     height: auto !important;

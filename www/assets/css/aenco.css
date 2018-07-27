@@ -1575,10 +1575,7 @@ div#modal-container {
   margin: auto;
 }
 .welcome-area .contribution-bar .text-total-value {
-  max-width: 25%;
-  height: 45%;
-  float: left;
-  padding: 0 2%;
+  left: 80%;
 }
 .welcome-area .contribution-bar .bar-desc {
   width: 100%;
@@ -1618,7 +1615,7 @@ div#modal-container {
   width: 49.4%;
 }
 .welcome-area .contribution-bar .softcap-info .txt-current-cap {
-  left: calc(49.4% - 4%);
+  left: calc(49.4% - 7%);
 }
 .welcome-area .contribution-bar .hardcap-info {
   width: 50%;
@@ -1633,7 +1630,7 @@ div#modal-container {
   width: 12.4%;
 }
 .welcome-area .contribution-bar .hardcap-info .txt-current-cap {
-  left: calc(12.4% - 4%);
+  left: calc(12.4% - 7%);
 }
 .welcome-area .contribution-bar .bar-desc span {
   position: absolute;
@@ -4152,6 +4149,12 @@ a:hover {
   text-align: center;
   margin: 10% auto 0 auto;
   max-width: 300px;
+}
+.promotion-area.one-col-promotion {
+  max-width: 400px;
+}
+.promotion-area.one-col-promotion .tb-block {
+  width: 100%;
 }
 
 .promotion-popup {

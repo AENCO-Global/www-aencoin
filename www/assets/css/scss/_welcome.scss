@@ -233,10 +233,7 @@
             margin: auto;
         }
         .text-total-value {
-            max-width: 25%;
-            height: 45%;
-            float: left;
-            padding: 0 2%;
+            left: 80%;
         }
         .bar-desc {
             width: 100%;
@@ -275,7 +272,7 @@
                 width: 49.4%;
             }
             .txt-current-cap {
-                left: calc(49.4% - 4%);
+                left: calc(49.4% - 7%);
             }    
         }
         .hardcap-info{
@@ -290,7 +287,7 @@
                 width: 12.4%;
             }
             .txt-current-cap {
-                left: calc(12.4% - 4%);
+                left: calc(12.4% - 7%);
             }
         }
         .bar-desc span {
