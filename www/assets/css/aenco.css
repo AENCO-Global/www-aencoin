@@ -1425,7 +1425,7 @@ div#modal-container {
   display: inline;
 }
 .welcome-area .link-group-container {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .welcome-area .link-list {
   margin: auto;
@@ -1547,53 +1547,96 @@ div#modal-container {
   max-width: 44.5%;
 }
 .welcome-area .contribution-bar {
-  width: 500px;
-  height: 50px;
+  max-width: 60%;
+  max-height: 100%;
+  margin: 20px auto auto auto;
 }
-.welcome-area .contribution-bar .table-container {
-  height: 40%;
+.welcome-area .contribution-bar .item-name {
   width: 100%;
+  height: 35%;
+  padding: 1% 0;
+  text-align: center;
+  display: block;
 }
-.welcome-area .contribution-bar .tb-col.item-name {
-  width: 15%;
-  height: 100%;
-}
-.welcome-area .contribution-bar .tb-col.item-graph {
-  width: 85%;
-  height: 100%;
+.welcome-area .contribution-bar .item-graph {
+  width: 100%;
+  height: 60%;
 }
 .welcome-area .contribution-bar .bar-graph {
   width: 100%;
-  height: 80%;
+  height: 100%;
+  align-content: center;
+  display: flex;
+}
+.welcome-area .contribution-bar .bar-container {
+  width: 75%;
+  height: 100%;
+  float: left;
+  margin: auto;
+}
+.welcome-area .contribution-bar .text-total-value {
+  max-width: 25%;
+  height: 45%;
+  float: left;
+  padding: 0 2%;
 }
 .welcome-area .contribution-bar .bar-desc {
   width: 100%;
-  height: 20%;
+  height: 35%;
 }
 .welcome-area .contribution-bar .bar-background {
-  background-color: #FF0000;
+  background-color: #000000;
   width: 100%;
-  height: 100%;
+  height: 45%;
+  border: 0.08em solid #FFFFFF;
+  border-radius: 20px;
 }
 .welcome-area .contribution-bar .value-bar {
-  background-color: #FFFF00;
+  position: absolute;
+  height: 45%;
+  top: 0;
+  left: 0;
+  border: 0.08em solid #FFFFFF;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+}
+.welcome-area .contribution-bar .value-indicator {
+  height: 20%;
+  border-right: 0.08em solid #FFFFFF;
+}
+.welcome-area .contribution-bar .softcap-info {
+  width: 50%;
+  height: 120px;
+  padding: 0 2%;
+}
+.welcome-area .contribution-bar .softcap-info .value-bar {
+  background-color: #00b7ce;
+  width: 49.4%;
+}
+.welcome-area .contribution-bar .softcap-info .value-indicator {
+  width: 49.4%;
+}
+.welcome-area .contribution-bar .softcap-info .txt-current-cap {
+  left: calc(49.4% - 4%);
+}
+.welcome-area .contribution-bar .hardcap-info {
+  width: 50%;
+  height: 120px;
+  padding: 0 2%;
+}
+.welcome-area .contribution-bar .hardcap-info .value-bar {
+  background-color: #b1d34a;
   width: 12.4%;
-  height: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info .value-indicator {
+  width: 12.4%;
+}
+.welcome-area .contribution-bar .hardcap-info .txt-current-cap {
+  left: calc(12.4% - 4%);
 }
 .welcome-area .contribution-bar .bar-desc span {
   position: absolute;
-}
-.welcome-area .contribution-bar .txt-start {
-  left: 0;
-}
-.welcome-area .contribution-bar .txt-current-cap {
-  left: 12.4%;
-}
-.welcome-area .contribution-bar .txt-softcap {
-  left: 25%;
-}
-.welcome-area .contribution-bar .txt-end {
-  right: 0;
 }
 @media (max-width: 1024px) {
   .welcome-area .content {
@@ -1689,6 +1732,17 @@ div#modal-container {
   .welcome-area .link-group-container li a {
     float: left;
     width: 100%;
+  }
+  .welcome-area .contribution-bar .item-name {
+    width: 100%;
+  }
+  .welcome-area .contribution-bar .softcap-info {
+    width: 100%;
+    padding: 0;
+  }
+  .welcome-area .contribution-bar .hardcap-info {
+    width: 100%;
+    padding: 0;
   }
 }
 @media (max-width: 479px) {
