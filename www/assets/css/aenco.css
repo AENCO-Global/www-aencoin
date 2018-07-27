@@ -1546,6 +1546,55 @@ div#modal-container {
   flex: 0 0 44.5%;
   max-width: 44.5%;
 }
+.welcome-area .contribution-bar {
+  width: 500px;
+  height: 50px;
+}
+.welcome-area .contribution-bar .table-container {
+  height: 40%;
+  width: 100%;
+}
+.welcome-area .contribution-bar .tb-col.item-name {
+  width: 15%;
+  height: 100%;
+}
+.welcome-area .contribution-bar .tb-col.item-graph {
+  width: 85%;
+  height: 100%;
+}
+.welcome-area .contribution-bar .bar-graph {
+  width: 100%;
+  height: 80%;
+}
+.welcome-area .contribution-bar .bar-desc {
+  width: 100%;
+  height: 20%;
+}
+.welcome-area .contribution-bar .bar-background {
+  background-color: #FF0000;
+  width: 100%;
+  height: 100%;
+}
+.welcome-area .contribution-bar .value-bar {
+  background-color: #FFFF00;
+  width: 12.4%;
+  height: 100%;
+}
+.welcome-area .contribution-bar .bar-desc span {
+  position: absolute;
+}
+.welcome-area .contribution-bar .txt-start {
+  left: 0;
+}
+.welcome-area .contribution-bar .txt-current-cap {
+  left: 12.4%;
+}
+.welcome-area .contribution-bar .txt-softcap {
+  left: 25%;
+}
+.welcome-area .contribution-bar .txt-end {
+  right: 0;
+}
 @media (max-width: 1024px) {
   .welcome-area .content {
     max-width: 1024px;
