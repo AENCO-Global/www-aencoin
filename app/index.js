@@ -10,6 +10,7 @@ var videos = require('./src/video');
 var tokenDistribution = require('./src/token-distribution');
 var getPdfDoc = require('./src/pdfDoc').getPdfDoc;
 var contribution = require('./src/contribution');
+var cap = require('./src/cap');
 
 function getUrlLanguageCode(lang) {
     switch(lang) {
@@ -150,6 +151,7 @@ const system = {
         this.updateSoftcapBar();
         tokenDistribution.render();
         tokenDistribution.updateTable(this.language);
+        cap.updateValue();
     },
     addButtonListener: function() {
         var that = this;
