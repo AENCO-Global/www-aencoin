@@ -1665,6 +1665,10 @@ div#modal-container {
   border-bottom-right-radius: 0;
   box-shadow: inset -1px -3px 5px 0px rgba(111, 111, 111, 0.61), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
   overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
 }
 .welcome-area .contribution-bar .txt-current-cap-container {
   width: 75%;
