@@ -151,7 +151,7 @@ const system = {
         this.updateSoftcapBar();
         tokenDistribution.render();
         tokenDistribution.updateTable(this.language);
-        cap.updateValue();
+        //cap.updateValue();
     },
     addButtonListener: function() {
         var that = this;
@@ -522,50 +522,7 @@ const system = {
         $("#modal-container #modal-body-content").html(content);
     },
     updateSoftcapBar: function() {
-        var that = this;
-        var classSelector = $(".contribution-bar");
-        const softcapText = getTranslatedText(that.language, "text0257");
-        const hardcapText = getTranslatedText(that.language, "text0258");
-        const usdText = getTranslatedText(that.language, "text0259");
-        var dom =   `<div class="tb-col softcap-info">
-                        <div class="item-name">
-                            <h6>${softcapText}</h6>
-                        </div>
-                        <div class="item-graph">
-                            <div class="bar-graph">
-                                <div class="bar-container">
-                                    <div class="bar-background"></div>
-                                    <div class="value-bar"></div>
-                                    <div class="value-indicator"></div>
-                                    <div class="bar-desc">
-                                        <span class="txt-current-cap f6">49.4%</span>
-                                        <span class="text-total-value f6">${usdText}15M</span>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>    
-                        </div>
-                    </div>
-                    <div class="tb-col hardcap-info">
-                        <div class="item-name">
-                            <h6>${hardcapText}</h6>
-                        </div>
-                        <div class="item-graph">
-                            <div class="bar-graph">
-                                <div class="bar-container">
-                                    <div class="bar-background"></div>
-                                    <div class="value-bar"></div>
-                                    <div class="value-indicator"></div>
-                                    <div class="bar-desc">
-                                        <span class="txt-current-cap f6">12.4%</span>
-                                        <span class="text-total-value f6">${usdText}60M</span>
-                                    </div>
-                                </div>
-                                <div class="clear"></div>
-                            </div>    
-                        </div>
-                    </div>`;
-        classSelector.html(dom);
+        cap.render({language: this.language});
     }
 };
 

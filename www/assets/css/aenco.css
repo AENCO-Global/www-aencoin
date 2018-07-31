@@ -1341,6 +1341,74 @@ div#modal-container {
     margin-bottom: 10px;
   }
 }
+@-webkit-keyframes AnimationName {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  10% {
+    left: -80%;
+    opacity: 1;
+  }
+  20% {
+    left: -60%;
+  }
+  30% {
+    left: -40%;
+  }
+  40% {
+    left: -20%;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: -100%;
+    opacity: 1;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  10% {
+    left: -80%;
+    opacity: 1;
+  }
+  20% {
+    left: -60%;
+  }
+  30% {
+    left: -40%;
+  }
+  40% {
+    left: -20%;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: -100%;
+    opacity: 1;
+  }
+}
 .welcome-area {
   position: relative;
 }
@@ -1552,7 +1620,7 @@ div#modal-container {
   margin: 20px auto auto auto;
 }
 .welcome-area .contribution-bar .item-name {
-  width: 100%;
+  width: 75%;
   height: 35%;
   padding: 1% 0;
   text-align: center;
@@ -1565,12 +1633,10 @@ div#modal-container {
 .welcome-area .contribution-bar .bar-graph {
   width: 100%;
   height: 100%;
-  align-content: center;
-  display: flex;
 }
 .welcome-area .contribution-bar .bar-container {
   width: 75%;
-  height: 100%;
+  height: 45%;
   float: left;
   margin: auto;
 }
@@ -1578,25 +1644,35 @@ div#modal-container {
   left: 80%;
 }
 .welcome-area .contribution-bar .bar-desc {
-  width: 100%;
+  width: 25%;
   height: 35%;
+  float: left;
 }
 .welcome-area .contribution-bar .bar-background {
-  background-color: #000000;
+  background-color: #02272f;
   width: 100%;
-  height: 45%;
-  border: 0.08em solid #FFFFFF;
+  height: 100%;
   border-radius: 20px;
+  box-shadow: 0 2px 9px 0.2em #075059, inset 0 7px 13px 0em rgba(0, 14, 25, 0.86), 1px 0px 3px 0.1em rgba(21, 114, 102, 0.6);
 }
 .welcome-area .contribution-bar .value-bar {
   position: absolute;
-  height: 45%;
+  height: 100%;
   top: 0;
   left: 0;
-  border: 0.08em solid #FFFFFF;
   border-radius: 20px;
   border-top-right-radius: 0;
   border-bottom-right-radius: 0;
+  box-shadow: inset -1px -3px 5px 0px rgba(111, 111, 111, 0.61), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
+  overflow: hidden;
+}
+.welcome-area .contribution-bar .txt-current-cap-container {
+  width: 75%;
+}
+.welcome-area .contribution-bar .txt-current-cap {
+  z-index: 10;
+  text-align: right;
+  padding: 10px 3px 0 0;
 }
 .welcome-area .contribution-bar .value-indicator {
   height: 20%;
@@ -1609,13 +1685,10 @@ div#modal-container {
 }
 .welcome-area .contribution-bar .softcap-info .value-bar {
   background-color: #00b7ce;
-  width: 49.4%;
 }
-.welcome-area .contribution-bar .softcap-info .value-indicator {
-  width: 49.4%;
-}
-.welcome-area .contribution-bar .softcap-info .txt-current-cap {
-  left: calc(49.4% - 7%);
+.welcome-area .contribution-bar .softcap-info .gradientBar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(100, 255, 100, 0.47), rgba(255, 255, 255, 0) 80%);
+  box-shadow: inset 1px -3px 5px 0px rgba(0, 89, 101, 0.74), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
 .welcome-area .contribution-bar .hardcap-info {
   width: 50%;
@@ -1623,17 +1696,27 @@ div#modal-container {
   padding: 0 2%;
 }
 .welcome-area .contribution-bar .hardcap-info .value-bar {
-  background-color: #b1d34a;
-  width: 12.4%;
+  background-color: #a1c043;
 }
-.welcome-area .contribution-bar .hardcap-info .value-indicator {
-  width: 12.4%;
-}
-.welcome-area .contribution-bar .hardcap-info .txt-current-cap {
-  left: calc(12.4% - 7%);
+.welcome-area .contribution-bar .hardcap-info .gradientBar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(0, 228, 251, 0.33), rgba(255, 255, 255, 0) 80%);
+  box-shadow: inset 1px -3px 5px 0px rgba(100, 132, 11, 0.7), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
 .welcome-area .contribution-bar .bar-desc span {
+  margin-left: 10px;
+}
+.welcome-area .contribution-bar .gradientBar {
+  z-index: 9;
   position: absolute;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  opacity: 0;
+  -webkit-animation: AnimationName 4s linear infinite;
+  -moz-animation: AnimationName 4s linear infinite;
+  animation: AnimationName 4s linear infinite;
+  box-shadow: inset -1px -3px 5px 0px rgba(111, 111, 111, 0.61), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
 @media (max-width: 1024px) {
   .welcome-area .content {
@@ -1651,6 +1734,20 @@ div#modal-container {
     -ms-flex: 0 0 40.8%;
     flex: 0 0 40.8%;
     max-width: 40.8%;
+  }
+  .welcome-area .contribution-bar .item-name {
+    width: 100%;
+  }
+  .welcome-area .contribution-bar .softcap-info {
+    width: 100%;
+    padding: 0;
+  }
+  .welcome-area .contribution-bar .hardcap-info {
+    width: 100%;
+    padding: 0;
+  }
+  .welcome-area .contribution-bar .bar-graph {
+    margin-left: 10%;
   }
 }
 @media (max-width: 768px) {
@@ -1730,17 +1827,6 @@ div#modal-container {
     float: left;
     width: 100%;
   }
-  .welcome-area .contribution-bar .item-name {
-    width: 100%;
-  }
-  .welcome-area .contribution-bar .softcap-info {
-    width: 100%;
-    padding: 0;
-  }
-  .welcome-area .contribution-bar .hardcap-info {
-    width: 100%;
-    padding: 0;
-  }
 }
 @media (max-width: 479px) {
   .welcome-area .content {
@@ -1772,6 +1858,15 @@ div#modal-container {
     float: left;
     line-height: 30px;
   }
+  .welcome-area .contribution-bar {
+    max-width: 80%;
+  }
+  .welcome-area .contribution-bar .bar-container {
+    width: 70%;
+  }
+  .welcome-area .contribution-bar .bar-desc {
+    width: 30%;
+  }
 }
 
 .app.lang-zhcn .welcome-area .row-contributor .link-group a, .app.lang-zhcn .welcome-area .welcome-area .row-contributor .link-group span {
@@ -1784,7 +1879,11 @@ div#modal-container {
   line-height: 1.5;
 }
 .app.lang-zhcn .welcome-area .core-message {
-  max-width: 750px;
+  max-width: 600px;
+}
+.app.lang-zhcn .welcome-area h1 {
+  font-size: 40px;
+  line-height: 60px;
 }
 
 .app.lang-kr .welcome-area .row-contributor .link-group a, .app.lang-kr .welcome-area .welcome-area .row-contributor .link-group span {
@@ -1793,6 +1892,7 @@ div#modal-container {
 .app.lang-kr .welcome-area .header-count-down {
   font-family: "Do Hyeon", sans-serif;
 }
+
 .what-is-aen-blockchain-area .main-container {
   width: 100%;
   margin: auto;
