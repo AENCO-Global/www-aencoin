@@ -1514,6 +1514,27 @@ div#modal-container {
 .welcome-area .rating-container {
   width: 80%;
   margin: 65px auto;
+  height: 73px;
+}
+.welcome-area .slick-slider {
+  height: 100%;
+}
+.welcome-area .slick-list {
+  height: 100%;
+}
+.welcome-area .slick-track {
+  height: 100%;
+}
+.welcome-area .slider-item {
+  display: flex !important;
+  align-items: center;
+  height: 100%;
+}
+.welcome-area .slider-item a {
+  margin: auto;
+}
+.welcome-area .slick-slide > div:first-child {
+  height: 100%;
 }
 .welcome-area .badge-container {
   padding: 14px 5px;

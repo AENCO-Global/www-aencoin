@@ -126,6 +126,27 @@
     .rating-container {
         width: 80%;
         margin: 65px auto;
+        height: 73px;
+    }
+    .slick-slider {
+        height: 100%;
+    }
+    .slick-list {
+        height: 100%;
+    }
+    .slick-track {
+        height: 100%;
+    }
+    .slider-item {
+        display: flex !important;
+        align-items: center;
+        height: 100%;
+        a {
+            margin: auto;
+        }
+    }
+    .slick-slide > div:first-child {
+        height: 100%;
     }
     .badge-container {
         padding: 14px 5px;
