@@ -11,6 +11,7 @@ var tokenDistribution = require('./src/token-distribution');
 var getPdfDoc = require('./src/pdfDoc').getPdfDoc;
 var contribution = require('./src/contribution');
 var cap = require('./src/cap');
+var ImageManager = require('./src/image-manager');
 
 function getUrlLanguageCode(lang) {
     switch(lang) {
@@ -575,6 +576,34 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
             url = 'https://www.youtube.com/embed/U5A5d22b17E';
     }
     var html = '<iframe class="embed-responsive-item" src="' + url + '" allowfullscreen=""></iframe>';
+    return $sce.trustAsHtml(html);
+  }
+
+  todoList.getBlockchainDiagram = function() {
+    const imageId = "img0001";
+    const desktopImage = ImageManager.getImagePath(imageId, todoList.lang, 0);
+    const mobileImage = ImageManager.getImagePath(imageId, todoList.lang, 1);
+    var html = `<img
+                    srcset="${mobileImage} 479w, ${desktopImage} 480w"
+                    sizes="(max-width: 479px) 479px, (min-width: 480px) 480px"
+                    src="${desktopImage}"
+                    alt="Aenco Blockchain"
+                    title="Aenco Blockchain"
+                />`;
+    return $sce.trustAsHtml(html);
+  }
+
+  todoList.getBlockchainPlatformDiagram = function() {
+    const imageId = "img0002";
+    const desktopImage = ImageManager.getImagePath(imageId, todoList.lang, 0);
+    const mobileImage = ImageManager.getImagePath(imageId, todoList.lang, 1);
+    var html = `<img
+                    srcset="${mobileImage} 479w, ${desktopImage} 480w"
+                    sizes="(max-width: 479px) 479px, (min-width: 480px) 480px"
+                    src="${desktopImage}"
+                    alt="Aenco Blockchain Platform"
+                    title="token &amp; smart modules"
+                />`;
     return $sce.trustAsHtml(html);
   }
 }]);

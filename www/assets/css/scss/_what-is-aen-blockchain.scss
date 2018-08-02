@@ -34,176 +34,21 @@
     .aen-blockchain-platform-diagram {
       text-align: center;
       img {
-        content: url($blockchain-platform-diagram);
+        content: url($blockchain-platform-diagram-en);
       }
     }
     .blockchain-diagram {
-      height: calc(100vw * 300 / 1200);
-      margin: 50px auto;
-      text-align: center;
       max-width: 1024px;
-      h5 {
-        text-align: center;
-      }
-      .left-side {
-        width: 28%;
-        height: 80%;
-        position: absolute;
-        top: 10%;
-        left: 0px;
-      }
-      .middle-side {
-        width: 24%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 38%;
-      }
-      .right-side {
-        width: 28%;
-        height: 80%;
-        position: absolute;
-        top: 10%;
-        left: 72%;
-      }
-      .left-direction-line-container {
-        width: 10%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 28%;
-      }
-      .left-line {
-        border-top: 3px solid #FFFFFF;
-        border-bottom: 3px solid #FFFFFF;
-        border-right: 3px solid #FFFFFF;
-        width: 50%;
-        height: 20%;
-        position: absolute;
-        top: 40%;
-        left: 0px;
-      }
-      .middle-left-line {
-        height: 3px;
-        width: 50%;
-        background-color: #FFFFFF;
-        position: absolute;
-        top: calc(50% - 3px / 2);
-        left: 50%;
-        z-index: 5;
-      }
-      .right-direction-line-container {
-        width: 10%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        left: 62%;
-      }
-      .right-line {
-        border-top: 3px solid #FFFFFF;
-        border-bottom: 3px solid #FFFFFF;
-        border-left: 3px solid #FFFFFF;
-        width: 50%;
-        height: 20%;
-        position: absolute;
-        top: 40%;
-        right: 0px;
-      }
-      .middle-right-line {
-        height: 3px;
-        width: 50%;
-        background-color: #FFFFFF;
-        position: absolute;
-        top: calc(50% - 3px / 2);
-        right: 50%;
-        z-index: 5;
-      }
-      .center-top-line {
-        height: 10%;
-        width: 3px;
-        background-color: #FFFFFF;
-        margin: auto;
-      }
-      .center-bottom-line {
-        height: 10%;
-        width: 3px;
-        background-color: #FFFFFF;
-        margin: auto;
-      }
-      .left-top-box {
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        background-color: #637c27;
-        width: 100%;
-        height: 50%;
-      }
-      .left-bottom-box {
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        background-color: #465b16;
-        width: 100%;
-        height: 50%;
-      }
-      .center-top-box {
-        border-radius: 25px;
-        background-color: #637c27;
-        width: 80%;
-        height: 30%;
-        margin: auto;
-      }
-      .center-middle-box {
-        border-radius: 100px;
-        border: solid #637c27 10px;
-        background-color: #92af3d;
-        width: 100%;
-        height: 20%;
-        margin: auto;
-        text-align: center;
-        z-index: 10;
-        span {
-          margin: auto;
-        }
-        h3 {
-          margin: auto;
-          text-align: center;
-        }
-        .dblock {
-          padding: 5px 20px 1px;
-        }
-      }
-      .center-bottom-box {
-        border-radius: 25px;
-        background-color: #465b16;
-        width: 90%;
-        height: 30%;
-        margin: auto;
-      }
-      .right-top-box {
-        border-top-left-radius: 25px;
-        border-top-right-radius: 25px;
-        background-color: #637c27;
-        width: 100%;
-        height: 50%;
-      }
-      .right-bottom-box {
-        border-bottom-left-radius: 25px;
-        border-bottom-right-radius: 25px;
-        background-color: #465b16;
-        width: 100%;
-        height: 50%;
-      }
-      .dblock {
-        padding: 10px 25px;
+      text-align: center;
+      width: 100%;
+      margin: 60px auto auto auto;
+      img {
+        content: url($blockchain-en);
       }
     }
     @media (max-width: 1315px) {
       .content {
         font-size: calc(100vw * 32 / 1315);
-      }
-      .blockchain-diagram {
-        .dblock {
-          padding: calc(100vw * 10 / 1315) calc(100vw * 20 / 1315);
-        }
       }
     }
     @media (max-width: 1024px) {
@@ -218,10 +63,6 @@
         margin-top: 35px;
         width: 100%;
       }
-      .blockchain-diagram {
-        width: 100%;
-        height: 30vw;
-      }
     }
     @media (max-width: 768px) {
       .video-container {
@@ -234,164 +75,16 @@
         margin: auto;
         padding: 0 20px;
       }
-      .blockchain-diagram {
-        width: 80vw;
-        height: 80vw;
-        margin: 30px auto;
-        text-align: center;
-        .left-side {
-          width: 100%;
-          height: 25%;
-          position: absolute;
-          top: 0px;
-          left: 0px;
-          display: flex;
-        }
-        .middle-side {
-          width: 100%;
-          height: 30%;
-          position: absolute;
-          top: 35%;
-          left: 0px;
-          display: flex;
-        }
-        .right-side {
-          width: 100%;
-          height: 25%;
-          position: absolute;
-          top: 75%;
-          left: 0px;
-          display: flex;
-        }
-        .left-direction-line-container {
-          width: 100%;
-          height: 10%;
-          position: absolute;
-          top: 25%;
-          left: 0;
-        }
-        .left-line {
-          border-top: 0;
-          border-left: 3px solid #FFFFFF;
-          border-bottom: 3px solid #FFFFFF;
-          border-right: 3px solid #FFFFFF;
-          width: 50%;
-          height: 50%;
-          position: absolute;
-          top: 0px;
-          left: 25%;
-        }
-        .middle-left-line {
-          height: 160%;
-          width: 3px;
-          position: absolute;
-          top: 50%;
-          left: calc(50% - 3px / 2);
-        }
-        .right-direction-line-container {
-          width: 100%;
-          height: 10%;
-          position: absolute;
-          top: 65%;
-          left: 0px;
-        }
-        .right-line {
-          border-bottom: 0;
-          border-top: 3px solid #FFFFFF;
-          border-right: 3px solid #FFFFFF;
-          border-left: 3px solid #FFFFFF;
-          width: 50%;
-          height: 50%;
-          position: absolute;
-          top: 50%;
-          right: 25%;
-        }
-        .middle-right-line {
-          height: 151%;
-          width: 3px;
-          position: absolute;
-          top: -95%;
-          right: calc(50% - 5px / 2);
-        }
-        .center-top-line {
-          height: 3px;
-          width: 5%;
-          margin: auto;
-        }
-        .center-bottom-line {
-          height: 3px;
-          width: 5%;
-          margin: auto;
-        }
-        .left-top-box {
-          border-radius: 0;
-          border-top-left-radius: 10px;
-          border-bottom-left-radius: 10px;
-          width: 50%;
-          height: 100%;
-        }
-        .left-bottom-box {
-          border-radius: 0;
-          border-top-right-radius: 10px;
-          border-bottom-right-radius: 10px;
-          width: 50%;
-          height: 100%;
-        }
-        .center-top-box {
-          border-radius: 10px;
-          width: 30%;
-          height: 100%;
-          margin: auto;
-        }
-        .center-middle-box {
-          border-radius: 35px;
-          border-width: 8px;
-          width: 30%;
-          height: 80%;
-          margin: auto;
-          text-align: center;
-          span {
-            margin: auto;
-          }
-        }
-        .center-bottom-box {
-          border-radius: 10px;
-          width: 30%;
-          height: 100%;
-          margin: auto;
-        }
-        .right-top-box {
-          border-radius: 0;
-          border-top-left-radius: 10px;
-          border-bottom-left-radius: 10px;
-          width: 50%;
-          height: 100%;
-        }
-        .right-bottom-box {
-          border-radius: 0;
-          border-top-right-radius: 10px;
-          border-bottom-right-radius: 10px;
-          width: 50%;
-          height: 100%;
-        }
-        .f55p {
-          font-size: 100%;
-        }
-        .f90p {
-          font-size: 120%;
-        }
-      }
     }
     @media (max-width: 479px) {
       .aen-blockchain-platform-diagram {
         img {
-          content: url($blockchain-platform-diagram-mobile);
+          content: url($blockchain-platform-diagram-en-mobile);
         }
       }
       .blockchain-diagram {
-        height: 80vw;
-        .center-middle-box {
-          border-width: 8px;
+        img {
+          content: url($blockchain-en-mobile);
         }
       }
     }

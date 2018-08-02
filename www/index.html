@@ -302,40 +302,8 @@
                 <div class="tb-col video-container dflex" ng-bind-html="app.getCoreVideoUrl()"></div>
                 <div class="clear"></div>
             </div>
-            <div class="blockchain-diagram">
-                <div class="left-side">
-                    <div class="left-top-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0248') }}</h5></div>
-                    <div class="left-bottom-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0247') }}</h5></div>
-                </div>
-                <div class="left-direction-line-container">
-                    <div class="left-line"></div>
-                    <div class="middle-left-line"></div>
-                </div>
-                <div class="middle-side">
-                    <div class="center-top-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0244') }}</h5></div>
-                    <div class="center-top-line"></div>
-                    <div class="center-middle-box dflex dblock"><h3 class="f90p">{{ app.getTranslatedText('text0242') }}</h3></div>
-                    <div class="center-bottom-line"></div>
-                    <div class="center-bottom-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0243') }}</h5></div>
-                </div>
-                <div class="right-direction-line-container">
-                    <div class="middle-right-line"></div>
-                    <div class="right-line"></div>
-                </div>
-                <div class="right-side">
-                    <div class="right-top-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0246') }}</h5></div>
-                    <div class="right-bottom-box dflex dblock"><h5 class="f55p">{{ app.getTranslatedText('text0245') }}</h5></div>
-                </div>
-                <div class="clear"></div>
-            </div>
-            <div class="aen-blockchain-platform-diagram">
-                <img srcset="./assets/img/mobile/aenco-blockchain-platform-architecture.m.png 479w, ./assets/img/aenco-blockchain-platform-architecture.png 480w"
-                sizes="(max-width: 479px) 479px, (min-width: 480px) 480px"
-                src="./assets/img/aenco-blockchain-platform-architecture.png"
-                alt="Aenco Blockchain Platform"
-                title="token &amp; smart modules"
-                />
-            </div>
+            <div class="blockchain-diagram" ng-bind-html="app.getBlockchainDiagram()"></div>
+            <div class="aen-blockchain-platform-diagram" ng-bind-html="app.getBlockchainPlatformDiagram()"></div>
         </div>
     </div>
 </section>
