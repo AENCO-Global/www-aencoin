@@ -31,6 +31,12 @@
         width: 100%;
       }
     }
+    .aen-blockchain-platform-diagram {
+      text-align: center;
+      img {
+        content: url($blockchain-platform-diagram);
+      }
+    }
     .blockchain-diagram {
       height: calc(100vw * 300 / 1200);
       margin: 50px auto;
@@ -377,6 +383,11 @@
       }
     }
     @media (max-width: 479px) {
+      .aen-blockchain-platform-diagram {
+        img {
+          content: url($blockchain-platform-diagram-mobile);
+        }
+      }
       .blockchain-diagram {
         height: 80vw;
         .center-middle-box {

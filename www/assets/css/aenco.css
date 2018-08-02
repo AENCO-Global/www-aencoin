@@ -319,6 +319,11 @@ div {
   position: relative;
 }
 
+img {
+  width: 100%;
+  height: auto;
+}
+
 iframe {
   border: none;
   width: 100%;
@@ -1950,6 +1955,12 @@ div#modal-container {
 .what-is-aen-blockchain-area .video-container img {
   width: 100%;
 }
+.what-is-aen-blockchain-area .aen-blockchain-platform-diagram {
+  text-align: center;
+}
+.what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+  content: url("../img/aenco-blockchain-platform-architecture.png");
+}
 .what-is-aen-blockchain-area .blockchain-diagram {
   height: calc(100vw * 300 / 1200);
   margin: 50px auto;
@@ -2294,6 +2305,9 @@ div#modal-container {
   }
 }
 @media (max-width: 479px) {
+  .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+    content: url("../img/mobile/aenco-blockchain-platform-architecture.m.png");
+  }
   .what-is-aen-blockchain-area .blockchain-diagram {
     height: 80vw;
   }
