@@ -2037,6 +2037,15 @@ div#modal-container {
   letter-spacing: 0.02em;
 }
 
+.aenco-products-area .main-container {
+  width: 100%;
+  background-color: #0a92a4;
+}
+.aenco-products-area .content {
+  max-width: 1300px;
+  margin: auto;
+}
+
 .what-is-aen-token-area .main-container {
   width: 100%;
   margin: auto;
