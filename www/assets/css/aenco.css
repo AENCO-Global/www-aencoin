@@ -1540,6 +1540,7 @@ div#modal-container {
 }
 .welcome-area .slick-slide > div:first-child {
   height: 100%;
+  padding: 0 20px;
 }
 .welcome-area .badge-container {
   padding: 14px 5px;
