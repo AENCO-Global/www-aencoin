@@ -72,5 +72,9 @@ module.exports = [
     {
         image: "./assets/img/partners/bountyhive.png",
         url: "https://bountyhive.io/join/Aenco"
+    },
+    {
+        image: "./assets/img/partners/tokenmez.png",
+        url: "https://tokenmez.com/aenco"
     }
 ];
