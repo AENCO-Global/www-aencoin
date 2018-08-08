@@ -319,11 +319,6 @@ div {
   position: relative;
 }
 
-img {
-  width: 100%;
-  height: auto;
-}
-
 iframe {
   border: none;
   width: 100%;
@@ -1733,6 +1728,15 @@ div#modal-container {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(0, 228, 251, 0.33), rgba(255, 255, 255, 0) 80%);
   box-shadow: inset 1px -3px 5px 0px rgba(100, 132, 11, 0.7), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
+.welcome-area .contribution-bar .hardcap-info.combine-softcap {
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .value-bar {
+  background: linear-gradient(to right, #00b7ce 25%, #a1c043 25%, #a1c043 100%);
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .gradientBar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(100, 255, 100, 0.47), rgba(255, 255, 255, 0) 80%);
+}
 .welcome-area .contribution-bar .bar-desc span {
   margin-left: 10px;
 }
@@ -1937,6 +1941,10 @@ div#modal-container {
   max-width: 50%;
   padding: 0 30px 0 0;
   flex-wrap: wrap;
+}
+.what-is-aen-blockchain-area img {
+  width: 100%;
+  height: auto;
 }
 .what-is-aen-blockchain-area h2 {
   color: #b6d84e;

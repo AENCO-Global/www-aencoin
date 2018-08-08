@@ -523,7 +523,7 @@ const system = {
         $("#modal-container #modal-body-content").html(content);
     },
     updateSoftcapBar: function() {
-        cap.render({language: this.language});
+        cap.init({language: this.language});
     }
 };
 
