@@ -32,6 +32,7 @@
         $json_data = file_get_contents($filePath);
         $history = json_decode($json_data, true);
         $lastHistory = end($history);
+        $lastUpdateValue = 0;
         if ($lastHistory) {
             //compare to last history
             $lastUpdateTime = $lastHistory['t'];
