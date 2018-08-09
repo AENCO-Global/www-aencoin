@@ -43,38 +43,12 @@ const capData = [
     }
 ];
 
-function getCapData(now) {
-    const currentData = null;
-    for(let i = capData.length - 1; i >= 0; i--) {
-        const startTime = Date.parse(capData[i].startTime);
-        if(now >= startTime) {
-            return doCapCalculation(capData[i], now);
-        }
-    }
-    return {
-        softcapPercentage: 89.4,
-        hardcapPercentage: 22.4
-    }
-}
-
-function doCapCalculation(capData, now) {
-    const {
-        startTime,
-        duration,
-        startPercentageValue,
-        endPercentageValue
-    } = capData;
-    const capStartTime = Date.parse(startTime);
-    const percentageDiff = endPercentageValue - startPercentageValue;
-    const timeDiff = (now - capStartTime) / 1000;
-    const ratio = Math.min(timeDiff / duration, 1);
-    const addonPercentage =  percentageDiff * ratio;
-    let softcapPercentage = roundToOneDecimal(startPercentageValue + addonPercentage);
-    let hardcapPercentage = roundToOneDecimal((softcapVolume * softcapPercentage / 100) / hardcapVolume * 100);
-    return {
-        softcapPercentage: Math.min(100, softcapPercentage),
-        hardcapPercentage: Math.min(100, hardcapPercentage)
-    };
+function getCapData(cb) {
+    $.ajax({
+        dataType: "json",
+        url: "./api/index.php",
+        success: cb
+    });
 }
 
 const cap = {
@@ -94,14 +68,24 @@ const cap = {
     },
     init: function(props) {
         var that = this;
+        var getCapDataFunc = function() {
+            getCapData(function(data){
+                const capData = {
+                    softcapPercentage: data.sv,
+                    hardcapPercentage: data.hv
+                };
+                that.triggerUpdate(capData);
+            });
+        }
+        getCapDataFunc();
         this.componentDidMount(props);
         this.render();
-
+        //const interval = 60000;
+        const interval = 30000;
         setInterval(function() {
             const now = Date.now();
-            const capData = getCapData(now);
-            that.triggerUpdate(capData);
-        }, 1000);
+            getCapDataFunc();
+        }, interval);
     },
     triggerUpdate: function(props) {
         const mergedProps = this.mergeProps(props);
@@ -113,11 +97,10 @@ const cap = {
     },
     componentDidMount: function(props) {
         const now = Date.now();
-        const capData = getCapData(now);
         this.props = {
             language: props.language,
-            softcapPercentage: capData.softcapPercentage,
-            hardcapPercentage: capData.hardcapPercentage
+            softcapPercentage: 0,
+            hardcapPercentage: 0
         };
     },
     shouldComponentUpdate: function(props) {
@@ -128,7 +111,7 @@ const cap = {
     render: function() {
         var that = this;
         var props = that.props;
-        const {
+        let {
             language = "en",
             softcapPercentage = 0,
             hardcapPercentage = 0
@@ -137,10 +120,60 @@ const cap = {
         const softcapText = getTranslatedText(language, "text0257");
         const hardcapText = getTranslatedText(language, "text0258");
         const usdText = getTranslatedText(language, "text0259");
+        const contributionText = getTranslatedText(language, "text0268");
+        const softcapRemarkText = getTranslatedText(language, "text0269");
+        const midcapRemarkText = getTranslatedText(language, "text0270");
+        const hardcapRemarkText = getTranslatedText(language, "text0271");
         var dom = "";
-        const isSingleBar = softcapPercentage >= 100;
+        //softcapPercentage = 150;
+        //hardcapPercentage = 100;
+        //const isSingleBar = softcapPercentage >= 100;
+        const isSingleBar = true;
         const singleBarDomClass = isSingleBar ? "combine-softcap" : "";
-        var singleBarDom = `<div class="tb-col hardcap-info ${singleBarDomClass}">
+        const gradientPercentage = 25 / hardcapPercentage * 100;
+        var singleBarDom = `
+        <div class="single-bar-container">
+            <div class="tb-col hardcap-info ${singleBarDomClass}">
+                <div class="item-name">
+                    <div class="f3">${contributionText}</div>
+                </div>
+                <div class="item-graph">
+                    <div class="bar-graph">
+                        <div class="bar-container">
+                            <div class="bar-background"></div>
+                            <div class="value-bar dflex" style="width:${hardcapPercentage}%; background: linear-gradient(to right, #00b7ce ${gradientPercentage}%, #a1c043 ${gradientPercentage}%, #a1c043 100%);">
+                                <div class="gradientBar"></div>
+                                <div class="current-cap-value">
+                                    <h6>${hardcapPercentage}%</h6>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="bar-desc">
+                            <div class="text-total-value f6">${hardcapRemarkText}</div>
+                        </div>
+                        <div class="clear"></div>
+                        <div class="softcap-indicator-container">
+                            <div class="bar-indicator-container">
+                                <div class="bar-indicator" style="width:25%"></div>
+                            </div>
+                            <div class="txt-current-cap-container">
+                                <div class="txt-current-cap"><span class="f6">${softcapRemarkText}</span></div>
+                            </div>
+                        </div>
+                        <div class="midcap-indicator-container">
+                            <div class="bar-indicator-container">
+                                <div class="bar-indicator" style="width:37%"></div>
+                            </div>
+                            <div class="txt-current-cap-container">
+                                <div class="txt-current-cap"><span class="f6">${midcapRemarkText}</span></div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="empty-row"></div>
+            </div>
+        </div>`;
+        /*var singleBarDom = `<div class="tb-col hardcap-info ${singleBarDomClass}">
                                 <div class="item-name">
                                     <h6>${hardcapText}</h6>
                                 </div>
@@ -148,9 +181,12 @@ const cap = {
                                     <div class="bar-graph">
                                         <div class="bar-container">
                                             <div class="bar-background"></div>
-                                            <div class="value-bar dflex" style="width:${hardcapPercentage}%">
+                                            <div class="value-bar dflex" style="width:${hardcapPercentage}%; background: linear-gradient(to right, #00b7ce ${gradientPercentage}%, #a1c043 ${gradientPercentage}%, #a1c043 100%);">
                                                 <div class="gradientBar"></div>
                                             </div>
+                                        </div>
+                                        <div class="bar-indicator-container">
+                                            <div class="bar-indicator"></div>
                                         </div>
                                         <div class="bar-desc">
                                             <span class="text-total-value f6">${usdText}60M</span>
@@ -159,9 +195,12 @@ const cap = {
                                         <div class="txt-current-cap-container">
                                             <div class="txt-current-cap" style="width:${hardcapPercentage}%"><h6>${hardcapPercentage}%</h6></div>
                                         </div>
+                                        <div class="txt-soft-cap-container">
+                                            <div class="txt-soft-cap"><h6>Soft Cap<br/>US$15M</h6></div>
+                                        </div>
                                     </div>    
                                 </div>
-                            </div>`;
+                            </div>`;*/
         
         if (isSingleBar) {
             dom = singleBarDom;
@@ -188,7 +227,28 @@ const cap = {
                             </div>
                         </div>
                     </div>
-                    ${singleBarDom}`;
+                    <div class="tb-col hardcap-info">
+                        <div class="item-name">
+                            <h6>${hardcapText}</h6>
+                        </div>
+                        <div class="item-graph">
+                            <div class="bar-graph">
+                                <div class="bar-container">
+                                    <div class="bar-background"></div>
+                                    <div class="value-bar dflex" style="width:${hardcapPercentage}%">
+                                        <div class="gradientBar"></div>
+                                    </div>
+                                </div>
+                                <div class="bar-desc">
+                                    <span class="text-total-value f6">${usdText}15M</span>
+                                </div>
+                                <div class="clear"></div>
+                                <div class="txt-current-cap-container">
+                                    <div class="txt-current-cap" style="width:${hardcapPercentage}%"><h6>${hardcapPercentage}%</h6></div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>`;
         }
         classSelector.html(dom);
     },

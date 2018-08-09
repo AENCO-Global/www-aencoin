@@ -1637,7 +1637,7 @@ div#modal-container {
   max-width: 44.5%;
 }
 .welcome-area .contribution-bar {
-  max-width: 60%;
+  max-width: 600px;
   max-height: 100%;
   margin: 20px auto auto auto;
 }
@@ -1716,6 +1716,10 @@ div#modal-container {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(100, 255, 100, 0.47), rgba(255, 255, 255, 0) 80%);
   box-shadow: inset 1px -3px 5px 0px rgba(0, 89, 101, 0.74), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
+.welcome-area .contribution-bar .single-bar-container {
+  width: 70%;
+  margin: auto;
+}
 .welcome-area .contribution-bar .hardcap-info {
   width: 50%;
   height: 120px;
@@ -1726,16 +1730,100 @@ div#modal-container {
 }
 .welcome-area .contribution-bar .hardcap-info .gradientBar {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(0, 228, 251, 0.33), rgba(255, 255, 255, 0) 80%);
-  box-shadow: inset 1px -3px 5px 0px rgba(100, 132, 11, 0.7), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
+  box-shadow: inset -1px -3px 5px 0px rgba(67, 68, 68, 0.48), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
 .welcome-area .contribution-bar .hardcap-info.combine-softcap {
   width: 100%;
+  height: 180px;
 }
 .welcome-area .contribution-bar .hardcap-info.combine-softcap .value-bar {
-  background: linear-gradient(to right, #00b7ce 25%, #a1c043 25%, #a1c043 100%);
+  position: absolute;
+  height: 94%;
+  max-width: 99.7%;
+  top: 5%;
+  left: 0.15%;
+  border-radius: 20px;
+  /* border-top-right-radius: 0; */
+  /* border-bottom-right-radius: 0; */
+  box-shadow: inset -1px -3px 5px 0px rgba(67, 68, 68, 0.48), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
 }
 .welcome-area .contribution-bar .hardcap-info.combine-softcap .gradientBar {
   background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(100, 255, 100, 0.47), rgba(255, 255, 255, 0) 80%);
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-indicator-container {
+  height: 100%;
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-indicator {
+  border-right: 1px #FFFFFF solid;
+  height: 100%;
+  width: 25%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-container {
+  width: 100%;
+  float: none;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-desc {
+  position: absolute;
+  top: 0%;
+  left: 102%;
+  float: none;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-soft-cap-container {
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-soft-cap-container .txt-soft-cap {
+  width: 50%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-soft-cap-container .txt-soft-cap h6 {
+  text-align: center;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-current-cap-container {
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-current-cap {
+  padding-top: 0;
+  line-height: 12px;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .item-name {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 2%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .item-graph {
+  height: 40%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .softcap-indicator-container, .welcome-area .contribution-bar .hardcap-info.combine-softcap .midcap-indicator-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 100%;
+  height: 20%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .softcap-indicator-container .txt-current-cap {
+  width: 25%;
+  text-align: right;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .midcap-indicator-container .txt-current-cap {
+  margin-left: 37%;
+  text-align: left;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .current-cap-value {
+  width: 90%;
+  text-align: right;
+  z-index: 10;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .text-total-value {
+  left: 10%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .empty-row {
+  width: 100%;
+  height: 20%;
 }
 .welcome-area .contribution-bar .bar-desc span {
   margin-left: 10px;
@@ -1783,6 +1871,9 @@ div#modal-container {
   }
   .welcome-area .contribution-bar .bar-graph {
     margin-left: 10%;
+  }
+  .welcome-area .hardcap-info.combine-softcap .bar-graph {
+    margin-left: 0;
   }
 }
 @media (max-width: 768px) {
@@ -1893,14 +1984,11 @@ div#modal-container {
     float: left;
     line-height: 30px;
   }
-  .welcome-area .contribution-bar {
-    max-width: 80%;
-  }
   .welcome-area .contribution-bar .bar-container {
     width: 70%;
   }
   .welcome-area .contribution-bar .bar-desc {
-    width: 30%;
+    width: 20%;
   }
 }
 
@@ -2052,6 +2140,10 @@ div#modal-container {
 .aenco-products-area .content {
   max-width: 1300px;
   margin: auto;
+}
+.aenco-products-area .system-diagram img {
+  width: 100%;
+  height: auto;
 }
 
 .what-is-aen-token-area .main-container {
@@ -2249,7 +2341,7 @@ div#modal-container {
   text-align: left;
 }
 .token-economy-area .remark-sign {
-  width: 1%;
+  width: 2%;
 }
 .token-economy-area .remark-text {
   max-width: 98%;
