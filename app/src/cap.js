@@ -125,13 +125,19 @@ const cap = {
         const midcapRemarkText = getTranslatedText(language, "text0270");
         const hardcapRemarkText = getTranslatedText(language, "text0271");
         var dom = "";
-        //softcapPercentage = 150;
-        //hardcapPercentage = 100;
-        //const isSingleBar = softcapPercentage >= 100;
-        const isSingleBar = true;
+        const isSingleBar = false;
+        const version = 3;
         const singleBarDomClass = isSingleBar ? "combine-softcap" : "";
         const gradientPercentage = 25 / hardcapPercentage * 100;
-        var singleBarDom = `
+        const realSoftcapPer = roundToOneDecimal(15 * softcapPercentage / 22);
+        const softcapPerText = realSoftcapPer >= 100 ? 100 : realSoftcapPer;
+        const remarkText = [
+            getTranslatedText(language, "text0272"),
+            getTranslatedText(language, "text0273")
+        ];
+        const midCapValueBarClassName = softcapPerText >= 95 ? "has-right-radius" : "";
+        const hardcapValueBarClassName = hardcapPercentage >= 95 ? "has-right-radius" : "";
+        /*var singleBarDom = `
         <div class="single-bar-container">
             <div class="tb-col hardcap-info ${singleBarDomClass}">
                 <div class="item-name">
@@ -172,43 +178,73 @@ const cap = {
                 </div>
                 <div class="empty-row"></div>
             </div>
-        </div>`;
-        /*var singleBarDom = `<div class="tb-col hardcap-info ${singleBarDomClass}">
-                                <div class="item-name">
-                                    <h6>${hardcapText}</h6>
+        </div>`;*/
+
+        dom = `<div class="contribution-header item-name">
+                    <h3>${contributionText}</h3>
+                </div>
+                <div class="cap-remarks-container">
+                    <div class="remarks f8">${remarkText[0]}</div>
+                    <div class="remarks f8">${remarkText[1]}</div>
+                </div>
+                <div class="tb-col softcap-info combine-softcap">
+                    <div class="item-graph">
+                        <div class="bar-graph">
+                            <div class="bar-container">
+                                <div class="bar-background"></div>
+                                <div class="value-bar dflex ${midCapValueBarClassName}" style="width:${softcapPerText}%">
+                                    <div class="gradientBar"></div>
+                                    <div class="current-cap-value" style="width:90%;text-align:right;">
+                                        <h6>${softcapPerText}%</h6>
+                                    </div>
                                 </div>
-                                <div class="item-graph">
-                                    <div class="bar-graph">
-                                        <div class="bar-container">
-                                            <div class="bar-background"></div>
-                                            <div class="value-bar dflex" style="width:${hardcapPercentage}%; background: linear-gradient(to right, #00b7ce ${gradientPercentage}%, #a1c043 ${gradientPercentage}%, #a1c043 100%);">
-                                                <div class="gradientBar"></div>
-                                            </div>
-                                        </div>
-                                        <div class="bar-indicator-container">
-                                            <div class="bar-indicator"></div>
-                                        </div>
-                                        <div class="bar-desc">
-                                            <span class="text-total-value f6">${usdText}60M</span>
-                                        </div>
-                                        <div class="clear"></div>
-                                        <div class="txt-current-cap-container">
-                                            <div class="txt-current-cap" style="width:${hardcapPercentage}%"><h6>${hardcapPercentage}%</h6></div>
-                                        </div>
-                                        <div class="txt-soft-cap-container">
-                                            <div class="txt-soft-cap"><h6>Soft Cap<br/>US$15M</h6></div>
-                                        </div>
-                                    </div>    
+                            </div>
+                            <div class="bar-desc">
+                                <div class="text-total-value f6">${midcapRemarkText}</div>
+                            </div>
+                            <div class="clear"></div>
+                            <div class="txt-current-cap-container">
+                                <div class="txt-current-cap"><span class="f6">${softcapRemarkText}</span></div>
+                            </div>
+                            <div class="softcap-indicator-container">
+                                <div class="bar-indicator-container">
+                                    <div class="bar-indicator" style="width:68%"></div>
                                 </div>
-                            </div>`;*/
-        
-        if (isSingleBar) {
+                            </div>
+                        </div>
+                    </div>
+                    <div class="empty-row"></div>
+                </div>
+                <div class="tb-col hardcap-info">
+                    <div class="item-graph">
+                        <div class="bar-graph">
+                            <div class="bar-container">
+                                <div class="bar-background"></div>
+                                <div class="value-bar dflex ${hardcapValueBarClassName}" style="width:${hardcapPercentage}%">
+                                    <div class="gradientBar"></div>
+                                    <div class="current-cap-value" style="width:90%;text-align:right;">
+                                        <h6>${hardcapPercentage}%</h6>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="bar-desc">
+                                <div class="text-total-value f6">${hardcapRemarkText}</div>
+                            </div>
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                `;
+
+
+        /*if (isSingleBar) {
             dom = singleBarDom;
         } else {
-            dom =   `<div class="tb-col softcap-info">
-                        <div class="item-name">
-                            <h6>${softcapText}</h6>
-                        </div>
+            dom =   `
+                    <div class="item-name">
+                        <h6>${contributionText}</h6>
+                    </div>
+                    <div class="tb-col softcap-info">
                         <div class="item-graph">
                             <div class="bar-graph">
                                 <div class="bar-container">
@@ -228,9 +264,6 @@ const cap = {
                         </div>
                     </div>
                     <div class="tb-col hardcap-info">
-                        <div class="item-name">
-                            <h6>${hardcapText}</h6>
-                        </div>
                         <div class="item-graph">
                             <div class="bar-graph">
                                 <div class="bar-container">
@@ -240,7 +273,7 @@ const cap = {
                                     </div>
                                 </div>
                                 <div class="bar-desc">
-                                    <span class="text-total-value f6">${usdText}15M</span>
+                                    <span class="text-total-value f6">${usdText}60M</span>
                                 </div>
                                 <div class="clear"></div>
                                 <div class="txt-current-cap-container">
@@ -249,7 +282,7 @@ const cap = {
                             </div>
                         </div>
                     </div>`;
-        }
+        }*/
         classSelector.html(dom);
     },
     getValue: function() {

@@ -251,14 +251,25 @@
         flex: 0 0 44.5%;
         max-width: 44.5%;
     }
+    .cap-remarks-container {
+        width: 100%;
+        text-align: center;
+        margin-bottom: 40px;
+    }
     .contribution-bar {
-        max-width: 600px;
+        max-width: 800px;
         max-height: 100%;
         margin: 20px auto auto auto;
+        .contribution-header.item-name {
+            width: 100%;
+            h3 {
+                margin-bottom: 0;
+            }
+        }
         .item-name {
             width: 75%;
             height: 35%;
-            padding: 1% 0;
+            padding: 5px 0;
             text-align: center;
             display: block;
         }
@@ -277,7 +288,7 @@
             margin: auto;
         }
         .text-total-value {
-            left: 80%;
+            left: 10%;
         }
         .bar-desc {
             width: 25%;
@@ -305,14 +316,18 @@
             -moz-backface-visibility: hidden;
             -webkit-transform: translate3d(0, 0, 0);
             -moz-transform: translate3d(0, 0, 0);
+            &.has-right-radius {
+                border-top-right-radius: 20px;
+                border-bottom-right-radius: 20px;
+            }
         }
         .txt-current-cap-container {
             width: 75%;
         }
         .txt-current-cap {
             z-index: 10;
-            text-align: right;
-            padding: 10px 3px 0 0;
+            text-align: center;
+            padding: 15px 3px 0 0;
         }
         .value-indicator {
             height: 20%;
@@ -328,6 +343,38 @@
             .gradientBar {
                 background: linear-gradient(to right, rgba(255,255,255,0) 20%, rgba(100,255,100,0.47), rgba(255,255,255,0) 80%);
                 box-shadow: inset 1px -3px 5px 0px rgba(0, 89, 101, 0.74), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
+            }
+        }
+        .softcap-indicator-container, .midcap-indicator-container {
+            position: absolute;
+            top: 50%;
+            left: 0;
+            width: 75%;
+            height: 20%;
+        }
+        .softcap-indicator-container {
+            .txt-current-cap {
+                width: 68%;
+                text-align: right;
+            }
+            .bar-indicator-container {
+                height: 100%;
+                width: 100%;
+            }
+            .bar-indicator {
+                border-right: 1px #FFFFFF solid;
+                height: 100%;
+                width: 25%;
+            }
+        }
+        .combine-softcap {
+            .txt-current-cap-container {
+                width: 102%;
+            }
+        }
+        .midcap-indicator-container {
+            .txt-current-cap {
+                text-align: right;
             }
         }
         .single-bar-container {
@@ -478,6 +525,7 @@
             max-width: 40.8%;
         }
         .contribution-bar {
+            max-width: 600px;
             .item-name {
                 width: 100%;
             }
@@ -491,6 +539,7 @@
             }
             .bar-graph {
                 margin-left: 10%;
+                width: 90%;
             }
         }
         .hardcap-info {
