@@ -204,7 +204,7 @@ const cap = {
                             </div>
                             <div class="clear"></div>
                             <div class="txt-current-cap-container">
-                                <div class="txt-current-cap"><span class="f6">${softcapRemarkText}</span></div>
+                                <div class="txt-current-cap"><div class="f6">${softcapRemarkText}</div></div>
                             </div>
                             <div class="softcap-indicator-container">
                                 <div class="bar-indicator-container">
