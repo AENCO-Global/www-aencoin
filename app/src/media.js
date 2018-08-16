@@ -55,5 +55,49 @@ module.exports = [
     {
         image: "./assets/img/press/entrepreneur-magazine.png",
         url: "https://www.entrepreneur.com/article/314699"
+    },
+    {
+        image: "./assets/img/press/jinse.png",
+        url: "https://www.jinse.com/lives/45434.htm"
+    },
+    {
+        image: "./assets/img/press/btweek.png",
+        url: "http://www.btweek.com/news/27531/"
+    },
+    {
+        image: "./assets/img/press/fanyitie.png",
+        url: "https://www.fanyitie.com/64029.html"
+    },
+    {
+        image: "./assets/img/press/36xwzx.png",
+        url: "http://www.36xwzx.com/20180621/61445.html"
+    },
+    {
+        image: "./assets/img/press/liancaijing.png",
+        url: "http://liancaijing.com/alerts/166948.html"
+    },
+    {
+        image: "./assets/img/press/dianshi.png",
+        url: "https://www.dianshi.com/article-2871-1.html"
+    },
+    {
+        image: "./assets/img/press/jfq.png",
+        url: "https://www.jfq.com/news/headline/15767.shtml"
+    },
+    {
+        image: "./assets/img/press/greendeco.png",
+        url: "http://www.greendeco.com.cn/?p=40713"
+    },
+    {
+        image: "./assets/img/press/qklyz.png",
+        url: "http://www.qklyz.com/news/10300.html"
+    },
+    {
+        image: "./assets/img/press/jungmedia.png",
+        url: "http://www.jungmedia.cn/news/i-15702.html"
+    },
+    {
+        image: "./assets/img/press/esxqk.png",
+        url: "https://www.esxqk.com/60861/"
     }
 ];
