@@ -1654,6 +1654,7 @@ div#modal-container {
 }
 .welcome-area .contribution-bar .contribution-header.item-name {
   width: 100%;
+  margin-top: 30px;
 }
 .welcome-area .contribution-bar .contribution-header.item-name h3 {
   margin-bottom: 0;

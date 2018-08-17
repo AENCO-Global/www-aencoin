@@ -146,8 +146,8 @@ const system = {
         this.updateTeamMemberList();
         this.updateAdvisorList();
         this.addButtonListener();
-        //this.startCounter();
-        //this.updateCounterText();
+        this.startCounter();
+        this.updateCounterText();
         this.updateTitle();
         this.updateSoftcapBar();
         tokenDistribution.render();
@@ -506,7 +506,7 @@ const system = {
     },
     startCounter: function startCounter() {
         var now = Date.now();
-        var endTime = Date.parse('2018-07-30T00:00:00.000Z');
+        var endTime = Date.parse('2018-09-01T00:00:00.000Z');
         var diff = (endTime - now) / 1000;
         if (diff < 0) {
             diff = 0;
