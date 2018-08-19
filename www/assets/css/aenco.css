@@ -2036,12 +2036,6 @@ div#modal-container {
     float: left;
     line-height: 30px;
   }
-  .welcome-area .contribution-bar .bar-container {
-    width: 70%;
-  }
-  .welcome-area .contribution-bar .bar-desc {
-    width: 20%;
-  }
 }
 
 .app.lang-zhcn .welcome-area .row-contributor .link-group a, .app.lang-zhcn .welcome-area .welcome-area .row-contributor .link-group span {
