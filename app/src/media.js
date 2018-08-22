@@ -99,5 +99,17 @@ module.exports = [
     {
         image: "./assets/img/press/esxqk.png",
         url: "https://www.esxqk.com/60861/"
+    },
+    {
+        image: "./assets/img/press/newsbtc.png",
+        url: "https://www.newsbtc.com/2018/08/21/3-reasons-why-investors-should-keep-an-eye-on-aenco-a-financial-solutions-ecosystem-for-healthtech/"
+    },
+    {
+        image: "./assets/img/press/coinspeaker.png",
+        url: "https://www.coinspeaker.com/2018/08/17/3-reasons-why-investors-should-keep-an-eye-on-aenco-a-financial-solutions-ecosystem-for-healthtech/"
+    },
+    {
+        image: "./assets/img/press/nulltx.png",
+        url: "https://nulltx.com/3-reasons-why-investors-should-keep-an-eye-on-aenco-a-financial-solutions-ecosystem-for-healthtech/"
     }
 ];
