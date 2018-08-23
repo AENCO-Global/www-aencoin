@@ -438,13 +438,14 @@ const system = {
         let imagePath_per = `${image_prefix}5per-bonus-${lang_code}.jpg`;
         let imagePath_fomo = `${image_prefix}fomo-en.jpg`;
         var now = Date.now();
-        var endTime = Date.parse('2018-07-28T00:00:00.000Z');
-        var diff = (endTime - now) / 1000;
+        var startTime = Date.parse('2018-08-30T00:00:00.000Z');
+        var endTime = Date.parse('2018-09-01T00:00:00.000Z');
+        var isFomoStarted = now >= startTime && now < endTime;
         var containerClass = "";
         var promotionFomo = `<div class="tb-block">
                                 <img src="${imagePath_fomo}" />
                             </div>`;
-        if (diff <= 0) {
+        if (!isFomoStarted) {
             promotionFomo = "";
             containerClass = "one-col-promotion";
         }
