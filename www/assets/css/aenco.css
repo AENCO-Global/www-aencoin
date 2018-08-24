@@ -125,6 +125,12 @@ h6 {
   line-height: 1.2;
 }
 
+.f8 {
+  font-size: 11px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+}
+
 .f10p {
   font-size: 10%;
 }
@@ -1341,6 +1347,74 @@ div#modal-container {
     margin-bottom: 10px;
   }
 }
+@-webkit-keyframes AnimationName {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  10% {
+    left: -80%;
+    opacity: 1;
+  }
+  20% {
+    left: -60%;
+  }
+  30% {
+    left: -40%;
+  }
+  40% {
+    left: -20%;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: -100%;
+    opacity: 1;
+  }
+}
+@keyframes AnimationName {
+  0% {
+    left: -100%;
+    opacity: 1;
+  }
+  10% {
+    left: -80%;
+    opacity: 1;
+  }
+  20% {
+    left: -60%;
+  }
+  30% {
+    left: -40%;
+  }
+  40% {
+    left: -20%;
+  }
+  50% {
+    left: 0%;
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  80% {
+    left: -100%;
+    opacity: 0;
+  }
+  100% {
+    left: -100%;
+    opacity: 1;
+  }
+}
 .welcome-area {
   position: relative;
 }
@@ -1425,7 +1499,7 @@ div#modal-container {
   display: inline;
 }
 .welcome-area .link-group-container {
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .welcome-area .link-list {
   margin: auto;
@@ -1446,6 +1520,28 @@ div#modal-container {
 .welcome-area .rating-container {
   width: 80%;
   margin: 65px auto;
+  height: 73px;
+}
+.welcome-area .slick-slider {
+  height: 100%;
+}
+.welcome-area .slick-list {
+  height: 100%;
+}
+.welcome-area .slick-track {
+  height: 100%;
+}
+.welcome-area .slider-item {
+  display: flex !important;
+  align-items: center;
+  height: 100%;
+}
+.welcome-area .slider-item a {
+  margin: auto;
+}
+.welcome-area .slick-slide > div:first-child {
+  height: 100%;
+  padding: 0 20px;
 }
 .welcome-area .badge-container {
   padding: 14px 5px;
@@ -1546,54 +1642,252 @@ div#modal-container {
   flex: 0 0 44.5%;
   max-width: 44.5%;
 }
-.welcome-area .contribution-bar {
-  width: 500px;
-  height: 50px;
-}
-.welcome-area .contribution-bar .table-container {
-  height: 40%;
+.welcome-area .cap-remarks-container {
   width: 100%;
+  text-align: center;
+  margin-bottom: 40px;
 }
-.welcome-area .contribution-bar .tb-col.item-name {
-  width: 15%;
-  height: 100%;
+.welcome-area .contribution-bar {
+  max-width: 800px;
+  max-height: 100%;
+  margin: 20px auto auto auto;
 }
-.welcome-area .contribution-bar .tb-col.item-graph {
-  width: 85%;
-  height: 100%;
+.welcome-area .contribution-bar .contribution-header.item-name {
+  width: 100%;
+  margin-top: 30px;
+}
+.welcome-area .contribution-bar .contribution-header.item-name h3 {
+  margin-bottom: 0;
+}
+.welcome-area .contribution-bar .item-name {
+  width: 75%;
+  height: 35%;
+  padding: 5px 0;
+  text-align: center;
+  display: block;
+}
+.welcome-area .contribution-bar .item-graph {
+  width: 100%;
+  height: 60%;
 }
 .welcome-area .contribution-bar .bar-graph {
   width: 100%;
-  height: 80%;
+  height: 100%;
+}
+.welcome-area .contribution-bar .bar-container {
+  width: 75%;
+  height: 45%;
+  float: left;
+  margin: auto;
+}
+.welcome-area .contribution-bar .text-total-value {
+  left: 10%;
 }
 .welcome-area .contribution-bar .bar-desc {
+  width: 25%;
+  height: 35%;
+  float: left;
+}
+.welcome-area .contribution-bar .bar-background {
+  background-color: #02272f;
+  width: 100%;
+  height: 100%;
+  border-radius: 20px;
+  box-shadow: 0 2px 9px 0.2em #075059, inset 0 7px 13px 0em rgba(0, 14, 25, 0.86), 1px 0px 3px 0.1em rgba(21, 114, 102, 0.6);
+}
+.welcome-area .contribution-bar .value-bar {
+  position: absolute;
+  height: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 20px;
+  border-top-right-radius: 0;
+  border-bottom-right-radius: 0;
+  box-shadow: inset -1px -3px 5px 0px rgba(111, 111, 111, 0.61), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+.welcome-area .contribution-bar .value-bar.has-right-radius {
+  border-top-right-radius: 20px;
+  border-bottom-right-radius: 20px;
+}
+.welcome-area .contribution-bar .txt-current-cap-container {
+  width: 75%;
+}
+.welcome-area .contribution-bar .txt-current-cap {
+  z-index: 10;
+  text-align: center;
+  padding: 15px 3px 0 0;
+}
+.welcome-area .contribution-bar .value-indicator {
+  height: 20%;
+  border-right: 0.08em solid #FFFFFF;
+}
+.welcome-area .contribution-bar .softcap-info {
+  width: 50%;
+  height: 120px;
+  padding: 0 2%;
+}
+.welcome-area .contribution-bar .softcap-info .value-bar {
+  background-color: #00b7ce;
+}
+.welcome-area .contribution-bar .softcap-info .gradientBar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(100, 255, 100, 0.47), rgba(255, 255, 255, 0) 80%);
+  box-shadow: inset 1px -3px 5px 0px rgba(0, 89, 101, 0.74), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.3), 0 0 4px 0px rgba(216, 216, 216, 0);
+}
+.welcome-area .contribution-bar .softcap-indicator-container, .welcome-area .contribution-bar .midcap-indicator-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  width: 75%;
+  height: 20%;
+}
+.welcome-area .contribution-bar .softcap-indicator-container .txt-current-cap {
+  width: 68%;
+  text-align: right;
+}
+.welcome-area .contribution-bar .softcap-indicator-container .bar-indicator-container {
+  height: 100%;
+  width: 100%;
+}
+.welcome-area .contribution-bar .softcap-indicator-container .bar-indicator {
+  border-right: 1px #FFFFFF solid;
+  height: 100%;
+  width: 25%;
+}
+.welcome-area .contribution-bar .combine-softcap .txt-current-cap-container {
+  width: 102%;
+}
+.welcome-area .contribution-bar .midcap-indicator-container .txt-current-cap {
+  text-align: right;
+}
+.welcome-area .contribution-bar .single-bar-container {
+  width: 70%;
+  margin: auto;
+}
+.welcome-area .contribution-bar .hardcap-info {
+  width: 50%;
+  height: 120px;
+  padding: 0 2%;
+}
+.welcome-area .contribution-bar .hardcap-info .value-bar {
+  background-color: #a1c043;
+}
+.welcome-area .contribution-bar .hardcap-info .gradientBar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(0, 228, 251, 0.33), rgba(255, 255, 255, 0) 80%);
+  box-shadow: inset -1px -3px 5px 0px rgba(67, 68, 68, 0.48), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap {
+  width: 100%;
+  height: 180px;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .value-bar {
+  position: absolute;
+  height: 94%;
+  max-width: 99.7%;
+  top: 5%;
+  left: 0.15%;
+  border-radius: 20px;
+  /* border-top-right-radius: 0; */
+  /* border-bottom-right-radius: 0; */
+  box-shadow: inset -1px -3px 5px 0px rgba(67, 68, 68, 0.48), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
+  overflow: hidden;
+  -webkit-backface-visibility: hidden;
+  -moz-backface-visibility: hidden;
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .gradientBar {
+  background: linear-gradient(to right, rgba(255, 255, 255, 0) 20%, rgba(100, 255, 100, 0.47), rgba(255, 255, 255, 0) 80%);
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-indicator-container {
+  height: 100%;
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-indicator {
+  border-right: 1px #FFFFFF solid;
+  height: 100%;
+  width: 25%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-container {
+  width: 100%;
+  float: none;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .bar-desc {
+  position: absolute;
+  top: 0%;
+  left: 102%;
+  float: none;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-soft-cap-container {
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-soft-cap-container .txt-soft-cap {
+  width: 50%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-soft-cap-container .txt-soft-cap h6 {
+  text-align: center;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-current-cap-container {
+  width: 100%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .txt-current-cap {
+  padding-top: 0;
+  line-height: 12px;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .item-name {
+  width: 100%;
+  height: 30%;
+  margin-bottom: 2%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .item-graph {
+  height: 40%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .softcap-indicator-container, .welcome-area .contribution-bar .hardcap-info.combine-softcap .midcap-indicator-container {
+  position: absolute;
+  top: 50%;
+  left: 0;
   width: 100%;
   height: 20%;
 }
-.welcome-area .contribution-bar .bar-background {
-  background-color: #FF0000;
-  width: 100%;
-  height: 100%;
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .softcap-indicator-container .txt-current-cap {
+  width: 25%;
+  text-align: right;
 }
-.welcome-area .contribution-bar .value-bar {
-  background-color: #FFFF00;
-  width: 12.4%;
-  height: 100%;
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .midcap-indicator-container .txt-current-cap {
+  margin-left: 37%;
+  text-align: left;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .current-cap-value {
+  width: 90%;
+  text-align: right;
+  z-index: 10;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .text-total-value {
+  left: 10%;
+}
+.welcome-area .contribution-bar .hardcap-info.combine-softcap .empty-row {
+  width: 100%;
+  height: 20%;
 }
 .welcome-area .contribution-bar .bar-desc span {
+  margin-left: 10px;
+}
+.welcome-area .contribution-bar .gradientBar {
+  z-index: 9;
   position: absolute;
-}
-.welcome-area .contribution-bar .txt-start {
-  left: 0;
-}
-.welcome-area .contribution-bar .txt-current-cap {
-  left: 12.4%;
-}
-.welcome-area .contribution-bar .txt-softcap {
-  left: 25%;
-}
-.welcome-area .contribution-bar .txt-end {
-  right: 0;
+  top: 0;
+  left: -100%;
+  width: 200%;
+  height: 100%;
+  opacity: 0;
+  -webkit-animation: AnimationName 4s linear infinite;
+  -moz-animation: AnimationName 4s linear infinite;
+  animation: AnimationName 4s linear infinite;
+  box-shadow: inset -1px -3px 5px 0px rgba(111, 111, 111, 0.61), inset 0px 5px 3px 0px rgba(255, 255, 255, 0.46), 0 0 4px 0px rgba(216, 216, 216, 0);
 }
 @media (max-width: 1024px) {
   .welcome-area .content {
@@ -1611,6 +1905,27 @@ div#modal-container {
     -ms-flex: 0 0 40.8%;
     flex: 0 0 40.8%;
     max-width: 40.8%;
+  }
+  .welcome-area .contribution-bar {
+    max-width: 600px;
+  }
+  .welcome-area .contribution-bar .item-name {
+    width: 100%;
+  }
+  .welcome-area .contribution-bar .softcap-info {
+    width: 100%;
+    padding: 0;
+  }
+  .welcome-area .contribution-bar .hardcap-info {
+    width: 100%;
+    padding: 0;
+  }
+  .welcome-area .contribution-bar .bar-graph {
+    margin-left: 10%;
+    width: 90%;
+  }
+  .welcome-area .hardcap-info.combine-softcap .bar-graph {
+    margin-left: 0;
   }
 }
 @media (max-width: 768px) {
@@ -1733,7 +2048,11 @@ div#modal-container {
   line-height: 1.5;
 }
 .app.lang-zhcn .welcome-area .core-message {
-  max-width: 750px;
+  max-width: 600px;
+}
+.app.lang-zhcn .welcome-area h1 {
+  font-size: 40px;
+  line-height: 60px;
 }
 
 .app.lang-kr .welcome-area .row-contributor .link-group a, .app.lang-kr .welcome-area .welcome-area .row-contributor .link-group span {
@@ -1742,6 +2061,7 @@ div#modal-container {
 .app.lang-kr .welcome-area .header-count-down {
   font-family: "Do Hyeon", sans-serif;
 }
+
 .what-is-aen-blockchain-area .main-container {
   width: 100%;
   margin: auto;
@@ -1755,6 +2075,10 @@ div#modal-container {
   max-width: 50%;
   padding: 0 30px 0 0;
   flex-wrap: wrap;
+}
+.what-is-aen-blockchain-area img {
+  width: 100%;
+  height: auto;
 }
 .what-is-aen-blockchain-area h2 {
   color: #b6d84e;
@@ -1774,171 +2098,24 @@ div#modal-container {
 .what-is-aen-blockchain-area .video-container img {
   width: 100%;
 }
+.what-is-aen-blockchain-area .aen-blockchain-platform-diagram {
+  text-align: center;
+}
+.what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+  content: url("../img/aenco-blockchain-platform-architecture-en.png");
+}
 .what-is-aen-blockchain-area .blockchain-diagram {
-  height: calc(100vw * 300 / 1200);
-  margin: 50px auto;
-  text-align: center;
   max-width: 1024px;
-}
-.what-is-aen-blockchain-area .blockchain-diagram h5 {
   text-align: center;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .left-side {
-  width: 28%;
-  height: 80%;
-  position: absolute;
-  top: 10%;
-  left: 0px;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .middle-side {
-  width: 24%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 38%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .right-side {
-  width: 28%;
-  height: 80%;
-  position: absolute;
-  top: 10%;
-  left: 72%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .left-direction-line-container {
-  width: 10%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 28%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .left-line {
-  border-top: 3px solid #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
-  border-right: 3px solid #FFFFFF;
-  width: 50%;
-  height: 20%;
-  position: absolute;
-  top: 40%;
-  left: 0px;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .middle-left-line {
-  height: 3px;
-  width: 50%;
-  background-color: #FFFFFF;
-  position: absolute;
-  top: calc(50% - 3px / 2);
-  left: 50%;
-  z-index: 5;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .right-direction-line-container {
-  width: 10%;
-  height: 100%;
-  position: absolute;
-  top: 0;
-  left: 62%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .right-line {
-  border-top: 3px solid #FFFFFF;
-  border-bottom: 3px solid #FFFFFF;
-  border-left: 3px solid #FFFFFF;
-  width: 50%;
-  height: 20%;
-  position: absolute;
-  top: 40%;
-  right: 0px;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .middle-right-line {
-  height: 3px;
-  width: 50%;
-  background-color: #FFFFFF;
-  position: absolute;
-  top: calc(50% - 3px / 2);
-  right: 50%;
-  z-index: 5;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-top-line {
-  height: 10%;
-  width: 3px;
-  background-color: #FFFFFF;
-  margin: auto;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-bottom-line {
-  height: 10%;
-  width: 3px;
-  background-color: #FFFFFF;
-  margin: auto;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .left-top-box {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  background-color: #637c27;
   width: 100%;
-  height: 50%;
+  margin: 60px auto auto auto;
 }
-.what-is-aen-blockchain-area .blockchain-diagram .left-bottom-box {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  background-color: #465b16;
-  width: 100%;
-  height: 50%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-top-box {
-  border-radius: 25px;
-  background-color: #637c27;
-  width: 80%;
-  height: 30%;
-  margin: auto;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box {
-  border-radius: 100px;
-  border: solid #637c27 10px;
-  background-color: #92af3d;
-  width: 100%;
-  height: 20%;
-  margin: auto;
-  text-align: center;
-  z-index: 10;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box span {
-  margin: auto;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box h3 {
-  margin: auto;
-  text-align: center;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-middle-box .dblock {
-  padding: 5px 20px 1px;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .center-bottom-box {
-  border-radius: 25px;
-  background-color: #465b16;
-  width: 90%;
-  height: 30%;
-  margin: auto;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .right-top-box {
-  border-top-left-radius: 25px;
-  border-top-right-radius: 25px;
-  background-color: #637c27;
-  width: 100%;
-  height: 50%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .right-bottom-box {
-  border-bottom-left-radius: 25px;
-  border-bottom-right-radius: 25px;
-  background-color: #465b16;
-  width: 100%;
-  height: 50%;
-}
-.what-is-aen-blockchain-area .blockchain-diagram .dblock {
-  padding: 10px 25px;
+.what-is-aen-blockchain-area .blockchain-diagram img {
+  content: url("../img/aenco-blockchain-en.png");
 }
 @media (max-width: 1315px) {
   .what-is-aen-blockchain-area .content {
     font-size: calc(100vw * 32 / 1315);
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .dblock {
-    padding: calc(100vw * 10 / 1315) calc(100vw * 20 / 1315);
   }
 }
 @media (max-width: 1024px) {
@@ -1953,10 +2130,6 @@ div#modal-container {
     margin-top: 35px;
     width: 100%;
   }
-  .what-is-aen-blockchain-area .blockchain-diagram {
-    width: 100%;
-    height: 30vw;
-  }
 }
 @media (max-width: 768px) {
   .what-is-aen-blockchain-area .video-container {
@@ -1969,160 +2142,13 @@ div#modal-container {
     margin: auto;
     padding: 0 20px;
   }
-  .what-is-aen-blockchain-area .blockchain-diagram {
-    width: 80vw;
-    height: 80vw;
-    margin: 30px auto;
-    text-align: center;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .left-side {
-    width: 100%;
-    height: 25%;
-    position: absolute;
-    top: 0px;
-    left: 0px;
-    display: flex;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .middle-side {
-    width: 100%;
-    height: 30%;
-    position: absolute;
-    top: 35%;
-    left: 0px;
-    display: flex;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .right-side {
-    width: 100%;
-    height: 25%;
-    position: absolute;
-    top: 75%;
-    left: 0px;
-    display: flex;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .left-direction-line-container {
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    top: 25%;
-    left: 0;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .left-line {
-    border-top: 0;
-    border-left: 3px solid #FFFFFF;
-    border-bottom: 3px solid #FFFFFF;
-    border-right: 3px solid #FFFFFF;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 0px;
-    left: 25%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .middle-left-line {
-    height: 160%;
-    width: 3px;
-    position: absolute;
-    top: 50%;
-    left: calc(50% - 3px / 2);
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .right-direction-line-container {
-    width: 100%;
-    height: 10%;
-    position: absolute;
-    top: 65%;
-    left: 0px;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .right-line {
-    border-bottom: 0;
-    border-top: 3px solid #FFFFFF;
-    border-right: 3px solid #FFFFFF;
-    border-left: 3px solid #FFFFFF;
-    width: 50%;
-    height: 50%;
-    position: absolute;
-    top: 50%;
-    right: 25%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .middle-right-line {
-    height: 151%;
-    width: 3px;
-    position: absolute;
-    top: -95%;
-    right: calc(50% - 5px / 2);
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-top-line {
-    height: 3px;
-    width: 5%;
-    margin: auto;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-bottom-line {
-    height: 3px;
-    width: 5%;
-    margin: auto;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .left-top-box {
-    border-radius: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 50%;
-    height: 100%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .left-bottom-box {
-    border-radius: 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 50%;
-    height: 100%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-top-box {
-    border-radius: 10px;
-    width: 30%;
-    height: 100%;
-    margin: auto;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box {
-    border-radius: 35px;
-    border-width: 8px;
-    width: 30%;
-    height: 80%;
-    margin: auto;
-    text-align: center;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box span {
-    margin: auto;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-bottom-box {
-    border-radius: 10px;
-    width: 30%;
-    height: 100%;
-    margin: auto;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .right-top-box {
-    border-radius: 0;
-    border-top-left-radius: 10px;
-    border-bottom-left-radius: 10px;
-    width: 50%;
-    height: 100%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .right-bottom-box {
-    border-radius: 0;
-    border-top-right-radius: 10px;
-    border-bottom-right-radius: 10px;
-    width: 50%;
-    height: 100%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .f55p {
-    font-size: 100%;
-  }
-  .what-is-aen-blockchain-area .blockchain-diagram .f90p {
-    font-size: 120%;
-  }
 }
 @media (max-width: 479px) {
-  .what-is-aen-blockchain-area .blockchain-diagram {
-    height: 80vw;
+  .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+    content: url("../img/mobile/aenco-blockchain-platform-architecture-en.m.png");
   }
-  .what-is-aen-blockchain-area .blockchain-diagram .center-middle-box {
-    border-width: 8px;
+  .what-is-aen-blockchain-area .blockchain-diagram img {
+    content: url("../img/mobile/aenco-blockchain-en.m.png");
   }
 }
 
@@ -2151,6 +2177,19 @@ div#modal-container {
 }
 .app.lang-zhcn .what-is-aen-blockchain-area h5 {
   letter-spacing: 0.02em;
+}
+
+.aenco-products-area .main-container {
+  width: 100%;
+  background-color: #0a92a4;
+}
+.aenco-products-area .content {
+  max-width: 1300px;
+  margin: auto;
+}
+.aenco-products-area .system-diagram img {
+  width: 100%;
+  height: auto;
 }
 
 .what-is-aen-token-area .main-container {
@@ -2348,7 +2387,7 @@ div#modal-container {
   text-align: left;
 }
 .token-economy-area .remark-sign {
-  width: 1%;
+  width: 2%;
 }
 .token-economy-area .remark-text {
   max-width: 98%;
@@ -4099,6 +4138,12 @@ a:hover {
   margin: 10% auto 0 auto;
   max-width: 300px;
 }
+.promotion-area.one-col-promotion {
+  max-width: 400px;
+}
+.promotion-area.one-col-promotion .tb-block {
+  width: 100%;
+}
 
 .promotion-popup {
   height: auto !important;
@@ -4171,6 +4216,71 @@ a:hover {
 
   .promotion-popup .modal-body {
     padding: 8%;
+  }
+}
+.token-sale-area .content {
+  max-width: 1300px;
+  margin: auto;
+}
+.token-sale-area .table-container .tb-col {
+  width: 33.33%;
+}
+.token-sale-area .table-container .title {
+  margin: auto;
+}
+.token-sale-area .table-container .subtitle {
+  width: 100%;
+  height: 30%;
+  text-align: center;
+  margin-bottom: 10px;
+}
+.token-sale-area .table-container .logo-container {
+  text-align: center;
+  padding: 0 20px;
+  width: 100%;
+  height: 70%;
+}
+.token-sale-area .table-container .logo-container a {
+  margin: auto;
+}
+.token-sale-area .table-container img {
+  max-width: 100%;
+  height: auto;
+}
+
+@media (max-width: 479px) {
+  .token-sale-area .table-container .tb-col {
+    width: 100%;
+    margin: 20px auto;
+  }
+}
+.app.lang-zhcn .what-is-aen-blockchain-area .blockchain-diagram img {
+  content: url("../img/aenco-blockchain-cn.png");
+}
+.app.lang-zhcn .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+  content: url("../img/aenco-blockchain-platform-architecture-cn.png");
+}
+
+.app.lang-kr .what-is-aen-blockchain-area .blockchain-diagram img {
+  content: url("../img/aenco-blockchain-kr.png");
+}
+.app.lang-kr .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+  content: url("../img/aenco-blockchain-platform-architecture-kr.png");
+}
+
+@media (max-width: 479px) {
+  .app.lang-zhcn .what-is-aen-blockchain-area .blockchain-diagram img {
+    content: url("../img/mobile/aenco-blockchain-cn.m.png");
+  }
+  .app.lang-zhcn .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+    content: url("../img/mobile/aenco-blockchain-platform-architecture-cn.m.png");
+  }
+
+  .app.lang-kr .what-is-aen-blockchain-area .blockchain-diagram img {
+    content: url("../img/mobile/aenco-blockchain-kr.m.png");
+  }
+  .app.lang-kr .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+    content: url("../img/mobile/aenco-blockchain-platform-architecture-kr.m.png");
   }
 }
 

@@ -14,6 +14,16 @@ echo "Version $1" > ./www/version.html
 ls  -l
 echo "--------------------------------------"
 
+echo "--=== Set Login/Register Link ===--"
+if [ "$4" = "uat" ]
+    then
+        echo "UAT Login/Register Set"
+        sed -i -e 's/<!--uatorlive-->/uatsignup/g' ./www/index.html
+    else
+        echo "Live Login/Register Set"
+        sed -i -e 's/<!--uatorlive-->/signup/g' ./www/index.html
+fi
+
 echo "--=== Transfer files to remote Server ===--"
 echo "rsync -avzhe ssh  --rsync-path="""rsync""" ./www/ jenkins@$2:$3"""
 rsync -avzhe ssh  --rsync-path="rsync" ./www/* jenkins@$2:$3
