@@ -5,11 +5,6 @@ echo "[P2] Target Server is :$2 "
 echo "[P3] Target Folder is :$3 "
 echo "---------------------------------------"
 
-echo "--=== Identify the taret server ===--"
-ssh -p 22 $2 "sudo /home/ubuntu/role.sh"
-ssh -p 22 $2 "sudo whoami"
-echo "---------------------------------------"
-
 echo "--=== Run local Tests on Deployment ===--"
 echo "No tests yet Defined"
 echo "-----------------------------------------"
