@@ -434,12 +434,17 @@ const system = {
         var that = this;
         var lang_code = getUrlLanguageCode(that.language);
         let image_prefix = './assets/img/promotion/';
-        let imagePath_free = `${image_prefix}50free-${lang_code}.jpg`;
+        let imagePath_50free = `${image_prefix}50free-${lang_code}.jpg`;
+        let imagePath_free = `${image_prefix}200free-${lang_code}.jpg`;
         let imagePath_per = `${image_prefix}5per-bonus-${lang_code}.jpg`;
         let imagePath_fomo = `${image_prefix}fomo-en.jpg`;
         var now = Date.now();
         var startTime = Date.parse('2018-08-30T00:00:00.000Z');
         var endTime = Date.parse('2018-09-01T00:00:00.000Z');
+        var freeStartTime = Date.parse('2018-09-01T00:00:00.000Z');
+        if (now >= freeStartTime) {
+            imagePath_free = imagePath_50free;
+        }
         var isFomoStarted = now >= startTime && now < endTime;
         var containerClass = "";
         var promotionFomo = `<div class="tb-block">
