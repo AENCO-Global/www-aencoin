@@ -511,16 +511,19 @@ const system = {
         tokenDistribution.updateTable(this.language);*/
     },
     startCounter: function startCounter() {
-        var now = Date.now();
+        /*var now = Date.now();
         var endTime = Date.parse('2018-09-01T00:00:00.000Z');
         var diff = (endTime - now) / 1000;
-        if (diff < 0) {
+        diff = 0;
+        if (diff <= 0) {
             diff = 0;
+            $('.count-down-container').hide();
+            return;
         }
         var clock = $('.clock').FlipClock(diff, {
             clockFace: 'DailyCounter',
             countdown: true
-        });
+        });*/
     },
     initModal: function initModal(title = "", content = "", extraModalClass = "") {
         var className = "modal-dialog " + extraModalClass;
@@ -541,7 +544,8 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
   var todoList = this;
   todoList.done = 1;
   todoList.lang = getDefaultLanguage();
-    
+  todoList.isCounterShown = false;
+
   todoList.getTranslatedText = function(key) {
     var txt = getTranslatedText(todoList.lang, key);
     return $sce.trustAsHtml(txt);
@@ -611,6 +615,23 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
                     title="token &amp; smart modules"
                 />`;
     return $sce.trustAsHtml(html);
+  }
+
+  todoList.updateIcoStatus = function() {
+    var now = Date.now();
+    var endTime = Date.parse('2018-09-01T00:00:00.000Z');
+    var diff = (endTime - now) / 1000;
+    var txt = getTranslatedText(todoList.lang, "text0003");
+    if (diff <= 0) {
+        txt = getTranslatedText(todoList.lang, "text0274");
+    } else {
+        todoList.isCounterShown = true;
+        var clock = $('.clock').FlipClock(diff, {
+            clockFace: 'DailyCounter',
+            countdown: true
+        });
+    }
+    return $sce.trustAsHtml(txt);
   }
 }]);
 
