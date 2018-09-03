@@ -1970,6 +1970,7 @@ div#modal-container {
   }
   .welcome-area .private-sale-txt {
     line-height: 43px;
+    text-align: center;
   }
   .welcome-area .sub-message-container {
     margin-top: 0px;
