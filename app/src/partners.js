@@ -6,6 +6,10 @@ module.exports = [
         url: "https://www.idax.mn"
     },
     {
+        image: "./assets/img/partners/coinmake.png",
+        url: "https://www.coinmake.com/"
+    },
+    {
         image: "./assets/img/partners/latoken.png",
         url: "https://latoken.com/"
     },
