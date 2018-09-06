@@ -4223,23 +4223,29 @@ a:hover {
   max-width: 1300px;
   margin: auto;
 }
+.token-sale-area .table-container .logo-group {
+  width: 100%;
+  height: 100px;
+}
 .token-sale-area .table-container .tb-col {
-  width: 25%;
+  flex-wrap: wrap;
+  display: flex;
+  flex-direction: row;
+  width: 50%;
+  padding: 0 20px;
 }
 .token-sale-area .table-container .title {
   margin: auto;
 }
 .token-sale-area .table-container .subtitle {
   width: 100%;
-  height: 30%;
   text-align: center;
-  margin-bottom: 10px;
+  margin: 15px auto;
 }
 .token-sale-area .table-container .logo-container {
   text-align: center;
   padding: 0 20px;
   width: 100%;
-  height: 70%;
 }
 .token-sale-area .table-container .logo-container a {
   margin: auto;
@@ -4249,10 +4255,20 @@ a:hover {
   height: auto;
 }
 
-@media (max-width: 479px) {
+@media (max-width: 768px) {
   .token-sale-area .table-container .tb-col {
     width: 100%;
     margin: 20px auto;
+  }
+}
+@media (max-width: 479px) {
+  .token-sale-area .table-container .logo-group {
+    display: block;
+    height: auto;
+  }
+  .token-sale-area .table-container .logo-group .logo-container {
+    margin: 20px auto;
+    padding: 10px 30px;
   }
 }
 .app.lang-zhcn .what-is-aen-blockchain-area .blockchain-diagram img {
