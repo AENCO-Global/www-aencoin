@@ -6,12 +6,9 @@
     .table-container {
         .logo-group {
             width: 100%;
-            height: 100px;
+            flex-wrap: wrap;
         }
         .tb-col {
-            flex-wrap: wrap;
-            display: flex;
-            flex-direction: row;
             width: 50%;
             padding: 0 20px;
         }
@@ -25,14 +22,14 @@
         }
         .logo-container {
             text-align: center;
-            padding: 0 20px;
-            width: 100%;
+            padding: 10px 20px;
+            margin: auto;
+            height: 105px;
             a {
                 margin: auto;
             }
         }
         img {
-            max-width: 100%;
             height: auto;
         }
     }
@@ -56,7 +53,11 @@
                 .logo-container {
                     margin: 20px auto;
                     padding: 10px 30px;
+                    width: 100%;
                 }
+            }
+            img {
+                max-width: 100%;
             }
         }
     }
