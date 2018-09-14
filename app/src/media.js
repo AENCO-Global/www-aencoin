@@ -2,6 +2,10 @@
 
 module.exports = [
     {
+        image: "./assets/img/press/forbes.png",
+        url: "https://www.forbes.com/sites/yoavvilner/2018/09/07/why-blockchain-research-labs-are-being-built-by-both-new-projects-and-major-organizations/#1a6c2965794c"
+    },
+    {
         image: "./assets/img/press/bloomberg.png"
     },
     {
@@ -115,10 +119,6 @@ module.exports = [
     {
         image: "./assets/img/press/coins300.png",
         url: "https://coins300.com/2018/09/13/is-blockchain-technology-the-answer-to-a-better-healthcare-industry/"
-    },
-    {
-        image: "./assets/img/press/forbes.png",
-        url: "https://www.forbes.com/sites/yoavvilner/2018/09/07/why-blockchain-research-labs-are-being-built-by-both-new-projects-and-major-organizations/#1a6c2965794c"
     },
     {
         image: "./assets/img/press/yb-blocknews.png",
