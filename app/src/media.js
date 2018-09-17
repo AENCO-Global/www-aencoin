@@ -123,5 +123,9 @@ module.exports = [
     {
         image: "./assets/img/press/yb-blocknews.png",
         url: "https://ypblocknews.com/2018/09/11/aenco-%E7%AB%8B%E5%BF%97%E6%88%90%E4%B8%BA%E5%8C%BB%E7%96%97%E7%A7%91%E6%8A%80%E9%A2%86%E5%9F%9F%E7%9A%84%E5%8C%BA%E5%9D%97%E9%93%BE%E9%A2%A0%E8%A6%86%E8%80%85/"
+    },
+    {
+        image: "./assets/img/press/ccn.png",
+        url: "https://www.ccn.com/aenco-a-blockchain-game-changer/"
     }
 ];
