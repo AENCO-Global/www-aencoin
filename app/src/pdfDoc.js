@@ -24,7 +24,8 @@ var pdfDoc = [
         languages: {
             "en": "./assets/docs/aenco-two-pager.pdf",
             "zhcn": "./assets/docs/aenco-two-pager-cn.pdf",
-            "kr": "./assets/docs/aenco-two-pager-kr.pdf"
+            "kr": "./assets/docs/aenco-two-pager-kr.pdf",
+            "jp": "./assets/docs/aenco-two-pager-jp.pdf"
         }
     },
     {

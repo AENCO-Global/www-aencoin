@@ -28,6 +28,16 @@ const images = {
             "./assets/img/aenco-blockchain-platform-architecture-kr.png",
             "./assets/img/mobile/aenco-blockchain-platform-architecture-kr.m.png"
         ]
+    },
+    "jp": {
+        "img0001": [
+            "./assets/img/aenco-blockchain-en.png",
+            "./assets/img/mobile/aenco-blockchain-en.m.png"
+        ],
+        "img0002": [
+            "./assets/img/aenco-blockchain-platform-architecture-jp.png",
+            "./assets/img/mobile/aenco-blockchain-platform-architecture-jp.m.png"
+        ]
     }
 };
 

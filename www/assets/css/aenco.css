@@ -315,6 +315,71 @@ h6 {
   font-family: "Teko", "Do Hyeon", sans-serif;
 }
 
+.app.lang-jp {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+}
+.app.lang-jp h1 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 30px;
+  line-height: 45px;
+  letter-spacing: 0.01em;
+}
+.app.lang-jp h2 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 30px;
+  line-height: 1.5;
+}
+.app.lang-jp h3 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.app.lang-jp h4 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 20px;
+  letter-spacing: 0.05em;
+}
+.app.lang-jp h5 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 18px;
+  letter-spacing: 0.05em;
+  line-height: 1.5;
+}
+.app.lang-jp h6 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 15px;
+  letter-spacing: 0.05em;
+}
+.app.lang-jp .f1 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+}
+.app.lang-jp .f2 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+}
+.app.lang-jp .f3 {
+  font-size: 20px;
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.02em;
+}
+.app.lang-jp .f4 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 17px;
+}
+.app.lang-jp .f5 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  font-size: 17px;
+}
+.app.lang-jp .f6 {
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+}
+.app.lang-jp .f7 {
+  font-size: 30px;
+  font-family: "Titillium Web", "Noto Sans JP", sans-serif;
+  line-height: 1.5;
+}
+
 body {
   background-color: #002d35;
   font-family: "Titillium Web", sans-serif;
@@ -2177,6 +2242,21 @@ div#modal-container {
   line-height: 1.2;
 }
 .app.lang-zhcn .what-is-aen-blockchain-area h5 {
+  letter-spacing: 0.02em;
+}
+
+.app.lang-jp .what-is-aen-blockchain-area .f55p {
+  font-size: 55%;
+}
+.app.lang-jp .what-is-aen-blockchain-area .f90p {
+  font-size: 90%;
+}
+.app.lang-jp .what-is-aen-blockchain-area h3 {
+  font-family: "Teko", "Noto Sans JP", sans-serif;
+  letter-spacing: 0.02em;
+  line-height: 1.2;
+}
+.app.lang-jp .what-is-aen-blockchain-area h5 {
   letter-spacing: 0.02em;
 }
 
@@ -4286,6 +4366,13 @@ a:hover {
   content: url("../img/aenco-blockchain-platform-architecture-kr.png");
 }
 
+.app.lang-jp .what-is-aen-blockchain-area .blockchain-diagram img {
+  content: url("../img/aenco-blockchain-en.png");
+}
+.app.lang-jp .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+  content: url("../img/aenco-blockchain-platform-architecture-jp.png");
+}
+
 @media (max-width: 479px) {
   .app.lang-zhcn .what-is-aen-blockchain-area .blockchain-diagram img {
     content: url("../img/mobile/aenco-blockchain-cn.m.png");
@@ -4299,6 +4386,13 @@ a:hover {
   }
   .app.lang-kr .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
     content: url("../img/mobile/aenco-blockchain-platform-architecture-kr.m.png");
+  }
+
+  .app.lang-jp .what-is-aen-blockchain-area .blockchain-diagram img {
+    content: url("../img/mobile/aenco-blockchain-en.m.png");
+  }
+  .app.lang-jp .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
+    content: url("../img/mobile/aenco-blockchain-platform-architecture-jp.m.png");
   }
 }
 

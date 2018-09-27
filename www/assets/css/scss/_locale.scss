@@ -26,6 +26,20 @@
         }
     }
 }
+.app.lang-jp {
+    .what-is-aen-blockchain-area {
+        .blockchain-diagram {
+            img {
+              content: url($blockchain-en);
+            }
+        }
+        .aen-blockchain-platform-diagram {
+            img {
+              content: url($blockchain-platform-diagram-jp);
+            }
+        }
+    }
+}
 @media (max-width: 479px) {
     .app.lang-zhcn {
         .what-is-aen-blockchain-area {
@@ -51,6 +65,20 @@
             .aen-blockchain-platform-diagram {
                 img {
                   content: url($blockchain-platform-diagram-kr-mobile);
+                }
+            }
+        }
+    }
+    .app.lang-jp {
+        .what-is-aen-blockchain-area {
+            .blockchain-diagram {
+                img {
+                  content: url($blockchain-en-mobile);
+                }
+            }
+            .aen-blockchain-platform-diagram {
+                img {
+                  content: url($blockchain-platform-diagram-jp-mobile);
                 }
             }
         }

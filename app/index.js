@@ -23,8 +23,10 @@ function getUrlLanguageCode(lang) {
         case 'zhcn':
         case 'zh-cn':
             return 'zh';
+        case 'jp':
+            return 'jp';
         default:
-            return 'en'
+            return 'en';
     }
 }
 
@@ -38,6 +40,8 @@ function getLanguage(langText) {
         case 'zhcn':
         case 'zh-cn':
             return 'zhcn';
+        case 'jp':
+            return 'jp';
         default:
             return 'en'
     }
