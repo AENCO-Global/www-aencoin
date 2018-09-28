@@ -58,7 +58,8 @@ var pdfDoc = [
         languages: {
             "en": "./assets/docs/aenco-position-paper.pdf",
             "zhcn": "./assets/docs/aenco-position-paper-cn.pdf",
-            "kr": "./assets/docs/aenco-position-paper-kr.pdf"
+            "kr": "./assets/docs/aenco-position-paper-kr.pdf",
+            "jp": "./assets/docs/aenco-position-paper-jp.pdf"
         }
     }
 ];
