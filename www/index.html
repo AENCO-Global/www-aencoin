@@ -35,7 +35,7 @@
     <!-- slider -->
     <link rel="stylesheet" type="text/css" href="//cdn.jsdelivr.net/npm/slick-carousel@1.8.1/slick/slick.css"/>
     <!-- Theme -->
-    <link rel="stylesheet" href="./assets/css/aenco.css?v=2.8.2" type="text/css">
+    <link rel="stylesheet" href="./assets/css/aenco.css?v=2.8.3" type="text/css">
     <!-- Matomo -->
     <script src="./assets/js/vendor/angular.min.js"></script>
     <!-- JQuery -->
@@ -192,14 +192,14 @@
     <div class="background">
         <div class="content">
             <div class="row-core-message">
-                <h1 class="core-message">{{ app.getTranslatedText('text0001') }}</h1>
+                <h1 class="core-message">{{ app.getTranslatedText('text0278') }}</h1>
             </div>
             <div class="sub-message-container">
                 <h3 class="sub-message">{{ app.getTranslatedText('text0002') }}</h3>
             </div>
             <div class="private-sale-notice">
                 <div class="col2"><h2 class="private-sale-txt">{{ app.updateIcoStatus() }}</h2></div>
-                <div class="col2">
+                <div class="col2" ng-if="app.isCounterShown">
                     <a href="https://<!--uatorlive-->.aencoin.com/register" class="btn-join">
                         <span class="f3">{{ app.getTranslatedText('text0004') }}</span>
                     </a>
@@ -216,7 +216,7 @@
                 </div>
             </div>
             <div class="count-down-container" ng-if="app.isCounterShown">
-                <div class="header-count-down f4">{{ app.getTranslatedText('text0195') }}</div>
+                <div class="header-count-down f4">{{ app.getTranslatedText('text0277') }}</div>
                 <div class="clock"></div>
             </div>
             <div class="contribution-bar table-container"></div>
@@ -1229,7 +1229,7 @@
 <footer>
     <div class="footer footer-content">
         <div class="fleft company-name"><h6>{{ app.getTranslatedText('text0194') }}</h6></div>
-        <div class="fright version"><h6>VER 2.8.2</h6></div>
+        <div class="fright version"><h6>VER 2.8.3</h6></div>
         <div class="clear"></div>
     </div>
 </footer>
@@ -1241,7 +1241,7 @@
     </div>
 </section>
 <!-- Hidden Bottom Bar  End -->
-<script src="./assets/js/bundle.js?v=2.8.2"></script>
+<script src="./assets/js/bundle.js?v=2.8.3"></script>
 </div>
 </body>
 </html>

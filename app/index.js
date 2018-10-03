@@ -540,8 +540,6 @@ const system = {
     }
 };
 
-system.init();
-
 var app = angular.module('todoApp', []);
 
 app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $http, $sce) {
@@ -623,11 +621,11 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
 
   todoList.updateIcoStatus = function() {
     var now = Date.now();
-    var endTime = Date.parse('2018-09-01T00:00:00.000Z');
+    var endTime = Date.parse('2018-10-28T00:00:00.000Z');
     var diff = (endTime - now) / 1000;
-    var txt = getTranslatedText(todoList.lang, "text0003");
+    var txt = getTranslatedText(todoList.lang, "text0274");
     if (diff <= 0) {
-        txt = getTranslatedText(todoList.lang, "text0274");
+        txt = getTranslatedText(todoList.lang, "text0279");
     } else {
         todoList.isCounterShown = true;
         var clock = $('.clock').FlipClock(diff, {
@@ -641,4 +639,8 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
 
 window.showDetailInfo = system.showDetailInfo.bind(system);
 window.openVideo = system.openVideo.bind(system);
+
+$(function() {
+    system.init();
+});
 
