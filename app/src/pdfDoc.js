@@ -8,7 +8,8 @@ var pdfDoc = [
         languages: {
             "en": "./assets/docs/aenco-whitepaper.pdf",
             "zhcn": "./assets/docs/aenco-whitepaper-cn.pdf",
-            "kr": "./assets/docs/aenco-whitepaper-kr.pdf"
+            "kr": "./assets/docs/aenco-whitepaper-kr.pdf",
+            "jp": "./assets/docs/aenco-whitepaper-jp.pdf"
         }
     },
     {
@@ -16,7 +17,8 @@ var pdfDoc = [
         languages: {
             "en": "./assets/docs/aenco-token-economics.pdf",
             "zhcn": "./assets/docs/aenco-token-economics-cn.pdf",
-            "kr": "./assets/docs/aenco-token-economics-kr.pdf"
+            "kr": "./assets/docs/aenco-token-economics-kr.pdf",
+            "jp": "./assets/docs/aenco-token-economics-jp.pdf"
         }
     },
     {
