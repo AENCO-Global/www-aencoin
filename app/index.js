@@ -13,6 +13,8 @@ var contribution = require('./src/contribution');
 var cap = require('./src/cap');
 var ImageManager = require('./src/image-manager');
 
+var popupEndTime = Date.parse('2018-09-29T00:00:00.000Z');
+
 function getUrlLanguageCode(lang) {
     switch(lang) {
         case 'kr':
@@ -428,6 +430,10 @@ const system = {
     },
     showPromotionPopup: function showPromotionPopup() {
         var that = this;
+        var now = Date.now();
+        if (now >= popupEndTime) {
+            return;
+        }
         that.initModal("", that.getPromotionPopup(), "promotion-popup");
         $('#modal-container').modal('show');
     },
@@ -446,6 +452,11 @@ const system = {
         var startTime = Date.parse('2018-08-30T00:00:00.000Z');
         var endTime = Date.parse('2018-09-01T00:00:00.000Z');
         var freeStartTime = Date.parse('2018-09-01T00:00:00.000Z');
+
+        if (now >= popupEndTime) {
+            return '';
+        }
+
         if (now >= freeStartTime) {
             imagePath_free = imagePath_50free;
         }
@@ -466,6 +477,7 @@ const system = {
                     ${promotionFomo}
                     <div class="clear"></div>
                 </div>`;
+
     },
     openVideo: function openVideo(id) {
         let data;

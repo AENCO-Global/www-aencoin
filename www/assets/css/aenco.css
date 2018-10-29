@@ -1528,6 +1528,10 @@ div#modal-container {
   text-align: right;
   margin: auto 5px;
 }
+.welcome-area .subtitle-3 {
+  max-width: 800px;
+  margin: auto;
+}
 .welcome-area .btn-join {
   background-color: #8aa739;
   border-radius: 24px;
