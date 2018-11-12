@@ -3,7 +3,7 @@
 module.exports = [
     {
         image: "./assets/img/partners/idax.png",
-        url: "https://www.idax.mn"
+        url: "https://www.idax.pro"
     },
     {
         image: "./assets/img/partners/latoken.png",

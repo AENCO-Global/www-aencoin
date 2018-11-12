@@ -112,7 +112,7 @@ var partnerData = [
     },
     {
         image: "./assets/img/partners/idax.png",
-        url: "https://www.idax.mn"
+        url: "https://www.idax.pro"
     }
 ];
 
