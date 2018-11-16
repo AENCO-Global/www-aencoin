@@ -4303,59 +4303,6 @@ a:hover {
     padding: 8%;
   }
 }
-.token-sale-area .content {
-  max-width: 1300px;
-  margin: auto;
-}
-.token-sale-area .table-container .logo-group {
-  width: 100%;
-  flex-wrap: wrap;
-}
-.token-sale-area .table-container .tb-col {
-  width: 50%;
-  padding: 0 20px;
-}
-.token-sale-area .table-container .title {
-  margin: auto;
-}
-.token-sale-area .table-container .subtitle {
-  width: 100%;
-  text-align: center;
-  margin: 15px auto;
-}
-.token-sale-area .table-container .logo-container {
-  text-align: center;
-  padding: 10px 20px;
-  margin: auto;
-  height: 105px;
-}
-.token-sale-area .table-container .logo-container a {
-  margin: auto;
-}
-.token-sale-area .table-container img {
-  height: auto;
-}
-
-@media (max-width: 768px) {
-  .token-sale-area .table-container .tb-col {
-    width: 100%;
-    margin: 20px auto;
-  }
-}
-@media (max-width: 479px) {
-  .token-sale-area .table-container .logo-group {
-    display: block;
-    height: auto;
-  }
-  .token-sale-area .table-container .logo-group .logo-container {
-    margin: 20px auto;
-    padding: 10px 30px;
-    width: 100%;
-  }
-  .token-sale-area .table-container img {
-    max-width: 100%;
-  }
-}
 .app.lang-zhcn .what-is-aen-blockchain-area .blockchain-diagram img {
   content: url("../img/aenco-blockchain-cn.png");
 }
@@ -4397,6 +4344,53 @@ a:hover {
   }
   .app.lang-jp .what-is-aen-blockchain-area .aen-blockchain-platform-diagram img {
     content: url("../img/mobile/aenco-blockchain-platform-architecture-jp.m.png");
+  }
+}
+.exchange-area .main-container {
+  width: 100%;
+}
+.exchange-area .content {
+  width: 1024px;
+  margin: auto;
+}
+.exchange-area .exchange-list-container {
+  margin-top: 30px;
+}
+.exchange-area .exchange-list {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 100%;
+}
+.exchange-area .exchange-list li {
+  margin: auto;
+  text-align: center;
+  padding: 20px 20px 30px;
+}
+.exchange-area .exchange-list img {
+  max-width: 100%;
+}
+.exchange-area .main-desc {
+  text-align: center;
+}
+@media (max-width: 1024px) {
+  .exchange-area .content {
+    width: 100%;
+  }
+}
+@media (max-width: 768px) {
+  .exchange-area .exchange-list li {
+    width: 33%;
+  }
+  .exchange-area .exchange-list img {
+    height: auto;
+  }
+}
+@media (max-width: 479px) {
+  .exchange-area .exchange-list li {
+    width: 50%;
+  }
+  .exchange-area .exchange-list img {
+    height: auto;
   }
 }
 

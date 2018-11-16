@@ -1,0 +1,53 @@
+.exchange-area {
+    .main-container {
+        width: 100%;
+    }
+    .content {
+        width: 1024px;
+        margin: auto;
+    }
+    .exchange-list-container {
+        margin-top: 30px;
+    }
+    .exchange-list {
+        display: flex;
+        flex-wrap: wrap;
+        max-width: 100%;
+    }
+    .exchange-list li {
+        margin: auto;
+        text-align: center;
+        padding: 20px 20px 30px;
+    }
+    .exchange-list img {
+        max-width: 100%;
+    }
+    .main-desc {
+        text-align: center;
+    }
+    @media (max-width: 1024px) {
+        .content {
+            width: 100%;
+        }
+    }
+    @media (max-width: 768px) {
+        .exchange-list {
+            li {
+                width: 33%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+    @media (max-width: 479px) {
+        .exchange-list {
+            li {
+                width: 50%;
+            }
+            img {
+                height: auto;
+            }
+        }
+    }
+}

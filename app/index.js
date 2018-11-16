@@ -6,6 +6,7 @@ var teamMembers = require('./src/member').teamMemberData;
 var advisors = require('./src/member').advisorsData;
 var media = require('./src/media');
 var partners = require('./src/partners');
+var exchange = require('./src/exchange');
 var videos = require('./src/video');
 var tokenDistribution = require('./src/token-distribution');
 var getPdfDoc = require('./src/pdfDoc').getPdfDoc;
@@ -501,6 +502,7 @@ const system = {
     updateMediaAndPartners: function updateMediaAndPartners() {
         $("#media-list").html(this.getMediaOrPartners(media));
         $("#partner-list").html(this.getMediaOrPartners(partners));
+        $("#exchange-list").html(this.getMediaOrPartners(exchange));
     },
     updateVideos: function updateVideos() {
         $("#video-list").html(this.getVideos());
