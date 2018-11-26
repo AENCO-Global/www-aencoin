@@ -2,12 +2,12 @@
 
 module.exports = [
     {
-        image: "./assets/img/partners/idax.png",
-        url: "https://www.idax.pro"
-    },
-    {
         image: "./assets/img/partners/nem.png",
         url: "https://nem.io/"
+    },
+    {
+        image: "./assets/img/partners/idax.png",
+        url: "https://www.idax.pro"
     },
     {
         image: "./assets/img/partners/latoken.png",
