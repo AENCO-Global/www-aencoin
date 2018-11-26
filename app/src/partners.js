@@ -6,6 +6,10 @@ module.exports = [
         url: "https://www.idax.pro"
     },
     {
+        image: "./assets/img/partners/nem.png",
+        url: "https://nem.io/"
+    },
+    {
         image: "./assets/img/partners/latoken.png",
         url: "https://latoken.com/"
     },
