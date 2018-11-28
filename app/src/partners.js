@@ -11,7 +11,7 @@ module.exports = [
     },
     {
         image: "./assets/img/partners/latoken.png",
-        url: "https://latoken.com/"
+        url: "https://bit.ly/2IWfvFb"
     },
     {
         image: "./assets/img/partners/coinmake.png",

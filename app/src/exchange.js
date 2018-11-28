@@ -7,7 +7,7 @@ module.exports = [
     },
     {
         image: "./assets/img/exchange-partners/latoken_2x.png",
-        url: "http://bit.ly/2A7FPLO"
+        url: "https://bit.ly/2IWfvFb"
     },
     {
         image: "./assets/img/exchange-partners/coinmake_2x.png",
