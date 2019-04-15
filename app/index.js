@@ -561,6 +561,7 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
   todoList.done = 1;
   todoList.lang = getDefaultLanguage();
   todoList.isCounterShown = false;
+  todoList.isContributionShown = false;
 
   todoList.getTranslatedText = function(key) {
     var txt = getTranslatedText(todoList.lang, key);

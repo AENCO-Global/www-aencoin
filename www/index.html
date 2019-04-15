@@ -224,7 +224,7 @@
             <div class="count-down-container" ng-if="!app.isCounterShown">
                 <h3 class="subtitle-3">{{ app.getTranslatedText('text0280') }}</h3>
             </div>
-            <div class="contribution-bar table-container"></div>
+            <div class="contribution-bar table-container" ng-if="app.isContributionShown"></div>
             <div class="link-group-container">
                 <div class="row">
                     <ul class="link-list">
