@@ -1,0 +1,128 @@
+.contact-us-area {
+    .main-container {
+        width: 100%;
+        background-color: #0a92a4;
+        text-align: left;
+    }
+    .content {
+        display: flex;
+        margin: auto;
+        max-width: 1300px;
+        flex-wrap: wrap;
+    }
+    .footer-menu {
+        width: 25%;
+    }
+    .moon-contact {
+        margin-top: 25px;
+    }
+    .social-items {
+        width: 100%;
+        height: 42px;
+        margin-top: 40px;
+        margin-bottom: 48px;
+    }
+    .text-reg-addr {
+        margin-top: 15px;
+    }
+    li {
+        list-style: none;
+        margin: 0 auto;
+    }
+    li a {
+        color: #FFFFFF;
+    }
+    .fa-3x {
+        font-size: 38px;
+    }
+    .txt-email {
+        margin-left: 10px;
+        display: inline-block;
+    }
+    .display-inline {
+        display: inline-block;
+    }
+    .row-sign {
+        display: flex;
+        li {
+            margin: 0;
+            &.seperator {
+                background-color: #FFFFFF;
+                width: 0.05em;
+                height: 23px;
+                margin: 8px 12px;
+                display: inline-block;
+            }
+        }
+    }
+    .row-join-telegram .icon-telegram {
+        margin-top: 18px;
+        margin-left: 10px;
+    }
+    @media (max-width: 1600px) {
+        .content {
+            width: 96%;
+        }
+    }
+    @media (max-width: 1060px) {
+        .title {
+            font-size: 24px;
+        }
+        .footer-menu ul li {
+            font-size: 24px;
+        }
+        .text-reg-addr {
+            font-size: 24px;
+        }
+        .txt-registerd-address {
+            font-size: 16px;
+        }
+    }
+    @media (max-width: 1024px) {
+        .content {
+            width: 100%;
+            grid-template-columns: auto auto auto auto;
+            padding: 50px 20px 50px 30px;
+            grid-gap: 25px;
+        }
+        .footer-menu ul li {
+            font-size: 20px;
+        }
+        .title {
+            font-size: 20px;
+        }
+        .text-reg-addr {
+            font-size: 20px;
+        }
+        .txt-registerd-address {
+            font-size: 14px;
+        }
+        .moon-contact {
+            margin-top: 20px;
+            font-size: 20px;
+        }
+        .row-sign li.seperator {
+            height: 16px;
+        }
+        .row-join-telegram .icon-telegram {
+            margin-top: 11px;
+            margin-left: 2px;
+        }
+    }
+    @media (max-width: 768px) {
+        .content {
+            width: 90%;
+        }
+        .footer-menu {
+            width: 50%;
+        }
+    }
+    @media (max-width: 560px) {
+        .content {
+            width: 90%;
+        }
+        .footer-menu {
+            width: 100%;
+        }
+    }
+}

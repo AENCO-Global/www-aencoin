@@ -1,0 +1,13 @@
+.table-container {
+    flex-wrap: wrap;
+    display: flex;
+    flex-direction: row;
+}
+.tb-col {
+    flex: auto;
+}
+.dflex {
+    display: flex;
+    align-items: center;
+    align-content: center;
+}

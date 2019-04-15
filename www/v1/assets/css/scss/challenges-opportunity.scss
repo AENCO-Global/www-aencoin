@@ -1,0 +1,168 @@
+.challenges-opportunity-area {
+    .main-container {
+        width: 100%;
+    }
+    .content {
+        margin: auto;
+        padding: 0;
+    }
+    .margin-area {
+        width: calc(100% - 520px);
+        height: 100%;
+    }
+    .challenge-area {
+        float: left;
+        width: 50%;
+        background-color: #0193a5;
+        padding: 0 3%;
+    }
+    .opportunities-area {
+        float: right;
+        width: 50%;
+        background-color: #02b7ce;
+        padding: 0 3%;
+    }
+    .challenge-box {
+        margin: auto;
+        padding: 64px 0;
+        width: 520px;
+    }
+    .opportunity-box {
+        margin: 0 auto;
+        width: 520px;
+        padding: 64px 0;
+    }
+    .logo {
+        float:left;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    .desc {
+        float: left;
+        margin-left: 35px;
+        max-width: 70%;
+        text-align: left;
+        display: flex;
+        align-items: center;
+        align-content: center;
+    }
+    .challenge-one-logo {
+        background: url($challenge-one-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .challenge-two-logo {
+        background: url($challenge-two-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .challenge-three-logo {
+        background: url($challenge-three-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .challenge-four-logo {
+        background: url($challenge-four-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .opportunity-one-logo {
+        background: url($opportunity-one-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .opportunity-two-logo {
+        background: url($opportunity-two-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .opportunity-three-logo {
+        background: url($opportunity-three-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .opportunity-four-logo {
+        background: url($opportunity-four-logo) no-repeat;
+        width: 100px;
+        height: 90px;
+        margin: auto;
+    }
+    .items {
+        margin-top: 50px;
+    }
+    .item {
+        width: 80%;
+        margin: auto;
+        margin-top: 49px;
+        display: flex;
+    }
+    @media (max-width: 1300px) {
+        .item {
+            width: 100%;
+        }
+        .margin-area {
+            width: 20%;
+        }
+        .challenge-box {
+            width: 80%;
+        }
+        .opportunity-box {
+            width: 80%;
+        }
+    }
+    @media (max-width: 1060px) {
+        .challenge-area {
+            float: none;
+            width: 100%;
+        }
+        .opportunities-area {
+            float: none;
+            width: 100%;
+        }
+        .margin-area {
+            width: 0;
+            height: 100%;
+        }
+        .challenge-box {
+            max-width: 70%;
+        }
+        .opportunity-box {
+            max-width: 70%;
+        }
+        .items {
+            max-width: 70%;
+            margin: auto;
+        }
+        .item {
+            width: 100%;
+            display: block;
+        }
+        .logo {
+            float: none;
+            display: block;
+        }
+        .desc {
+            text-align: center;
+            padding: 0 20px;
+            float: none;
+            max-width: 100%;
+            margin-left: 0;
+            margin-top: 20px;
+            display: block;
+        }
+    }
+    @media (max-width: 479px) {
+        .items {
+            max-width: 90%;
+            margin: auto;
+        }
+    }
+}

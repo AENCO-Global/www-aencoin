@@ -1,0 +1,86 @@
+.app.lang-zhcn {
+    .what-is-aen-blockchain-area {
+        .blockchain-diagram {
+            img {
+              content: url($blockchain-cn);
+            }
+        }
+        .aen-blockchain-platform-diagram {
+            img {
+              content: url($blockchain-platform-diagram-cn);
+            }
+        }
+    }
+}
+.app.lang-kr {
+    .what-is-aen-blockchain-area {
+        .blockchain-diagram {
+            img {
+              content: url($blockchain-kr);
+            }
+        }
+        .aen-blockchain-platform-diagram {
+            img {
+              content: url($blockchain-platform-diagram-kr);
+            }
+        }
+    }
+}
+.app.lang-jp {
+    .what-is-aen-blockchain-area {
+        .blockchain-diagram {
+            img {
+              content: url($blockchain-en);
+            }
+        }
+        .aen-blockchain-platform-diagram {
+            img {
+              content: url($blockchain-platform-diagram-jp);
+            }
+        }
+    }
+}
+@media (max-width: 479px) {
+    .app.lang-zhcn {
+        .what-is-aen-blockchain-area {
+            .blockchain-diagram {
+                img {
+                  content: url($blockchain-cn-mobile);
+                }
+            }
+            .aen-blockchain-platform-diagram {
+                img {
+                  content: url($blockchain-platform-diagram-cn-mobile);
+                }
+            }
+        }
+    }
+    .app.lang-kr {
+        .what-is-aen-blockchain-area {
+            .blockchain-diagram {
+                img {
+                  content: url($blockchain-kr-mobile);
+                }
+            }
+            .aen-blockchain-platform-diagram {
+                img {
+                  content: url($blockchain-platform-diagram-kr-mobile);
+                }
+            }
+        }
+    }
+    .app.lang-jp {
+        .what-is-aen-blockchain-area {
+            .blockchain-diagram {
+                img {
+                  content: url($blockchain-en-mobile);
+                }
+            }
+            .aen-blockchain-platform-diagram {
+                img {
+                  content: url($blockchain-platform-diagram-jp-mobile);
+                }
+            }
+        }
+    }
+}

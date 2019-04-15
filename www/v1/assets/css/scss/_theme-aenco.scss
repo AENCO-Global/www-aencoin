@@ -1,0 +1,45 @@
+/** Image location */
+$img-url: '../img/';
+
+/** Font settings */
+@import url('https://fonts.googleapis.com/css?family=Teko:300,400,500,600,700');
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web:300,400,600,700');
+$font-primary: 'Teko', sans-serif;
+$font-secondary: 'Titillium Web', sans-serif;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+
+/** Theme colour */
+$primary-color: #00B7CE;
+$secondary-color: #B1D34A;
+$tertiary-color: #252525;
+
+$primary-color-shade-1: #0A92A4;
+$secondary-color-shade-1: #8AA739;
+$secondary-color-shade-2: #637C27;
+$tertiary-color-shade-1: #076F7D;
+
+/** Text colour */
+$textDark: #6F8BA4;
+$textLight: #fff;
+
+$white-color: #fff;
+$sm-width: 560px;
+$md-width: 768px;
+$lg-width: 992px;
+
+/** Loading gradient colours */
+$gradient-1: #0fb8ad;
+$gradient-2: #1fc8db;
+$gradient-3: #2cb5e8;
+
+/** Gradient colours */
+$gradientDark: #0EB8D9;
+$gradientLight: #2CDDC9;
+
+/** Heading colours */
+$headingDark: #3B566E;
+$headingLight: #ffffff;

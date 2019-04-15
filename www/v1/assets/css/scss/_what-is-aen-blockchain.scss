@@ -1,0 +1,145 @@
+.what-is-aen-blockchain-area {
+    .main-container {
+      width: 100%;
+      margin: auto;
+    }
+    .content {
+      max-width: 1300px;
+      font-size: 32px;
+      margin: auto;
+    }
+    .message-container {
+      max-width: 50%;
+      padding: 0 30px 0 0;
+      flex-wrap: wrap;
+    }
+    img {
+      width: 100%;
+      height: auto;
+    }
+    h2 {
+      color: #b6d84e;
+      text-align: left;
+    }
+    h3 {
+      text-align: left;
+    }
+    h5 {
+      text-align: left;
+    }
+    .video-container {
+      margin: auto;
+      width: 50%;
+      height: 337px;
+      img {
+        width: 100%;
+      }
+    }
+    .aen-blockchain-platform-diagram {
+      text-align: center;
+      img {
+        content: url($blockchain-platform-diagram-en);
+      }
+    }
+    .blockchain-diagram {
+      max-width: 1024px;
+      text-align: center;
+      width: 100%;
+      margin: 60px auto auto auto;
+      img {
+        content: url($blockchain-en);
+      }
+    }
+    @media (max-width: 1315px) {
+      .content {
+        font-size: calc(100vw * 32 / 1315);
+      }
+    }
+    @media (max-width: 1024px) {
+      .content {
+        width: 96%;
+      }
+      .message-container {
+        max-width: 100%;
+        padding: 0;
+      }
+      .video-container {
+        margin-top: 35px;
+        width: 100%;
+      }
+    }
+    @media (max-width: 768px) {
+      .video-container {
+        float: none;
+        margin-top: 5%;
+      }
+      .message-container {
+        float: none;
+        width: 100%;
+        margin: auto;
+        padding: 0 20px;
+      }
+    }
+    @media (max-width: 479px) {
+      .aen-blockchain-platform-diagram {
+        img {
+          content: url($blockchain-platform-diagram-en-mobile);
+        }
+      }
+      .blockchain-diagram {
+        img {
+          content: url($blockchain-en-mobile);
+        }
+      }
+    }
+  }
+  
+  .ytp-title-text, .ytp-watch-later-icon, .ytp-chrome-top .ytp-share-button {
+    display: none;
+  }
+  
+  .ytp-watch-later-icon {
+    margin: auto;
+    width: 36px;
+    height: 36px;
+    position: relative;
+    display: none;
+  }
+
+  .app.lang-zhcn {
+    .what-is-aen-blockchain-area {
+      .f55p {
+        font-size: 55%;
+      }
+      .f90p {
+        font-size: 90%;
+      }
+      h3 {
+        font-family: "Teko", "Noto Sans SC", sans-serif;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+      }
+      h5 {
+        letter-spacing: 0.02em;
+      }
+    }
+  }
+
+  .app.lang-jp {
+    .what-is-aen-blockchain-area {
+      .f55p {
+        font-size: 55%;
+      }
+      .f90p {
+        font-size: 90%;
+      }
+      h3 {
+        font-family: "Teko", "Noto Sans JP", sans-serif;
+        letter-spacing: 0.02em;
+        line-height: 1.2;
+      }
+      h5 {
+        letter-spacing: 0.02em;
+      }
+    }
+  }

@@ -1,0 +1,64 @@
+.token-sale-area {
+    .content {
+        max-width: 1300px;
+        margin: auto;
+    }
+    .table-container {
+        .logo-group {
+            width: 100%;
+            flex-wrap: wrap;
+        }
+        .tb-col {
+            width: 50%;
+            padding: 0 20px;
+        }
+        .title {
+            margin: auto;
+        }
+        .subtitle {
+            width: 100%;
+            text-align: center;
+            margin: 15px auto;
+        }
+        .logo-container {
+            text-align: center;
+            padding: 10px 20px;
+            margin: auto;
+            height: 105px;
+            a {
+                margin: auto;
+            }
+        }
+        img {
+            height: auto;
+        }
+    }
+}
+@media (max-width: 768px) {
+    .token-sale-area {
+        .table-container {
+            .tb-col {
+                width: 100%;
+                margin: 20px auto;
+            }
+        }
+    }
+}
+@media (max-width: 479px) {
+    .token-sale-area {
+        .table-container {
+            .logo-group {
+                display: block;
+                height: auto;
+                .logo-container {
+                    margin: 20px auto;
+                    padding: 10px 30px;
+                    width: 100%;
+                }
+            }
+            img {
+                max-width: 100%;
+            }
+        }
+    }
+}

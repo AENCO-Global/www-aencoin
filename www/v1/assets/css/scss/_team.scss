@@ -1,0 +1,196 @@
+.team-area {
+  .team-round {
+    margin: 0 auto;
+    margin-bottom: 10px;
+    position: inherit;
+    .profile {
+      margin: auto;
+      position: relative;
+      text-align: center;
+      padding-top: 10px;
+      width: 150px;
+      margin-bottom: 18px;
+  
+      &:before {
+        content: '';
+        position: absolute;
+        left: 0px;
+        right: 0px;
+        margin: auto;
+        bottom: -89px;
+        width: 3px;
+        height: 89px;
+      }
+  
+      .img {
+        width: 150px;
+        height: 120px;
+        position: relative;
+        overflow: hidden;
+        img {
+          overflow: hidden;
+        }
+      }
+    }
+  
+    &:hover {
+      .profile {
+        .img {
+          .social {
+            left: 0px;
+          }
+        }
+      }
+    }
+  }
+  .main-container {
+    width: 100%;
+  }
+  .content {
+    width: 1300px;
+    margin: auto;
+  }
+  .team-member-list {
+    margin: auto;
+    flex-wrap: wrap;
+    flex: 14%;
+    display: flex;
+    margin-top: 50px;
+  }
+  #team-member-list ul.social li {
+    float: none;
+  }
+  .name {
+    text-align: center;
+    font-size: 25px;
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    letter-spacing: 0.05em;
+    line-height: 1;
+    margin-top: 20px;
+    text-transform: uppercase;
+  }
+  .title {
+    text-align: center;
+    font-size: 16px;
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    letter-spacing: 1px;
+    line-height: 1.4;
+    color: #ffffff90;
+    margin-top: 4px;
+  }
+  .btn-more:hover {
+    opacity: 0.8;
+  }
+  .icon {
+    width: 30px;
+    height: 40px;
+    text-align: center;
+    background-size: 18px;
+    opacity: 0.5;
+    margin: auto;
+  }
+  .icon.single-item {
+    margin-left: 32px;
+  }
+  .icon-linkedin {
+    background: center no-repeat url($icon-linkedin);
+    background-size: 18px !important;
+
+  }
+  .icon-profile {
+    background: center no-repeat url($icon-profile);
+    background-size: 18px;
+    margin: 0 10px;
+
+  }
+  ul.social {
+    margin: auto 28px;
+    li {
+      float: left;
+    }
+  }
+  @media (max-width: 1320px) {
+    .content {
+        width: 96%;
+    }
+  }
+}
+
+.member-info-container {
+  .member-image {
+    text-align: center;
+  }
+  img {
+    width: 110px;
+    height: 110px;
+  }
+  .info {
+    color: #FFFFFF;
+    width: 600px;
+    padding: 20px;
+  }
+  .name {
+    font-family: 'Teko', sans-serif;
+    font-weight: 300;
+    font-size: 36px;
+    text-align: center;
+    letter-spacing: 0.02em;
+  }
+  .title {
+    font-family: 'Titillium Web', sans-serif;
+    font-weight: 300;
+    font-size: 18px;
+    text-align: center;
+    letter-spacing: 0.02em;
+    margin: 10px 0 20px 0;
+  }
+  .desc {
+    ul {
+      list-style-type: circle;
+      margin-left: 2em;
+    }
+  }
+}
+.popup-name {
+  text-align: center;
+  font-size: 25px;
+  font-family: "Teko", sans-serif;
+  font-weight: 300;
+  letter-spacing: 0.05em;
+  line-height: 1;
+  margin-top: 20px;
+  text-transform: uppercase;
+}
+.popup-title {
+  text-align: center;
+  font-size: 16px;
+  font-family: "Titillium Web", sans-serif;
+  font-weight: 300;
+  letter-spacing: 1px;
+  line-height: 1.4;
+  color: #ffffff90;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .modal-dialog {
+    &.team-member-popup {
+      .modal-header {
+          display: block;
+      }
+    }
+  }
+  .team-member-popup {
+    .modal-header {
+      display: block;
+    }
+    .modal-title {
+      display: none;
+    }
+    .member-info-container .info {
+      width: 100%;
+    }
+  }
+}

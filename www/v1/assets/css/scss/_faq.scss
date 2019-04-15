@@ -1,0 +1,95 @@
+.faq-area {
+    display: none;
+    text-align: left;
+    a {
+        color: #00b7ce;
+    }
+    .main-container {
+      width: 100%;
+      background-color: #002d35;
+      margin: auto;
+    }
+    .content {
+      max-width: 1600px;
+      margin: auto;
+      padding: 120px 45px 45px;
+    }
+    .btn, .mb-0 {
+        text-align: left;
+    }
+    h2 {
+        color: #b1d249;
+        margin-top: 100px;
+    }
+    .subtitle {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        font-size: 18px;
+        letter-spacing: 1px;
+        text-align: center;
+    }
+    .questions-container {
+        margin: 50px auto 80px auto;
+        max-width: 100%;
+    }
+    .new-card {
+        button {
+            padding: 0;
+        }
+    }
+    .sign {
+        font-family: 'Titillium Web', sans-serif;
+        font-weight: 400;
+        color: #00b7ce;
+        font-size: 60px;
+        width: 25px;
+        margin: auto;
+        float: left;
+        margin-top: -18px;
+    }
+    .btn-label {
+        font-family: "Titillium Web", sans-serif;
+        font-weight: 400;
+        color: #FFFFFF;
+        font-size: 22px;
+        letter-spacing: 1px;
+        margin-left: 28px;
+        padding-top: 16px;
+        float: left;
+        max-width: 80%;
+    }
+    .sign:before {
+        content: "-";
+    }
+    a.collapsed .sign:before {
+        content: "+";
+    }
+    a.collapsed .sign {
+        font-size: 40px;
+        margin-top: 0;
+    }
+    .card-body {
+        padding: 20px 0 0 60px;
+    }
+    @media (max-width: 479px) {
+        .content {
+            padding: 45px;
+        }
+        .new-card {
+            margin-top: 20px;
+        }
+        .btn-label {
+          max-width: 75%;
+          padding-top: 10px;
+          font-size: 16px;
+        }
+        .sign {
+            font-size: 36px;
+            margin-top: -8px;
+        }
+        a.collapsed .sign {
+            font-size: 24px;
+        }
+    }
+}

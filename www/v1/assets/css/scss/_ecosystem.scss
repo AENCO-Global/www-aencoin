@@ -1,0 +1,447 @@
+.ecosystem-area {
+    .main-container {
+        width: 100%;
+        background-color: #006e7c;
+    }
+    .content {
+        max-width: 1100px;
+        margin: auto;
+    }
+    .main-desc {
+        margin: 20px auto;
+        text-align: center;
+    }
+    .diagram {
+        margin: auto;
+        width: 960px;
+        padding-bottom: 25px;
+    }
+    .diagram-border-container {
+        margin-top: -60px;
+        .top-left-corner {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 180px;
+            height: 180px;
+            background: no-repeat center url(../img/border.png);
+            background-position: 1px 3px;
+        }
+        .top-border {
+            position: absolute;
+            top: 0;
+            left: 179px;
+            width: 602px;
+            height: 150px;
+            background-image: url(../img/border.png);
+            background-position: -160px 3px;
+            background-repeat: repeat-x;
+        }
+        .top-right-corner {
+            position: absolute;
+            top: 0;
+            left: 780px;
+            width: 180px;
+            height: 180px;
+            background: no-repeat center url(../img/border.png);
+            background-position: -1019px 3px;
+        }
+        .left-border {
+            position: absolute;
+            top: 179px;
+            left: 0;
+            width: 24px;
+            height: 190px;
+            background: no-repeat center url(../img/border.png);
+            background-position: 1px -150px;
+        }
+        .right-border {
+            position: absolute;
+            top: 179px;
+            left: 936px;
+            width: 24px;
+            height: 190px;
+            background: no-repeat center url(../img/border.png);
+            background-position: -1175px -150px;
+        }
+        .bottom-left-corner {
+            position: absolute;
+            top: 368px;
+            left: 0px;
+            width: 180px;
+            height: 180px;
+            background: no-repeat center url(../img/border.png);
+            background-position: 1px -502px;
+        }
+        .bottom-right-corner {
+            position: absolute;
+            top: 368px;
+            left: 780px;
+            width: 180px;
+            height: 180px;
+            background: no-repeat center url(../img/border.png);
+            background-position: -1019px -502px;
+        }
+        .bottom-border-end {
+            position: absolute;
+            top: 368px;
+            left: 179px;
+            width: 602px;
+            height: 180px;
+            background: no-repeat center url(../img/border.png);
+            background-position: -300px -502px;
+        }
+    }
+    .diagram-title {
+        width: 400px;
+        position: absolute;
+        top: -17px;
+        left: 280px;
+        background-color: #0093a5;
+        font-family: "Teko", sans-serif;
+        font-weight: 400;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        line-height: 1.7;
+        text-align: center;
+        padding: 3px 0 2px;
+        box-shadow: 0px 0px 10px rgb(0, 110, 124), 0px 0px 15px rgb(0, 110, 124);
+    }
+    .diagram-pointer {
+        width: 250px;
+        height: 96px;
+        position: absolute;
+        top: -36px;
+        left: -20px;
+        font-family: "Teko", sans-serif;
+        font-weight: 500;
+        font-size: 30px;
+        letter-spacing: 0.02em;
+        line-height: 3.2;
+        text-align: center;
+        color: #0093a5;
+        padding: 3px 0 2px;
+        background: no-repeat center url($arrow-image);
+        span {
+            margin-left: -20px;
+        }
+    }
+    .items {
+        padding: 65px 20px 35px 20px;
+        width: 900px;
+        margin: auto;
+        margin-top: 124px;
+    }
+    .item {
+        padding: 15px 20px 25px;
+        border-bottom: 2px solid #FFFFFF;
+        .title {
+            float: left;
+            width: 260px;
+            text-align: center;
+            &.title-row-one {
+                margin-top: 36px;
+            }
+            &.title-row-two {
+                margin-top: 12px;
+            }
+            &.title-row-three {
+                margin-top: 17px;
+            }
+        }
+        .desc {
+            float: left;
+            margin-left: 30px;
+            width: 530px;
+            ul {
+                list-style-type: circle;
+                &.list-row-1 {
+                    margin-top: 14px;
+                    margin-bottom: -7px;
+                }
+                &.list-row-2 {
+                    margin-top: 36px;
+                }
+                &.list-row-3 {
+                    margin-top: 21px;
+                }
+            }
+            li h5 {
+                text-align: left;
+            }
+        }
+    }
+    .no-border {
+        border: none;
+    }
+    .challenges-opportunity-area .opportunity-box {
+        padding: 60px 0 70px;
+    }
+    .challenges-opportunity-area .challenge-box{
+        padding: 60px 0 70px;
+    }
+    @media (max-width: 1024px) {
+        .content {
+            width: 96%;
+        }
+        .diagram {
+            width: 80%;
+        }
+        .diagram-border-container {
+            .top-left-corner {
+                height: 320px;
+            }
+            .top-border {
+                width: calc(100% - 360px);
+            }
+            .top-right-corner {
+                left: calc(100% - 182px);
+                height: 320px;
+            }
+            .left-border {
+                top: 320px;
+                left: 0px;
+                height: 270px;
+                width: 30px;
+                background-position: 1px -150px;
+            }
+            .right-border {
+                top: 320px;
+                left: calc(100% - 30px);
+                width: 30px;
+                height: 270px;
+                background-position: 9px -150px;
+            }
+            .bottom-left-corner {
+                top: 550px;
+                height: 280px;
+                background-position: 1px -380px;
+            }
+            .bottom-right-corner {
+                top: 550px;
+                left: calc(100% - 182px);
+                height: 280px;
+                background-position: -1019px -380px;
+            }
+            .bottom-border-end {
+                top: 793px;
+                left: 179px;
+                width: calc(100% - 360px);
+                height: 57px;
+                background-position: calc(-400px - (400px - 100vw * 400 / 1024)) -623px;
+            }
+        }
+        .diagram-title {
+            width: 200px;
+            top: -26px;
+            left: calc(100% / 2 - 100px);
+            font-size: 26px;
+            line-height: 1.2;
+            padding: 8px 0 6px;
+        }
+        .diagram-pointer {
+            left: -70px;
+            background-size: 200px;
+            font-size: 26px;
+            line-height: 3.6;
+        }
+        .items {
+            width: 80%;
+            padding-bottom: 120px;
+        }
+        .item {
+            .title {
+                float: none;
+                width: 100%;
+            }
+            .desc {
+                float: none;
+                width: 100%;
+            }
+        }
+    }
+    @media (max-width: 768px) {
+        .diagram {
+            width: 90%;
+        }
+        .diagram-border-container {
+            .top-left-corner {
+                background-size: 900px;
+                width: 150px;
+            }
+            .top-border {
+                left: 149px;
+                width: calc(100% - 300px);
+                background-size: 900px;
+            }
+            .top-right-corner {
+                left: calc(100% - 152px);
+                background-size: 900px;
+                background-position: -750px 3px;
+                width: 150px;
+            }
+            .left-border {
+                top: 180px;
+                left: 0px;
+                height: 270px;
+                width: 30px;
+                background-position: 1px -120px;
+                background-size: 900px;
+            }
+            .right-border {
+                top: 179px;
+                left: calc(100% - 30px);
+                width: 30px;
+                height: 270px;
+                background-position: 15px -120px;
+                background-size: 900px;
+            }
+            .bottom-left-corner {
+                top: 448px;
+                width: 150px;
+                height: 318px;
+                background-size: 900px;
+                background-position: 1px -180px;
+            }
+            .bottom-right-corner {
+                top: 448px;
+                left: calc(100% - 152px);
+                width: 150px;
+                height: 318px;
+                background-size: 900px;
+                background-position: -749px -180px;
+            }
+            .bottom-border-end {
+                top: 735px;
+                left: 149px;
+                height: 43px;
+                width: calc(100% - 300px);
+                background-size: 900px;
+                background-position: calc(-325px - (325px - 100vw * 325 / 768)) -467px;
+            }
+        }
+        .item {
+            h3 {
+                font-size: 24px;
+            }
+            h5 {
+                font-size: 15px;
+            }
+        }
+        .diagram-pointer {
+            left: -1%;
+            top: -19px;
+            background-size: 189px;
+            font-size: 18px;
+            line-height: 2.5;
+            background-position: -60px 0;
+            width: 120px;
+            span {
+                margin-left: -22px;
+            }
+        }
+        .diagram-title {
+            width: 160px;
+            font-size: 22px;
+            left: calc(100% / 2 - 74px);
+            top: -20px;
+        }
+    }
+    @media (max-width: 479px) {
+        .diagram-border-container {
+            .top-left-corner {
+                background-size: 600px;
+                width: 100px;
+                height: 250px;
+            }
+            .top-border {
+                left: 99px;
+                width: calc(100% - 200px);
+                background-size: 600px;
+            }
+            .top-right-corner {
+                left: calc(100% - 102px);
+                background-size: 600px;
+                background-position: -500px 3px;
+                width: 100px;
+                height: 250px;
+            }
+            .left-border {
+                top: 249px;
+                left: 0px;
+                height: 170px;
+                width: 30px;
+                background-position: 1px -80px;
+                background-size: 600px;
+            }
+            .right-border {
+                top: 249px;
+                left: calc(100% - 30px);
+                width: 30px;
+                height: 170px;
+                background-position: 19px -80px;
+                background-size: 600px;
+            }
+            .bottom-left-corner {
+                top: 360px;
+                width: 100px;
+                height: 230px;
+                background-size: 600px;
+                background-position: 1px -100px;
+            }
+            .bottom-right-corner {
+                top: 360px;
+                left: calc(100% - 102px);
+                width: 100px;
+                height: 230px;
+                background-size: 600px;
+                background-position: -500px -100px;
+            }
+            .bottom-border-end {
+                top: 571px;
+                left: 99px;
+                height: 30px;
+                width: calc(100% - 200px);
+                background-size: 600px;
+                background-position: calc(-200px - (200px - 100vw * 200 / 479)) -311px;
+            }
+        }
+        .items {
+            padding: 0px 20px 40px;
+        }
+        .item {
+            padding: 15px 0 25px;
+            .desc {
+                margin-left: 15px;
+                ul {
+                    &.list-row-2 {
+                        margin-top: 10px;
+                    }
+                }
+            }
+            h3 {
+                font-size: 18px;
+            }
+            h5 {
+                font-size: 12px;
+            }
+        }
+        .diagram-title {
+            top: -28px;
+            left: 50%;
+            width: 130px;
+            font-size: 18px;
+            .f5 {
+                font-size: 18px;
+            }
+        }
+        .diagram-pointer {
+            top: -23px;
+            left: 1%;
+            line-height: 3;
+            .f5 {
+                font-size: 18px;
+            }
+        }
+    }
+}
