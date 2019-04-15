@@ -27,6 +27,11 @@
     .main-container {
         width: 100%;
     }
+    .mvp-container {
+        margin-top: 15px;
+        margin-bottom: 25px;
+        text-align: center;
+    }
     .background {
         background: no-repeat center url($welcome-background-image-url);
         background-size: cover;
@@ -60,7 +65,7 @@
         text-shadow: 0px 0px 10px rgb(0, 16, 26), 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
     }
     .private-sale-notice {
-        margin-top: 30px;
+        margin-top: 50px;
         text-align: center;
         margin-bottom: 10px;
     }
@@ -110,6 +115,7 @@
     }
     .link-group-container {
         margin-top: 20px;
+        margin-bottom: 50px;
     }
     .link-list {
         margin: auto;
@@ -164,6 +170,10 @@
     .count-down-container {
         text-align: center;
     }
+    .count-down-container-txt {
+        text-align: center;
+        margin-bottom: 50px;
+    }
     .header-count-down {
         color: #FFFFFF;
         font-size: 25px;
@@ -190,9 +200,6 @@
     }
     .flip-clock-divider.minutes .flip-clock-label {
         right: initial;
-    }
-    .welcome-area .link-group-container {
-        margin-top: 60px;
     }
     .flip-clock-wrapper ul li a div.up:before {
         width: 7px;

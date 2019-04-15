@@ -208,7 +208,7 @@
                 </div>
                 <div class="clear"></div>
             </div>
-            <div class="row-contributor">
+            <div class="row-contributor" ng-if="app.isContributionShown">
                 <div class="link-group">
                     <a class="f3 btn-contributors" id="btn-contributors" data-toggle="modal" data-target="#modal-container">{{ app.getTranslatedText('text0005') }}</a>
                     <span>|</span> 
@@ -221,8 +221,12 @@
                 <div class="header-count-down f4">{{ app.getTranslatedText('text0277') }}</div>
                 <div class="clock"></div>
             </div>
-            <div class="count-down-container" ng-if="!app.isCounterShown">
-                <h3 class="subtitle-3">{{ app.getTranslatedText('text0280') }}</h3>
+            <div class="mvp-container" ng-if="!app.isContributionShown">
+                <img src="./assets/img/aenx_aenc.png" />
+            </div>
+            <div class="count-down-container-txt" ng-if="!app.isCounterShown">
+                <h3 class="subtitle-3" ng-if="app.isContributionShown">{{ app.getTranslatedText('text0280') }}</h3>
+                <h3 class="subtitle-3" ng-if="!app.isContributionShown">{{ app.getTranslatedText('text0287') }}</h3>
             </div>
             <div class="contribution-bar table-container" ng-if="app.isContributionShown"></div>
             <div class="link-group-container">
@@ -243,7 +247,7 @@
                     </ul>
                 </div>
             </div>
-            <div class="rating-container">
+            <div class="rating-container" ng-if="app.isContributionShown">
                 <div class="regular slider">
                     <div class="slider-item">
                         <a href="https://icobench.com/ico/aenco" target="_blank" rel="nofollow" title="Aenco on ICObench"><img border="0" src="https://icobench.com/rated/aenco?shape=horizontal&size=s" width="133px" height="50px" alt="Aenco ICO rating"/></a>

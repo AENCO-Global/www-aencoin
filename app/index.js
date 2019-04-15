@@ -640,7 +640,7 @@ app.controller('AppController', ['$scope', '$http', '$sce', function($scope, $ht
     var diff = (endTime - now) / 1000;
     var txt = getTranslatedText(todoList.lang, "text0274");
     if (diff <= 0) {
-        txt = getTranslatedText(todoList.lang, "text0279");
+        txt = getTranslatedText(todoList.lang, "text0286");
     } else {
         todoList.isCounterShown = true;
         var clock = $('.clock').FlipClock(diff, {

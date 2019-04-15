@@ -1486,6 +1486,11 @@ div#modal-container {
 .welcome-area .main-container {
   width: 100%;
 }
+.welcome-area .mvp-container {
+  margin-top: 15px;
+  margin-bottom: 25px;
+  text-align: center;
+}
 .welcome-area .background {
   background: no-repeat center url("../img/banner-bg.jpg");
   background-size: cover;
@@ -1519,7 +1524,7 @@ div#modal-container {
   text-shadow: 0px 0px 10px #00101a, 0px 0px 15px rgba(0, 16, 26, 0.79), 0px 0px 18px rgba(0, 16, 26, 0.03);
 }
 .welcome-area .private-sale-notice {
-  margin-top: 30px;
+  margin-top: 50px;
   text-align: center;
   margin-bottom: 10px;
 }
@@ -1569,6 +1574,7 @@ div#modal-container {
 }
 .welcome-area .link-group-container {
   margin-top: 20px;
+  margin-bottom: 50px;
 }
 .welcome-area .link-list {
   margin: auto;
@@ -1623,6 +1629,10 @@ div#modal-container {
 .welcome-area .count-down-container {
   text-align: center;
 }
+.welcome-area .count-down-container-txt {
+  text-align: center;
+  margin-bottom: 50px;
+}
 .welcome-area .header-count-down {
   color: #FFFFFF;
   font-size: 25px;
@@ -1651,7 +1661,8 @@ div#modal-container {
   right: initial;
 }
 .welcome-area .welcome-area .link-group-container {
-  margin-top: 60px;
+  margin-top: 20px;
+  margin-bottom: 50px;
 }
 .welcome-area .flip-clock-wrapper ul li a div.up:before {
   width: 7px;
